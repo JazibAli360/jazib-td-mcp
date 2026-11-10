@@ -1,0 +1,790 @@
+{
+ "created": "2026-10-29 00:08:05",
+ "doc": null,
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in3",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in4",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "BP_io_router",
+ "ops": 426,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 1920,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 1920,
+   "name": "out3",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 1920,
+   "name": "out4",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 1920,
+   "name": "out5",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out6",
+   "type": "outCHOP"
+  },
+  {
+   "name": "out7",
+   "type": "outDAT"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Bus",
+   "pars": [
+    {
+     "default": "s1",
+     "label": "Bus A",
+     "name": "Busa",
+     "style": "Menu",
+     "value": "s1"
+    },
+    {
+     "default": "s2",
+     "label": "Bus B",
+     "name": "Busb",
+     "style": "Menu",
+     "value": "s2"
+    },
+    {
+     "default": 0.0,
+     "label": "Mix A-B",
+     "name": "Mix",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "manual",
+     "label": "Fade mode",
+     "name": "Xfademode",
+     "style": "Menu",
+     "value": "manual"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "1",
+     "label": "Cut on beats",
+     "name": "Cutdiv",
+     "style": "Menu",
+     "value": "1"
+    },
+    {
+     "default": 0.0,
+     "label": "Fade time s",
+     "name": "Xfadetime",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "linear",
+     "label": "Fade curve",
+     "name": "Fadecurve",
+     "style": "Menu",
+     "value": "linear"
+    },
+    {
+     "default": false,
+     "label": "Cut now",
+     "name": "Cutnow",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Stale after s",
+     "name": "Stalesec",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Refresh status",
+     "name": "Refreshsources",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Sources",
+   "pars": [
+    {
+     "default": "test",
+     "label": "S1 kind",
+     "name": "S1kind",
+     "style": "Menu",
+     "value": "local"
+    },
+    {
+     "default": "",
+     "label": "S1 NDI/Syphon name",
+     "name": "S1name",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "S1 NDI receive on",
+     "name": "S1active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "S1 alpha in",
+     "name": "S1inalpha",
+     "style": "Menu",
+     "value": "premult"
+    },
+    {
+     "default": "1080x1920",
+     "label": "S1 res",
+     "name": "S1res",
+     "style": "Menu",
+     "value": "1080x1920"
+    },
+    {
+     "default": 1080,
+     "label": "S1 custom w",
+     "name": "S1resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "S1 custom h",
+     "name": "S1resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "fitbest",
+     "label": "S1 fit",
+     "name": "S1fit",
+     "style": "Menu",
+     "value": "fitbest"
+    },
+    {
+     "default": "",
+     "label": "S1 movie file",
+     "name": "S1file",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "off",
+     "label": "S2 kind",
+     "name": "S2kind",
+     "style": "Menu",
+     "value": "test"
+    },
+    {
+     "default": "",
+     "label": "S2 NDI/Syphon name",
+     "name": "S2name",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "S2 NDI receive on",
+     "name": "S2active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "S2 alpha in",
+     "name": "S2inalpha",
+     "style": "Menu",
+     "value": "straight"
+    },
+    {
+     "default": "1080x1920",
+     "label": "S2 res",
+     "name": "S2res",
+     "style": "Menu",
+     "value": "1080x1920"
+    },
+    {
+     "default": 1080,
+     "label": "S2 custom w",
+     "name": "S2resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "S2 custom h",
+     "name": "S2resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "fitbest",
+     "label": "S2 fit",
+     "name": "S2fit",
+     "style": "Menu",
+     "value": "fitbest"
+    },
+    {
+     "default": "",
+     "label": "S2 movie file",
+     "name": "S2file",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "off",
+     "label": "S3 kind",
+     "name": "S3kind",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "",
+     "label": "S3 NDI/Syphon name",
+     "name": "S3name",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "S3 NDI receive on",
+     "name": "S3active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "S3 alpha in",
+     "name": "S3inalpha",
+     "style": "Menu",
+     "value": "premult"
+    },
+    {
+     "default": "1080x1920",
+     "label": "S3 res",
+     "name": "S3res",
+     "style": "Menu",
+     "value": "1080x1920"
+    },
+    {
+     "default": 1080,
+     "label": "S3 custom w",
+     "name": "S3resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "S3 custom h",
+     "name": "S3resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "fitbest",
+     "label": "S3 fit",
+     "name": "S3fit",
+     "style": "Menu",
+     "value": "fitbest"
+    },
+    {
+     "default": "",
+     "label": "S3 movie file",
+     "name": "S3file",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "off",
+     "label": "S4 kind",
+     "name": "S4kind",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "",
+     "label": "S4 NDI/Syphon name",
+     "name": "S4name",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "S4 NDI receive on",
+     "name": "S4active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "S4 alpha in",
+     "name": "S4inalpha",
+     "style": "Menu",
+     "value": "premult"
+    },
+    {
+     "default": "1080x1920",
+     "label": "S4 res",
+     "name": "S4res",
+     "style": "Menu",
+     "value": "1080x1920"
+    },
+    {
+     "default": 1080,
+     "label": "S4 custom w",
+     "name": "S4resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "S4 custom h",
+     "name": "S4resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "fitbest",
+     "label": "S4 fit",
+     "name": "S4fit",
+     "style": "Menu",
+     "value": "fitbest"
+    },
+    {
+     "default": "",
+     "label": "S4 movie file",
+     "name": "S4file",
+     "style": "File",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "page": "Sinks",
+   "pars": [
+    {
+     "default": "off",
+     "label": "O1 kind",
+     "name": "O1kind",
+     "style": "Menu",
+     "value": "syphon"
+    },
+    {
+     "default": "bus",
+     "label": "O1 source",
+     "name": "O1src",
+     "style": "Menu",
+     "value": "s1"
+    },
+    {
+     "default": "TD_BP_io_router_1",
+     "label": "O1 sender name",
+     "name": "O1name",
+     "style": "Str",
+     "value": "jazib-td master"
+    },
+    {
+     "default": false,
+     "label": "O1 SEND (go-ahead)",
+     "name": "O1active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "O1 alpha out",
+     "name": "O1outalpha",
+     "style": "Menu",
+     "value": "straight"
+    },
+    {
+     "default": "fixed8",
+     "label": "O1 format",
+     "name": "O1fmt",
+     "style": "Menu",
+     "value": "fixed8"
+    },
+    {
+     "default": true,
+     "label": "O1 NDI skip frames",
+     "name": "O1skip",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "input",
+     "label": "O1 res",
+     "name": "O1res",
+     "style": "Menu",
+     "value": "input"
+    },
+    {
+     "default": 1080,
+     "label": "O1 custom w",
+     "name": "O1resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "O1 custom h",
+     "name": "O1resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "off",
+     "label": "O2 kind",
+     "name": "O2kind",
+     "style": "Menu",
+     "value": "ndi"
+    },
+    {
+     "default": "bus",
+     "label": "O2 source",
+     "name": "O2src",
+     "style": "Menu",
+     "value": "bus"
+    },
+    {
+     "default": "TD_BP_io_router_2",
+     "label": "O2 sender name",
+     "name": "O2name",
+     "style": "Str",
+     "value": "TD_BP_io_router_2"
+    },
+    {
+     "default": false,
+     "label": "O2 SEND (go-ahead)",
+     "name": "O2active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "O2 alpha out",
+     "name": "O2outalpha",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": "fixed8",
+     "label": "O2 format",
+     "name": "O2fmt",
+     "style": "Menu",
+     "value": "fixed8"
+    },
+    {
+     "default": true,
+     "label": "O2 NDI skip frames",
+     "name": "O2skip",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "input",
+     "label": "O2 res",
+     "name": "O2res",
+     "style": "Menu",
+     "value": "input"
+    },
+    {
+     "default": 1080,
+     "label": "O2 custom w",
+     "name": "O2resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "O2 custom h",
+     "name": "O2resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "off",
+     "label": "O3 kind",
+     "name": "O3kind",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "bus",
+     "label": "O3 source",
+     "name": "O3src",
+     "style": "Menu",
+     "value": "bus"
+    },
+    {
+     "default": "TD_BP_io_router_3",
+     "label": "O3 sender name",
+     "name": "O3name",
+     "style": "Str",
+     "value": "TD_BP_io_router_3"
+    },
+    {
+     "default": false,
+     "label": "O3 SEND (go-ahead)",
+     "name": "O3active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "O3 alpha out",
+     "name": "O3outalpha",
+     "style": "Menu",
+     "value": "premult"
+    },
+    {
+     "default": "fixed8",
+     "label": "O3 format",
+     "name": "O3fmt",
+     "style": "Menu",
+     "value": "fixed8"
+    },
+    {
+     "default": true,
+     "label": "O3 NDI skip frames",
+     "name": "O3skip",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "input",
+     "label": "O3 res",
+     "name": "O3res",
+     "style": "Menu",
+     "value": "input"
+    },
+    {
+     "default": 1080,
+     "label": "O3 custom w",
+     "name": "O3resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "O3 custom h",
+     "name": "O3resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "off",
+     "label": "O4 kind",
+     "name": "O4kind",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "bus",
+     "label": "O4 source",
+     "name": "O4src",
+     "style": "Menu",
+     "value": "bus"
+    },
+    {
+     "default": "TD_BP_io_router_4",
+     "label": "O4 sender name",
+     "name": "O4name",
+     "style": "Str",
+     "value": "TD_BP_io_router_4"
+    },
+    {
+     "default": false,
+     "label": "O4 SEND (go-ahead)",
+     "name": "O4active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "premult",
+     "label": "O4 alpha out",
+     "name": "O4outalpha",
+     "style": "Menu",
+     "value": "premult"
+    },
+    {
+     "default": "fixed8",
+     "label": "O4 format",
+     "name": "O4fmt",
+     "style": "Menu",
+     "value": "fixed8"
+    },
+    {
+     "default": true,
+     "label": "O4 NDI skip frames",
+     "name": "O4skip",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "input",
+     "label": "O4 res",
+     "name": "O4res",
+     "style": "Menu",
+     "value": "input"
+    },
+    {
+     "default": 1080,
+     "label": "O4 custom w",
+     "name": "O4resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "O4 custom h",
+     "name": "O4resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 48
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 10
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 93.959,
+  "cpu_ms": 93.959,
+  "frames": 30,
+  "gpu_ms": 1.161,
+  "ops": 29
+ },
+ "sha256": "b9adf3f70b2c3df2c5412785e470c95d1c3731339bfc22523a094678e4252115",
+ "size": 115278,
+ "source": "/project1/lab/BP_io_router",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 8205,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

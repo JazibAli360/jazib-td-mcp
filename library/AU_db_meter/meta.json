@@ -1,0 +1,479 @@
+{
+ "created": "2026-10-29 00:09:36",
+ "doc": "docs/builds/db_meter.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in1",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "AU_db_meter",
+ "ops": 412,
+ "outputs": [
+  {
+   "height": 1024,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 256
+  },
+  {
+   "name": "out2",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Meter",
+   "pars": [
+    {
+     "default": "peak",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "peak"
+    },
+    {
+     "default": -60.0,
+     "label": "Floor dB",
+     "name": "Floor",
+     "style": "Float",
+     "value": -60.0
+    },
+    {
+     "default": 3.0,
+     "label": "Ceil dB",
+     "name": "Ceil",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 6.0,
+     "label": "Label step dB",
+     "name": "Step",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.0,
+     "label": "Gain dB",
+     "name": "Gain",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Attack s",
+     "name": "Attack",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 24.0,
+     "label": "Release dB/s",
+     "name": "Release",
+     "style": "Float",
+     "value": 24.0
+    },
+    {
+     "default": 1.5,
+     "label": "Peak/clip hold s",
+     "name": "Hold",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.0,
+     "label": "Clip at dB",
+     "name": "Clipdb",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Reset hold",
+     "name": "Holdreset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Input",
+   "pars": [
+    {
+     "default": "input",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "input"
+    },
+    {
+     "default": "auto",
+     "label": "Channels",
+     "name": "Channels",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 0.5,
+     "label": "Test amplitude",
+     "name": "Testamp",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 440.0,
+     "label": "Test Hz",
+     "name": "Testfreq",
+     "style": "Float",
+     "value": 440.0
+    },
+    {
+     "default": "both",
+     "label": "Testchan",
+     "name": "Testchan",
+     "style": "Menu",
+     "value": "both"
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 256,
+     "label": "Width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": 1024,
+     "label": "Height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1024
+    },
+    {
+     "default": "vertical",
+     "label": "Orient",
+     "name": "Orient",
+     "style": "Menu",
+     "value": "vertical"
+    },
+    {
+     "default": 4.0,
+     "label": "Bar gap px",
+     "name": "Gap",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.4,
+     "label": "Scale strip",
+     "name": "Scalew",
+     "style": "Float",
+     "value": 0.4
+    },
+    {
+     "default": true,
+     "label": "Scale",
+     "name": "Showscale",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Peak hold line",
+     "name": "Showpeak",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 2.0,
+     "label": "Peak line px",
+     "name": "Peakpx",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.0,
+     "label": "Font px (0 auto)",
+     "name": "Fontsize",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Transparent bg",
+     "name": "Transparent",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Colours",
+   "pars": [
+    {
+     "default": 0.1,
+     "label": "Low",
+     "name": "Gradlowr",
+     "style": "RGBA",
+     "value": 0.1
+    },
+    {
+     "default": 0.62,
+     "label": "Low",
+     "name": "Gradlowg",
+     "style": "RGBA",
+     "value": 0.62
+    },
+    {
+     "default": 0.22,
+     "label": "Low",
+     "name": "Gradlowb",
+     "style": "RGBA",
+     "value": 0.22
+    },
+    {
+     "default": 0.9,
+     "label": "Mid (-6 dB)",
+     "name": "Gradmidr",
+     "style": "RGBA",
+     "value": 0.9
+    },
+    {
+     "default": 0.78,
+     "label": "Mid (-6 dB)",
+     "name": "Gradmidg",
+     "style": "RGBA",
+     "value": 0.78
+    },
+    {
+     "default": 0.12,
+     "label": "Mid (-6 dB)",
+     "name": "Gradmidb",
+     "style": "RGBA",
+     "value": 0.12
+    },
+    {
+     "default": 0.95,
+     "label": "High (0 dB) / clip",
+     "name": "Gradhighr",
+     "style": "RGBA",
+     "value": 0.95
+    },
+    {
+     "default": 0.18,
+     "label": "High (0 dB) / clip",
+     "name": "Gradhighg",
+     "style": "RGBA",
+     "value": 0.18
+    },
+    {
+     "default": 0.12,
+     "label": "High (0 dB) / clip",
+     "name": "Gradhighb",
+     "style": "RGBA",
+     "value": 0.12
+    },
+    {
+     "default": 0.16,
+     "label": "Track",
+     "name": "Trackr",
+     "style": "RGBA",
+     "value": 0.16
+    },
+    {
+     "default": 0.16,
+     "label": "Track",
+     "name": "Trackg",
+     "style": "RGBA",
+     "value": 0.16
+    },
+    {
+     "default": 0.17,
+     "label": "Track",
+     "name": "Trackb",
+     "style": "RGBA",
+     "value": 0.17
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.92,
+     "label": "Peak line",
+     "name": "Peakcolr",
+     "style": "RGBA",
+     "value": 0.92
+    },
+    {
+     "default": 0.92,
+     "label": "Peak line",
+     "name": "Peakcolg",
+     "style": "RGBA",
+     "value": 0.92
+    },
+    {
+     "default": 0.92,
+     "label": "Peak line",
+     "name": "Peakcolb",
+     "style": "RGBA",
+     "value": 0.92
+    },
+    {
+     "default": 0.8,
+     "label": "Labels",
+     "name": "Labelcolr",
+     "style": "RGBA",
+     "value": 0.8
+    },
+    {
+     "default": 0.8,
+     "label": "Labels",
+     "name": "Labelcolg",
+     "style": "RGBA",
+     "value": 0.8
+    },
+    {
+     "default": 0.8,
+     "label": "Labels",
+     "name": "Labelcolb",
+     "style": "RGBA",
+     "value": 0.8
+    }
+   ]
+  },
+  {
+   "page": "Controls",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Smooth",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.65
+    },
+    {
+     "default": 0.0,
+     "label": "Range",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 33.698,
+  "cpu_ms": 33.698,
+  "frames": 30,
+  "gpu_ms": 0.103,
+  "ops": 5
+ },
+ "sha256": "34fc89af5b006697da6a0edc3f27e3de9119f6db9748f46efd572db8d1b2d59d",
+ "size": 102150,
+ "source": "/project1/lab/AU_db_meter",
+ "summary": "db_meter (`/project1/lab/AU_db_meter`)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 22509,
+  "height": 1024,
+  "ok": true,
+  "top": "out1",
+  "width": 256
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

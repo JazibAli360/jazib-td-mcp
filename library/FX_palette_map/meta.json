@@ -1,0 +1,261 @@
+{
+ "created": "2026-10-29 00:08:24",
+ "doc": "docs/builds/palette_map.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Clipfile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_palette_map",
+ "ops": 281,
+ "outputs": [
+  {
+   "height": 128,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 128
+  }
+ ],
+ "pars": [
+  {
+   "page": "Palette",
+   "pars": [
+    {
+     "default": "pico8",
+     "label": "Palette",
+     "name": "Palette",
+     "style": "Menu",
+     "value": "pico8"
+    },
+    {
+     "default": "oklab",
+     "label": "Colour space",
+     "name": "Colourspace",
+     "style": "Menu",
+     "value": "oklab"
+    },
+    {
+     "default": 1.0,
+     "label": "Blend",
+     "name": "Blend",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Lightness weight",
+     "name": "Lightnessweight",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Preserve luma",
+     "name": "Preserveluma",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "off",
+     "label": "Dither",
+     "name": "Dither",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 1.0,
+     "label": "Dither amount",
+     "name": "Ditheramount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Animate dither",
+     "name": "Ditheranimate",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Copy to table",
+     "name": "Copytotable",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Load file",
+     "name": "Load",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": "",
+     "label": "Palette file (.txt .hex .json .gpl .pal .ase)",
+     "name": "File",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": 0,
+     "label": "Colours (read-only)",
+     "name": "Count",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": "auto",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+     "label": "Clip file",
+     "name": "Clipfile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Strength",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Grit",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.016,
+  "cpu_ms": 0.016,
+  "frames": 30,
+  "gpu_ms": 0.025,
+  "ops": 1
+ },
+ "sha256": "c58b65232bf66e82bbbec7f9a9697fe4962b9c7a3e1ae92e719fc0af9f09d0e1",
+ "size": 100758,
+ "source": "/project1/lab/FX_palette_map",
+ "summary": "palette_map - `/project1/lab/FX_palette_map` (TD 2025.31550, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 216,
+  "height": 128,
+  "ok": true,
+  "top": "out1",
+  "width": 128
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

@@ -1,0 +1,689 @@
+{
+ "created": "2026-10-29 00:09:07",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_collide",
+ "ops": 320,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Collide",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 16384,
+     "label": "Particles",
+     "name": "Count",
+     "style": "Int",
+     "value": 16384
+    },
+    {
+     "default": 1.0,
+     "label": "Speed (sim seconds per second at 60 fps)",
+     "name": "Speed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 2,
+     "label": "Substeps",
+     "name": "Substeps",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": -0.8,
+     "label": "Gravity (units / s2)",
+     "name": "Gravity",
+     "style": "Float",
+     "value": -0.8
+    },
+    {
+     "default": 0.1,
+     "label": "Drag",
+     "name": "Drag",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.2,
+     "label": "Wind (value noise)",
+     "name": "Wind",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 3.0,
+     "label": "Wind frequency",
+     "name": "Windfreq",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.5,
+     "label": "Restitution (bounce)",
+     "name": "Restitution",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.1,
+     "label": "Friction (tangential loss)",
+     "name": "Friction",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Reset",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Test mode (one particle, no wind / drag)",
+     "name": "Testmode",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.4,
+     "label": "Test particle start y",
+     "name": "Testh",
+     "style": "Float",
+     "value": 0.4
+    }
+   ]
+  },
+  {
+   "page": "Emitter",
+   "pars": [
+    {
+     "default": "line",
+     "label": "Emitshape",
+     "name": "Emitshape",
+     "style": "Menu",
+     "value": "line"
+    },
+    {
+     "default": 0.0,
+     "label": "Emitter x",
+     "name": "Emitx",
+     "style": "Float",
+     "value": 0.14
+    },
+    {
+     "default": 0.48,
+     "label": "Emitter y",
+     "name": "Emity",
+     "style": "Float",
+     "value": 0.48
+    },
+    {
+     "default": 0.0,
+     "label": "Emitter z",
+     "name": "Emitz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.25,
+     "label": "Emitter size",
+     "name": "Emitsize",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.0,
+     "label": "Start velocity x",
+     "name": "Emitvx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": -0.1,
+     "label": "Start velocity y",
+     "name": "Emitvy",
+     "style": "Float",
+     "value": -0.1
+    },
+    {
+     "default": 0.0,
+     "label": "Start velocity z",
+     "name": "Emitvz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.05,
+     "label": "Velocity spread",
+     "name": "Spread",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 6.0,
+     "label": "Life s (x 0.5..1.5)",
+     "name": "Life",
+     "style": "Float",
+     "value": 6.0
+    }
+   ]
+  },
+  {
+   "page": "Colliders",
+   "pars": [
+    {
+     "default": true,
+     "label": "Floor on",
+     "name": "Floor",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": -0.45,
+     "label": "Floor y",
+     "name": "Floory",
+     "style": "Float",
+     "value": -0.45
+    },
+    {
+     "default": true,
+     "label": "Sphere 1 on",
+     "name": "Sphere1on",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 1 x",
+     "name": "Sphere1x",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": -0.1,
+     "label": "Sphere 1 y",
+     "name": "Sphere1y",
+     "style": "Float",
+     "value": -0.1
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 1 z",
+     "name": "Sphere1z",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.12,
+     "label": "Sphere 1 radius",
+     "name": "Sphere1r",
+     "style": "Float",
+     "value": 0.12
+    },
+    {
+     "default": true,
+     "label": "Sphere 2 on",
+     "name": "Sphere2on",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.12,
+     "label": "Sphere 2 x",
+     "name": "Sphere2x",
+     "style": "Float",
+     "value": 0.12
+    },
+    {
+     "default": 0.15,
+     "label": "Sphere 2 y",
+     "name": "Sphere2y",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 2 z",
+     "name": "Sphere2z",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.07,
+     "label": "Sphere 2 radius",
+     "name": "Sphere2r",
+     "style": "Float",
+     "value": 0.07
+    },
+    {
+     "default": false,
+     "label": "Sphere 3 on",
+     "name": "Sphere3on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 3 x",
+     "name": "Sphere3x",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 3 y",
+     "name": "Sphere3y",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 3 z",
+     "name": "Sphere3z",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.1,
+     "label": "Sphere 3 radius",
+     "name": "Sphere3r",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": false,
+     "label": "Sphere 4 on",
+     "name": "Sphere4on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 4 x",
+     "name": "Sphere4x",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 4 y",
+     "name": "Sphere4y",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 4 z",
+     "name": "Sphere4z",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.1,
+     "label": "Sphere 4 radius",
+     "name": "Sphere4r",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": true,
+     "label": "Box 1 on",
+     "name": "Box1on",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": -0.12,
+     "label": "Box 1 centre x",
+     "name": "Box1x",
+     "style": "Float",
+     "value": -0.12
+    },
+    {
+     "default": -0.3,
+     "label": "Box 1 centre y",
+     "name": "Box1y",
+     "style": "Float",
+     "value": -0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Box 1 centre z",
+     "name": "Box1z",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.08,
+     "label": "Box 1 half size x",
+     "name": "Box1hx",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 0.03,
+     "label": "Box 1 half size y",
+     "name": "Box1hy",
+     "style": "Float",
+     "value": 0.03
+    },
+    {
+     "default": 0.2,
+     "label": "Box 1 half size z",
+     "name": "Box1hz",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": false,
+     "label": "Box 2 on",
+     "name": "Box2on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Box 2 centre x",
+     "name": "Box2x",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Box 2 centre y",
+     "name": "Box2y",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Box 2 centre z",
+     "name": "Box2z",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.1,
+     "label": "Box 2 half size x",
+     "name": "Box2hx",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.1,
+     "label": "Box 2 half size y",
+     "name": "Box2hy",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.1,
+     "label": "Box 2 half size z",
+     "name": "Box2hz",
+     "style": "Float",
+     "value": 0.1
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 2.0,
+     "label": "Point size px",
+     "name": "Size",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.6,
+     "label": "Brightness",
+     "name": "Bright",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.55,
+     "label": "Hue slow",
+     "name": "Hue1",
+     "style": "Float",
+     "value": 0.55
+    },
+    {
+     "default": 0.95,
+     "label": "Hue fast",
+     "name": "Hue2",
+     "style": "Float",
+     "value": 0.95
+    },
+    {
+     "default": 0.7,
+     "label": "Saturation",
+     "name": "Sat",
+     "style": "Float",
+     "value": 0.7
+    },
+    {
+     "default": 2.0,
+     "label": "Speed for the fast hue (1 / units per s)",
+     "name": "Colorspeed",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 1.0,
+     "label": "Render gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trails (0 = none)",
+     "name": "Persist",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tilt deg (x)",
+     "name": "Tilt",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit deg (y)",
+     "name": "Orbit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.2,
+     "label": "Camera distance",
+     "name": "Dist",
+     "style": "Float",
+     "value": 1.2
+    },
+    {
+     "default": 1.0,
+     "label": "Zoom (1 = 1 unit tall frame at z 0)",
+     "name": "Zoom",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.828,
+  "cpu_ms": 1.828,
+  "frames": 30,
+  "gpu_ms": 1.776,
+  "ops": 9
+ },
+ "sha256": "fdddfd0efb608342ea21ebcdddb5d185f4da2b666387d0d0a669e55b2a1323d1",
+ "size": 92934,
+ "source": "/project1/lab/POP_collide",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 274133,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

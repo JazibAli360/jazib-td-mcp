@@ -1,0 +1,130 @@
+{
+ "created": "2026-10-29 00:08:16",
+ "doc": "docs/builds/fx_film.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_film",
+ "ops": 4181,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "lights",
+     "label": "Chart",
+     "name": "Chart",
+     "style": "Menu",
+     "value": "lights"
+    },
+    {
+     "default": 4.0,
+     "label": "Chart light value",
+     "name": "Chartvalue",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.0,
+     "label": "Chart background",
+     "name": "Chartbg",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.5,
+     "label": "Chart grey",
+     "name": "Chartgrey",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "About",
+   "pars": [
+    {
+     "default": "",
+     "label": "Version",
+     "name": "Version",
+     "style": "Str",
+     "value": "1.0.0"
+    },
+    {
+     "default": "",
+     "label": "Touch build",
+     "name": "Touchbuild",
+     "style": "Str",
+     "value": "2025.31550"
+    },
+    {
+     "default": "",
+     "label": "Saved",
+     "name": "Saved",
+     "style": "Str",
+     "value": "2026-10-26 21:12"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 29.18,
+  "cpu_ms": 29.18,
+  "frames": 30,
+  "gpu_ms": 1.867,
+  "ops": 18
+ },
+ "sha256": "8e21da3ee67293fa10d3b4a8d460b673aa5a488a3b4750304d4affe86f870d47",
+ "size": 1267524,
+ "source": "/project1/lab/FX_film",
+ "summary": "fx_film: FX_film rack + 14 modules (film, lens, camera, dof, gate, colour), live in main, 26-27 Oct 2026",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1448542,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "1.0.0",
+ "was_parked": true
+}

@@ -1,0 +1,401 @@
+{
+ "created": "2026-10-29 00:09:10",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "caps_in",
+   "type": "inCHOP"
+  },
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_fillbody",
+ "ops": 339,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Fillbody",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 16384,
+     "label": "Particles",
+     "name": "Count",
+     "style": "Int",
+     "value": 16384
+    },
+    {
+     "default": 1.0,
+     "label": "Speed",
+     "name": "Speed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 2,
+     "label": "Substeps",
+     "name": "Substeps",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": 1.5,
+     "label": "Wander force",
+     "name": "Wander",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 6.0,
+     "label": "Wander frequency",
+     "name": "Wanderfreq",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 2.0,
+     "label": "Damping",
+     "name": "Damp",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.004,
+     "label": "Keep this far inside the skin",
+     "name": "Margin",
+     "style": "Float",
+     "value": 0.004
+    },
+    {
+     "default": 0.02,
+     "label": "Respawn per second (fraction)",
+     "name": "Respawn",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Reset (spawn inside again)",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Body",
+   "pars": [
+    {
+     "default": "dancer",
+     "label": "Bodysrc",
+     "name": "Bodysrc",
+     "style": "Menu",
+     "value": "dancer"
+    },
+    {
+     "default": 0.5,
+     "label": "Dance speed (0 = frozen pose)",
+     "name": "Dancespeed",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Pose time offset s",
+     "name": "Posetime",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Pose amount (0 = standing)",
+     "name": "Pose",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Body x",
+     "name": "Bodyx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.04,
+     "label": "Body y",
+     "name": "Bodyy",
+     "style": "Float",
+     "value": 0.04
+    },
+    {
+     "default": 0.0,
+     "label": "Body z",
+     "name": "Bodyz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.9,
+     "label": "Body scale",
+     "name": "Bodyscale",
+     "style": "Float",
+     "value": 0.9
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 2.0,
+     "label": "Point size px",
+     "name": "Size",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.6,
+     "label": "Brightness",
+     "name": "Bright",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.55,
+     "label": "Hue slow",
+     "name": "Hue1",
+     "style": "Float",
+     "value": 0.55
+    },
+    {
+     "default": 0.95,
+     "label": "Hue fast",
+     "name": "Hue2",
+     "style": "Float",
+     "value": 0.95
+    },
+    {
+     "default": 0.7,
+     "label": "Saturation",
+     "name": "Sat",
+     "style": "Float",
+     "value": 0.7
+    },
+    {
+     "default": 2.0,
+     "label": "Speed for the fast hue (1 / units per s)",
+     "name": "Colorspeed",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 1.0,
+     "label": "Render gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trails (0 = none)",
+     "name": "Persist",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tilt deg (x)",
+     "name": "Tilt",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit deg (y)",
+     "name": "Orbit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.2,
+     "label": "Camera distance",
+     "name": "Dist",
+     "style": "Float",
+     "value": 1.2
+    },
+    {
+     "default": 1.0,
+     "label": "Zoom (1 = 1 unit tall frame at z 0)",
+     "name": "Zoom",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Pose",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.977,
+  "cpu_ms": 0.977,
+  "frames": 30,
+  "gpu_ms": 2.914,
+  "ops": 8
+ },
+ "sha256": "5768b86218dbe56b20f0ed1417047782c98da4dc38cd0d3e9dc620e31bd7e04d",
+ "size": 104222,
+ "source": "/project1/lab/POP_fillbody",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 300765,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.2",
+ "was_parked": true
+}

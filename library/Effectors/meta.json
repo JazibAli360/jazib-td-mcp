@@ -1,0 +1,394 @@
+{
+ "created": "2026-10-27 03:25:54",
+ "doc": "docs/builds/effectors.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [],
+ "name": "effectors",
+ "ops": 326,
+ "outputs": [],
+ "pars": [
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": "sphere",
+     "label": "Kind to add",
+     "name": "Addkind",
+     "style": "Menu",
+     "value": "path"
+    },
+    {
+     "default": "",
+     "label": "Name (empty = kind + n)",
+     "name": "Addname",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Tags (space separated)",
+     "name": "Addtags",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Add effector",
+     "name": "Add",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Effector (for the pulses below)",
+     "name": "Target",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Remove",
+     "name": "Remove",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Duplicate",
+     "name": "Duplicate",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "New name",
+     "name": "Newname",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Rename",
+     "name": "Rename",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Enable / disable",
+     "name": "Toggle",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "frame",
+     "label": "Update rows",
+     "name": "Track",
+     "style": "Menu",
+     "value": "frame"
+    },
+    {
+     "default": false,
+     "label": "Sync objects to the list",
+     "name": "Sync",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "4 effectors, 4 enabled, 0 lights on, 0 envs on, 0 point texels"
+    },
+    {
+     "default": 0,
+     "label": "List version (auto)",
+     "name": "Listver",
+     "style": "Int",
+     "value": 22
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Lights",
+   "pars": [
+    {
+     "default": "neon_trio",
+     "label": "Palette",
+     "name": "Palsource",
+     "style": "Menu",
+     "value": "neon_trio"
+    },
+    {
+     "default": "#00ff66 #00e5ff #ff00cc",
+     "label": "Custom stops (hex [pos], comma separated)",
+     "name": "Palstops",
+     "style": "Str",
+     "value": "#00ff66 #00e5ff #ff00cc"
+    },
+    {
+     "default": "steps",
+     "label": "Palette mode",
+     "name": "Palmode",
+     "style": "Menu",
+     "value": "steps"
+    },
+    {
+     "default": "oklab",
+     "label": "Blend",
+     "name": "Palinterp",
+     "style": "Menu",
+     "value": "oklab"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette shift (drive me)",
+     "name": "Palshift",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Reverse palette",
+     "name": "Palreverse",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "solid",
+     "label": "Light colour source",
+     "name": "Lightcolsrc",
+     "style": "Menu",
+     "value": "solid"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette position",
+     "name": "Lightpalpos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Palette spread (x attribute)",
+     "name": "Lightpalspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Keep source colour",
+     "name": "Lightkeep",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Grid",
+   "pars": [
+    {
+     "default": false,
+     "label": "Distance field on (cloud effectors)",
+     "name": "Gridon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Grid centre",
+     "name": "Gridcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Grid centre",
+     "name": "Gridcentrey",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Grid centre",
+     "name": "Gridcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Grid size (cube edge, world units)",
+     "name": "Gridsize",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": "32",
+     "label": "Field resolution (voxels per edge)",
+     "name": "Gridres",
+     "style": "Menu",
+     "value": "32"
+    },
+    {
+     "default": 0.5,
+     "label": "Cloud point valid when alpha >",
+     "name": "Gridalpha",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Paint volume on",
+     "name": "Painton",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "64",
+     "label": "Paint resolution",
+     "name": "Paintres",
+     "style": "Menu",
+     "value": "64"
+    },
+    {
+     "default": "#paint",
+     "label": "Paint with (names / #tags)",
+     "name": "Paintselect",
+     "style": "Str",
+     "value": "#paint"
+    },
+    {
+     "default": "#erase",
+     "label": "Erase with (names / #tags)",
+     "name": "Eraseselect",
+     "style": "Str",
+     "value": "#erase"
+    },
+    {
+     "default": 2.0,
+     "label": "Paint rate (full / s at weight 1)",
+     "name": "Paintrate",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.0,
+     "label": "Fade (per s, 0 = stays)",
+     "name": "Paintdecay",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Clear paint",
+     "name": "Paintclear",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "paint/effectors_paint.exr",
+     "label": "Paint file (project folder)",
+     "name": "Paintfile",
+     "style": "Str",
+     "value": "paint/effectors_paint.exr"
+    },
+    {
+     "default": false,
+     "label": "Save paint",
+     "name": "Paintsave",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Load paint",
+     "name": "Paintload",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 19.518,
+  "cpu_ms": 19.518,
+  "frames": 0,
+  "gpu_ms": 0.016,
+  "ops": 3
+ },
+ "sha256": "08c72182f83e15256010aadfe546a35b34411c68ee3bf4a5a7932ae0e355b826",
+ "size": 141078,
+ "source": "/project1/effectors",
+ "summary": "Shared effectors: `/project1/effectors` + adapters (26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.3.0",
+ "was_parked": null
+}

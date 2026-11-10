@@ -1,0 +1,348 @@
+{
+ "created": "2026-10-29 00:09:04",
+ "doc": null,
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_branching",
+ "ops": 312,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Branching",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Play (off = hold)",
+     "name": "Play",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Reset (reseed, clear trail)",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "center",
+     "label": "Seedmode",
+     "name": "Seedmode",
+     "style": "Menu",
+     "value": "center"
+    },
+    {
+     "default": 8,
+     "label": "Seed tips",
+     "name": "Seedcount",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 256,
+     "label": "Max tips",
+     "name": "Maxtips",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": 1.0,
+     "label": "Step px / frame",
+     "name": "Step",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 30.0,
+     "label": "Sensor angle deg",
+     "name": "Sensorangle",
+     "style": "Float",
+     "value": 30.0
+    },
+    {
+     "default": 6.0,
+     "label": "Sensor distance px",
+     "name": "Sensordist",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 20.0,
+     "label": "Turn deg",
+     "name": "Turn",
+     "style": "Float",
+     "value": 20.0
+    },
+    {
+     "default": 10.0,
+     "label": "Wander deg",
+     "name": "Wander",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 2.0,
+     "label": "Die when trail ahead >",
+     "name": "Killthresh",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.02,
+     "label": "Split chance / frame",
+     "name": "Splitrate",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 25.0,
+     "label": "Split angle deg",
+     "name": "Splitangle",
+     "style": "Float",
+     "value": 25.0
+    },
+    {
+     "default": 600,
+     "label": "Max age (frames)",
+     "name": "Maxage",
+     "style": "Int",
+     "value": 600
+    },
+    {
+     "default": 1.0,
+     "label": "Deposit",
+     "name": "Deposit",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.995,
+     "label": "Trail decay / frame",
+     "name": "Decay",
+     "style": "Float",
+     "value": 0.995
+    },
+    {
+     "default": 0.0,
+     "label": "Trail diffuse (wrap 3x3)",
+     "name": "Diffuse",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 540,
+     "label": "Sim width",
+     "name": "Simw",
+     "style": "Int",
+     "value": 540
+    },
+    {
+     "default": 960,
+     "label": "Sim height",
+     "name": "Simh",
+     "style": "Int",
+     "value": 960
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": -10,
+     "label": "Reset frame (internal, set by Reset)",
+     "name": "Resetat",
+     "style": "Int",
+     "value": 87303
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 0.08,
+     "label": "Hue (young)",
+     "name": "Huea",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 0.6,
+     "label": "Hue (old)",
+     "name": "Hueb",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.8,
+     "label": "Saturation",
+     "name": "Sat",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": 1.0,
+     "label": "Gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Growth",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.342,
+  "cpu_ms": 0.342,
+  "frames": 30,
+  "gpu_ms": 1.323,
+  "ops": 8
+ },
+ "sha256": "79a1b090a4c416bfde82eee0c4eae95faad6083fe7bbe28b24f40db2460ce339",
+ "size": 89142,
+ "source": "/project1/lab/POP_branching",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 32545,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

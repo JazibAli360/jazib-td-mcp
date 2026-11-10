@@ -1,0 +1,991 @@
+{
+ "created": "2026-10-29 00:08:40",
+ "doc": "docs/builds/gen_clone.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "tex_test",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "GEN_clone",
+ "ops": 345,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Clone",
+   "pars": [
+    {
+     "default": "grid",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "grid"
+    },
+    {
+     "default": 12,
+     "label": "Count (radial / linear / path / random)",
+     "name": "Count",
+     "style": "Int",
+     "value": 12
+    },
+    {
+     "default": 5,
+     "label": "Grid count x",
+     "name": "Countx",
+     "style": "Int",
+     "value": 5
+    },
+    {
+     "default": 9,
+     "label": "Grid count y",
+     "name": "County",
+     "style": "Int",
+     "value": 9
+    },
+    {
+     "default": 1,
+     "label": "Grid count z",
+     "name": "Countz",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.42,
+     "label": "Grid spacing",
+     "name": "Spacex",
+     "style": "XYZW",
+     "value": 0.42
+    },
+    {
+     "default": 0.42,
+     "label": "Grid spacing",
+     "name": "Spacey",
+     "style": "XYZW",
+     "value": 0.42
+    },
+    {
+     "default": 0.42,
+     "label": "Grid spacing",
+     "name": "Spacez",
+     "style": "XYZW",
+     "value": 0.42
+    },
+    {
+     "default": 1.2,
+     "label": "Radial radius",
+     "name": "Radius",
+     "style": "Float",
+     "value": 1.2
+    },
+    {
+     "default": 0.0,
+     "label": "Arc start deg",
+     "name": "Arcstart",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 360.0,
+     "label": "Arc end deg (360 = full ring)",
+     "name": "Arcend",
+     "style": "Float",
+     "value": 360.0
+    },
+    {
+     "default": "xy",
+     "label": "Plane",
+     "name": "Plane",
+     "style": "Menu",
+     "value": "xy"
+    },
+    {
+     "default": 0.0,
+     "label": "Linear step offset",
+     "name": "Linx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.25,
+     "label": "Linear step offset",
+     "name": "Liny",
+     "style": "XYZW",
+     "value": 0.25
+    },
+    {
+     "default": 0.0,
+     "label": "Linear step offset",
+     "name": "Linz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Linear: centred on the origin",
+     "name": "Centre",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "circle",
+     "label": "Path shape",
+     "name": "Pathshape",
+     "style": "Menu",
+     "value": "circle"
+    },
+    {
+     "default": 1.2,
+     "label": "Path size (radius / half length)",
+     "name": "Pathsize",
+     "style": "Float",
+     "value": 1.2
+    },
+    {
+     "default": 3.0,
+     "label": "Spiral / helix turns",
+     "name": "Pathturns",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.0,
+     "label": "Path start",
+     "name": "Pathstart",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Path end",
+     "name": "Pathend",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Path travel (per s)",
+     "name": "Pathspeed",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 3.0,
+     "label": "Helix height",
+     "name": "Helixheight",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": "sop",
+     "label": "Points from",
+     "name": "Pointsource",
+     "style": "Menu",
+     "value": "sop"
+    },
+    {
+     "default": "",
+     "label": "Points SOP path",
+     "name": "Pointsop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Points CHOP path",
+     "name": "Pointchop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Points TOP path",
+     "name": "Pointtop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 1,
+     "label": "Every Nth point",
+     "name": "Pointstep",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 256,
+     "label": "Path resample (points path)",
+     "name": "Pathsamples",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": 2.4,
+     "label": "Random box size",
+     "name": "Boxx",
+     "style": "XYZW",
+     "value": 2.4
+    },
+    {
+     "default": 4.2,
+     "label": "Random box size",
+     "name": "Boxy",
+     "style": "XYZW",
+     "value": 4.2
+    },
+    {
+     "default": 1.0,
+     "label": "Random box size",
+     "name": "Boxz",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Align to layout (outward / tangent)",
+     "name": "Align",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "y",
+     "label": "Axis that aligns",
+     "name": "Alignaxis",
+     "style": "Menu",
+     "value": "y"
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "card",
+     "label": "Clone shape",
+     "name": "Source",
+     "style": "Menu",
+     "value": "card"
+    },
+    {
+     "default": "",
+     "label": "SOP path (Source = sop)",
+     "name": "Sourcesop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "auto",
+     "label": "Card picture",
+     "name": "Texsource",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "",
+     "label": "Card TOP path",
+     "name": "Textop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 0.35,
+     "label": "Size (uniform)",
+     "name": "Size",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 1.0,
+     "label": "Scale per axis",
+     "name": "Scalex",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Scale per axis",
+     "name": "Scaley",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Scale per axis",
+     "name": "Scalez",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Colourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Colourg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Colourb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Alpha",
+     "name": "Alpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "lambert",
+     "label": "Shading",
+     "name": "Shading",
+     "style": "Menu",
+     "value": "lambert"
+    },
+    {
+     "default": 0.35,
+     "label": "Ambient (headlight)",
+     "name": "Ambient",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 0.0,
+     "label": "Discard alpha below",
+     "name": "Alphacut",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "over",
+     "label": "Blend",
+     "name": "Blend",
+     "style": "Menu",
+     "value": "over"
+    },
+    {
+     "default": "off",
+     "label": "Map TOP",
+     "name": "Mapmode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "",
+     "label": "Map TOP path",
+     "name": "Maptop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 1.0,
+     "label": "Map amount",
+     "name": "Mapamount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 2.4,
+     "label": "Map size (world units across)",
+     "name": "Mapsize",
+     "style": "Float",
+     "value": 2.4
+    }
+   ]
+  },
+  {
+   "page": "Modifiers",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Step rotate deg per clone",
+     "name": "Steprx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Step rotate deg per clone",
+     "name": "Stepry",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Step rotate deg per clone",
+     "name": "Steprz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Step scale per clone",
+     "name": "Stepscale",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Step hue (turns per clone)",
+     "name": "Stephue",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random position",
+     "name": "Randpx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random position",
+     "name": "Randpy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random position",
+     "name": "Randpz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random rotation deg",
+     "name": "Randrx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random rotation deg",
+     "name": "Randry",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random rotation deg",
+     "name": "Randrz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random scale",
+     "name": "Randscale",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Random hue (turns)",
+     "name": "Randhue",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Noise position",
+     "name": "Noisepos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Noise rotation deg",
+     "name": "Noiserot",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Noise scale",
+     "name": "Noisescale",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Noise frequency (per unit)",
+     "name": "Noisefreq",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Noise speed",
+     "name": "Noisespeed",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Time offset (frames per step)",
+     "name": "Timeoffset",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "index",
+     "label": "Time offset by",
+     "name": "Timemode",
+     "style": "Menu",
+     "value": "index"
+    },
+    {
+     "default": 30,
+     "label": "Card frame ring (frames)",
+     "name": "Timedepth",
+     "style": "Int",
+     "value": 30
+    },
+    {
+     "default": "newestlast",
+     "label": "Ring slice order (LIVE CHECK C9)",
+     "name": "Ringorder",
+     "style": "Menu",
+     "value": "newestlast"
+    }
+   ]
+  },
+  {
+   "page": "Render",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 6.0,
+     "label": "Camera distance",
+     "name": "Camdist",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 45.0,
+     "label": "Vertical FOV deg",
+     "name": "Fov",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 0.0,
+     "label": "Camera tilt deg",
+     "name": "Camrx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Camera orbit deg",
+     "name": "Camry",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit speed deg/s",
+     "name": "Camspin",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Orthographic",
+     "name": "Ortho",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 3.0,
+     "label": "Ortho width",
+     "name": "Orthowidth",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Background alpha (0 = transparent out)",
+     "name": "Bgalpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Antialias (4x)",
+     "name": "Antialias",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Effgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "max",
+     "label": "Combine",
+     "name": "Effcombine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Radius scale",
+     "name": "Effradscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge",
+     "name": "Effragged",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged freq",
+     "name": "Effraggedfreq",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": false,
+     "label": "Own falloff (ignore per-effector)",
+     "name": "Effoverride",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Own radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Own exponent",
+     "name": "Effexp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "smooth",
+     "label": "Own shape",
+     "name": "Effshape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 0.0,
+     "label": "Offset x weight",
+     "name": "Effoffx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset x weight",
+     "name": "Effoffy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset x weight",
+     "name": "Effoffz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Push (away from the effector)",
+     "name": "Effpush",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rotate deg x weight",
+     "name": "Effrotx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rotate deg x weight",
+     "name": "Effroty",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rotate deg x weight",
+     "name": "Effrotz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Scale (x 1 + s w; -1 = vanish)",
+     "name": "Effscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Tint colour",
+     "name": "Effcolourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.3,
+     "label": "Tint colour",
+     "name": "Effcolourg",
+     "style": "RGBA",
+     "value": 0.3
+    },
+    {
+     "default": 0.1,
+     "label": "Tint colour",
+     "name": "Effcolourb",
+     "style": "RGBA",
+     "value": 0.1
+    },
+    {
+     "default": 0.0,
+     "label": "Tint x weight",
+     "name": "Effcolourmix",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Time offset frames x weight",
+     "name": "Efftime",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Hide at weight (0 = off)",
+     "name": "Effhide",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.45
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.17
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 132.709,
+  "cpu_ms": 132.709,
+  "frames": 30,
+  "gpu_ms": 1.46,
+  "ops": 8
+ },
+ "sha256": "29de462adcd979d7fc7270c8aca5d9ddefee2211eff08e9af50969d1021e672a",
+ "size": 128598,
+ "source": "/project1/lab/GEN_clone",
+ "summary": "gen_clone: GEN_clone, the G-CLONE cloner COMP (live in main, C1-C12 verified, 26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 4691872,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

@@ -1,0 +1,994 @@
+{
+ "created": "2026-10-29 00:07:55",
+ "doc": "docs/builds/pointcloud.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Filea",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": false,
+ "inputs": [],
+ "name": "BL_cloud_morph",
+ "ops": 319,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out_info",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Source A",
+   "pars": [
+    {
+     "default": "file",
+     "label": "Source A",
+     "name": "Sourcea",
+     "style": "Menu",
+     "value": "file"
+    },
+    {
+     "default": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/banana.ply",
+     "label": "File A",
+     "name": "Filea",
+     "style": "File",
+     "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz"
+    },
+    {
+     "default": "sphere",
+     "label": "Generator A",
+     "name": "Gena",
+     "style": "Menu",
+     "value": "sphere"
+    },
+    {
+     "default": "",
+     "label": "Depth image file A",
+     "name": "Depthfilea",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Colour image file A",
+     "name": "Colourfilea",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Depth TOP A (live)",
+     "name": "Deptha",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "Colour TOP A (live)",
+     "name": "Colora",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": "y",
+     "label": "Up axis A (files)",
+     "name": "Upa",
+     "style": "Menu",
+     "value": "y"
+    },
+    {
+     "default": 1.0,
+     "label": "Scale A",
+     "name": "Scalea",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset A",
+     "name": "Offsetax",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset A",
+     "name": "Offsetay",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset A",
+     "name": "Offsetaz",
+     "style": "XYZW",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Source B",
+   "pars": [
+    {
+     "default": "gen",
+     "label": "Source B",
+     "name": "Sourceb",
+     "style": "Menu",
+     "value": "gen"
+    },
+    {
+     "default": "",
+     "label": "File B",
+     "name": "Fileb",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "sphere",
+     "label": "Generator B",
+     "name": "Genb",
+     "style": "Menu",
+     "value": "sphere"
+    },
+    {
+     "default": "",
+     "label": "Depth image file B",
+     "name": "Depthfileb",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Colour image file B",
+     "name": "Colourfileb",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Depth TOP B (live)",
+     "name": "Depthb",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "Colour TOP B (live)",
+     "name": "Colorb",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": "y",
+     "label": "Up axis B (files)",
+     "name": "Upb",
+     "style": "Menu",
+     "value": "y"
+    },
+    {
+     "default": 1.0,
+     "label": "Scale B",
+     "name": "Scaleb",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset B",
+     "name": "Offsetbx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset B",
+     "name": "Offsetby",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset B",
+     "name": "Offsetbz",
+     "style": "XYZW",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Match",
+   "pars": [
+    {
+     "default": 0,
+     "label": "Count (0 = auto)",
+     "name": "Count",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "kd",
+     "label": "Match",
+     "name": "Match",
+     "style": "Menu",
+     "value": "kd"
+    },
+    {
+     "default": 8,
+     "label": "Sliced OT rounds",
+     "name": "Slices",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "radial",
+     "label": "Stagger order",
+     "name": "Staggermode",
+     "style": "Menu",
+     "value": "radial"
+    },
+    {
+     "default": "even",
+     "label": "Resample",
+     "name": "Resample",
+     "style": "Menu",
+     "value": "even"
+    },
+    {
+     "default": 100.0,
+     "label": "Keep percentile",
+     "name": "Outlier",
+     "style": "Float",
+     "value": 100.0
+    },
+    {
+     "default": true,
+     "label": "Fit to unit radius",
+     "name": "Fit",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Reload",
+     "name": "Reload",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "A spz v2 228287 sh3 | B gen sphere 228287 | N 228287 | travel 0.744 | 774 ms"
+    }
+   ]
+  },
+  {
+   "page": "Depth",
+   "pars": [
+    {
+     "default": "inverse",
+     "label": "Depth kind",
+     "name": "Depthkind",
+     "style": "Menu",
+     "value": "inverse"
+    },
+    {
+     "default": 60.0,
+     "label": "Depth camera FOV (vert deg)",
+     "name": "Dfov",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 1.0,
+     "label": "Near",
+     "name": "Znear",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 10.0,
+     "label": "Far",
+     "name": "Zfar",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 0.0,
+     "label": "Depth lo (raw)",
+     "name": "Depthlo",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Depth hi (raw)",
+     "name": "Depthhi",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Auto lo/hi (files: 2-98 %)",
+     "name": "Depthauto",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 4,
+     "label": "Depth file pixel step",
+     "name": "Depthstep",
+     "style": "Int",
+     "value": 4
+    }
+   ]
+  },
+  {
+   "page": "Morph",
+   "pars": [
+    {
+     "default": "manual",
+     "label": "Morph mode",
+     "name": "Morphmode",
+     "style": "Menu",
+     "value": "manual"
+    },
+    {
+     "default": 0.0,
+     "label": "Morph A -> B",
+     "name": "Morph",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "inout",
+     "label": "Ease",
+     "name": "Ease",
+     "style": "Menu",
+     "value": "inout"
+    },
+    {
+     "default": 0.5,
+     "label": "Stagger",
+     "name": "Stagger",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.3,
+     "label": "Arc (noise path)",
+     "name": "Arc",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1.0,
+     "label": "Colour follows",
+     "name": "Colourmix",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "project",
+     "label": "Tempo",
+     "name": "Tempo",
+     "style": "Menu",
+     "value": "project"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": 8.0,
+     "label": "Beats per swap",
+     "name": "Beatsperswap",
+     "style": "Float",
+     "value": 8.0
+    },
+    {
+     "default": 2.0,
+     "label": "Morph beats",
+     "name": "Morphbeats",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.1,
+     "label": "LFO Hz",
+     "name": "Rate",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": "",
+     "label": "Audio CHOP",
+     "name": "Audiochop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "low",
+     "label": "Audio channel",
+     "name": "Audiochan",
+     "style": "Str",
+     "value": "low"
+    },
+    {
+     "default": 1.0,
+     "label": "Audio gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.05,
+     "label": "Attack s",
+     "name": "Attack",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.3,
+     "label": "Release s",
+     "name": "Release",
+     "style": "Float",
+     "value": 0.3
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "disc",
+     "label": "Shape",
+     "name": "Shape",
+     "style": "Menu",
+     "value": "disc"
+    },
+    {
+     "default": "add",
+     "label": "Blend",
+     "name": "Blend",
+     "style": "Menu",
+     "value": "add"
+    },
+    {
+     "default": 2.0,
+     "label": "Size px",
+     "name": "Size",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Size by depth",
+     "name": "Sizebydepth",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Opacity",
+     "name": "Opacity",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Brightness",
+     "name": "Brightness",
+     "style": "Float",
+     "value": 1.3
+    },
+    {
+     "default": 1.0,
+     "label": "Tint",
+     "name": "Tintr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Tint",
+     "name": "Tintg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Tint",
+     "name": "Tintb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tint amount",
+     "name": "Tintamount",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Drift",
+     "name": "Noiseamp",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 2.0,
+     "label": "Noise freq",
+     "name": "Noisefreq",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.3,
+     "label": "Noise speed",
+     "name": "Noisespeed",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "DOF px per unit",
+     "name": "Dof",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 3.0,
+     "label": "Focus distance",
+     "name": "Focusdist",
+     "style": "Float",
+     "value": 1.4
+    },
+    {
+     "default": 0.0,
+     "label": "Streak (path fraction)",
+     "name": "Streak",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Camera",
+   "pars": [
+    {
+     "default": "orbit",
+     "label": "Camera",
+     "name": "Cammode",
+     "style": "Menu",
+     "value": "orbit"
+    },
+    {
+     "default": "",
+     "label": "External camera",
+     "name": "Camcomp",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": 0.0,
+     "label": "Azimuth",
+     "name": "Orbitaz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 10.0,
+     "label": "Elevation",
+     "name": "Orbitel",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 3.0,
+     "label": "Distance",
+     "name": "Orbitdist",
+     "style": "Float",
+     "value": 4.8086
+    },
+    {
+     "default": 0.0,
+     "label": "Target",
+     "name": "Targetx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Target",
+     "name": "Targety",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Target",
+     "name": "Targetz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 45.0,
+     "label": "FOV (vert deg)",
+     "name": "Fov",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 6.0,
+     "label": "Orbit deg/s",
+     "name": "Autorbit",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": false,
+     "label": "Frame both clouds",
+     "name": "Frame",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reset look",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Resolution",
+     "name": "Resolution1",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Resolution",
+     "name": "Resolution2",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgcolorr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgcolorg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgcolorb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgcolora",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Tone map (additive)",
+     "name": "Tonemap",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Output alpha",
+     "name": "Outputalpha",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Premultiplied out",
+     "name": "Premult",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "chop",
+     "label": "Instance data",
+     "name": "Datapath",
+     "style": "Menu",
+     "value": "chop"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Motion",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Spread",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.27
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Effgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "max",
+     "label": "Combine",
+     "name": "Effcombine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Radius scale",
+     "name": "Effradscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge",
+     "name": "Effragged",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged freq",
+     "name": "Effraggedfreq",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": false,
+     "label": "Own falloff (ignore per-effector)",
+     "name": "Effoverride",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Own radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Own exponent",
+     "name": "Effexp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "smooth",
+     "label": "Own shape",
+     "name": "Effshape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 0.3,
+     "label": "Push (units)",
+     "name": "Effpush",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Dissolve (+ near / - reveal near)",
+     "name": "Effdissolve",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Scale near (x 1 + gain w)",
+     "name": "Effgrow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Dust (per point thresholds)",
+     "name": "Effdust",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "outward",
+     "label": "Push direction",
+     "name": "Effdir",
+     "style": "Menu",
+     "value": "outward"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.075,
+  "cpu_ms": 1.075,
+  "frames": 30,
+  "gpu_ms": 3.018,
+  "ops": 6
+ },
+ "sha256": "76848505f7de9fbab0496ed3ccef669f26eb613ab28ef0341d28ed875ed86f7e",
+ "size": 8874208,
+ "source": "/project1/lab/BL_cloud_morph",
+ "summary": "pointcloud: BL_cloud_morph point-cloud viewer + A/B morph (live v1 in main, 26 Oct 2026, TD 2025.31550, T-89)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 484189,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

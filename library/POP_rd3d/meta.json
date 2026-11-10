@@ -1,0 +1,342 @@
+{
+ "created": "2026-10-29 00:09:16",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_rd3d",
+ "ops": 309,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 256,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 256
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rd3d",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "coral",
+     "label": "Preset",
+     "name": "Preset",
+     "style": "Menu",
+     "value": "coral"
+    },
+    {
+     "default": 0.0545,
+     "label": "Custom feed",
+     "name": "Customf",
+     "style": "Float",
+     "value": 0.0545
+    },
+    {
+     "default": 0.062,
+     "label": "Custom kill",
+     "name": "Customk",
+     "style": "Float",
+     "value": 0.062
+    },
+    {
+     "default": true,
+     "label": "Play",
+     "name": "Play",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "4",
+     "label": "Steps",
+     "name": "Steps",
+     "style": "Menu",
+     "value": "4"
+    },
+    {
+     "default": -1,
+     "label": "Stop after N steps (-1 = run)",
+     "name": "Stopat",
+     "style": "Int",
+     "value": -1
+    },
+    {
+     "default": false,
+     "label": "Reseed",
+     "name": "Reseed",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.35,
+     "label": "Seed spot density",
+     "name": "Density",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 0.3,
+     "label": "Seed spot radius (cells)",
+     "name": "Spotsize",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 256,
+     "label": "Sim resolution (square, wraps)",
+     "name": "Simres",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": -100.0,
+     "label": "internal: frame of the last Reseed",
+     "name": "Resetat",
+     "style": "Float",
+     "value": 256433.0
+    }
+   ]
+  },
+  {
+   "page": "Surface",
+   "pars": [
+    {
+     "default": "torus",
+     "label": "Shape",
+     "name": "Shape",
+     "style": "Menu",
+     "value": "torus"
+    },
+    {
+     "default": 0.15,
+     "label": "Height x V (along the normal)",
+     "name": "Height",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 256,
+     "label": "Mesh columns (u)",
+     "name": "Cols",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": 128,
+     "label": "Mesh rows (v)",
+     "name": "Rows",
+     "style": "Int",
+     "value": 128
+    },
+    {
+     "default": 10.0,
+     "label": "Spin deg / s (y)",
+     "name": "Spin",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 60.0,
+     "label": "Tilt deg (x)",
+     "name": "Tilt",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 5.2,
+     "label": "Camera distance (5.2 fits the torus in 9:16)",
+     "name": "Dist",
+     "style": "Float",
+     "value": 5.2
+    },
+    {
+     "default": 1.0,
+     "label": "Zoom",
+     "name": "Zoom",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "bio",
+     "label": "Palette",
+     "name": "Palette",
+     "style": "Menu",
+     "value": "bio"
+    },
+    {
+     "default": 1.0,
+     "label": "Lambert amount",
+     "name": "Light",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Rim light",
+     "name": "Rim",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Relief",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Turn",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 37.808,
+  "cpu_ms": 37.808,
+  "frames": 30,
+  "gpu_ms": 1.36,
+  "ops": 8
+ },
+ "sha256": "4312f9e18baa0faa037a6263aa5eb8518d0b5173d3bc0a64c837e82b489effd2",
+ "size": 89006,
+ "source": "/project1/lab/POP_rd3d",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 878255,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

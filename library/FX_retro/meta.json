@@ -1,0 +1,102 @@
+{
+ "created": "2026-10-29 00:08:26",
+ "doc": "docs/builds/fx_retro.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_retro",
+ "ops": 3404,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    }
+   ]
+  },
+  {
+   "page": "About",
+   "pars": [
+    {
+     "default": "",
+     "label": "Version",
+     "name": "Version",
+     "style": "Str",
+     "value": "0.4.0"
+    },
+    {
+     "default": "",
+     "label": "Touch build",
+     "name": "Touchbuild",
+     "style": "Str",
+     "value": "2025.31550"
+    },
+    {
+     "default": "",
+     "label": "Saved",
+     "name": "Saved",
+     "style": "Str",
+     "value": "2026-10-26 21:55"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 28.321,
+  "cpu_ms": 28.321,
+  "frames": 30,
+  "gpu_ms": 10.295,
+  "ops": 16
+ },
+ "sha256": "653107653798e43bca636981e43696a32d8a89fc20d0ea91c2b217aa2ca568bb",
+ "size": 1136116,
+ "source": "/project1/lab/FX_retro",
+ "summary": "fx_retro: FX_retro rack + 5 modules (palette, dither, glyph, teletext, smalldisplay), live in main, 26 Oct 2026",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1448542,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.4.0",
+ "was_parked": true
+}

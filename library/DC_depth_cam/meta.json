@@ -1,0 +1,441 @@
+{
+ "created": "2026-10-29 00:08:08",
+ "doc": "docs/builds/depth_cam.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Clipfile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Helper",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Model",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/assets/DepthAnythingV2SmallF16.mlmodelc",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/assets/DepthAnythingV2SmallF16.mlmodelc",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in_video",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "DC_depth_cam",
+ "ops": 307,
+ "outputs": [
+  {
+   "height": 2,
+   "name": "out_depth",
+   "type": "outTOP",
+   "width": 2
+  },
+  {
+   "name": "out_info",
+   "type": "outDAT"
+  },
+  {
+   "height": 1080,
+   "name": "out_video",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Depth",
+   "pars": [
+    {
+     "default": false,
+     "label": "Active (runs the helper)",
+     "name": "Active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "depth",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "depth"
+    },
+    {
+     "default": 1.0,
+     "label": "Mix",
+     "name": "Mix",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Smoothing",
+     "name": "Smooth",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Hold s (then pass-through)",
+     "name": "Hold",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Invert depth",
+     "name": "Invert",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Mirror source",
+     "name": "Mirror",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Fog",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Fog amount",
+     "name": "Fogamount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.3,
+     "label": "Fog start (far)",
+     "name": "Fogstart",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.9,
+     "label": "Fog end (far)",
+     "name": "Fogend",
+     "style": "Float",
+     "value": 0.9
+    },
+    {
+     "default": 0.06,
+     "label": "Fog colour",
+     "name": "Fogcolourr",
+     "style": "RGBA",
+     "value": 0.06
+    },
+    {
+     "default": 0.08,
+     "label": "Fog colour",
+     "name": "Fogcolourg",
+     "style": "RGBA",
+     "value": 0.08
+    },
+    {
+     "default": 0.14,
+     "label": "Fog colour",
+     "name": "Fogcolourb",
+     "style": "RGBA",
+     "value": 0.14
+    }
+   ]
+  },
+  {
+   "page": "Slice",
+   "pars": [
+    {
+     "default": 0.8,
+     "label": "Slice centre (near)",
+     "name": "Slicecenter",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": 0.4,
+     "label": "Slice width",
+     "name": "Slicewidth",
+     "style": "Float",
+     "value": 0.4
+    },
+    {
+     "default": 0.05,
+     "label": "Slice soft edge",
+     "name": "Slicesoft",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.0,
+     "label": "Sweep Hz (0 = still)",
+     "name": "Slicespeed",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Outside level",
+     "name": "Sliceoutside",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Outline",
+   "pars": [
+    {
+     "default": 0.03,
+     "label": "Edge threshold",
+     "name": "Linethresh",
+     "style": "Float",
+     "value": 0.03
+    },
+    {
+     "default": 2.0,
+     "label": "Line width px",
+     "name": "Linewidth",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": false,
+     "label": "Lines only",
+     "name": "Lineonly",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Line colour",
+     "name": "Linecolourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Line colour",
+     "name": "Linecolourg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Line colour",
+     "name": "Linecolourb",
+     "style": "RGBA",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": "clip",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "clip"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+     "label": "Clip file",
+     "name": "Clipfile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge",
+     "label": "Vision helper binary",
+     "name": "Helper",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/assets/DepthAnythingV2SmallF16.mlmodelc",
+     "label": "Depth model (.mlmodelc)",
+     "name": "Model",
+     "style": "Folder",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/assets/DepthAnythingV2SmallF16.mlmodelc"
+    },
+    {
+     "default": false,
+     "label": "Fake depth (test without helper)",
+     "name": "Fakedepth",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "off"
+    },
+    {
+     "default": 0.0,
+     "label": "Round trip median (ms)",
+     "name": "Latency",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 0.0,
+     "label": "Depth maps per s",
+     "name": "Rate",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0,
+     "label": "Have depth",
+     "name": "Havedepth",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Fog depth",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.55
+    },
+    {
+     "default": 0.0,
+     "label": "Slice",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Lines",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.015,
+  "cpu_ms": 0.015,
+  "frames": 30,
+  "gpu_ms": 0.033,
+  "ops": 1
+ },
+ "sha256": "52df9ee976adaef5d459546a758ea17633b0d4dcbb72e243e5d0fe9b767a17b4",
+ "size": 107622,
+ "source": "/project1/lab/DC_depth_cam",
+ "summary": "depth_cam - `/project1/lab/DC_depth_cam` (live-verified v1 in main, 26 Oct 2026, TD 2025.31550; T-92)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 141,
+  "height": 2,
+  "ok": true,
+  "top": "out_depth",
+  "width": 2
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

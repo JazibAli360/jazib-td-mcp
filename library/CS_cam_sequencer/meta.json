@@ -1,0 +1,566 @@
+{
+ "created": "2026-10-29 00:09:33",
+ "doc": "docs/builds/cs_cam_sequencer.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in1",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "CS_cam_sequencer",
+ "ops": 197,
+ "outputs": [
+  {
+   "name": "out1",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Seq",
+   "pars": [
+    {
+     "default": false,
+     "label": "Append",
+     "name": "Append",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Replace",
+     "name": "Replace",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Insert",
+     "name": "Insert",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Remove",
+     "name": "Remove",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Init",
+     "name": "Init",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Ease Override",
+     "name": "Override",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "inOutSine",
+     "label": "Easing",
+     "name": "Easing",
+     "style": "Menu",
+     "value": "inOutSine"
+    },
+    {
+     "default": false,
+     "label": "Spline Interpolation",
+     "name": "Splineinterp",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Select",
+     "name": "Select",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0,
+     "label": "Length",
+     "name": "Length",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": true,
+     "label": "Bind",
+     "name": "Bind",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Presets",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open Cam Presets",
+     "name": "Opencampresets",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Open Lookat Presets",
+     "name": "Openlookatpresets",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "About",
+   "pars": [
+    {
+     "default": "A Camera COMP that stores camera positions as presets and eases between them. Drop it in, set your Render TOP Camera to it, activate its viewer and navigate, then Init / Append. Set Xform > Look At to a Null to sequence its transform too. Drive Select (fraction = blend). Bind off = edit freely.",
+     "label": "About",
+     "name": "Help",
+     "style": "Str",
+     "value": "A Camera COMP that stores camera positions as presets and eases between them. Drop it in, set your Render TOP Camera to it, activate its viewer and navigate, then Init / Append. Set Xform > Look At to a Null to sequence its transform too. Drive Select (fraction = blend). Bind off = edit freely."
+    },
+    {
+     "default": "2.0.0",
+     "label": "Version",
+     "name": "Version",
+     "style": "Str",
+     "value": "2.0.0"
+    },
+    {
+     "default": "jazib-td-mcp docs/builds/cs_cam_sequencer.md",
+     "label": "Docs",
+     "name": "Docs",
+     "style": "Str",
+     "value": "jazib-td-mcp docs/builds/cs_cam_sequencer.md"
+    },
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "Bind on: the sequencer owns the camera pars"
+    }
+   ]
+  },
+  {
+   "page": "Play",
+   "pars": [
+    {
+     "default": "manual",
+     "label": "Playmode",
+     "name": "Playmode",
+     "style": "Menu",
+     "value": "manual"
+    },
+    {
+     "default": "loop",
+     "label": "Loopmode",
+     "name": "Loopmode",
+     "style": "Menu",
+     "value": "loop"
+    },
+    {
+     "default": 4.0,
+     "label": "Quantise cuts (beats)",
+     "name": "Quant",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 8.0,
+     "label": "Hold (beats)",
+     "name": "Defaulthold",
+     "style": "Float",
+     "value": 8.0
+    },
+    {
+     "default": 2.0,
+     "label": "Transition (beats)",
+     "name": "Tdur",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": "ease",
+     "label": "Transition",
+     "name": "Trans",
+     "style": "Menu",
+     "value": "ease"
+    },
+    {
+     "default": 4.0,
+     "label": "Random min hold",
+     "name": "Minhold",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 12.0,
+     "label": "Random max hold",
+     "name": "Maxhold",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 1,
+     "label": "Random seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Next",
+     "name": "Trignext",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Previous",
+     "name": "Trigprev",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Random",
+     "name": "Trigrandom",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Cut to selected",
+     "name": "Trigcut",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Go to preset (any to any)",
+     "name": "Gotopreset",
+     "style": "StrMenu",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Go (again)",
+     "name": "Go",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "arc",
+     "label": "Go-to blend",
+     "name": "Gotoblend",
+     "style": "Menu",
+     "value": "arc"
+    },
+    {
+     "default": 1.0,
+     "label": "Go-to time (beats)",
+     "name": "Gototime",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "inOutSine",
+     "label": "Go-to ease",
+     "name": "Gotoease",
+     "style": "Menu",
+     "value": "inOutSine"
+    },
+    {
+     "default": 1.0,
+     "label": "Spline amount",
+     "name": "Splinetension",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Shortest rotation",
+     "name": "Shortrot",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Select lag (s)",
+     "name": "Lag",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "",
+     "label": "Custom ease CHOP",
+     "name": "Customease",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": false,
+     "label": "Reset playhead",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Clock",
+   "pars": [
+    {
+     "default": "internal",
+     "label": "Clockmode",
+     "name": "Clockmode",
+     "style": "Menu",
+     "value": "internal"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM (internal / fallback)",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": 0.0,
+     "label": "Seek (beats, manual clock)",
+     "name": "Seek",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4,
+     "label": "Beats per bar",
+     "name": "Beatsperbar",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": "",
+     "label": "AU_features COMP (optional)",
+     "name": "Auop",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "TL_timeline COMP (optional)",
+     "name": "Tlop",
+     "style": "COMP",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Shake",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Shakeprofile",
+     "name": "Shakeprofile",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 1.0,
+     "label": "Shake amount",
+     "name": "Shakeamount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Position scale",
+     "name": "Shakepos",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Rotation scale",
+     "name": "Shakerot",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Speed",
+     "name": "Shakespeed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0,
+     "label": "Seed",
+     "name": "Shakeseed",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Beat kick",
+     "name": "Shakebeat",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Scale by FOV",
+     "name": "Shakeperlens",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "presets",
+     "label": "Targetmode",
+     "name": "Targetmode",
+     "style": "Menu",
+     "value": "presets"
+    },
+    {
+     "default": "",
+     "label": "Global target op",
+     "name": "Targetop",
+     "style": "Object",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "Effectors COMP (optional)",
+     "name": "Effop",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": " ",
+     "label": "Global target effector",
+     "name": "Targeteff",
+     "style": "StrMenu",
+     "value": " "
+    },
+    {
+     "default": 0.0,
+     "label": "Look damping (s)",
+     "name": "Lookdamp",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Frame the look point",
+     "name": "Frame",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Frame radius",
+     "name": "Frameradius",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.2,
+     "label": "Frame padding",
+     "name": "Framepad",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 0.0,
+     "label": "Roll offset",
+     "name": "Roll",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "FOV offset",
+     "name": "Fovoffset",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Frame width (framing aspect)",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Frame height (framing aspect)",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "out1: cs_tx..cs_fov cs_la_tx..cs_la_pz cs_select cs_preset cs_progress cs_blend cs_cut cs_goto cs_beats cs_bar cs_shake cs_dist cs_haslook cs_ver",
+     "label": "Out CHOP channels",
+     "name": "Outchop",
+     "style": "Str",
+     "value": "out1: cs_tx..cs_fov cs_la_tx..cs_la_pz cs_select cs_preset cs_progress cs_blend cs_cut cs_goto cs_beats cs_bar cs_shake cs_dist cs_haslook cs_ver"
+    },
+    {
+     "default": false,
+     "label": "Open controls (zkit, optional)",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 4.351,
+  "cpu_ms": 4.351,
+  "frames": 0,
+  "gpu_ms": 1.029,
+  "ops": 32
+ },
+ "sha256": "780f5b43622209fe0409c5d2e7faedffa35b695fcb27424b4470ae0a783246ca",
+ "size": 58302,
+ "source": "/project1/lab/CS_cam_sequencer",
+ "summary": "CS_cam_sequencer v2: a Camera COMP that eases between camera presets (how-to)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "cameraCOMP",
+ "version": "2.0.0",
+ "was_parked": null
+}

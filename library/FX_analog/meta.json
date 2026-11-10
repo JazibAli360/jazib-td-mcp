@@ -1,0 +1,76 @@
+{
+ "created": "2026-10-29 00:08:11",
+ "doc": "docs/builds/fx_analog_crt.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_analog",
+ "ops": 1940,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 84.138,
+  "cpu_ms": 84.138,
+  "frames": 30,
+  "gpu_ms": 10.765,
+  "ops": 22
+ },
+ "sha256": "0f82da0c6561e47debd7e09e5d60c082e48874a26868485922fae05ccc56a937",
+ "size": 593952,
+ "source": "/project1/lab/FX_analog",
+ "summary": "fx_analog_crt: FX_analog modules `crt` (+ `monitor` presets) and `crtfault` (offline prep, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1465854,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.0",
+ "was_parked": true
+}

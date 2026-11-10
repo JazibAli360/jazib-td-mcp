@@ -1,0 +1,877 @@
+{
+ "created": "2026-10-29 00:08:57",
+ "doc": "docs/builds/projector_dome.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "viewer/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "dome_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "proj_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "proj_cam_b/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "dome_scene_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "content_in",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "LK_projection_room",
+ "ops": 519,
+ "outputs": [
+  {
+   "height": 2048,
+   "name": "domemaster_out",
+   "type": "outTOP",
+   "width": 2048
+  },
+  {
+   "height": 1080,
+   "name": "room_out",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Room",
+   "pars": [
+    {
+     "default": 50.0,
+     "label": "Cone angle (Lens input = angle)",
+     "name": "Throw",
+     "style": "Float",
+     "value": 43.4
+    },
+    {
+     "default": 2.2,
+     "label": "Projector brightness",
+     "name": "Brightness",
+     "style": "Float",
+     "value": 4.21
+    },
+    {
+     "default": 0.06,
+     "label": "Room ambient",
+     "name": "Ambient",
+     "style": "Float",
+     "value": 0.112839
+    },
+    {
+     "default": 0.0,
+     "label": "Audience camera orbit (deg)",
+     "name": "Orbit",
+     "style": "Float",
+     "value": -59.2
+    },
+    {
+     "default": 3.5,
+     "label": "Audience camera height",
+     "name": "Height",
+     "style": "Float",
+     "value": 5.34
+    },
+    {
+     "default": true,
+     "label": "Projector shadows",
+     "name": "Shadows",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Projector X",
+     "name": "Projx",
+     "style": "Float",
+     "value": 0.237197
+    },
+    {
+     "default": 2.0,
+     "label": "Projector height",
+     "name": "Projy",
+     "style": "Float",
+     "value": 2.24
+    },
+    {
+     "default": 6.0,
+     "label": "Projector distance (Z)",
+     "name": "Projz",
+     "style": "Float",
+     "value": 6.58
+    },
+    {
+     "default": -10.0,
+     "label": "Projector tilt (deg)",
+     "name": "Projtilt",
+     "style": "Float",
+     "value": -10.7547
+    },
+    {
+     "default": 0.0,
+     "label": "Projector pan (deg)",
+     "name": "Projpan",
+     "style": "Float",
+     "value": 2.74933
+    },
+    {
+     "default": 45.0,
+     "label": "Audience camera FOV (deg)",
+     "name": "Camfov",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 11.0,
+     "label": "Audience camera distance",
+     "name": "Camdist",
+     "style": "Float",
+     "value": 10.469
+    },
+    {
+     "default": 0.7,
+     "label": "Camera looks at height",
+     "name": "Lookheight",
+     "style": "Float",
+     "value": 0.808625
+    },
+    {
+     "default": false,
+     "label": "Open controls window",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Projector",
+   "pars": [
+    {
+     "default": "ratio",
+     "label": "Lens input",
+     "name": "Lensinput",
+     "style": "Menu",
+     "value": "ratio"
+    },
+    {
+     "default": 1.2564,
+     "label": "Throw ratio (distance / width)",
+     "name": "Throwratio",
+     "style": "Float",
+     "value": 1.2564
+    },
+    {
+     "default": "hd",
+     "label": "Native resolution",
+     "name": "Respreset",
+     "style": "Menu",
+     "value": "hd"
+    },
+    {
+     "default": 1920,
+     "label": "Native width px",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 1080,
+     "label": "Native height px",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 6000.0,
+     "label": "Lumens (ANSI)",
+     "name": "Lumens",
+     "style": "Float",
+     "value": 6000.0
+    },
+    {
+     "default": 2.0,
+     "label": "F-number (info)",
+     "name": "Fnum",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.0,
+     "label": "Lens shift H % of width",
+     "name": "Shifth",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Lens shift V % of height",
+     "name": "Shiftv",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Screen gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "fit",
+     "label": "Content fit",
+     "name": "Fitcontent",
+     "style": "Menu",
+     "value": "fit"
+    },
+    {
+     "default": false,
+     "label": "Test chart",
+     "name": "Testchart",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1024,
+     "label": "Light map width px",
+     "name": "Mapres",
+     "style": "Int",
+     "value": 1024
+    },
+    {
+     "default": true,
+     "label": "Show frustum",
+     "name": "Showfrustum",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "m",
+     "label": "Units",
+     "name": "Unit",
+     "style": "Menu",
+     "value": "m"
+    }
+   ]
+  },
+  {
+   "page": "Projb",
+   "pars": [
+    {
+     "default": false,
+     "label": "Projector B on",
+     "name": "Projbon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 2.7,
+     "label": "B x",
+     "name": "Projbx",
+     "style": "Float",
+     "value": 2.7
+    },
+    {
+     "default": 2.24,
+     "label": "B y",
+     "name": "Projby",
+     "style": "Float",
+     "value": 2.24
+    },
+    {
+     "default": 6.58,
+     "label": "B z",
+     "name": "Projbz",
+     "style": "Float",
+     "value": 6.58
+    },
+    {
+     "default": -10.75,
+     "label": "B tilt",
+     "name": "Projbtilt",
+     "style": "Float",
+     "value": -10.75
+    },
+    {
+     "default": -8.0,
+     "label": "B pan",
+     "name": "Projbpan",
+     "style": "Float",
+     "value": -8.0
+    },
+    {
+     "default": 1.2564,
+     "label": "B throw ratio",
+     "name": "Projbthrow",
+     "style": "Float",
+     "value": 1.2564
+    },
+    {
+     "default": 0.0,
+     "label": "B lens shift H %",
+     "name": "Projbshifth",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "B lens shift V %",
+     "name": "Projbshiftv",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 6000.0,
+     "label": "B lumens",
+     "name": "Projblumens",
+     "style": "Float",
+     "value": 6000.0
+    }
+   ]
+  },
+  {
+   "page": "View",
+   "pars": [
+    {
+     "default": "lit",
+     "label": "View mode",
+     "name": "Viewmode",
+     "style": "Menu",
+     "value": "lit"
+    },
+    {
+     "default": 40.0,
+     "label": "Legend max ppi",
+     "name": "Maxppi",
+     "style": "Float",
+     "value": 40.0
+    },
+    {
+     "default": 500.0,
+     "label": "Legend max nits",
+     "name": "Maxnits",
+     "style": "Float",
+     "value": 500.0
+    },
+    {
+     "default": true,
+     "label": "Occlusion in heat views",
+     "name": "Heatshadows",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 384,
+     "label": "Probe width px",
+     "name": "Shadowres",
+     "style": "Int",
+     "value": 384
+    },
+    {
+     "default": 0.02,
+     "label": "Occlusion bias",
+     "name": "Shadowbias",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": true,
+     "label": "Show readouts",
+     "name": "Showhud",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Camera",
+   "pars": [
+    {
+     "default": "orbit",
+     "label": "Camera preset",
+     "name": "Campreset",
+     "style": "Menu",
+     "value": "orbit"
+    },
+    {
+     "default": "persp",
+     "label": "Projection",
+     "name": "Camproj",
+     "style": "Menu",
+     "value": "persp"
+    },
+    {
+     "default": 12.0,
+     "label": "Ortho width",
+     "name": "Orthowidth",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 0.0,
+     "label": "Look at x",
+     "name": "Lookx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Look at z",
+     "name": "Lookz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.7,
+     "label": "Audience eye height",
+     "name": "Eyeheight",
+     "style": "Float",
+     "value": 1.7
+    },
+    {
+     "default": 0.0,
+     "label": "Camera shift x %",
+     "name": "Camshiftx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Camera shift y %",
+     "name": "Camshifty",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Dome",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Dome mode",
+     "name": "Domemode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "flat",
+     "label": "Input format",
+     "name": "Inputformat",
+     "style": "Menu",
+     "value": "flat"
+    },
+    {
+     "default": 180.0,
+     "label": "Dome fov",
+     "name": "Domefov",
+     "style": "Float",
+     "value": 180.0
+    },
+    {
+     "default": 0.0,
+     "label": "Dome tilt",
+     "name": "Dometilt",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 6.0,
+     "label": "Dome radius m",
+     "name": "Domeradius",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.0,
+     "label": "Seat x",
+     "name": "Seatx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Seat z",
+     "name": "Seatz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Eye above spring line",
+     "name": "Domeeye",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Look yaw",
+     "name": "Domeyaw",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 45.0,
+     "label": "Look pitch",
+     "name": "Domepitch",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 100.0,
+     "label": "View fov",
+     "name": "Domecamfov",
+     "style": "Float",
+     "value": 100.0
+    },
+    {
+     "default": 2048,
+     "label": "Domemaster px",
+     "name": "Domeres",
+     "style": "Int",
+     "value": 2048
+    },
+    {
+     "default": 0.0,
+     "label": "Window azimuth",
+     "name": "Winaz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 25.0,
+     "label": "Window elevation",
+     "name": "Winel",
+     "style": "Float",
+     "value": 25.0
+    },
+    {
+     "default": 60.0,
+     "label": "Window half width",
+     "name": "Winhw",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 34.0,
+     "label": "Window half height",
+     "name": "Winhh",
+     "style": "Float",
+     "value": 34.0
+    },
+    {
+     "default": true,
+     "label": "Angle rings",
+     "name": "Template",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.5,
+     "label": "Rings opacity",
+     "name": "Templateopacity",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": true,
+     "label": "Circle mask",
+     "name": "Domemask",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Room fisheye x",
+     "name": "Scenex",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.6,
+     "label": "Room fisheye y",
+     "name": "Sceney",
+     "style": "Float",
+     "value": 1.6
+    },
+    {
+     "default": 0.0,
+     "label": "Room fisheye z",
+     "name": "Scenez",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Readouts",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Throw distance m (image centre)",
+     "name": "Throwdist",
+     "style": "Float",
+     "value": 5.992032051086426
+    },
+    {
+     "default": 0.0,
+     "label": "Image width m",
+     "name": "Imgw",
+     "style": "Float",
+     "value": 4.76920747756958
+    },
+    {
+     "default": 0.0,
+     "label": "Image height m",
+     "name": "Imgh",
+     "style": "Float",
+     "value": 2.6826791763305664
+    },
+    {
+     "default": 0.0,
+     "label": "Image diagonal m",
+     "name": "Imgdiag",
+     "style": "Float",
+     "value": 5.471938133239746
+    },
+    {
+     "default": 0.0,
+     "label": "H FOV deg",
+     "name": "Hfov",
+     "style": "Float",
+     "value": 43.40139389038086
+    },
+    {
+     "default": 0.0,
+     "label": "V FOV deg",
+     "name": "Vfov",
+     "style": "Float",
+     "value": 25.235727310180664
+    },
+    {
+     "default": 0.0,
+     "label": "Px per metre (centre)",
+     "name": "Pxpm",
+     "style": "Float",
+     "value": 395.0565185546875
+    },
+    {
+     "default": 0.0,
+     "label": "Ppi (centre)",
+     "name": "Ppi",
+     "style": "Float",
+     "value": 10.034435272216797
+    },
+    {
+     "default": 0.0,
+     "label": "mm per px (centre)",
+     "name": "Mmpx",
+     "style": "Float",
+     "value": 2.531283378601074
+    },
+    {
+     "default": 0.0,
+     "label": "Lux (centre)",
+     "name": "Lux",
+     "style": "Float",
+     "value": 460.19354248046875
+    },
+    {
+     "default": 0.0,
+     "label": "Nits (centre)",
+     "name": "Nits",
+     "style": "Float",
+     "value": 146.48416137695312
+    },
+    {
+     "default": 0.0,
+     "label": "Foot-lamberts (centre)",
+     "name": "Fl",
+     "style": "Float",
+     "value": 42.756614685058594
+    },
+    {
+     "default": 0.0,
+     "label": "Ppi average on surfaces",
+     "name": "Avgppi",
+     "style": "Float",
+     "value": 6.3170270919799805
+    },
+    {
+     "default": 0.0,
+     "label": "Ppi minimum",
+     "name": "Minppi",
+     "style": "Float",
+     "value": 0.987446665763855
+    },
+    {
+     "default": 0.0,
+     "label": "Image on surfaces (0-1)",
+     "name": "Coverage",
+     "style": "Float",
+     "value": 0.9908854365348816
+    },
+    {
+     "default": 0.0,
+     "label": "B throw distance m",
+     "name": "Bthrowdist",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "B ppi (centre)",
+     "name": "Bppi",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "B nits (centre)",
+     "name": "Bnits",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 52
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 10
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Light",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Dome view",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "View aids",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.425,
+  "cpu_ms": 1.425,
+  "frames": 30,
+  "gpu_ms": 0.54,
+  "ops": 4
+ },
+ "sha256": "355fbdf13247e1628f80b5344bef9f99ae2c5c7831e9f1ec07b8368fe4da2817",
+ "size": 135142,
+ "source": "/project1/lab/LK_projection_room",
+ "summary": "projector_dome: LK_projection_room upgrade (projector planner + fulldome mode), 26 Oct 2026, TD 2025.31550",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 281207,
+  "height": 2048,
+  "ok": true,
+  "top": "domemaster_out",
+  "width": 2048
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

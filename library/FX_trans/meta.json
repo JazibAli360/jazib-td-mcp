@@ -1,0 +1,493 @@
+{
+ "created": "2026-10-29 00:08:37",
+ "doc": "docs/builds/fx_trans.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "mosh/b_test",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_testsrc2_30fps_8s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_testsrc2_30fps_8s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "test_a",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "test_b",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_testsrc2_30fps_8s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_testsrc2_30fps_8s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in3",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_trans",
+ "ops": 412,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Trans",
+   "pars": [
+    {
+     "default": "fade",
+     "label": "Type",
+     "name": "Type",
+     "style": "Menu",
+     "value": "fade"
+    },
+    {
+     "default": 0.0,
+     "label": "Progress A -> B",
+     "name": "Progress",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "manual",
+     "label": "Drive",
+     "name": "Drive",
+     "style": "Menu",
+     "value": "manual"
+    },
+    {
+     "default": false,
+     "label": "Go (to the other side)",
+     "name": "Go",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Back to A",
+     "name": "Back",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Cut (instant)",
+     "name": "Cut",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 2.0,
+     "label": "Duration s",
+     "name": "Duration",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 4.0,
+     "label": "Beats",
+     "name": "Beats",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": "smooth",
+     "label": "Ease",
+     "name": "Ease",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 0,
+     "label": "Steps (0 = continuous)",
+     "name": "Steps",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "rewind",
+     "label": "Backstyle",
+     "name": "Backstyle",
+     "style": "Menu",
+     "value": "rewind"
+    },
+    {
+     "default": "off",
+     "label": "Quantize",
+     "name": "Quantize",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "",
+     "label": "Random type per Go (ids, or all)",
+     "name": "Randompool",
+     "style": "Str",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "page": "Knobs",
+   "pars": [
+    {
+     "default": 6.0,
+     "label": "K1 -",
+     "name": "K1",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 10.0,
+     "label": "K2 -",
+     "name": "K2",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 0.18,
+     "label": "K3 -",
+     "name": "K3",
+     "style": "Float",
+     "value": 0.18
+    },
+    {
+     "default": 0.6,
+     "label": "K4 -",
+     "name": "K4",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.7,
+     "label": "K5 -",
+     "name": "K5",
+     "style": "Float",
+     "value": 0.7
+    },
+    {
+     "default": 1.0,
+     "label": "K6 -",
+     "name": "K6",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "K7 -",
+     "name": "K7",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.0,
+     "label": "K8 -",
+     "name": "K8",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "K9 -",
+     "name": "K9",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "K10 -",
+     "name": "K10",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Keep knob values on Type change",
+     "name": "Keepknobs",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Knobs to type defaults",
+     "name": "Resetknobs",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Tempo",
+   "pars": [
+    {
+     "default": 120.0,
+     "label": "BPM (when no CHOP)",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "",
+     "label": "BPM CHOP path (optional)",
+     "name": "Bpmchop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "bpm",
+     "label": "BPM channel",
+     "name": "Bpmchan",
+     "style": "Str",
+     "value": "bpm"
+    },
+    {
+     "default": "",
+     "label": "Beat phase channel 0..1 (optional, Quantize)",
+     "name": "Phasechan",
+     "style": "Str",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "page": "Input",
+   "pars": [
+    {
+     "default": "auto",
+     "label": "Asource",
+     "name": "Asource",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "auto",
+     "label": "Bsource",
+     "name": "Bsource",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "auto",
+     "label": "Mattesource",
+     "name": "Mattesource",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "",
+     "label": "Matte TOP path",
+     "name": "Mattetop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 1080,
+     "label": "Width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "fitoutside",
+     "label": "Fit",
+     "name": "Fit",
+     "style": "Menu",
+     "value": "fitoutside"
+    },
+    {
+     "default": "hold",
+     "label": "Outside",
+     "name": "Outside",
+     "style": "Menu",
+     "value": "hold"
+    },
+    {
+     "default": "bank",
+     "label": "Compile",
+     "name": "Compile",
+     "style": "Menu",
+     "value": "bank"
+    }
+   ]
+  },
+  {
+   "page": "State",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Run from (internal)",
+     "name": "Gofrom",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Run to (internal)",
+     "name": "Goto",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": -1.0,
+     "label": "Run start absTime (internal)",
+     "name": "Gotime",
+     "style": "Float",
+     "value": -1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Run seconds (internal)",
+     "name": "Godur",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Run swaps A/B (internal)",
+     "name": "Goswap",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Speed",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.667
+    },
+    {
+     "default": 0.0,
+     "label": "Snap",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 38.541,
+  "cpu_ms": 38.541,
+  "frames": 30,
+  "gpu_ms": 2.234,
+  "ops": 16
+ },
+ "sha256": "c9121709a212b9402ad3c7c63cecb07d739c4bccff764237d6b9d6289acfec93",
+ "size": 168726,
+ "source": "/project1/lab/FX_trans",
+ "summary": "fx_trans: FX_trans, the G-TRANS transition bank, 53 transition types (27 at first live) (live in main, 26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1090412,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.3.0",
+ "was_parked": true
+}

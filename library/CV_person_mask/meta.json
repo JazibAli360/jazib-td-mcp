@@ -1,0 +1,411 @@
+{
+ "created": "2026-10-29 00:08:07",
+ "doc": "docs/builds/person_mask.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Clipfile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Pluginpath",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/bgremoval/build/AppleVisionMask.plugin",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/bgremoval/build/AppleVisionMask.plugin",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "avm",
+   "par": "plugin",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/bgremoval/build/AppleVisionMask.plugin",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/bgremoval/build/AppleVisionMask.plugin",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "CV_person_mask",
+ "ops": 376,
+ "outputs": [
+  {
+   "height": 1080,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1920
+  },
+  {
+   "height": 1080,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 1920
+  },
+  {
+   "height": 1080,
+   "name": "out3",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Matte",
+   "pars": [
+    {
+     "default": 2.0,
+     "label": "Feather px",
+     "name": "Feather",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.0,
+     "label": "Choke/grow px",
+     "name": "Grow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.3,
+     "label": "Temporal smooth",
+     "name": "Smooth",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": false,
+     "label": "Invert",
+     "name": "Invert",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Opacity",
+     "name": "Opacity",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "source",
+     "label": "Person",
+     "name": "Person",
+     "style": "Menu",
+     "value": "source"
+    },
+    {
+     "default": 1.0,
+     "label": "Fill colour",
+     "name": "Fillcolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fill colour",
+     "name": "Fillcolorg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fill colour",
+     "name": "Fillcolorb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": "none",
+     "label": "Background",
+     "name": "Background",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": 0.0,
+     "label": "Bg colour",
+     "name": "Bgcolorr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Bg colour",
+     "name": "Bgcolorg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Bg colour",
+     "name": "Bgcolorb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bg alpha",
+     "name": "Bgalpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "cutout",
+     "label": "View on out1",
+     "name": "View",
+     "style": "Menu",
+     "value": "cutout"
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": false,
+     "label": "Vision on (loads the C++ plugin)",
+     "name": "Visionon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "Balanced",
+     "label": "Vision quality",
+     "name": "Quality",
+     "style": "Menu",
+     "value": "Balanced"
+    },
+    {
+     "default": "half",
+     "label": "Vision input size",
+     "name": "Inputscale",
+     "style": "Menu",
+     "value": "half"
+    },
+    {
+     "default": "Input",
+     "label": "Vision resolution",
+     "name": "Visionres",
+     "style": "Menu",
+     "value": "Input"
+    },
+    {
+     "default": "match",
+     "label": "RGB delay",
+     "name": "Rgbdelay",
+     "style": "Menu",
+     "value": "match"
+    },
+    {
+     "default": "clip",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "clip"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+     "label": "Clip file",
+     "name": "Clipfile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/bgremoval/build/AppleVisionMask.plugin",
+     "label": "Plugin path",
+     "name": "Pluginpath",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/bgremoval/build/AppleVisionMask.plugin"
+    },
+    {
+     "default": false,
+     "label": "Reset smoothing",
+     "name": "Resetsmooth",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Edge",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.33
+    },
+    {
+     "default": 0.0,
+     "label": "Wrap",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Wrap",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Light wrap",
+     "name": "Lightwrap",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 12.0,
+     "label": "Wrap width px",
+     "name": "Wrapwidth",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 24.0,
+     "label": "Wrap light blur px",
+     "name": "Wrapblur",
+     "style": "Float",
+     "value": 24.0
+    },
+    {
+     "default": 1.0,
+     "label": "Wrap falloff (gamma)",
+     "name": "Wrapgamma",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "background",
+     "label": "Wrap light from",
+     "name": "Wrapsrc",
+     "style": "Menu",
+     "value": "background"
+    },
+    {
+     "default": 0.0,
+     "label": "Despill (green -> max(r, b))",
+     "name": "Despill",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 3.648,
+  "cpu_ms": 3.648,
+  "frames": 30,
+  "gpu_ms": 14.108,
+  "ops": 15
+ },
+ "sha256": "667f255dac5c6a67234bd02dc4973489ff6a3726447d5bed38b0006e45809266",
+ "size": 116190,
+ "source": "/project1/lab/CV_person_mask",
+ "summary": "person_mask - `/project1/lab/CV_person_mask` (TD 2025.31550, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 394299,
+  "height": 1080,
+  "ok": true,
+  "top": "out1",
+  "width": 1920
+ },
+ "type": "baseCOMP",
+ "version": "0.2.0",
+ "was_parked": true
+}

@@ -1,0 +1,193 @@
+{
+ "created": "2026-10-29 00:08:13",
+ "doc": "docs/builds/fx_destroy.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_destroy",
+ "ops": 1784,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Effgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "max",
+     "label": "Combine",
+     "name": "Effcombine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Radius scale",
+     "name": "Effradscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge",
+     "name": "Effragged",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged freq",
+     "name": "Effraggedfreq",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": false,
+     "label": "Own falloff (ignore per-effector)",
+     "name": "Effoverride",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Own radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Own exponent",
+     "name": "Effexp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "smooth",
+     "label": "Own shape",
+     "name": "Effshape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre (world)",
+     "name": "Effcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre (world)",
+     "name": "Effcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre (world)",
+     "name": "Effcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Plane width (world)",
+     "name": "Effplanew",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Plane height (world)",
+     "name": "Effplaneh",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 11.328,
+  "cpu_ms": 11.328,
+  "frames": 30,
+  "gpu_ms": 1.571,
+  "ops": 16
+ },
+ "sha256": "d729a75be213ec331edd8f09713e45e80587f48f7a64dd5ca3d45e0db2b0a75f",
+ "size": 601816,
+ "source": "/project1/lab/FX_destroy",
+ "summary": "fx_destroy: FX_destroy rack + 6 modules `melt`, `burn`, `shatter`, `crack`, `explode`, `disintegrate` (26-27 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1465854,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

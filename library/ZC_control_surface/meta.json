@@ -1,0 +1,355 @@
+{
+ "created": "2026-10-29 00:09:31",
+ "doc": "docs/builds/zctl.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in_ctrl",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "ZC_control_surface",
+ "ops": 322,
+ "outputs": [
+  {
+   "name": "out_values",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Zctl",
+   "pars": [
+    {
+     "default": true,
+     "label": "Active (write targets)",
+     "name": "Active",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1.0,
+     "label": "Morph time (s)",
+     "name": "Morphtime",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "linear",
+     "label": "Morph curve",
+     "name": "Morphcurve",
+     "style": "Menu",
+     "value": "linear"
+    },
+    {
+     "default": 0,
+     "label": "Preset slot",
+     "name": "Activepreset",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Store (slot; 0 = new)",
+     "name": "Store",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Store as new",
+     "name": "Storenew",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Recall (morph)",
+     "name": "Recall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Delete preset",
+     "name": "Delete",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Stop morph",
+     "name": "Stopmorph",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Randamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Randomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Bind op (or selection)",
+     "name": "Bindpath",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Bind pars (e.g. tx ty, *)",
+     "name": "Bindpar",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Bind selected",
+     "name": "Bindselected",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Knob id",
+     "name": "Unbindknob",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": false,
+     "label": "Unbind knob",
+     "name": "Unbind",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Clear binds",
+     "name": "Clearbinds",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "State",
+   "pars": [
+    {
+     "default": 0,
+     "label": "Binds",
+     "name": "Nbinds",
+     "style": "Int",
+     "value": 6
+    },
+    {
+     "default": 0,
+     "label": "Presets",
+     "name": "Npresets",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": false,
+     "label": "Morphing",
+     "name": "Morphing",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Last error",
+     "name": "Lasterror",
+     "style": "Str",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "page": "Knobs",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "test_const const0value",
+     "name": "Knob1",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "    lock (randomize skips)",
+     "name": "Lock1",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "test_const const1value",
+     "name": "Knob2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "    lock (randomize skips)",
+     "name": "Lock2",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "test_noise Period",
+     "name": "Knob3",
+     "style": "Float",
+     "value": 0.9
+    },
+    {
+     "default": false,
+     "label": "    lock (randomize skips)",
+     "name": "Lock3",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "test_noise Amplitude",
+     "name": "Knob4",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "    lock (randomize skips)",
+     "name": "Lock4",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "test_noise Monochrome",
+     "name": "Knob5",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "    lock (randomize skips)",
+     "name": "Lock5",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "test_noise Type",
+     "name": "Knob6",
+     "style": "Float",
+     "value": 0.999676
+    },
+    {
+     "default": false,
+     "label": "    lock (randomize skips)",
+     "name": "Lock6",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 20.309,
+  "cpu_ms": 20.309,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 71
+ },
+ "sha256": "b0e1c48c941ea34a5da1268d7fa38403c4fb64d511694feadbf24d999fe4666c",
+ "size": 92886,
+ "source": "/project1/lab/ZC_control_surface",
+ "summary": "zctl (`/project1/lab/ZC_control_surface`)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

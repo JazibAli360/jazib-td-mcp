@@ -1,0 +1,664 @@
+{
+ "created": "2026-10-29 00:09:40",
+ "doc": "docs/builds/timeline_phase2.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "aclip0",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_clickflash_60fps_6s.mov",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_clickflash_60fps_6s.mov",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "player0",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_ramp_30fps_10s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_ramp_30fps_10s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "player1",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_solid_blue_6s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_solid_blue_6s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "player2",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Map/Banana.tif",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Map/Banana.tif",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "player3",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Map/Banana.tif",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Map/Banana.tif",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [],
+ "name": "TL_timeline",
+ "ops": 482,
+ "outputs": [
+  {
+   "name": "audio_out",
+   "type": "outCHOP"
+  },
+  {
+   "height": 1920,
+   "name": "program_out",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "tl_out",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Timeline",
+   "pars": [
+    {
+     "default": false,
+     "label": "Play / pause",
+     "name": "Play",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Loop in/out",
+     "name": "Loop",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1.0,
+     "label": "Rate (x)",
+     "name": "Rate",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Playhead / scrub (s)",
+     "name": "Seek",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Stop (pause + to in)",
+     "name": "Stop",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Go to in point",
+     "name": "Gotostart",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Step back 1 frame",
+     "name": "Stepback",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Step forward 1 frame",
+     "name": "Stepfwd",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Go to out point",
+     "name": "Gotoend",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Loop in (s)",
+     "name": "Inpoint",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 16.0,
+     "label": "Loop out (s)",
+     "name": "Outpoint",
+     "style": "Float",
+     "value": 16.0
+    },
+    {
+     "default": true,
+     "label": "Snap to grid",
+     "name": "Snap",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0,
+     "label": "Selected lane",
+     "name": "Lane",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.5,
+     "label": "Key value",
+     "name": "Keyvalue",
+     "style": "Float",
+     "value": 0.9
+    },
+    {
+     "default": "linear",
+     "label": "Key interpolation",
+     "name": "Keyinterp",
+     "style": "Menu",
+     "value": "linear"
+    },
+    {
+     "default": false,
+     "label": "Add key at playhead",
+     "name": "Addkey",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Delete key at playhead",
+     "name": "Deletekey",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Previous key",
+     "name": "Prevkey",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Next key",
+     "name": "Nextkey",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Add marker at playhead",
+     "name": "Addmarker",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Previous marker",
+     "name": "Prevmarker",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Next marker",
+     "name": "Nextmarker",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Open controls window",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": 16.0,
+     "label": "Length (s)",
+     "name": "Length",
+     "style": "Float",
+     "value": 16.0
+    },
+    {
+     "default": 30.0,
+     "label": "Frame rate",
+     "name": "Fps",
+     "style": "Float",
+     "value": 30.0
+    },
+    {
+     "default": "realtime",
+     "label": "Clock",
+     "name": "Clockmode",
+     "style": "Menu",
+     "value": "realtime"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": 4,
+     "label": "Beats per bar",
+     "name": "Beatsperbar",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": 1,
+     "label": "Snap divisions per beat",
+     "name": "Snapdiv",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "beat",
+     "label": "Snap to",
+     "name": "Snapunit",
+     "style": "Menu",
+     "value": "beat"
+    },
+    {
+     "default": "smpte",
+     "label": "Timecode",
+     "name": "Tcmode",
+     "style": "Menu",
+     "value": "smpte"
+    },
+    {
+     "default": "Marker",
+     "label": "New marker name",
+     "name": "Markername",
+     "style": "Str",
+     "value": "Marker"
+    }
+   ]
+  },
+  {
+   "page": "Info",
+   "pars": [
+    {
+     "default": "",
+     "label": "Timecode",
+     "name": "Timecode",
+     "style": "Str",
+     "value": "00:00:00:00"
+    },
+    {
+     "default": "",
+     "label": "Bar.beat.16th",
+     "name": "Barbeat",
+     "style": "Str",
+     "value": "1.1.1"
+    },
+    {
+     "default": "",
+     "label": "Current marker",
+     "name": "Marker",
+     "style": "Str",
+     "value": "Intro"
+    },
+    {
+     "default": 0,
+     "label": "Lanes",
+     "name": "Lanecount",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": "",
+     "label": "Clips on screen",
+     "name": "Clipactive",
+     "style": "Str",
+     "value": "ramp"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 12
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Tempo",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Audio",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "Clips",
+   "pars": [
+    {
+     "default": "clips",
+     "label": "Program out",
+     "name": "Program",
+     "style": "Menu",
+     "value": "clips"
+    },
+    {
+     "default": 2,
+     "label": "Players (full res)",
+     "name": "Maxplayers",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": "full",
+     "label": "Source",
+     "name": "Sourcemode",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "over",
+     "label": "Blend",
+     "name": "Blendmode",
+     "style": "Menu",
+     "value": "over"
+    },
+    {
+     "default": true,
+     "label": "Premultiply inputs (straight alpha)",
+     "name": "Premult",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "fit",
+     "label": "Fit",
+     "name": "Fit",
+     "style": "Menu",
+     "value": "fit"
+    },
+    {
+     "default": 0.5,
+     "label": "Preload ahead (s)",
+     "name": "Preroll",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "",
+     "label": "Selected clip",
+     "name": "Clip",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Re-read media info",
+     "name": "Refreshmedia",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Make proxies (ffmpeg, background)",
+     "name": "Makeproxies",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Record",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Record in (s)",
+     "name": "Recin",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 5.0,
+     "label": "Record out (s; <= in = loop range)",
+     "name": "Recout",
+     "style": "Float",
+     "value": 5.0
+    },
+    {
+     "default": 60.0,
+     "label": "File frame rate",
+     "name": "Recfps",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": "prores4444",
+     "label": "Codec",
+     "name": "Reccodec",
+     "style": "Menu",
+     "value": "prores4444"
+    },
+    {
+     "default": "",
+     "label": "File (.mov; empty = output/timeline/renders/TL_<time>.mov)",
+     "name": "Recfile",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Record (offline, frame-accurate)",
+     "name": "Record",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Abort take",
+     "name": "Recabort",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Recording",
+     "name": "Recording",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Recstatus",
+     "style": "Str",
+     "value": "ok 60 frames -> p3_take_30fps.mov"
+    },
+    {
+     "default": "csv",
+     "label": "Marker export format",
+     "name": "Exportformat",
+     "style": "Menu",
+     "value": "ae"
+    },
+    {
+     "default": false,
+     "label": "Export markers",
+     "name": "Exportmarkers",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Export lanes (per-frame CSV, record range)",
+     "name": "Exportlanes",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Last export",
+     "name": "Lastexport",
+     "style": "Str",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/timeline/export/lanes_20261026_183319.csv"
+    }
+   ]
+  },
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": "",
+     "label": "Master audio file (empty = none)",
+     "name": "Audiofile",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": 0.0,
+     "label": "Master starts at (s)",
+     "name": "Audiooffset",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Master gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Clip audio",
+     "name": "Clipaudio",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1.0,
+     "label": "Clip audio gain",
+     "name": "Clipgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Listen (Mac default output, only while playing)",
+     "name": "Listen",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.8,
+     "label": "Output volume",
+     "name": "Outvolume",
+     "style": "Float",
+     "value": 0.8
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.58,
+  "cpu_ms": 1.58,
+  "frames": 30,
+  "gpu_ms": 0.0,
+  "ops": 3
+ },
+ "sha256": "25488dc08fba5511d3b4eca8db757bbc71a0a28006b2b9141ba225d7cef8d7f3",
+ "size": 158422,
+ "source": "/project1/lab/TL_timeline",
+ "summary": "TL_timeline phase 2: clips track (live v1 26 Oct 2026, TD 2025.31550, T-93; live checks 3, 8, 9 open)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 12707,
+  "height": 1920,
+  "ok": true,
+  "top": "program_out",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

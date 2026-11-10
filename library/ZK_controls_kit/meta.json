@@ -1,0 +1,252 @@
+{
+ "created": "2026-10-29 00:09:32",
+ "doc": null,
+ "files": [],
+ "in_git": true,
+ "inputs": [],
+ "name": "ZK_controls_kit",
+ "ops": 244,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 1.2,
+     "label": "Period",
+     "name": "Period",
+     "style": "Float",
+     "value": 6.52046
+    },
+    {
+     "default": 3,
+     "label": "Harmonics",
+     "name": "Harmonics",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.0,
+     "label": "Gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": -0.768156
+    },
+    {
+     "default": 1.0,
+     "label": "Exponent",
+     "name": "Exponent",
+     "style": "Float",
+     "value": 2.45445
+    },
+    {
+     "default": "simplex3d",
+     "label": "Type",
+     "name": "Noisetype",
+     "style": "Menu",
+     "value": "simplex3d"
+    },
+    {
+     "default": false,
+     "label": "Mono",
+     "name": "Mono",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.91,
+     "label": "Tint",
+     "name": "Tintr",
+     "style": "RGBA",
+     "value": 0.656183
+    },
+    {
+     "default": 0.27,
+     "label": "Tint",
+     "name": "Tintg",
+     "style": "RGBA",
+     "value": 0.950673
+    },
+    {
+     "default": 0.11,
+     "label": "Tint",
+     "name": "Tintb",
+     "style": "RGBA",
+     "value": 0.492735
+    },
+    {
+     "default": 0.3,
+     "label": "Speed",
+     "name": "Speed",
+     "style": "Float",
+     "value": 2.5772399999999998
+    },
+    {
+     "default": "half",
+     "label": "Noise res",
+     "name": "Demores",
+     "style": "Menu",
+     "value": "half"
+    }
+   ]
+  },
+  {
+   "page": "Motion",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Offset",
+     "name": "Offset1",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset",
+     "name": "Offset2",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rotate",
+     "name": "Rotate",
+     "style": "Float",
+     "value": -113.703
+    },
+    {
+     "default": false,
+     "label": "Flash",
+     "name": "Flash",
+     "style": "Momentary",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reseed",
+     "name": "Reseed",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "zkit demo",
+     "label": "Caption",
+     "name": "Caption",
+     "style": "Str",
+     "value": "zkit demo"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Detail",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 49.277,
+  "cpu_ms": 49.277,
+  "frames": 30,
+  "gpu_ms": 1.181,
+  "ops": 5
+ },
+ "sha256": "40387dde2a74552b3a0bf4851ab74ff89be2884227da3267072143d04ff0622a",
+ "size": 78518,
+ "source": "/project1/lab/ZK_controls_kit",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 425992,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

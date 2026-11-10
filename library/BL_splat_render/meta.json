@@ -1,0 +1,912 @@
+{
+ "created": "2026-10-29 00:08:00",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "File",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "geo_env_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "geo_env_light/filein1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defenvlight.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defenvlight.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": false,
+ "inputs": [],
+ "name": "BL_splat_render",
+ "ops": 408,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out_info",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Source",
+   "pars": [
+    {
+     "default": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz",
+     "label": "Splat file",
+     "name": "File",
+     "style": "File",
+     "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/PointClouds/SmileyPinata.spz"
+    },
+    {
+     "default": "auto",
+     "label": "Format",
+     "name": "Format",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": false,
+     "label": "Reload",
+     "name": "Reload",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max splats (0 = all)",
+     "name": "Maxsplats",
+     "style": "Int",
+     "value": 209424
+    },
+    {
+     "default": 1,
+     "label": "Thin step",
+     "name": "Thinstep",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.0,
+     "label": "Thin random",
+     "name": "Thinrandom",
+     "style": "Float",
+     "value": 0.188
+    },
+    {
+     "default": 0.0,
+     "label": "Opacity cull",
+     "name": "Opacitycull",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "1",
+     "label": "SH degree",
+     "name": "Shdegree",
+     "style": "Menu",
+     "value": "1"
+    },
+    {
+     "default": "auto",
+     "label": "Coord fix",
+     "name": "Coordfix",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 0.01,
+     "label": "Point-cloud splat size",
+     "name": "Pointscale",
+     "style": "Float",
+     "value": 0.01
+    },
+    {
+     "default": 0.0,
+     "label": "Crop centre",
+     "name": "Cropcenterx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Crop centre",
+     "name": "Cropcentery",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Crop centre",
+     "name": "Cropcenterz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Crop size (0 = off)",
+     "name": "Cropsizex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Crop size (0 = off)",
+     "name": "Cropsizey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Crop size (0 = off)",
+     "name": "Cropsizez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Crop radius (0 = off)",
+     "name": "Cropradius",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Frame camera on load",
+     "name": "Autoframe",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "spz 185,267 of 228,287 splats, load 130 ms, radius 0.50"
+    },
+    {
+     "default": false,
+     "label": "Reset look/camera",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Camera",
+   "pars": [
+    {
+     "default": "orbit",
+     "label": "Camera",
+     "name": "Cammode",
+     "style": "Menu",
+     "value": "orbit"
+    },
+    {
+     "default": "",
+     "label": "External camera",
+     "name": "Camcomp",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": 0.0,
+     "label": "Azimuth",
+     "name": "Orbitaz",
+     "style": "Float",
+     "value": -39.0
+    },
+    {
+     "default": 10.0,
+     "label": "Elevation",
+     "name": "Orbitel",
+     "style": "Float",
+     "value": 11.7
+    },
+    {
+     "default": 3.0,
+     "label": "Distance",
+     "name": "Orbitdist",
+     "style": "Float",
+     "value": 1.0997
+    },
+    {
+     "default": 0.0,
+     "label": "Target",
+     "name": "Targetx",
+     "style": "XYZW",
+     "value": 0.010498046875
+    },
+    {
+     "default": 0.0,
+     "label": "Target",
+     "name": "Targety",
+     "style": "XYZW",
+     "value": -0.039306640625
+    },
+    {
+     "default": 0.0,
+     "label": "Target",
+     "name": "Targetz",
+     "style": "XYZW",
+     "value": -0.028076171875
+    },
+    {
+     "default": 45.0,
+     "label": "FOV (vertical deg)",
+     "name": "Fov",
+     "style": "Float",
+     "value": 55.5
+    },
+    {
+     "default": 10.0,
+     "label": "Orbit deg/s",
+     "name": "Autorbit",
+     "style": "Float",
+     "value": 17.3
+    },
+    {
+     "default": "none",
+     "label": "Orbit sync",
+     "name": "Orbitsync",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 124.8
+    },
+    {
+     "default": 32.0,
+     "label": "Beats per rev",
+     "name": "Beatsperrev",
+     "style": "Float",
+     "value": 36.1
+    },
+    {
+     "default": false,
+     "label": "Frame splats",
+     "name": "Frame",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Splat",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Scale",
+     "name": "Scalemult",
+     "style": "Float",
+     "value": 0.61
+    },
+    {
+     "default": 1.0,
+     "label": "Opacity",
+     "name": "Opacitygain",
+     "style": "Float",
+     "value": 1.106
+    },
+    {
+     "default": 0.015,
+     "label": "Alpha thr",
+     "name": "Alphathreshold",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.3,
+     "label": "Low-pass px2",
+     "name": "Lowpass",
+     "style": "Float",
+     "value": 0.95
+    },
+    {
+     "default": 1.0,
+     "label": "Brightness",
+     "name": "Brightness",
+     "style": "Float",
+     "value": 1.15
+    },
+    {
+     "default": 1.0,
+     "label": "Gamma",
+     "name": "Gamma",
+     "style": "Float",
+     "value": 1.27
+    },
+    {
+     "default": false,
+     "label": "sRGB to linear",
+     "name": "Srgbtolinear",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Point mix",
+     "name": "Pointmix",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 3.0,
+     "label": "Point px",
+     "name": "Pointsize",
+     "style": "Float",
+     "value": 3.0
+    }
+   ]
+  },
+  {
+   "page": "Sort",
+   "pars": [
+    {
+     "default": "sortpop",
+     "label": "Sort mode",
+     "name": "Sortmode",
+     "style": "Menu",
+     "value": "sortpop"
+    },
+    {
+     "default": 0,
+     "label": "Every N frames (0 = off)",
+     "name": "Sorteveryn",
+     "style": "Int",
+     "value": 14
+    },
+    {
+     "default": 1.0,
+     "label": "Re-sort after deg",
+     "name": "Sortmovedeg",
+     "style": "Float",
+     "value": 5.92
+    },
+    {
+     "default": false,
+     "label": "Sort now",
+     "name": "Sortnow",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Dissolve",
+     "name": "Dissolve",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Dissolve seed",
+     "name": "Dissolveseed",
+     "style": "Float",
+     "value": 69.2
+    },
+    {
+     "default": 0.0,
+     "label": "Noise amp",
+     "name": "Noiseamp",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 2.0,
+     "label": "Noise freq",
+     "name": "Noisefreq",
+     "style": "Float",
+     "value": 2.12
+    },
+    {
+     "default": 0.3,
+     "label": "Noise speed",
+     "name": "Noisespeed",
+     "style": "Float",
+     "value": 0.28
+    },
+    {
+     "default": 0.0,
+     "label": "Explode",
+     "name": "Explode",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Reveal",
+     "name": "Reveal",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Beat pulse",
+     "name": "Beatpulse",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": "",
+     "label": "Audio CHOP",
+     "name": "Audiochop",
+     "style": "CHOP",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Resolution",
+     "name": "Resolution1",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Resolution",
+     "name": "Resolution2",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "",
+     "label": "Background TOP",
+     "name": "Bgtop",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": 0.0,
+     "label": "Background colour",
+     "name": "Bgcolorr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background colour",
+     "name": "Bgcolorg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background colour",
+     "name": "Bgcolorb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background colour",
+     "name": "Bgcolora",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Premultiplied out",
+     "name": "Premult",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Output alpha",
+     "name": "Outputalpha",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "full",
+     "label": "Render scale",
+     "name": "Renderscale",
+     "style": "Menu",
+     "value": "full"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Motion",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.333
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.333
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.333
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Effgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "max",
+     "label": "Combine",
+     "name": "Effcombine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Radius scale",
+     "name": "Effradscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge",
+     "name": "Effragged",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged freq",
+     "name": "Effraggedfreq",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": false,
+     "label": "Own falloff (ignore per-effector)",
+     "name": "Effoverride",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Own radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Own exponent",
+     "name": "Effexp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "smooth",
+     "label": "Own shape",
+     "name": "Effshape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 0.3,
+     "label": "Push (units)",
+     "name": "Effpush",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Dissolve (+ near / - reveal near)",
+     "name": "Effdissolve",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Scale near (x 1 + gain w)",
+     "name": "Effgrow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Dust (per point thresholds)",
+     "name": "Effdust",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "outward",
+     "label": "Push direction",
+     "name": "Effdir",
+     "style": "Menu",
+     "value": "outward"
+    },
+    {
+     "default": "",
+     "label": "Splat FX modules",
+     "name": "Splatfx",
+     "style": "Str",
+     "value": "/project1/lab/PX_pointfx (Render splats)"
+    }
+   ]
+  },
+  {
+   "page": "Geo",
+   "pars": [
+    {
+     "default": false,
+     "label": "Geometry in the scene",
+     "name": "Geoon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Geometry COMPs (paths / patterns)",
+     "name": "Geocomps",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "#light",
+     "label": "Lights (paths, #tag; #light = all in /project1/effectors)",
+     "name": "Geolights",
+     "style": "Str",
+     "value": "#light"
+    },
+    {
+     "default": true,
+     "label": "Built-in key light",
+     "name": "Geokey",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Relight splats (light effectors)",
+     "name": "Georelight",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.25,
+     "label": "Splat ambient (relight)",
+     "name": "Geoambient",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": "halflambert",
+     "label": "Splat light mode",
+     "name": "Geolightmode",
+     "style": "Menu",
+     "value": "halflambert"
+    },
+    {
+     "default": 0.0,
+     "label": "Splat depth bias (world)",
+     "name": "Geodepthbias",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Scene environment (chrome)",
+     "name": "Geoenv",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "draw",
+     "label": "Environment captures (geometry)",
+     "name": "Geoenvgeo",
+     "style": "Str",
+     "value": "draw"
+    },
+    {
+     "default": 0.0,
+     "label": "Environment centre (chrome object)",
+     "name": "Geoenvcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Environment centre (chrome object)",
+     "name": "Geoenvcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Environment centre (chrome object)",
+     "name": "Geoenvcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 256,
+     "label": "Environment cube px",
+     "name": "Geoenvres",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": 4,
+     "label": "Environment every N frames",
+     "name": "Geoenveveryn",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": 1.0,
+     "label": "Environment dimmer",
+     "name": "Geoenvdimmer",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.015,
+  "cpu_ms": 1.015,
+  "frames": 30,
+  "gpu_ms": 2.065,
+  "ops": 6
+ },
+ "sha256": "a3b44eb513ee0c50f778f1df68b7903e3a63e9afb4f0e466884ada14f3d742d3",
+ "size": 6325792,
+ "source": "/project1/lab/BL_splat_render",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 4740577,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.1",
+ "was_parked": true
+}

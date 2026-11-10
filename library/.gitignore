@@ -1,0 +1,3 @@
+# written by td/library.py: .tox files over 5 MB stay out of git (meta.json keeps sha256 + size)
+/BL_cloud_morph/BL_cloud_morph.tox
+/BL_splat_render/BL_splat_render.tox

@@ -1,0 +1,165 @@
+{
+ "created": "2026-10-29 00:08:44",
+ "doc": "docs/builds/gen_pattern.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "GEN_pattern",
+ "ops": 4887,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (background only)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 1080,
+     "label": "Width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Drive",
+   "pars": [
+    {
+     "default": "internal",
+     "label": "Beatsource",
+     "name": "Beatsource",
+     "style": "Menu",
+     "value": "internal"
+    },
+    {
+     "default": 120.0,
+     "label": "Bpm",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "",
+     "label": "Bpm CHOP (e.g. AU_features/out1)",
+     "name": "Bpmchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "bpm",
+     "label": "Bpm channel",
+     "name": "Bpmchan",
+     "style": "Str",
+     "value": "bpm"
+    },
+    {
+     "default": "",
+     "label": "Beat CHOP (e.g. AU_features/out1)",
+     "name": "Beatchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "beat_phase",
+     "label": "Beat phase channel",
+     "name": "Phasechan",
+     "style": "Str",
+     "value": "beat_phase"
+    },
+    {
+     "default": "beat_count",
+     "label": "Beat count channel",
+     "name": "Countchan",
+     "style": "Str",
+     "value": "beat_count"
+    },
+    {
+     "default": "",
+     "label": "Audio CHOP (e.g. AC_audio/out_ctl)",
+     "name": "Audiochop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "low",
+     "label": "Audio channel",
+     "name": "Audiochan",
+     "style": "Str",
+     "value": "low"
+    },
+    {
+     "default": false,
+     "label": "Resync (beat 1 now)",
+     "name": "Resync",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 25.346,
+  "cpu_ms": 25.346,
+  "frames": 30,
+  "gpu_ms": 1.387,
+  "ops": 26
+ },
+ "sha256": "b592554c1f7093b51dcbe2f75222c79d45d10cffabfc78f4bfdf869b97cbf2c3",
+ "size": 1581974,
+ "source": "/project1/lab/GEN_pattern",
+ "summary": "gen_pattern: GEN_pattern rack + 17 one-pass generator modules (live in main, 26-27 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 119132,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.0",
+ "was_parked": true
+}

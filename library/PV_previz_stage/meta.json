@@ -1,0 +1,745 @@
+{
+ "created": "2026-10-29 00:09:39",
+ "doc": "docs/builds/previz_stage.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in_audio",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "PV_previz_stage",
+ "ops": 514,
+ "outputs": [
+  {
+   "height": 1080,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1920
+  },
+  {
+   "name": "out_react",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Stage",
+   "pars": [
+    {
+     "default": "flat",
+     "label": "Wall layout",
+     "name": "Layout",
+     "style": "Menu",
+     "value": "sides"
+    },
+    {
+     "default": 12.0,
+     "label": "Main width (m)",
+     "name": "Wallw",
+     "style": "Float",
+     "value": 14.1
+    },
+    {
+     "default": 6.75,
+     "label": "Main height (m)",
+     "name": "Wallh",
+     "style": "Float",
+     "value": 6.75
+    },
+    {
+     "default": 0.0,
+     "label": "Main curve (deg)",
+     "name": "Curve",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Side width (m)",
+     "name": "Sidew",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 6.0,
+     "label": "Side height (m)",
+     "name": "Sideh",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 20.0,
+     "label": "Side fold (deg)",
+     "name": "Sidefold",
+     "style": "Float",
+     "value": 20.0
+    },
+    {
+     "default": 1.5,
+     "label": "Gap between faces (m)",
+     "name": "Gap",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": "span",
+     "label": "Content on faces",
+     "name": "Contentmap",
+     "style": "Menu",
+     "value": "span"
+    },
+    {
+     "default": 1.0,
+     "label": "Screen above deck (m)",
+     "name": "Screenelev",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Screen brightness",
+     "name": "Screenemit",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.2,
+     "label": "Deck height (m)",
+     "name": "Stageh",
+     "style": "Float",
+     "value": 1.2
+    },
+    {
+     "default": 10.0,
+     "label": "Deck depth (m)",
+     "name": "Stagedepth",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 10.5,
+     "label": "Truss height (m)",
+     "name": "Trussh",
+     "style": "Float",
+     "value": 10.5
+    },
+    {
+     "default": 3.0,
+     "label": "Truss distance from wall (m)",
+     "name": "Trussz",
+     "style": "Float",
+     "value": 3.0
+    }
+   ]
+  },
+  {
+   "page": "Crowd",
+   "pars": [
+    {
+     "default": true,
+     "label": "Crowd on",
+     "name": "Crowdon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 800,
+     "label": "Count",
+     "name": "Count",
+     "style": "Int",
+     "value": 800
+    },
+    {
+     "default": 20,
+     "label": "Rows",
+     "name": "Rows",
+     "style": "Int",
+     "value": 20
+    },
+    {
+     "default": 0.65,
+     "label": "Spacing (m)",
+     "name": "Spacing",
+     "style": "Float",
+     "value": 0.65
+    },
+    {
+     "default": 3.0,
+     "label": "Gap to stage (m)",
+     "name": "Crowdgap",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.08,
+     "label": "Height variation",
+     "name": "Heightvar",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.3,
+     "label": "Sway",
+     "name": "Sway",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.5,
+     "label": "Sway speed",
+     "name": "Swayspeed",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.15,
+     "label": "Raised hands (fraction)",
+     "name": "Hands",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 1.0,
+     "label": "Screen light on crowd",
+     "name": "Crowdlit",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Haze",
+   "pars": [
+    {
+     "default": true,
+     "label": "Haze on",
+     "name": "Hazeon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.5,
+     "label": "Density",
+     "name": "Density",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Height falloff",
+     "name": "Falloff",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.05,
+     "label": "Drift speed",
+     "name": "Drift",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.6,
+     "label": "Beam visibility",
+     "name": "Scatter",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.5,
+     "label": "Screen glow in haze",
+     "name": "Hazeglow",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "Lights",
+   "pars": [
+    {
+     "default": true,
+     "label": "Lights on",
+     "name": "Lightson",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 8,
+     "label": "Beams",
+     "name": "Beams",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 6.0,
+     "label": "Beam spread (deg)",
+     "name": "Spread",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 50.0,
+     "label": "Fan (deg)",
+     "name": "Fan",
+     "style": "Float",
+     "value": 50.0
+    },
+    {
+     "default": 30.0,
+     "label": "Tilt to crowd (deg)",
+     "name": "Beamtilt",
+     "style": "Float",
+     "value": 30.0
+    },
+    {
+     "default": 30.0,
+     "label": "Beam length (m)",
+     "name": "Beamlen",
+     "style": "Float",
+     "value": 30.0
+    },
+    {
+     "default": 1.0,
+     "label": "Intensity",
+     "name": "Intensity",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Follow screen colour",
+     "name": "Follow",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "average",
+     "label": "React mode",
+     "name": "Reactmode",
+     "style": "Menu",
+     "value": "average"
+    },
+    {
+     "default": 0.2,
+     "label": "React lag (s)",
+     "name": "Reactlag",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 0.3,
+     "label": "Sweep",
+     "name": "Beamsweep",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.2,
+     "label": "Sweep speed (Hz)",
+     "name": "Beamsweepspeed",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 1.0,
+     "label": "Wash light",
+     "name": "Wash",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Strobe",
+     "name": "Strobe",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Strobe rate (Hz)",
+     "name": "Strobehz",
+     "style": "Float",
+     "value": 4.0
+    }
+   ]
+  },
+  {
+   "page": "Camera",
+   "pars": [
+    {
+     "default": "foh",
+     "label": "Camera preset",
+     "name": "Preset",
+     "style": "Menu",
+     "value": "foh"
+    },
+    {
+     "default": 45.0,
+     "label": "Field of view (deg)",
+     "name": "Fov",
+     "style": "Float",
+     "value": 36.2
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit yaw (deg)",
+     "name": "Orbitx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit pitch (deg)",
+     "name": "Orbity",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Distance x",
+     "name": "Orbitdist",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Auto orbit",
+     "name": "Autoorbit",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 5.0,
+     "label": "Orbit speed (deg/s)",
+     "name": "Orbitspeed",
+     "style": "Float",
+     "value": 5.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": "input",
+     "label": "Screen source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "noise"
+    },
+    {
+     "default": 1920,
+     "label": "Width",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 1080,
+     "label": "Height",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": "aa4",
+     "label": "Antialias",
+     "name": "Msaa",
+     "style": "Menu",
+     "value": "aa4"
+    },
+    {
+     "default": false,
+     "label": "Show screen only",
+     "name": "Showscreenonly",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Exposure (stops)",
+     "name": "Exposure",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.5,
+     "label": "Bloom",
+     "name": "Bloom",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1920,
+     "label": "Screen texture width",
+     "name": "Texw",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "high",
+     "label": "Quality",
+     "name": "Quality",
+     "style": "Menu",
+     "value": "high"
+    },
+    {
+     "default": "quarter",
+     "label": "Bloom resolution",
+     "name": "Bloomres",
+     "style": "Menu",
+     "value": "quarter"
+    }
+   ]
+  },
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Audio to beams",
+     "name": "Audioreact",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Audio gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Colours",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Beam base colour",
+     "name": "Basecolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Beam base colour",
+     "name": "Basecolorg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Beam base colour",
+     "name": "Basecolorb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.55,
+     "label": "Haze colour",
+     "name": "Hazecolorr",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.6,
+     "label": "Haze colour",
+     "name": "Hazecolorg",
+     "style": "RGBA",
+     "value": 0.6
+    },
+    {
+     "default": 0.7,
+     "label": "Haze colour",
+     "name": "Hazecolorb",
+     "style": "RGBA",
+     "value": 0.7
+    },
+    {
+     "default": 1.0,
+     "label": "Test colour",
+     "name": "Testcolorr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Test colour",
+     "name": "Testcolorg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Test colour",
+     "name": "Testcolorb",
+     "style": "RGBA",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Window",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls window",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Open view window",
+     "name": "Openview",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reset to defaults",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 46
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 12
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Haze",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.33
+    },
+    {
+     "default": 0.0,
+     "label": "Light",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.42
+    },
+    {
+     "default": 0.0,
+     "label": "Motion",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.0,
+     "label": "Crowd",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.25
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 312.509,
+  "cpu_ms": 312.509,
+  "frames": 30,
+  "gpu_ms": 4.159,
+  "ops": 24
+ },
+ "sha256": "3a8f5c0b8bee00862005a50ef2b84decf42f5f062571315062a995dc48057894",
+ "size": 136830,
+ "source": "/project1/lab/PV_previz_stage",
+ "summary": "previz_stage (`/project1/lab/PV_previz_stage`)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 3522570,
+  "height": 1080,
+  "ok": true,
+  "top": "out1",
+  "width": 1920
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

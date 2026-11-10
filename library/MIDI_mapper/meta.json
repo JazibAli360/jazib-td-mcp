@@ -1,0 +1,101 @@
+{
+ "created": "2026-10-26 19:46:35",
+ "doc": null,
+ "files": [
+  {
+   "exists": false,
+   "op": "midi_out",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/projects/untitled.midi",
+   "value": "untitled.midi",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [],
+ "name": "MIDI_mapper",
+ "ops": 137,
+ "outputs": [],
+ "pars": [
+  {
+   "page": "MIDI",
+   "pars": [
+    {
+     "default": true,
+     "label": "Enable",
+     "name": "Enable",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "1",
+     "label": "Device (MIDI Device Mapper id)",
+     "name": "Device",
+     "style": "Menu",
+     "value": "1"
+    },
+    {
+     "default": 1,
+     "label": "Active bank (0 = always)",
+     "name": "Activebank",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Learn (hover a par, move a control)",
+     "name": "Learn",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "LED feedback",
+     "name": "Feedback",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Send all feedback",
+     "name": "Sendfeedback",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Open editor",
+     "name": "Openeditor",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Refresh devices",
+     "name": "Refreshdevices",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.605,
+  "cpu_ms": 0.605,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 10
+ },
+ "sha256": "c7ecde0206b889462f874544254bf8e2e3c3196af41330b1c1fd6ae678dce8a7",
+ "size": 35286,
+ "source": "/project1/lab/MIDI_mapper",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

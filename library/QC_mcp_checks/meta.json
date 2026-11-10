@@ -1,0 +1,92 @@
+{
+ "created": "2026-10-29 00:09:30",
+ "doc": null,
+ "files": [],
+ "in_git": true,
+ "inputs": [],
+ "name": "QC_mcp_checks",
+ "ops": 700,
+ "outputs": [],
+ "pars": [
+  {
+   "page": "QC",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Tint",
+     "name": "Tintr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tint",
+     "name": "Tintg",
+     "style": "RGBA",
+     "value": 0.501961
+    },
+    {
+     "default": 0.0,
+     "label": "Tint",
+     "name": "Tintb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tint",
+     "name": "Tinta",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": "",
+     "label": "Note",
+     "name": "Note",
+     "style": "Str",
+     "value": "#abcdef"
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Glowr",
+     "style": "RGBA",
+     "value": 0.062745
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Glowg",
+     "style": "RGBA",
+     "value": 0.12549
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Glowb",
+     "style": "RGBA",
+     "value": 0.188235
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 75.953,
+  "cpu_ms": 75.953,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 157
+ },
+ "sha256": "ee732cf46f2f4a05bd27a11c33030c610eec96068469d1f40e1d8d1e90c00d05",
+ "size": 59918,
+ "source": "/project1/lab/QC_mcp_checks",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

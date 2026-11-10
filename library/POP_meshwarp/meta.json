@@ -1,0 +1,330 @@
+{
+ "created": "2026-10-29 00:09:14",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_meshwarp",
+ "ops": 301,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Meshwarp",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "ripple",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "ripple"
+    },
+    {
+     "default": 0.5,
+     "label": "Strength",
+     "name": "Strength",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 3.0,
+     "label": "Frequency",
+     "name": "Freq",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.25,
+     "label": "Speed (cycles / s)",
+     "name": "Speed",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.5,
+     "label": "Centre u",
+     "name": "Centerx",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.5,
+     "label": "Centre v",
+     "name": "Centery",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.5,
+     "label": "Radius (sheet heights)",
+     "name": "Radius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.3,
+     "label": "Depth (z out of the sheet)",
+     "name": "Depth",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1.0,
+     "label": "Texture warp",
+     "name": "Uvwarp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "page": "Sheet",
+   "pars": [
+    {
+     "default": 128,
+     "label": "Grid columns",
+     "name": "Cols",
+     "style": "Int",
+     "value": 128
+    },
+    {
+     "default": 228,
+     "label": "Grid rows",
+     "name": "Rows",
+     "style": "Int",
+     "value": 228
+    },
+    {
+     "default": 0.0,
+     "label": "Tilt deg (x)",
+     "name": "Tilt",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit deg (y)",
+     "name": "Orbit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Roll deg (z)",
+     "name": "Roll",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.2,
+     "label": "Camera distance",
+     "name": "Dist",
+     "style": "Float",
+     "value": 1.2
+    },
+    {
+     "default": 1.0,
+     "label": "Zoom (1 = sheet fills the frame)",
+     "name": "Zoom",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Shading from the bent normal",
+     "name": "Shade",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "hold",
+     "label": "Edge",
+     "name": "Edge",
+     "style": "Menu",
+     "value": "hold"
+    },
+    {
+     "default": false,
+     "label": "Wireframe (MAT wireframe, 1 px on macOS)",
+     "name": "Wire",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Warp",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Ripple",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 45.135,
+  "cpu_ms": 45.135,
+  "frames": 30,
+  "gpu_ms": 1.511,
+  "ops": 7
+ },
+ "sha256": "4764b2a92e575c84494ae00e73afbabd75fada0fc3f18585e6809981dbfe4fb3",
+ "size": 86766,
+ "source": "/project1/lab/POP_meshwarp",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 6143425,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

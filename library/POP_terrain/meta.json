@@ -1,0 +1,390 @@
+{
+ "created": "2026-10-29 00:09:17",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_terrain",
+ "ops": 299,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Terrain",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "shaded",
+     "label": "Style",
+     "name": "Style",
+     "style": "Menu",
+     "value": "shaded"
+    },
+    {
+     "default": 2.0,
+     "label": "Fly speed (world units / s)",
+     "name": "Speed",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": true,
+     "label": "Snap scroll to the finest cell (no swimming near the camera)",
+     "name": "Snap",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 40.0,
+     "label": "Extent (half size, world units)",
+     "name": "Extent",
+     "style": "Float",
+     "value": 40.0
+    },
+    {
+     "default": 2.0,
+     "label": "LOD power (1 = uniform, 3 = very dense near)",
+     "name": "Lodpow",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.08,
+     "label": "Noise frequency (per world unit)",
+     "name": "Freq",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 6.0,
+     "label": "Height scale",
+     "name": "Heightscale",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 5,
+     "label": "Octaves",
+     "name": "Octaves",
+     "style": "Int",
+     "value": 5
+    },
+    {
+     "default": false,
+     "label": "Ridged noise (1 - |2n - 1|)",
+     "name": "Ridge",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 12.0,
+     "label": "Contour lines per Heightscale",
+     "name": "Contours",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 0.02,
+     "label": "Fog density",
+     "name": "Fog",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.05,
+     "label": "Low colour",
+     "name": "Lowcolorr",
+     "style": "RGBA",
+     "value": 0.05
+    },
+    {
+     "default": 0.1,
+     "label": "Low colour",
+     "name": "Lowcolorg",
+     "style": "RGBA",
+     "value": 0.1
+    },
+    {
+     "default": 0.3,
+     "label": "Low colour",
+     "name": "Lowcolorb",
+     "style": "RGBA",
+     "value": 0.3
+    },
+    {
+     "default": 0.1,
+     "label": "Mid colour",
+     "name": "Midcolorr",
+     "style": "RGBA",
+     "value": 0.1
+    },
+    {
+     "default": 0.6,
+     "label": "Mid colour",
+     "name": "Midcolorg",
+     "style": "RGBA",
+     "value": 0.6
+    },
+    {
+     "default": 0.5,
+     "label": "Mid colour",
+     "name": "Midcolorb",
+     "style": "RGBA",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "High colour",
+     "name": "Highcolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.9,
+     "label": "High colour",
+     "name": "Highcolorg",
+     "style": "RGBA",
+     "value": 0.9
+    },
+    {
+     "default": 0.7,
+     "label": "High colour",
+     "name": "Highcolorb",
+     "style": "RGBA",
+     "value": 0.7
+    },
+    {
+     "default": 0.0,
+     "label": "Fog colour",
+     "name": "Fogcolorr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Fog colour",
+     "name": "Fogcolorg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Fog colour",
+     "name": "Fogcolorb",
+     "style": "RGBA",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Camera",
+   "pars": [
+    {
+     "default": 160,
+     "label": "Grid columns",
+     "name": "Cols",
+     "style": "Int",
+     "value": 160
+    },
+    {
+     "default": 160,
+     "label": "Grid rows",
+     "name": "Rows",
+     "style": "Int",
+     "value": 160
+    },
+    {
+     "default": 10.0,
+     "label": "Camera height",
+     "name": "Camh",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 0.0,
+     "label": "Camera z",
+     "name": "Camz",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 25.0,
+     "label": "Pitch down (deg)",
+     "name": "Pitch",
+     "style": "Float",
+     "value": 25.0
+    },
+    {
+     "default": 70.0,
+     "label": "Vertical fov (deg)",
+     "name": "Fov",
+     "style": "Float",
+     "value": 70.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Relief",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Fly",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.2
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 36.364,
+  "cpu_ms": 36.364,
+  "frames": 30,
+  "gpu_ms": 0.415,
+  "ops": 5
+ },
+ "sha256": "a719dbc85932ffb52c40041590f18173cfb606ac6c6e821ec5d55220263c89e4",
+ "size": 86142,
+ "source": "/project1/lab/POP_terrain",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 2368567,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

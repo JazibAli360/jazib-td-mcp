@@ -1,0 +1,76 @@
+{
+ "created": "2026-10-29 00:08:29",
+ "doc": "docs/builds/fx_scope.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_scope",
+ "ops": 1732,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 29.096,
+  "cpu_ms": 29.096,
+  "frames": 30,
+  "gpu_ms": 1.197,
+  "ops": 9
+ },
+ "sha256": "bae4acb18d940ea8614a4bdf2b358e28d365252dcb695aa3c1584f10843b08e5",
+ "size": 481248,
+ "source": "/project1/lab/FX_scope",
+ "summary": "fx_scope: FX_scope rack + 5 modules `xy` `vector` `lissajous` `scopes` `hud` (live in main, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1448542,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

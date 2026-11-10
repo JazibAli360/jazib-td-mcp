@@ -1,0 +1,92 @@
+{
+ "created": "2026-10-29 00:08:21",
+ "doc": "docs/builds/fx_glitch.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "mosh1/clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/mosh/webcam_bloom_mid_540.mov",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/mosh/webcam_bloom_mid_540.mov",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "moshcut1/b_test",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_testsrc2_30fps_8s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/clips/tl_testsrc2_30fps_8s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_glitch",
+ "ops": 4626,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "test"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 28.059,
+  "cpu_ms": 28.059,
+  "frames": 30,
+  "gpu_ms": 13.121,
+  "ops": 46
+ },
+ "sha256": "26a795dd4c1000a2c9dd434d80e03fa7905c8675f1090bd685afd5cab6c566df",
+ "size": 1425828,
+ "source": "/project1/lab/FX_glitch",
+ "summary": "fx_glitch: FX_glitch rack + 15 modules (smear pilot first; live in main, 26-27 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1465854,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.3.1",
+ "was_parked": true
+}

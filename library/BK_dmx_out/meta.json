@@ -1,0 +1,602 @@
+{
+ "created": "2026-10-26 19:46:21",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "demo_movie",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in2",
+   "type": "inCHOP"
+  },
+  {
+   "name": "in3",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "BK_dmx_out",
+ "ops": 256,
+ "outputs": [
+  {
+   "height": 128,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 128
+  },
+  {
+   "name": "out2",
+   "type": "outCHOP"
+  },
+  {
+   "name": "out3",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": false,
+     "label": "Active (send)",
+     "name": "Active",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "artnet",
+     "label": "Protocol",
+     "name": "Protocol",
+     "style": "Menu",
+     "value": "artnet"
+    },
+    {
+     "default": "unicast",
+     "label": "Target",
+     "name": "Targetmode",
+     "style": "Menu",
+     "value": "unicast"
+    },
+    {
+     "default": "127.0.0.1",
+     "label": "Target IP",
+     "name": "Targetip",
+     "style": "Str",
+     "value": "127.0.0.1"
+    },
+    {
+     "default": "",
+     "label": "Local IP (blank = OS)",
+     "name": "Localip",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 40.0,
+     "label": "Rate Hz",
+     "name": "Rate",
+     "style": "Float",
+     "value": 40.0
+    },
+    {
+     "default": 0,
+     "label": "First universe",
+     "name": "Firstuniv",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 100,
+     "label": "sACN priority",
+     "name": "Priority",
+     "style": "Int",
+     "value": 100
+    },
+    {
+     "default": "BK_dmx_out",
+     "label": "Source name",
+     "name": "Sourcename",
+     "style": "Str",
+     "value": "BK_dmx_out"
+    },
+    {
+     "default": false,
+     "label": "Send ArtSync",
+     "name": "Sendsync",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 20,
+     "label": "Sync timeout ms",
+     "name": "Syncms",
+     "style": "Int",
+     "value": 20
+    },
+    {
+     "default": 0,
+     "label": "Port (0 = default)",
+     "name": "Netport",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": false,
+     "label": "Loopback check",
+     "name": "Loopback",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "tddmx",
+     "label": "Sender",
+     "name": "Sender",
+     "style": "Menu",
+     "value": "tddmx"
+    },
+    {
+     "default": 0,
+     "label": "Universes (read)",
+     "name": "Universes",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": 0,
+     "label": "Slots used (read)",
+     "name": "Slotsused",
+     "style": "Int",
+     "value": 224
+    },
+    {
+     "default": 0.0,
+     "label": "Packets/s (read)",
+     "name": "Packetsrate",
+     "style": "Float",
+     "value": 80.0
+    },
+    {
+     "default": true,
+     "label": "Map ok (read)",
+     "name": "Mapok",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Mapping",
+   "pars": [
+    {
+     "default": "",
+     "label": "Pixel source (blank = in1)",
+     "name": "Pixelsrc",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": 0.0,
+     "label": "Blur px",
+     "name": "Pixelblur",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "rgb",
+     "label": "Colour order",
+     "name": "Colororder",
+     "style": "Menu",
+     "value": "rgb"
+    },
+    {
+     "default": "none",
+     "label": "White",
+     "name": "Whitemode",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": 1.0,
+     "label": "Gamma",
+     "name": "Gamma",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 170,
+     "label": "Pixels / universe",
+     "name": "Pixperuniv",
+     "style": "Int",
+     "value": 170
+    },
+    {
+     "default": false,
+     "label": "Span universes",
+     "name": "Spanuniv",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 255.0,
+     "label": "Full scale",
+     "name": "Pixelscale",
+     "style": "Float",
+     "value": 255.0
+    },
+    {
+     "default": "nearest",
+     "label": "Interp",
+     "name": "Interp",
+     "style": "Menu",
+     "value": "nearest"
+    }
+   ]
+  },
+  {
+   "page": "Master",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Master",
+     "name": "Master",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Blackout",
+     "name": "Blackout",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "intensity",
+     "label": "Blackout acts on",
+     "name": "Blackoutmode",
+     "style": "Menu",
+     "value": "intensity"
+    },
+    {
+     "default": false,
+     "label": "Freeze",
+     "name": "Freeze",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "manual",
+     "label": "Master from",
+     "name": "Masterfrom",
+     "style": "Menu",
+     "value": "manual"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "pulse",
+     "label": "Beat shape",
+     "name": "Beatshape",
+     "style": "Menu",
+     "value": "pulse"
+    },
+    {
+     "default": 1.0,
+     "label": "Beat depth",
+     "name": "Beatdepth",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Audio amount",
+     "name": "Audioamt",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Tap BPM",
+     "name": "Tapbpm",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Test",
+   "pars": [
+    {
+     "default": "live",
+     "label": "Pattern",
+     "name": "Pattern",
+     "style": "Menu",
+     "value": "live"
+    },
+    {
+     "default": "replace",
+     "label": "Pattern mix",
+     "name": "Patternmix",
+     "style": "Menu",
+     "value": "replace"
+    },
+    {
+     "default": 1.0,
+     "label": "Level",
+     "name": "Level",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Speed (Hz / beats)",
+     "name": "Speed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "",
+     "label": "Solo fixture (pattern)",
+     "name": "Solofixture",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 0,
+     "label": "Solo slot (0 = off)",
+     "name": "Solochan",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "",
+     "label": "Universe filter (e.g. 0-3 7)",
+     "name": "Univfilter",
+     "style": "Str",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "page": "Monitor",
+   "pars": [
+    {
+     "default": 0,
+     "label": "First row",
+     "name": "Monfirst",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 16,
+     "label": "Rows shown",
+     "name": "Moncount",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": 6,
+     "label": "Px per slot",
+     "name": "Moncell",
+     "style": "Int",
+     "value": 6
+    },
+    {
+     "default": "heat",
+     "label": "Mode",
+     "name": "Monmode",
+     "style": "Menu",
+     "value": "heat"
+    },
+    {
+     "default": 1024,
+     "label": "Monitor width",
+     "name": "Monw",
+     "style": "Int",
+     "value": 1024
+    },
+    {
+     "default": 768,
+     "label": "Monitor height",
+     "name": "Monh",
+     "style": "Int",
+     "value": 768
+    }
+   ]
+  },
+  {
+   "page": "Patch",
+   "pars": [
+    {
+     "default": "generic_rgb_3ch",
+     "label": "Profile",
+     "name": "Profile",
+     "style": "Menu",
+     "value": "generic_rgb_3ch"
+    },
+    {
+     "default": "",
+     "label": "Mode (blank = first)",
+     "name": "Mode",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 1,
+     "label": "Count",
+     "name": "Count",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "fx",
+     "label": "Name",
+     "name": "Fixname",
+     "style": "Str",
+     "value": "fx"
+    },
+    {
+     "default": 0,
+     "label": "Universe",
+     "name": "Univ",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 1,
+     "label": "Address",
+     "name": "Addr",
+     "style": "Int",
+     "value": 10
+    },
+    {
+     "default": true,
+     "label": "Next free",
+     "name": "Autonext",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "fixture",
+     "label": "Quantize",
+     "name": "Quantize",
+     "style": "Menu",
+     "value": "fixture"
+    },
+    {
+     "default": 0,
+     "label": "Gap slots",
+     "name": "Gap",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": false,
+     "label": "Add fixture(s)",
+     "name": "Addfixture",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Check patch",
+     "name": "Checkpatch",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "strip",
+     "label": "Pixel layout",
+     "name": "Pixlayout",
+     "style": "Menu",
+     "value": "strip"
+    },
+    {
+     "default": 50,
+     "label": "Pixels W / count",
+     "name": "Pixw",
+     "style": "Int",
+     "value": 50
+    },
+    {
+     "default": 1,
+     "label": "Pixels H",
+     "name": "Pixh",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": true,
+     "label": "Serpentine",
+     "name": "Serpentine",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Make pixel map",
+     "name": "Genpixels",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Import (OFL .json / .csv)",
+     "name": "Importfile",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Import",
+     "name": "Importpulse",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Clear patch",
+     "name": "Clearpatch",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Controls",
+   "pars": [
+    {
+     "default": false,
+     "label": "Bypass (send nothing)",
+     "name": "Bypass",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reset defaults",
+     "name": "Resetdefaults",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 41.676,
+  "cpu_ms": 41.676,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 66
+ },
+ "sha256": "51332e46515caea8ea43745524107d8e150c9619996f8ec350c6811f38486797",
+ "size": 42974,
+ "source": "/project1/lab/BK_dmx_out",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

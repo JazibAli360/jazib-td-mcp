@@ -1,0 +1,214 @@
+{
+ "created": "2026-10-29 00:08:59",
+ "doc": null,
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "audio_in",
+   "type": "inCHOP"
+  },
+  {
+   "height": 128,
+   "name": "spec_in_t",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "LK_spectrum_glass",
+ "ops": 269,
+ "outputs": [
+  {
+   "height": 1080,
+   "name": "look_out",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 32,
+     "label": "Bar count",
+     "name": "Barcount",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 0.18,
+     "label": "Ring size",
+     "name": "Ringsize",
+     "style": "Float",
+     "value": 0.181
+    },
+    {
+     "default": 0.08,
+     "label": "Ring reaction",
+     "name": "Ringreact",
+     "style": "Float",
+     "value": 0.186
+    },
+    {
+     "default": 0.08,
+     "label": "Kick glow (flash-safe)",
+     "name": "Kickglow",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 0.02,
+     "label": "Ring spin",
+     "name": "Spin",
+     "style": "Float",
+     "value": 0.106
+    },
+    {
+     "default": 1.0,
+     "label": "Reactivity",
+     "name": "React",
+     "style": "Float",
+     "value": 0.937838
+    },
+    {
+     "default": false,
+     "label": "Open controls window",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Colours",
+   "pars": [
+    {
+     "default": 0.55,
+     "label": "Colour A",
+     "name": "Colorar",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.2,
+     "label": "Colour A",
+     "name": "Colorag",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.85,
+     "label": "Colour A",
+     "name": "Colorab",
+     "style": "RGBA",
+     "value": 0.85
+    },
+    {
+     "default": 1.0,
+     "label": "Colour B",
+     "name": "Colorbr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.55,
+     "label": "Colour B",
+     "name": "Colorbg",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.25,
+     "label": "Colour B",
+     "name": "Colorbb",
+     "style": "RGBA",
+     "value": 0.25
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.131,
+  "cpu_ms": 0.131,
+  "frames": 30,
+  "gpu_ms": 0.845,
+  "ops": 3
+ },
+ "sha256": "a98ef70a8eb503fc3f1f27d143b10a646078f8ec86c9780d3bd5a2d96785e13a",
+ "size": 82222,
+ "source": "/project1/lab/LK_spectrum_glass",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 2026580,
+  "height": 1080,
+  "ok": true,
+  "top": "look_out",
+  "width": 1920
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

@@ -1,0 +1,1145 @@
+{
+ "created": "2026-10-29 00:09:03",
+ "doc": "docs/builds/prox_mat.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "env1/filein1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defenvlight.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defenvlight.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "env_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [],
+ "name": "MX_prox_material",
+ "ops": 478,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": "eff_box eff_sphere eff_null",
+     "label": "Effectors (names / paths)",
+     "name": "Effectors",
+     "style": "StrMenu",
+     "value": "eff_box eff_sphere eff_null"
+    },
+    {
+     "default": 0.6,
+     "label": "Radius (falloff width)",
+     "name": "Radius",
+     "style": "Float",
+     "value": 1.72
+    },
+    {
+     "default": 1.0,
+     "label": "Falloff exponent",
+     "name": "Falloffexp",
+     "style": "Float",
+     "value": 2.93
+    },
+    {
+     "default": "smooth",
+     "label": "Falloff shape",
+     "name": "Shape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": "max",
+     "label": "Combine effectors",
+     "name": "Combine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 0.695
+    },
+    {
+     "default": false,
+     "label": "Flip (far = 1)",
+     "name": "Flip",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge (noise x Radius)",
+     "name": "Ragged",
+     "style": "Float",
+     "value": 1.291
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged noise freq",
+     "name": "Raggedfreq",
+     "style": "Float",
+     "value": 5.0
+    },
+    {
+     "default": "change",
+     "label": "Update effectors",
+     "name": "Track",
+     "style": "Menu",
+     "value": "change"
+    },
+    {
+     "default": "list",
+     "label": "Effector source",
+     "name": "Effsource",
+     "style": "Menu",
+     "value": "list"
+    },
+    {
+     "default": "all",
+     "label": "List: use (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": "effector",
+     "label": "List: falloff from",
+     "name": "Listfalloff",
+     "style": "Menu",
+     "value": "effector"
+    }
+   ]
+  },
+  {
+   "page": "Points",
+   "pars": [
+    {
+     "default": "none",
+     "label": "Point set source",
+     "name": "Pointsource",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": "",
+     "label": "Point op (path)",
+     "name": "Pointop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "auto",
+     "label": "CHOP layout",
+     "name": "Pointlayout",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "tx ty tz",
+     "label": "CHOP xyz channels (samples layout)",
+     "name": "Pointchans",
+     "style": "Str",
+     "value": "tx ty tz"
+    },
+    {
+     "default": 1,
+     "label": "TOP texels per point",
+     "name": "Topstride",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0,
+     "label": "TOP texel offset",
+     "name": "Topoffset",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 1.0,
+     "label": "Point scale",
+     "name": "Pointscalex",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Point scale",
+     "name": "Pointscaley",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Point scale",
+     "name": "Pointscalez",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Point offset",
+     "name": "Pointoffsetx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Point offset",
+     "name": "Pointoffsety",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Point offset",
+     "name": "Pointoffsetz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": "",
+     "label": "Point space COMP (optional)",
+     "name": "Pointspace",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 4096,
+     "label": "Max points (stride decimate)",
+     "name": "Pointmax",
+     "style": "Int",
+     "value": 4096
+    },
+    {
+     "default": "auto",
+     "label": "Point proximity path",
+     "name": "Pointpath",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 64,
+     "label": "Direct path max points",
+     "name": "Directmax",
+     "style": "Int",
+     "value": 64
+    },
+    {
+     "default": "nearest",
+     "label": "Point mode",
+     "name": "Pointmode",
+     "style": "Menu",
+     "value": "nearest"
+    },
+    {
+     "default": 0.05,
+     "label": "Point radius",
+     "name": "Pointradius",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 2.0,
+     "label": "Density for full weight",
+     "name": "Densityfull",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 1.0,
+     "label": "Point-set weight",
+     "name": "Pointweight",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Velocity smoothing",
+     "name": "Velsmooth",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 48,
+     "label": "Field grid cells / axis",
+     "name": "Gridres",
+     "style": "Int",
+     "value": 48
+    },
+    {
+     "default": 0.0,
+     "label": "Field box centre",
+     "name": "Gridcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Field box centre",
+     "name": "Gridcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Field box centre",
+     "name": "Gridcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Field box size",
+     "name": "Gridsizex",
+     "style": "XYZW",
+     "value": 4.0
+    },
+    {
+     "default": 4.0,
+     "label": "Field box size",
+     "name": "Gridsizey",
+     "style": "XYZW",
+     "value": 4.0
+    },
+    {
+     "default": 4.0,
+     "label": "Field box size",
+     "name": "Gridsizez",
+     "style": "XYZW",
+     "value": 4.0
+    }
+   ]
+  },
+  {
+   "page": "Colour",
+   "pars": [
+    {
+     "default": 0.55,
+     "label": "Base colour",
+     "name": "Basecolourr",
+     "style": "RGBA",
+     "value": 0.08
+    },
+    {
+     "default": 0.55,
+     "label": "Base colour",
+     "name": "Basecolourg",
+     "style": "RGBA",
+     "value": 0.07
+    },
+    {
+     "default": 0.6,
+     "label": "Base colour",
+     "name": "Basecolourb",
+     "style": "RGBA",
+     "value": 0.07
+    },
+    {
+     "default": 1.0,
+     "label": "Base alpha",
+     "name": "Basealpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Multiply by point colour (Cd, as TD PBR)",
+     "name": "Pointcolour",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "tint",
+     "label": "Colour mode",
+     "name": "Colourmode",
+     "style": "Menu",
+     "value": "ramp"
+    },
+    {
+     "default": 1.0,
+     "label": "Near colour",
+     "name": "Colournearr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.35,
+     "label": "Near colour",
+     "name": "Colournearg",
+     "style": "RGBA",
+     "value": 0.32
+    },
+    {
+     "default": 0.1,
+     "label": "Near colour",
+     "name": "Colournearb",
+     "style": "RGBA",
+     "value": 0.05
+    },
+    {
+     "default": 0.1,
+     "label": "Far colour (ramp)",
+     "name": "Colourfarr",
+     "style": "RGBA",
+     "value": 0.08
+    },
+    {
+     "default": 0.12,
+     "label": "Far colour (ramp)",
+     "name": "Colourfarg",
+     "style": "RGBA",
+     "value": 0.07
+    },
+    {
+     "default": 0.2,
+     "label": "Far colour (ramp)",
+     "name": "Colourfarb",
+     "style": "RGBA",
+     "value": 0.07
+    },
+    {
+     "default": 1.0,
+     "label": "Colour amount",
+     "name": "Colouramt",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour curve",
+     "name": "Colourcurve",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.25,
+     "label": "Hue shift near (turns)",
+     "name": "Huenear",
+     "style": "Float",
+     "value": 0.25
+    }
+   ]
+  },
+  {
+   "page": "Surface",
+   "pars": [
+    {
+     "default": 0.15,
+     "label": "Roughness near",
+     "name": "Roughnear",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.6,
+     "label": "Roughness far",
+     "name": "Roughfar",
+     "style": "Float",
+     "value": 0.85
+    },
+    {
+     "default": 1.0,
+     "label": "Roughness curve",
+     "name": "Roughcurve",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Metallic near",
+     "name": "Metalnear",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Metallic far",
+     "name": "Metalfar",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Metallic curve",
+     "name": "Metalcurve",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Specular level",
+     "name": "Specular",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Ambient occlusion",
+     "name": "Ao",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Detail normal near",
+     "name": "Nrmnear",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.0,
+     "label": "Detail normal far",
+     "name": "Nrmfar",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Detail normal curve",
+     "name": "Nrmcurve",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 6.0,
+     "label": "Detail noise freq",
+     "name": "Nrmfreq",
+     "style": "Float",
+     "value": 9.0
+    },
+    {
+     "default": 0.0,
+     "label": "Detail noise speed",
+     "name": "Nrmspeed",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 3,
+     "label": "Detail octaves",
+     "name": "Nrmoct",
+     "style": "Int",
+     "value": 2
+    },
+    {
+     "default": 1.0,
+     "label": "Shadow strength",
+     "name": "Shadowstrength",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Shadow colour",
+     "name": "Shadowcolourr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Shadow colour",
+     "name": "Shadowcolourg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Shadow colour",
+     "name": "Shadowcolourb",
+     "style": "RGBA",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Emission",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Base emission",
+     "name": "Emitbaser",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Base emission",
+     "name": "Emitbaseg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Base emission",
+     "name": "Emitbaseb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Proximity emission colour",
+     "name": "Emitcolourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.45,
+     "label": "Proximity emission colour",
+     "name": "Emitcolourg",
+     "style": "RGBA",
+     "value": 0.35
+    },
+    {
+     "default": 0.12,
+     "label": "Proximity emission colour",
+     "name": "Emitcolourb",
+     "style": "RGBA",
+     "value": 0.06
+    },
+    {
+     "default": 0.0,
+     "label": "Emission near",
+     "name": "Emitnear",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.0,
+     "label": "Emission far",
+     "name": "Emitfar",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Emission curve",
+     "name": "Emitcurve",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.4,
+     "label": "Rim colour",
+     "name": "Rimcolourr",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": 0.7,
+     "label": "Rim colour",
+     "name": "Rimcolourg",
+     "style": "RGBA",
+     "value": 0.7
+    },
+    {
+     "default": 1.0,
+     "label": "Rim colour",
+     "name": "Rimcolourb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rim glow near",
+     "name": "Rimnear",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rim glow far",
+     "name": "Rimfar",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Rim curve",
+     "name": "Rimcurve",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 3.0,
+     "label": "Rim power (fresnel)",
+     "name": "Rimpower",
+     "style": "Float",
+     "value": 3.0
+    }
+   ]
+  },
+  {
+   "page": "Dissolve",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Dissolve",
+     "name": "Dissolvemode",
+     "style": "Menu",
+     "value": "near"
+    },
+    {
+     "default": 1.0,
+     "label": "Dissolve curve",
+     "name": "Dissolvecurve",
+     "style": "Float",
+     "value": 1.4
+    },
+    {
+     "default": 0.0,
+     "label": "Dissolve offset",
+     "name": "Dissolveoffset",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 5.0,
+     "label": "Edge noise scale",
+     "name": "Noisescale",
+     "style": "Float",
+     "value": 5.0
+    },
+    {
+     "default": 3,
+     "label": "Edge noise octaves",
+     "name": "Noiseoct",
+     "style": "Int",
+     "value": 3
+    },
+    {
+     "default": 0.2,
+     "label": "Edge noise speed",
+     "name": "Noisespeed",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 0.08,
+     "label": "Burnt rim width",
+     "name": "Burnwidth",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 1.0,
+     "label": "Burnt rim colour",
+     "name": "Burncolourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.4,
+     "label": "Burnt rim colour",
+     "name": "Burncolourg",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": 0.05,
+     "label": "Burnt rim colour",
+     "name": "Burncolourb",
+     "style": "RGBA",
+     "value": 0.05
+    },
+    {
+     "default": 6.0,
+     "label": "Burnt rim emission",
+     "name": "Burnemit",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.8,
+     "label": "Char (darken near the rim)",
+     "name": "Char",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": false,
+     "label": "Opacity drive (blending on)",
+     "name": "Opacityon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Opacity near",
+     "name": "Opanear",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Opacity far",
+     "name": "Opafar",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Opacity curve",
+     "name": "Opacurve",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Displace",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Displace mode",
+     "name": "Dispmode",
+     "style": "Menu",
+     "value": "swell"
+    },
+    {
+     "default": 0.2,
+     "label": "Displace near",
+     "name": "Dispnear",
+     "style": "Float",
+     "value": -0.542
+    },
+    {
+     "default": 0.0,
+     "label": "Displace far",
+     "name": "Dispfar",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Displace curve",
+     "name": "Dispcurve",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "normal",
+     "label": "Direction",
+     "name": "Dispdir",
+     "style": "Menu",
+     "value": "normal"
+    },
+    {
+     "default": 12.0,
+     "label": "Ripple freq (rad / unit)",
+     "name": "Ripplefreq",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 6.0,
+     "label": "Ripple speed (rad / s)",
+     "name": "Ripplespeed",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 3.0,
+     "label": "Noise freq",
+     "name": "Dispnoisefreq",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.05,
+     "label": "Wake gain (s)",
+     "name": "Wakegain",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": true,
+     "label": "Recompute normals",
+     "name": "Normalfix",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.01,
+     "label": "Normal step (world)",
+     "name": "Normaleps",
+     "style": "Float",
+     "value": 0.01
+    },
+    {
+     "default": true,
+     "label": "Vertex cache (displace once per point)",
+     "name": "Dispcache",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Presets",
+   "pars": [
+    {
+     "default": "molten_touch",
+     "label": "Preset",
+     "name": "Preset",
+     "style": "Menu",
+     "value": "molten_touch"
+    },
+    {
+     "default": false,
+     "label": "Apply preset",
+     "name": "Applypreset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1080,
+     "label": "Out width (demo)",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Out height (demo)",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": true,
+     "label": "Animate demo effectors",
+     "name": "Animate",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "COMP viewer: preview with gizmos",
+     "name": "Showeff",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "aa2",
+     "label": "Antialias (demo renders)",
+     "name": "Antialias",
+     "style": "Menu",
+     "value": "aa2"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Reach",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ripple",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Burn",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "Environment",
+   "pars": [
+    {
+     "default": "gradient",
+     "label": "Environment (demo env1)",
+     "name": "Envmode",
+     "style": "Menu",
+     "value": "gradient"
+    },
+    {
+     "default": "",
+     "label": "Environment TOP (path)",
+     "name": "Envtop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "geo_torus geo_plane",
+     "label": "Scene cube: geometry",
+     "name": "Envgeo",
+     "style": "StrMenu",
+     "value": "geo_torus geo_plane"
+    },
+    {
+     "default": 0.0,
+     "label": "Scene cube: centre (the chrome object)",
+     "name": "Envcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.35,
+     "label": "Scene cube: centre (the chrome object)",
+     "name": "Envcentrey",
+     "style": "XYZW",
+     "value": 1.35
+    },
+    {
+     "default": 0.0,
+     "label": "Scene cube: centre (the chrome object)",
+     "name": "Envcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 256,
+     "label": "Scene cube px",
+     "name": "Envres",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": 4,
+     "label": "Scene cube every N frames",
+     "name": "Enveveryn",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": 0.8,
+     "label": "Environment dimmer",
+     "name": "Envdimmer",
+     "style": "Float",
+     "value": 0.8
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 285.189,
+  "cpu_ms": 285.189,
+  "frames": 30,
+  "gpu_ms": 10.796,
+  "ops": 7
+ },
+ "sha256": "d8ecd4708d8f1b9144e286da8ed8f0d5e6adc17eb8ef9420d963a4b375dcef94",
+ "size": 234670,
+ "source": "/project1/lab/MX_prox_material",
+ "summary": "MX_prox_material: proximity-driven PBR material for any mesh (26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1268772,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.3.0",
+ "was_parked": true
+}

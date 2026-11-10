@@ -1,0 +1,597 @@
+{
+ "created": "2026-10-27 02:15:32",
+ "doc": "docs/builds/px_haze.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_haze",
+ "ops": 23,
+ "outputs": [
+  {
+   "height": 128,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 128
+  }
+ ],
+ "pars": [
+  {
+   "page": "Haze",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = passthrough)",
+     "name": "Hazeamount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "half",
+     "label": "Hazeres",
+     "name": "Hazeres",
+     "style": "Menu",
+     "value": "quarter"
+    },
+    {
+     "default": 0.08,
+     "label": "Density",
+     "name": "Density",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 0.0,
+     "label": "Floor height (y)",
+     "name": "Floor",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.35,
+     "label": "Height falloff",
+     "name": "Falloff",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 0.5,
+     "label": "Patchiness (fbm)",
+     "name": "Noise",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.35,
+     "label": "Noisescale",
+     "name": "Noisescale",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 0.3,
+     "label": "Drift (units/s)",
+     "name": "Windx",
+     "style": "XYZW",
+     "value": 0.3
+    },
+    {
+     "default": 0.05,
+     "label": "Drift (units/s)",
+     "name": "Windy",
+     "style": "XYZW",
+     "value": 0.05
+    },
+    {
+     "default": 0.1,
+     "label": "Drift (units/s)",
+     "name": "Windz",
+     "style": "XYZW",
+     "value": 0.1
+    },
+    {
+     "default": false,
+     "label": "Noise per sample (detail, slower)",
+     "name": "Noisepersample",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Extinction (dims the scene)",
+     "name": "Extinction",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.25,
+     "label": "Ambient haze",
+     "name": "Ambient",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.55,
+     "label": "Hazecol",
+     "name": "Hazecolr",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.6,
+     "label": "Hazecol",
+     "name": "Hazecolg",
+     "style": "RGBA",
+     "value": 0.6
+    },
+    {
+     "default": 0.7,
+     "label": "Hazecol",
+     "name": "Hazecolb",
+     "style": "RGBA",
+     "value": 0.7
+    },
+    {
+     "default": "source",
+     "label": "Hazecolsrc",
+     "name": "Hazecolsrc",
+     "style": "Menu",
+     "value": "source"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette position",
+     "name": "Hazepalpos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Palette spread (x attribute)",
+     "name": "Hazepalspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Keep source colour",
+     "name": "Hazekeep",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Lit fog tint",
+     "name": "Hazetintr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Lit fog tint",
+     "name": "Hazetintg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Lit fog tint",
+     "name": "Hazetintb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Lit fog gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.35,
+     "label": "Forward scatter (g)",
+     "name": "Anisotropy",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 10,
+     "label": "Steps",
+     "name": "Steps",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.05,
+     "label": "Light size",
+     "name": "Softradius",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": false,
+     "label": "Jitter",
+     "name": "Jitter",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "none",
+     "label": "Depthmode",
+     "name": "Depthmode",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": 1.0,
+     "label": "Depthscale",
+     "name": "Depthscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 6.0,
+     "label": "Object distance (no depth)",
+     "name": "Objdist",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 60.0,
+     "label": "Max distance (sky)",
+     "name": "Maxdist",
+     "style": "Float",
+     "value": 60.0
+    }
+   ]
+  },
+  {
+   "page": "Shafts",
+   "pars": [
+    {
+     "default": 0.6,
+     "label": "Shafts (0 = off)",
+     "name": "Shafts",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.96,
+     "label": "Decay",
+     "name": "Decay",
+     "style": "Float",
+     "value": 0.97
+    },
+    {
+     "default": 0.85,
+     "label": "Length",
+     "name": "Length",
+     "style": "Float",
+     "value": 0.85
+    },
+    {
+     "default": 20,
+     "label": "Taps",
+     "name": "Taps",
+     "style": "Int",
+     "value": 12
+    },
+    {
+     "default": 0.0,
+     "label": "Bright pixels emit (0 = off)",
+     "name": "Threshold",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.06,
+     "label": "Source disc",
+     "name": "Disc",
+     "style": "Float",
+     "value": 0.06
+    },
+    {
+     "default": 1.0,
+     "label": "Occlusion",
+     "name": "Occlusion",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Shaft mip (perf)",
+     "name": "Shaftlod",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Lights",
+   "pars": [
+    {
+     "default": "",
+     "label": "Light COMPs (paths / patterns)",
+     "name": "Lights",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Camera COMP (empty = manual)",
+     "name": "Camera",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 0.0,
+     "label": "Campos",
+     "name": "Camposx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Campos",
+     "name": "Camposy",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 8.0,
+     "label": "Campos",
+     "name": "Camposz",
+     "style": "XYZW",
+     "value": 8.0
+    },
+    {
+     "default": 0.0,
+     "label": "Camtarget",
+     "name": "Camtargetx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Camtarget",
+     "name": "Camtargety",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Camtarget",
+     "name": "Camtargetz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 45.0,
+     "label": "Horizontal FOV",
+     "name": "Fov",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 0.1,
+     "label": "Near",
+     "name": "Near",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 1000.0,
+     "label": "Far",
+     "name": "Far",
+     "style": "Float",
+     "value": 1000.0
+    }
+   ]
+  },
+  {
+   "page": "Bloom",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Bloom (0 = off)",
+     "name": "Bloom",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.8,
+     "label": "Bloomthr",
+     "name": "Bloomthr",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Bloomknee",
+     "name": "Bloomknee",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bloomwide",
+     "name": "Bloomwide",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Bloomtight",
+     "name": "Bloomtight",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.0,
+     "label": "Firefly clamp (0 = off)",
+     "name": "Bloomclamp",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bloomcol",
+     "name": "Bloomcolr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bloomcol",
+     "name": "Bloomcolg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bloomcol",
+     "name": "Bloomcolb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": "solid",
+     "label": "Bloomcolsrc",
+     "name": "Bloomcolsrc",
+     "style": "Menu",
+     "value": "solid"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette position",
+     "name": "Bloompalpos",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1.0,
+     "label": "Palette spread (x attribute)",
+     "name": "Bloompalspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Keep source colour",
+     "name": "Bloomkeep",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bloomsat",
+     "name": "Bloomsat",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ring halo",
+     "name": "Ring",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.12,
+     "label": "Ringradius",
+     "name": "Ringradius",
+     "style": "Float",
+     "value": 0.07
+    },
+    {
+     "default": 0.5,
+     "label": "Ringwidth",
+     "name": "Ringwidth",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Ringchroma",
+     "name": "Ringchroma",
+     "style": "Float",
+     "value": 0.2
+    }
+   ]
+  },
+  {
+   "page": "Palette",
+   "pars": [
+    {
+     "default": "neon_trio",
+     "label": "Palsource",
+     "name": "Palsource",
+     "style": "Menu",
+     "value": "neon_trio"
+    },
+    {
+     "default": "",
+     "label": "Custom stops (hex hex ...)",
+     "name": "Palstops",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "gradient",
+     "label": "Palmode",
+     "name": "Palmode",
+     "style": "Menu",
+     "value": "gradient"
+    },
+    {
+     "default": "oklab",
+     "label": "Palinterp",
+     "name": "Palinterp",
+     "style": "Menu",
+     "value": "oklab"
+    },
+    {
+     "default": 0.0,
+     "label": "Palshift",
+     "name": "Palshift",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 9.09,
+  "cpu_ms": 9.09,
+  "frames": 30,
+  "gpu_ms": 1.013,
+  "ops": 4
+ },
+ "sha256": "b013e5cce85d6b5a9b2b1306632d60c6206f5c2ad3c56fbabcb51cb63025a809",
+ "size": 46398,
+ "source": "/project1/lab/FX_haze",
+ "summary": "px_haze - volumetric haze, light shafts and bloom v2 (lane W1-D, 27 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 45054,
+  "height": 128,
+  "ok": true,
+  "top": "out1",
+  "width": 128
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

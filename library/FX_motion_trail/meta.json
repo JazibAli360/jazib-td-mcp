@@ -1,0 +1,412 @@
+{
+ "created": "2026-10-29 00:08:23",
+ "doc": "docs/builds/motion_trail.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Clipfile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Palettefile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/palettes/trail_test.gpl",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/palettes/trail_test.gpl",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in_level",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "FX_motion_trail",
+ "ops": 335,
+ "outputs": [
+  {
+   "height": 1080,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Trail",
+   "pars": [
+    {
+     "default": 30,
+     "label": "Length",
+     "name": "Length",
+     "style": "Int",
+     "value": 30
+    },
+    {
+     "default": "frames",
+     "label": "Unit",
+     "name": "Lengthunit",
+     "style": "Menu",
+     "value": "frames"
+    },
+    {
+     "default": 1.0,
+     "label": "Beats",
+     "name": "Beats",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": 0.5,
+     "label": "Decay",
+     "name": "Decay",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.08,
+     "label": "Threshold",
+     "name": "Threshold",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 0.05,
+     "label": "Softness",
+     "name": "Softness",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 1.0,
+     "label": "Mix",
+     "name": "Mix",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Source lvl",
+     "name": "Sourcelevel",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Audio mix",
+     "name": "Audioamount",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Hold",
+     "name": "Hold",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Clear",
+     "name": "Clear",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Colour",
+   "pars": [
+    {
+     "default": "ramp",
+     "label": "Age colour",
+     "name": "Agecolor",
+     "style": "Menu",
+     "value": "palette"
+    },
+    {
+     "default": "over",
+     "label": "Blend",
+     "name": "Blend",
+     "style": "Menu",
+     "value": "over"
+    },
+    {
+     "default": 1.0,
+     "label": "New",
+     "name": "Colornewr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "New",
+     "name": "Colornewg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "New",
+     "name": "Colornewb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.62,
+     "label": "Mid",
+     "name": "Colormidr",
+     "style": "RGBA",
+     "value": 0.62
+    },
+    {
+     "default": 0.64,
+     "label": "Mid",
+     "name": "Colormidg",
+     "style": "RGBA",
+     "value": 0.64
+    },
+    {
+     "default": 0.68,
+     "label": "Mid",
+     "name": "Colormidb",
+     "style": "RGBA",
+     "value": 0.68
+    },
+    {
+     "default": 0.22,
+     "label": "Old",
+     "name": "Coloroldr",
+     "style": "RGBA",
+     "value": 0.22
+    },
+    {
+     "default": 0.23,
+     "label": "Old",
+     "name": "Coloroldg",
+     "style": "RGBA",
+     "value": 0.23
+    },
+    {
+     "default": 0.26,
+     "label": "Old",
+     "name": "Coloroldb",
+     "style": "RGBA",
+     "value": 0.26
+    },
+    {
+     "default": "custom",
+     "label": "Palette",
+     "name": "Palette",
+     "style": "Menu",
+     "value": "custom"
+    },
+    {
+     "default": true,
+     "label": "Smooth pal",
+     "name": "Palettesmooth",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1.0,
+     "label": "Spread",
+     "name": "Spread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Cycle /s",
+     "name": "Cycle",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": "clip",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "clip"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+     "label": "Clip file",
+     "name": "Clipfile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4"
+    },
+    {
+     "default": "half",
+     "label": "Working size",
+     "name": "Quality",
+     "style": "Menu",
+     "value": "half"
+    },
+    {
+     "default": true,
+     "label": "Clear at clip loop point",
+     "name": "Resetonloop",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "",
+     "label": "Palette file (.txt .hex .json .gpl .pal .ase)",
+     "name": "Palettefile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/palettes/trail_test.gpl"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Trail",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Sensitivity",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.0,
+     "label": "Colour",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.0,
+     "label": "Fade",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.804,
+  "cpu_ms": 0.804,
+  "frames": 30,
+  "gpu_ms": 0.702,
+  "ops": 10
+ },
+ "sha256": "d4507a2edf8f344fd61d7b9c0bb285beb6887b48b52647e342cda90ba71f3661",
+ "size": 106038,
+ "source": "/project1/lab/FX_motion_trail",
+ "summary": "motion_trail - `/project1/lab/FX_motion_trail` (TD 2025.31550, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1565908,
+  "height": 1080,
+  "ok": true,
+  "top": "out1",
+  "width": 1920
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

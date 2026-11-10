@@ -1,0 +1,17 @@
+{
+  "name": "jazib-td-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Jazib MCP for TouchDesigner: drives a running TouchDesigner over a local bridge (TD dials out, opens no port).",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "node --test test/offline.test.mjs test/debug.test.mjs test/scratch.test.mjs test/crash.test.mjs test/blender.test.mjs test/vat.test.mjs &&python3 -I -m unittest discover -s test -p 'test_*.py'"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "ws": "8.22.0",
+    "zod": "4.6.5"
+  }
+}

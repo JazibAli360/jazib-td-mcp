@@ -1,0 +1,1438 @@
+{
+ "created": "2026-10-29 00:09:22",
+ "doc": "docs/builds/px_lines.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in_depth",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in_points",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "PX_lines",
+ "ops": 352,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Lines",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "composite",
+     "label": "Outmode",
+     "name": "Outmode",
+     "style": "Menu",
+     "value": "composite"
+    },
+    {
+     "default": 65536,
+     "label": "Segment budget",
+     "name": "Maxseg",
+     "style": "Int",
+     "value": 43311
+    },
+    {
+     "default": 2.0,
+     "label": "Core width px",
+     "name": "Width",
+     "style": "Float",
+     "value": 7.68
+    },
+    {
+     "default": 6.0,
+     "label": "Halo radius px",
+     "name": "Halo",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.35,
+     "label": "Halo gain",
+     "name": "Halogain",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 1.5,
+     "label": "Intensity (HDR)",
+     "name": "Intensity",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": "max",
+     "label": "Blend",
+     "name": "Blend",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 0.0,
+     "label": "Dim the scene under the lines",
+     "name": "Bgdim",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "",
+     "label": "Camera (empty = own cam)",
+     "name": "Camera",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": 1.0,
+     "label": "Time speed",
+     "name": "Speed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Reset trails",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Reset count (internal)",
+     "name": "Resetn",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  },
+  {
+   "page": "Reveal",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Reveal (draw-on 0..1)",
+     "name": "Reveal",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Cut (erase from start)",
+     "name": "Cut",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.02,
+     "label": "Reveal softness",
+     "name": "Revsoft",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.0,
+     "label": "Dashes per line (0 off)",
+     "name": "Dash",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.5,
+     "label": "Dash duty",
+     "name": "Dashduty",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Dash speed (dashes/s)",
+     "name": "Dashspeed",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Flicker per line",
+     "name": "Flicker",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 12.0,
+     "label": "Flicker rate Hz",
+     "name": "Flickerhz",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": "off",
+     "label": "Maskmode",
+     "name": "Maskmode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "",
+     "label": "Mask object (centre + y axis)",
+     "name": "Maskop",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": 0.0,
+     "label": "Maskcentre",
+     "name": "Maskcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Maskcentre",
+     "name": "Maskcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Maskcentre",
+     "name": "Maskcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Maskaxis",
+     "name": "Maskaxisx",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Maskaxis",
+     "name": "Maskaxisy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Maskaxis",
+     "name": "Maskaxisz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Mask radius",
+     "name": "Maskradius",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.2,
+     "label": "Mask softness",
+     "name": "Masksoft",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": false,
+     "label": "Invert mask",
+     "name": "Maskinvert",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "over",
+     "label": "Occlusion",
+     "name": "Occlusion",
+     "style": "Menu",
+     "value": "over"
+    },
+    {
+     "default": false,
+     "label": "in_depth wired (linear eye depth in R)",
+     "name": "Usedepth",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.02,
+     "label": "Occlusion bias",
+     "name": "Occbias",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.05,
+     "label": "Occlusion softness",
+     "name": "Occsoft",
+     "style": "Float",
+     "value": 0.05
+    }
+   ]
+  },
+  {
+   "page": "Colour",
+   "pars": [
+    {
+     "default": 0.25,
+     "label": "Linecol",
+     "name": "Linecolr",
+     "style": "RGBA",
+     "value": 0.25
+    },
+    {
+     "default": 1.0,
+     "label": "Linecol",
+     "name": "Linecolg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.4,
+     "label": "Linecol",
+     "name": "Linecolb",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": "solid",
+     "label": "Linecolsrc",
+     "name": "Linecolsrc",
+     "style": "Menu",
+     "value": "solid"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette position",
+     "name": "Linepalpos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Palette spread (x attribute)",
+     "name": "Linepalspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Keep source colour",
+     "name": "Linekeep",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.25,
+     "label": "Edgecol",
+     "name": "Edgecolr",
+     "style": "RGBA",
+     "value": 0.25
+    },
+    {
+     "default": 1.0,
+     "label": "Edgecol",
+     "name": "Edgecolg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.4,
+     "label": "Edgecol",
+     "name": "Edgecolb",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": "solid",
+     "label": "Edgecolsrc",
+     "name": "Edgecolsrc",
+     "style": "Menu",
+     "value": "solid"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette position",
+     "name": "Edgepalpos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Palette spread (x attribute)",
+     "name": "Edgepalspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Keep source colour",
+     "name": "Edgekeep",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "neon_green",
+     "label": "Palsource",
+     "name": "Palsource",
+     "style": "Menu",
+     "value": "neon_green"
+    },
+    {
+     "default": "",
+     "label": "Palette file (source file)",
+     "name": "Palfile",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "cycle",
+     "label": "Palmode",
+     "name": "Palmode",
+     "style": "Menu",
+     "value": "cycle"
+    },
+    {
+     "default": "oklab",
+     "label": "Palinterp",
+     "name": "Palinterp",
+     "style": "Menu",
+     "value": "oklab"
+    },
+    {
+     "default": false,
+     "label": "Reverse palette",
+     "name": "Palreverse",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Palette shift (drive me)",
+     "name": "Palshift",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Depth colour near",
+     "name": "Depthnear",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 10.0,
+     "label": "Depth colour far",
+     "name": "Depthfar",
+     "style": "Float",
+     "value": 10.0
+    }
+   ]
+  },
+  {
+   "page": "Points",
+   "pars": [
+    {
+     "default": 1,
+     "label": "Texels per point (PX state 5)",
+     "name": "Ptstride",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0,
+     "label": "Points used (0 = all texels)",
+     "name": "Ptcount",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  },
+  {
+   "page": "Rings",
+   "pars": [
+    {
+     "default": true,
+     "label": "Rings on",
+     "name": "Rings",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 4,
+     "label": "Rings per centre",
+     "name": "Ringcount",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": 128,
+     "label": "Segments per ring",
+     "name": "Ringsegs",
+     "style": "Int",
+     "value": 128
+    },
+    {
+     "default": 0.5,
+     "label": "Inner radius",
+     "name": "Ringradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.15,
+     "label": "Spacing",
+     "name": "Ringspacing",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 0.0,
+     "label": "Expand (cycles/s, 0 = still)",
+     "name": "Ringexpand",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spin deg/s",
+     "name": "Ringspin",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tilt deg (orbits)",
+     "name": "Ringtilt",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit deg/s",
+     "name": "Ringorbit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "plane",
+     "label": "Ringface",
+     "name": "Ringface",
+     "style": "Menu",
+     "value": "plane"
+    },
+    {
+     "default": "",
+     "label": "Centres: objects (space separated, <= 4)",
+     "name": "Ringops",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 0.0,
+     "label": "Ringcentre",
+     "name": "Ringcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ringcentre",
+     "name": "Ringcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ringcentre",
+     "name": "Ringcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ringnormal",
+     "name": "Ringnormalx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ringnormal",
+     "name": "Ringnormaly",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Ringnormal",
+     "name": "Ringnormalz",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": "along",
+     "label": "Ringattr",
+     "name": "Ringattr",
+     "style": "Menu",
+     "value": "along"
+    },
+    {
+     "default": 1.0,
+     "label": "Rings gain",
+     "name": "Ringgain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Contour",
+   "pars": [
+    {
+     "default": false,
+     "label": "Contour lines on",
+     "name": "Contour",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 32768,
+     "label": "Segments (points sampled)",
+     "name": "Ctmax",
+     "style": "Int",
+     "value": 32768
+    },
+    {
+     "default": "y",
+     "label": "Ctaxis",
+     "name": "Ctaxis",
+     "style": "Menu",
+     "value": "y"
+    },
+    {
+     "default": 0.0,
+     "label": "Ctaxisv",
+     "name": "Ctaxisvx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Ctaxisv",
+     "name": "Ctaxisvy",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ctaxisv",
+     "name": "Ctaxisvz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ctorigin",
+     "name": "Ctoriginx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ctorigin",
+     "name": "Ctoriginy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ctorigin",
+     "name": "Ctoriginz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.05,
+     "label": "Band spacing",
+     "name": "Ctspacing",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.01,
+     "label": "Band thickness",
+     "name": "Ctband",
+     "style": "Float",
+     "value": 0.01
+    },
+    {
+     "default": 0.03,
+     "label": "Segment length",
+     "name": "Ctlen",
+     "style": "Float",
+     "value": 0.03
+    },
+    {
+     "default": 1.0,
+     "label": "Snap to band plane",
+     "name": "Ctsnap",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Band scroll (bands/s)",
+     "name": "Ctspeed",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Wave amplitude",
+     "name": "Ctwave",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 2.0,
+     "label": "Wave frequency",
+     "name": "Ctwavefreq",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.5,
+     "label": "Wave speed",
+     "name": "Ctwavespeed",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "around",
+     "label": "Cttangent",
+     "name": "Cttangent",
+     "style": "Menu",
+     "value": "around"
+    },
+    {
+     "default": 0,
+     "label": "First point id",
+     "name": "Ctfirst",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0,
+     "label": "Point ids (0 = rest)",
+     "name": "Ctcount",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "index",
+     "label": "Ctattr",
+     "name": "Ctattr",
+     "style": "Menu",
+     "value": "index"
+    },
+    {
+     "default": 1.0,
+     "label": "Contour gain",
+     "name": "Ctgain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Trails",
+   "pars": [
+    {
+     "default": false,
+     "label": "Trails on",
+     "name": "Trails",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 2048,
+     "label": "Tracks",
+     "name": "Trtracks",
+     "style": "Int",
+     "value": 2048
+    },
+    {
+     "default": 32,
+     "label": "Samples per track",
+     "name": "Trsamples",
+     "style": "Int",
+     "value": 32
+    },
+    {
+     "default": 1,
+     "label": "Frames per sample",
+     "name": "Trevery",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "flow",
+     "label": "Trmotion",
+     "name": "Trmotion",
+     "style": "Menu",
+     "value": "flow"
+    },
+    {
+     "default": 0,
+     "label": "First point id",
+     "name": "Trfirst",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0,
+     "label": "Point ids (0 = rest)",
+     "name": "Trcount",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 3.0,
+     "label": "Life s (flow)",
+     "name": "Trlife",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 1.0,
+     "label": "Flow speed",
+     "name": "Trspeed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trdir",
+     "name": "Trdirx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trdir",
+     "name": "Trdiry",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": -1.0,
+     "label": "Trdir",
+     "name": "Trdirz",
+     "style": "XYZW",
+     "value": -1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Curl",
+     "name": "Trcurl",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.5,
+     "label": "Curl scale",
+     "name": "Trcurlscale",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.0,
+     "label": "Vortex swirl",
+     "name": "Trswirl",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Vortex pull",
+     "name": "Trpull",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Vortex on the camera",
+     "name": "Trvcam",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Trvcentre",
+     "name": "Trvcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trvcentre",
+     "name": "Trvcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trvcentre",
+     "name": "Trvcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trvaxis",
+     "name": "Trvaxisx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Trvaxis",
+     "name": "Trvaxisy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Trvaxis",
+     "name": "Trvaxisz",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Jitter (lightning)",
+     "name": "Trjitter",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 12.0,
+     "label": "Jitter rate Hz",
+     "name": "Trjitterhz",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 0.5,
+     "label": "Max jump (points)",
+     "name": "Trmaxjump",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Width taper",
+     "name": "Trtaper",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fade along",
+     "name": "Trfade",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "index",
+     "label": "Trattr",
+     "name": "Trattr",
+     "style": "Menu",
+     "value": "index"
+    },
+    {
+     "default": 1.0,
+     "label": "Trails gain",
+     "name": "Trgain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Connect",
+   "pars": [
+    {
+     "default": false,
+     "label": "Connect lines on",
+     "name": "Connect",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1024,
+     "label": "Points (brute force n^2)",
+     "name": "Cnpoints",
+     "style": "Int",
+     "value": 1024
+    },
+    {
+     "default": 3,
+     "label": "Neighbours per point",
+     "name": "Cnk",
+     "style": "Int",
+     "value": 3
+    },
+    {
+     "default": 0.2,
+     "label": "Max distance",
+     "name": "Cnradius",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 1,
+     "label": "Pieces per link (lightning)",
+     "name": "Cnsub",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.0,
+     "label": "Jitter (lightning)",
+     "name": "Cnjitter",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 12.0,
+     "label": "Jitter rate Hz",
+     "name": "Cnjitterhz",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 0,
+     "label": "First point id",
+     "name": "Cnfirst",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0,
+     "label": "Point ids (0 = rest)",
+     "name": "Cncount",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "along",
+     "label": "Cnattr",
+     "name": "Cnattr",
+     "style": "Menu",
+     "value": "along"
+    },
+    {
+     "default": 1.0,
+     "label": "Connect gain",
+     "name": "Cngain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "brute",
+     "label": "Cnindex",
+     "name": "Cnindex",
+     "style": "Menu",
+     "value": "brute"
+    },
+    {
+     "default": 32,
+     "label": "Index voxels per edge (x8)",
+     "name": "Cngrid",
+     "style": "Int",
+     "value": 32
+    },
+    {
+     "default": 0.0,
+     "label": "Index box centre",
+     "name": "Cngridcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Index box centre",
+     "name": "Cngridcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Index box centre",
+     "name": "Cngridcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Index box edge",
+     "name": "Cngridsize",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": "random",
+     "label": "Cnpick",
+     "name": "Cnpick",
+     "style": "Menu",
+     "value": "random"
+    },
+    {
+     "default": "",
+     "label": "Index points TOP (rest: static = indexed once; empty = in_points)",
+     "name": "Cnindextop",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": 0,
+     "label": "Index TOP texels per point (0 = Ptstride)",
+     "name": "Cnistride",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  },
+  {
+   "page": "Polyline",
+   "pars": [
+    {
+     "default": false,
+     "label": "Polyline on",
+     "name": "Polyline",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Path CHOP (tx ty tz [w])",
+     "name": "Polychop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "Place by object",
+     "name": "Polyop",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": 4096,
+     "label": "Max path points",
+     "name": "Pomax",
+     "style": "Int",
+     "value": 4096
+    },
+    {
+     "default": false,
+     "label": "Closed",
+     "name": "Poclose",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Pen up above gap (0 off)",
+     "name": "Pomaxgap",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "along",
+     "label": "Poattr",
+     "name": "Poattr",
+     "style": "Menu",
+     "value": "along"
+    },
+    {
+     "default": 1.0,
+     "label": "Polyline gain",
+     "name": "Pogain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Edges",
+   "pars": [
+    {
+     "default": false,
+     "label": "Edge lines on",
+     "name": "Edges",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "half",
+     "label": "Edres",
+     "name": "Edres",
+     "style": "Menu",
+     "value": "half"
+    },
+    {
+     "default": 1.0,
+     "label": "Luma edges",
+     "name": "Edluma",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Alpha (silhouette) edges",
+     "name": "Edalpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Depth edges (Usedepth)",
+     "name": "Eddepth",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.15,
+     "label": "Threshold",
+     "name": "Edthr",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 0.1,
+     "label": "Softness",
+     "name": "Edsoft",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 1.5,
+     "label": "Width px",
+     "name": "Edwidth",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.0,
+     "label": "Wipe direction deg (reveal)",
+     "name": "Edwipe",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "luma",
+     "label": "Edattr",
+     "name": "Edattr",
+     "style": "Menu",
+     "value": "luma"
+    },
+    {
+     "default": 1.0,
+     "label": "Edges gain",
+     "name": "Edgain",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Info",
+   "pars": [
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "segments 512 of 43311"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.24
+    },
+    {
+     "default": 0.0,
+     "label": "Width",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.286
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 186.718,
+  "cpu_ms": 186.718,
+  "frames": 30,
+  "gpu_ms": 2.324,
+  "ops": 7
+ },
+ "sha256": "c7a3caee122d913eb26c6480c3fc1236553d94269502e4c6f2dcbf916e1cad95",
+ "size": 168886,
+ "source": "/project1/lab/PX_lines",
+ "summary": "PX_lines: the lines pass for point / splat scenes (lane W1-C, 27 Oct 2026, TD 2025.31550 target)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 781171,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.0",
+ "was_parked": true
+}

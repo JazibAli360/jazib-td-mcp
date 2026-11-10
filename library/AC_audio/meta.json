@@ -1,0 +1,184 @@
+{
+ "created": "2026-10-29 00:09:34",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Audiofile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio/aa_house128_breakdown.wav",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio/aa_house128_breakdown.wav",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "src",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio/aa_house128_breakdown.wav",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio/aa_house128_breakdown.wav",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [],
+ "name": "AC_audio",
+ "ops": 343,
+ "outputs": [
+  {
+   "name": "ctl_out",
+   "type": "outCHOP"
+  },
+  {
+   "height": 1,
+   "name": "spec_out",
+   "type": "outTOP",
+   "width": 256
+  }
+ ],
+ "pars": [
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": "",
+     "label": "Audio file",
+     "name": "Audiofile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio/aa_house128_breakdown.wav"
+    },
+    {
+     "default": 0.0,
+     "label": "Trim",
+     "name": "Trim",
+     "style": "Float",
+     "value": 1.7466300000000001
+    },
+    {
+     "default": 0.0,
+     "label": "Depth",
+     "name": "Depth",
+     "style": "Float",
+     "value": 0.7
+    },
+    {
+     "default": "file",
+     "label": "Analyse",
+     "name": "Source",
+     "style": "Menu",
+     "value": "device"
+    },
+    {
+     "default": 5.0,
+     "label": "Spectrum gain",
+     "name": "Specgain",
+     "style": "Float",
+     "value": 5.0
+    },
+    {
+     "default": false,
+     "label": "Open controls window",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Merge AU_features (out_ctl_feat)",
+     "name": "Features",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "../AU_features/out_features",
+     "label": "Features CHOP",
+     "name": "Featurespath",
+     "style": "Str",
+     "value": "../AU_features/out_features"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 241.59,
+  "cpu_ms": 241.59,
+  "frames": 30,
+  "gpu_ms": 0.249,
+  "ops": 13
+ },
+ "sha256": "f22d9e487a5dd5fa4a2acd94498c367d14fb591e42375c7adc9e5d8cc1e4905e",
+ "size": 102070,
+ "source": "/project1/lab/AC_audio",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1459,
+  "height": 1,
+  "ok": true,
+  "top": "spec_out",
+  "width": 256
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

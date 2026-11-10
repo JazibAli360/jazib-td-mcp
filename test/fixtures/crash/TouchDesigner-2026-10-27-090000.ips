@@ -1,0 +1,150 @@
+{"app_name": "TouchDesigner", "timestamp": "2026-10-27 09:00:00.00 +0500", "app_version": "2025.31550", "bug_type": "309", "os_version": "macOS 27.0 (26A428)", "name": "TouchDesigner"}
+{
+ "pid": 5555,
+ "procName": "TouchDesigner",
+ "captureTime": "2026-10-27 09:00:00.0000 +0500",
+ "procLaunch": "2026-10-27 08:00:00.0000 +0500",
+ "translated": true,
+ "cpuType": "X86-64",
+ "bundleInfo": {
+  "CFBundleShortVersionString": "2025.31550"
+ },
+ "exception": {
+  "type": "EXC_BAD_ACCESS",
+  "signal": "SIGSEGV",
+  "subtype": "KERN_INVALID_ADDRESS at 0x0"
+ },
+ "faultingThread": 2,
+ "usedImages": [
+  {
+   "name": "libsystem_platform.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libGX.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libC_TOP.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "Python",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libPY.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libOP.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libC_DAT.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libUT.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libUI.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libOPUI.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libsystem_pthread.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libsystem_kernel.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "name": "CoreFoundation",
+   "arch": "x86_64"
+  },
+  {
+   "name": "libC_SOP.dylib",
+   "arch": "x86_64"
+  },
+  {
+   "source": "A",
+   "size": 0
+  }
+ ],
+ "threads": [
+  {
+   "id": 1,
+   "queue": "com.apple.main-thread",
+   "frames": [
+    {
+     "imageOffset": 1000,
+     "imageIndex": 11
+    },
+    {
+     "imageOffset": 1001,
+     "imageIndex": 11
+    },
+    {
+     "imageOffset": 1002,
+     "imageIndex": 12
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "frames": [
+    {
+     "imageOffset": 1000,
+     "imageIndex": 11
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "triggered": true,
+   "name": "TouchDesigner",
+   "frames": [
+    {
+     "imageOffset": 1000,
+     "imageIndex": 14
+    },
+    {
+     "imageOffset": 1001,
+     "imageIndex": 0,
+     "symbol": "_sigtramp"
+    },
+    {
+     "imageOffset": 1000,
+     "imageIndex": 13
+    },
+    {
+     "imageOffset": 1001,
+     "imageIndex": 5
+    },
+    {
+     "imageOffset": 1002,
+     "imageIndex": 3,
+     "symbol": "builtin_exec"
+    },
+    {
+     "imageOffset": 1003,
+     "imageIndex": 4
+    },
+    {
+     "imageOffset": 1004,
+     "imageIndex": 6
+    },
+    {
+     "imageOffset": 1000,
+     "imageIndex": 10
+    }
+   ]
+  }
+ ]
+}

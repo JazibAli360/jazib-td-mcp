@@ -1,0 +1,11 @@
+{"time":"2026-10-26T09:00:00.000Z","pid":100,"phase":"start","code":"op('/project1/lab/OLD').par.Go = 1"}
+{"time":"2026-10-26T10:00:05.000Z","pid":100,"phase":"start","code":"x = 1"}
+{"time":"2026-10-26T10:00:05.100Z","pid":100,"phase":"end","code":"x = 1","ok":true,"result":"{}"}
+{"time":"2026-10-26T10:00:18.000Z","pid":100,"agent":"lane1","phase":"start","code":"t = op('/project1/lab/BJ_urdu_type').create(textTOP, 'm')\nt.par.fontsizex = 40\na = t.numpyArray()"}
+{"time":"2026-10-26T10:00:19.000Z","pid":200,"agent":"lane2","phase":"start","code":"op('/project1/lab/LK_room').par.Speed = 2"}
+{"time":"2026-10-26T10:00:19.200Z","pid":200,"agent":"lane2","phase":"end","code":"op('/project1/lab/LK_room').par.Speed = 2","ok":true,"result":"{}"}
+not json at all
+{"time":"2026-10-26T10:00:19.500Z","pid":200,"agent":"lane2","phase":"start","code":"op('/project1/lab/LK_room/hud').cook(force=True)"}
+{"time":"2026-10-26T10:01:18.000Z","pid":100,"agent":"lane1","phase":"end","code":"t = op('/project1/lab/BJ_urdu_type').create(textTOP, 'm')\nt.par.fontsizex = 40\na = t.numpyArray()","ok":false,"error":"TouchDesigner disconnected before replying"}
+{"time":"2026-10-26T10:30:00.000Z","pid":200,"phase":"start","code":"1"}
+{"time":"2026-10-26T10:31:00.000Z","pid":200,"phase":"end","code":"1","ok":false,"error":"TouchDesigner timeout after 60000 ms on exec"}

@@ -1,0 +1,874 @@
+{
+ "created": "2026-10-29 00:08:02",
+ "doc": "docs/builds/fluid2d.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in3",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in4",
+   "type": "inCHOP"
+  },
+  {
+   "name": "in5",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "BN_fluid2d",
+ "ops": 494,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 342,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 192
+  },
+  {
+   "name": "out3",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Sim",
+   "pars": [
+    {
+     "default": 456,
+     "label": "Sim cells (height)",
+     "name": "Simh",
+     "style": "Int",
+     "value": 342
+    },
+    {
+     "default": 1080,
+     "label": "Dye width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Dye height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 20,
+     "label": "Pressure iterations (rebuild)",
+     "name": "Iterations",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.8,
+     "label": "Jacobi weight",
+     "name": "Relax",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": "auto",
+     "label": "Time step",
+     "name": "Dtmode",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 0.0166667,
+     "label": "Dt s",
+     "name": "Dt",
+     "style": "Float",
+     "value": 0.0166667
+    },
+    {
+     "default": 1.0,
+     "label": "Time scale",
+     "name": "Timescale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.2,
+     "label": "Velocity decay /s",
+     "name": "Veldiss",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 1.0,
+     "label": "Dye decay /s",
+     "name": "Dyediss",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 30.0,
+     "label": "Vorticity",
+     "name": "Curl",
+     "style": "Float",
+     "value": 30.0
+    },
+    {
+     "default": "wall",
+     "label": "Edges",
+     "name": "Edge",
+     "style": "Menu",
+     "value": "wall"
+    },
+    {
+     "default": 0.8,
+     "label": "Pressure carry-over",
+     "name": "Warmstart",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": "balanced",
+     "label": "Quality",
+     "name": "Quality",
+     "style": "Menu",
+     "value": "balanced"
+    },
+    {
+     "default": true,
+     "label": "Sleep when idle",
+     "name": "Idlesleep",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "idle: nothing drives it - wire in1 (dye) or in3 (force), Effectors on, Audio or BPM Internal (a dropped copy starts here)"
+    }
+   ]
+  },
+  {
+   "page": "Input",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Source gain (in1)",
+     "name": "Srcgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Mask threshold (in2)",
+     "name": "Maskthresh",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Force gain (in3)",
+     "name": "Forcegain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.03,
+     "label": "Emitter radius",
+     "name": "Emitradius",
+     "style": "Float",
+     "value": 0.03
+    },
+    {
+     "default": 1.0,
+     "label": "Emitter force",
+     "name": "Emitforce",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Emitter colour",
+     "name": "Emitcolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.4,
+     "label": "Emitter colour",
+     "name": "Emitcolorg",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": 0.1,
+     "label": "Emitter colour",
+     "name": "Emitcolorb",
+     "style": "RGBA",
+     "value": 0.1
+    }
+   ]
+  },
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Audio",
+     "name": "Audiomode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 4.0,
+     "label": "Audio gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 150.0,
+     "label": "Low band Hz",
+     "name": "Lowhz",
+     "style": "Float",
+     "value": 150.0
+    },
+    {
+     "default": 0.3,
+     "label": "Kick threshold",
+     "name": "Burstthresh",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.15,
+     "label": "Kick refractory s",
+     "name": "Burstrefractory",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": "off",
+     "label": "BPM",
+     "name": "Bpmmode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "b1",
+     "label": "Burst every",
+     "name": "Bpmdiv",
+     "style": "Menu",
+     "value": "b1"
+    },
+    {
+     "default": "ring",
+     "label": "Burst pattern",
+     "name": "Bpmpattern",
+     "style": "Menu",
+     "value": "ring"
+    },
+    {
+     "default": "",
+     "label": "Beat CHOP (external)",
+     "name": "Beatchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": false,
+     "label": "Burst",
+     "name": "Burst",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Burst force",
+     "name": "Burstforce",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.12,
+     "label": "Burst ring radius",
+     "name": "Burstring",
+     "style": "Float",
+     "value": 0.12
+    },
+    {
+     "default": 0.04,
+     "label": "Burst splat radius",
+     "name": "Burstradius",
+     "style": "Float",
+     "value": 0.04
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "rgb",
+     "label": "Colour",
+     "name": "Colormode",
+     "style": "Menu",
+     "value": "rgb"
+    },
+    {
+     "default": 0.0,
+     "label": "Exposure (stops)",
+     "name": "Exposure",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Gamma",
+     "name": "Gamma",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 300.0,
+     "label": "Speed for top colour (cells/s)",
+     "name": "Speedref",
+     "style": "Float",
+     "value": 300.0
+    },
+    {
+     "default": "add",
+     "label": "Dye blend",
+     "name": "Dyeblend",
+     "style": "Menu",
+     "value": "add"
+    },
+    {
+     "default": "opaque",
+     "label": "Alpha",
+     "name": "Alpha",
+     "style": "Menu",
+     "value": "opaque"
+    },
+    {
+     "default": true,
+     "label": "Premultiplied",
+     "name": "Premult",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.05,
+     "label": "Palette 1 (low)",
+     "name": "Pal1r",
+     "style": "RGBA",
+     "value": 0.05
+    },
+    {
+     "default": 0.05,
+     "label": "Palette 1 (low)",
+     "name": "Pal1g",
+     "style": "RGBA",
+     "value": 0.05
+    },
+    {
+     "default": 0.25,
+     "label": "Palette 1 (low)",
+     "name": "Pal1b",
+     "style": "RGBA",
+     "value": 0.25
+    },
+    {
+     "default": 0.35,
+     "label": "Palette 2",
+     "name": "Pal2r",
+     "style": "RGBA",
+     "value": 0.35
+    },
+    {
+     "default": 0.1,
+     "label": "Palette 2",
+     "name": "Pal2g",
+     "style": "RGBA",
+     "value": 0.1
+    },
+    {
+     "default": 0.65,
+     "label": "Palette 2",
+     "name": "Pal2b",
+     "style": "RGBA",
+     "value": 0.65
+    },
+    {
+     "default": 0.95,
+     "label": "Palette 3",
+     "name": "Pal3r",
+     "style": "RGBA",
+     "value": 0.95
+    },
+    {
+     "default": 0.2,
+     "label": "Palette 3",
+     "name": "Pal3g",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.55,
+     "label": "Palette 3",
+     "name": "Pal3b",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 1.0,
+     "label": "Palette 4",
+     "name": "Pal4r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Palette 4",
+     "name": "Pal4g",
+     "style": "RGBA",
+     "value": 0.6
+    },
+    {
+     "default": 0.15,
+     "label": "Palette 4",
+     "name": "Pal4b",
+     "style": "RGBA",
+     "value": 0.15
+    },
+    {
+     "default": 1.0,
+     "label": "Palette 5 (high)",
+     "name": "Pal5r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Palette 5 (high)",
+     "name": "Pal5g",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.9,
+     "label": "Palette 5 (high)",
+     "name": "Pal5b",
+     "style": "RGBA",
+     "value": 0.9
+    }
+   ]
+  },
+  {
+   "page": "Control",
+   "pars": [
+    {
+     "default": false,
+     "label": "Reset",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Pause",
+     "name": "Pause",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Step (while paused)",
+     "name": "Step",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Pause at step (0 = off)",
+     "name": "Stopat",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "off",
+     "label": "Test mode",
+     "name": "Testmode",
+     "style": "Menu",
+     "value": "off"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Swirl",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Persist",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Force",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "About",
+   "pars": [
+    {
+     "default": "",
+     "label": "Version",
+     "name": "Version",
+     "style": "Str",
+     "value": "0.1.0"
+    },
+    {
+     "default": "",
+     "label": "Touch build",
+     "name": "Touchbuild",
+     "style": "Str",
+     "value": "2025.31550"
+    },
+    {
+     "default": "",
+     "label": "Saved",
+     "name": "Saved",
+     "style": "Str",
+     "value": "2026-10-26 17:01"
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Effgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "max",
+     "label": "Combine",
+     "name": "Effcombine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Radius scale",
+     "name": "Effradscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge",
+     "name": "Effragged",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged freq",
+     "name": "Effraggedfreq",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": false,
+     "label": "Own falloff (ignore per-effector)",
+     "name": "Effoverride",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Own radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Own exponent",
+     "name": "Effexp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "smooth",
+     "label": "Own shape",
+     "name": "Effshape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre (world)",
+     "name": "Effcentrex",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre (world)",
+     "name": "Effcentrey",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre (world)",
+     "name": "Effcentrez",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.125,
+     "label": "Plane width (world)",
+     "name": "Effplanew",
+     "style": "Float",
+     "value": 1.125
+    },
+    {
+     "default": 2.0,
+     "label": "Plane height (world)",
+     "name": "Effplaneh",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 1.0,
+     "label": "Push (outward)",
+     "name": "Effpush",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Swirl",
+     "name": "Effswirl",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Wake (effector velocity)",
+     "name": "Effwake",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Dye amount",
+     "name": "Effdye",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Dye colour",
+     "name": "Effcolourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.45,
+     "label": "Dye colour",
+     "name": "Effcolourg",
+     "style": "RGBA",
+     "value": 0.45
+    },
+    {
+     "default": 0.1,
+     "label": "Dye colour",
+     "name": "Effcolourb",
+     "style": "RGBA",
+     "value": 0.1
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.175,
+  "cpu_ms": 1.175,
+  "frames": 30,
+  "gpu_ms": 1.786,
+  "ops": 16
+ },
+ "sha256": "fba24b37393bb6f9ba6608e8fd115a5b86407489e6bf7b6ff053027ce70f0fb8",
+ "size": 175806,
+ "source": "/project1/lab/BN_fluid2d",
+ "summary": "fluid2d: BN_fluid2d 2D fluid COMP (live-verified v1 in main, 26 Oct 2026, TD 2025.31550, T-91)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 20691,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

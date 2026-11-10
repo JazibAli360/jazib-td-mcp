@@ -1,0 +1,1288 @@
+{
+ "count": 69,
+ "format": "jtd-library",
+ "items": [
+  {
+   "created": "2026-10-29 00:09:34",
+   "in_git": true,
+   "name": "AC_audio",
+   "outside_files": 0,
+   "sha256": "f22d9e487a5dd5fa4a2acd94498c367d14fb591e42375c7adc9e5d8cc1e4905e",
+   "size": 102070,
+   "source": "/project1/lab/AC_audio",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1459,
+    "height": 1,
+    "ok": true,
+    "top": "spec_out",
+    "width": 256
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:36",
+   "in_git": true,
+   "name": "AU_db_meter",
+   "outside_files": 0,
+   "sha256": "34fc89af5b006697da6a0edc3f27e3de9119f6db9748f46efd572db8d1b2d59d",
+   "size": 102150,
+   "source": "/project1/lab/AU_db_meter",
+   "summary": "db_meter (`/project1/lab/AU_db_meter`)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 22509,
+    "height": 1024,
+    "ok": true,
+    "top": "out1",
+    "width": 256
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:07:48",
+   "in_git": true,
+   "name": "AU_features",
+   "outside_files": 0,
+   "sha256": "decdef594f9eba3350c862e28e8a917ccd71a48999ad7e4e7b2ae58ad11c12d3",
+   "size": 112782,
+   "source": "/project1/lab/AU_features",
+   "summary": "au_features - `/project1/lab/AU_features` (TD 2025.31550, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:07:49",
+   "in_git": true,
+   "name": "BJ_urdu_type",
+   "outside_files": 1,
+   "sha256": "73c0850f72605154c83d5cf94696ff31a2f2a4e180fb9e48057872cb899df96e",
+   "size": 124302,
+   "source": "/project1/lab/BJ_urdu_type",
+   "summary": "urdu_type (BJ build spec A): status 26 Oct 2026, TD 2025.31550 - LIVE-VERIFIED via the pre-shaped atlas route (commit 9eb3bc7: 150 s scratch soak, then main; earlier Text TOP route crashed TD, T-76/T-79)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 130329,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-26 19:46:21",
+   "in_git": true,
+   "name": "BK_dmx_out",
+   "outside_files": 0,
+   "sha256": "51332e46515caea8ea43745524107d8e150c9619996f8ec350c6811f38486797",
+   "size": 42974,
+   "source": "/project1/lab/BK_dmx_out",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:07:51",
+   "in_git": true,
+   "name": "BK_dmx_patch",
+   "outside_files": 0,
+   "sha256": "85c3b77e0998820e2a3356088466f053fe0b91f029a2aadd20e8fa284e1eac2b",
+   "size": 127062,
+   "source": "/project1/lab/BK_dmx_patch",
+   "summary": "dmx_patch: BK_dmx_patch fixture patch sheet + stage plot + previs + aim helper (26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 22210,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:07:55",
+   "in_git": false,
+   "name": "BL_cloud_morph",
+   "outside_files": 0,
+   "sha256": "76848505f7de9fbab0496ed3ccef669f26eb613ab28ef0341d28ed875ed86f7e",
+   "size": 8874208,
+   "source": "/project1/lab/BL_cloud_morph",
+   "summary": "pointcloud: BL_cloud_morph point-cloud viewer + A/B morph (live v1 in main, 26 Oct 2026, TD 2025.31550, T-89)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 484189,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:00",
+   "in_git": false,
+   "name": "BL_splat_render",
+   "outside_files": 0,
+   "sha256": "a3b44eb513ee0c50f778f1df68b7903e3a63e9afb4f0e466884ada14f3d742d3",
+   "size": 6325792,
+   "source": "/project1/lab/BL_splat_render",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 4740577,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.1"
+  },
+  {
+   "created": "2026-10-29 00:08:01",
+   "in_git": true,
+   "name": "BN_cloth",
+   "outside_files": 0,
+   "sha256": "b23cee5a2acf595b7422b242eb715417fea1be1d7d04a974b2dc3c93850b128f",
+   "size": 135006,
+   "source": "/project1/lab/BN_cloth",
+   "summary": "cloth: BN_cloth cloth + jelly COMP (live v1 in main, 26 Oct 2026, TD 2025.31550; jelly fails live, T-87)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 72603,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.1"
+  },
+  {
+   "created": "2026-10-29 00:08:02",
+   "in_git": true,
+   "name": "BN_fluid2d",
+   "outside_files": 0,
+   "sha256": "fba24b37393bb6f9ba6608e8fd115a5b86407489e6bf7b6ff053027ce70f0fb8",
+   "size": 175806,
+   "source": "/project1/lab/BN_fluid2d",
+   "summary": "fluid2d: BN_fluid2d 2D fluid COMP (live-verified v1 in main, 26 Oct 2026, TD 2025.31550, T-91)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 20691,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:04",
+   "in_git": true,
+   "name": "BO_particles",
+   "outside_files": 0,
+   "sha256": "40948d24bfc61b59c8ec13e722ff3c8dbda5f761a620fc705ed62f5fc871a43f",
+   "size": 258310,
+   "source": "/project1/lab/BO_particles",
+   "summary": "particles: BO_particles GPU particle system (live v1 in main, 26 Oct 2026, TD 2025.31550; V5 partial)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 117328,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:05",
+   "in_git": true,
+   "name": "BP_io_router",
+   "outside_files": 0,
+   "sha256": "b9adf3f70b2c3df2c5412785e470c95d1c3731339bfc22523a094678e4252115",
+   "size": 115278,
+   "source": "/project1/lab/BP_io_router",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 8205,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-26 19:47:40",
+   "in_git": true,
+   "name": "BX_blender_scene",
+   "outside_files": 0,
+   "sha256": "bf59586e1a1dfa132fd37a620b53d89e5749dcd122707ec4743c2227553c8a28",
+   "size": 18470,
+   "source": "/project1/lab/BX_blender_scene",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:05",
+   "in_git": true,
+   "name": "CQ_cuelist",
+   "outside_files": 0,
+   "sha256": "748c51762ee3d40ff70c7ee962cf8347abf60b3a8431dbc2e5292ee21ae05113",
+   "size": 97270,
+   "source": "/project1/lab/CQ_cuelist",
+   "summary": "CQ_cuelist \u2014 cue list + timecode show control (v1)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:33",
+   "in_git": true,
+   "name": "CS_cam_sequencer",
+   "outside_files": 0,
+   "sha256": "780f5b43622209fe0409c5d2e7faedffa35b695fcb27424b4470ae0a783246ca",
+   "size": 58302,
+   "source": "/project1/lab/CS_cam_sequencer",
+   "summary": "CS_cam_sequencer v2: a Camera COMP that eases between camera presets (how-to)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "2.0.0"
+  },
+  {
+   "created": "2026-10-29 00:08:07",
+   "in_git": true,
+   "name": "CV_person_mask",
+   "outside_files": 0,
+   "sha256": "667f255dac5c6a67234bd02dc4973489ff6a3726447d5bed38b0006e45809266",
+   "size": 116190,
+   "source": "/project1/lab/CV_person_mask",
+   "summary": "person_mask - `/project1/lab/CV_person_mask` (TD 2025.31550, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 394299,
+    "height": 1080,
+    "ok": true,
+    "top": "out1",
+    "width": 1920
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:08",
+   "in_git": true,
+   "name": "DC_depth_cam",
+   "outside_files": 0,
+   "sha256": "52df9ee976adaef5d459546a758ea17633b0d4dcbb72e243e5d0fe9b767a17b4",
+   "size": 107622,
+   "source": "/project1/lab/DC_depth_cam",
+   "summary": "depth_cam - `/project1/lab/DC_depth_cam` (live-verified v1 in main, 26 Oct 2026, TD 2025.31550; T-92)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 141,
+    "height": 2,
+    "ok": true,
+    "top": "out_depth",
+    "width": 2
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-27 03:25:54",
+   "in_git": true,
+   "name": "effectors",
+   "outside_files": 0,
+   "sha256": "08c72182f83e15256010aadfe546a35b34411c68ee3bf4a5a7932ae0e355b826",
+   "size": 141078,
+   "source": "/project1/effectors",
+   "summary": "Shared effectors: `/project1/effectors` + adapters (26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.3.0"
+  },
+  {
+   "created": "2026-10-29 00:09:33",
+   "in_git": true,
+   "name": "FG_fps_governor",
+   "outside_files": 0,
+   "sha256": "166475652cf223e2474a029effdd595fe0adac30fd71cfe26f2c97db47286f8a",
+   "size": 84422,
+   "source": "/project1/lab/FG_fps_governor",
+   "summary": "FG_fps_governor: hold 60 fps, any COMP can follow (28 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:09",
+   "in_git": true,
+   "name": "FT_face_track",
+   "outside_files": 0,
+   "sha256": "c2a60eaa244b103166d3eadc351df8b98c761d330e27f79083de96d0431c5723",
+   "size": 123774,
+   "source": "/project1/lab/FT_face_track",
+   "summary": "face_track - `/project1/lab/FT_face_track` (TD 2025.31550, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 753,
+    "height": 144,
+    "ok": true,
+    "top": "out_eyes",
+    "width": 512
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:11",
+   "in_git": true,
+   "name": "FX_analog",
+   "outside_files": 0,
+   "sha256": "0f82da0c6561e47debd7e09e5d60c082e48874a26868485922fae05ccc56a937",
+   "size": 593952,
+   "source": "/project1/lab/FX_analog",
+   "summary": "fx_analog_crt: FX_analog modules `crt` (+ `monitor` presets) and `crtfault` (offline prep, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1465854,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:13",
+   "in_git": true,
+   "name": "FX_destroy",
+   "outside_files": 0,
+   "sha256": "d729a75be213ec331edd8f09713e45e80587f48f7a64dd5ca3d45e0db2b0a75f",
+   "size": 601816,
+   "source": "/project1/lab/FX_destroy",
+   "summary": "fx_destroy: FX_destroy rack + 6 modules `melt`, `burn`, `shatter`, `crack`, `explode`, `disintegrate` (26-27 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1465854,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:16",
+   "in_git": true,
+   "name": "FX_film",
+   "outside_files": 0,
+   "sha256": "8e21da3ee67293fa10d3b4a8d460b673aa5a488a3b4750304d4affe86f870d47",
+   "size": 1267524,
+   "source": "/project1/lab/FX_film",
+   "summary": "fx_film: FX_film rack + 14 modules (film, lens, camera, dof, gate, colour), live in main, 26-27 Oct 2026",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1448542,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "1.0.0"
+  },
+  {
+   "created": "2026-10-29 00:08:18",
+   "in_git": true,
+   "name": "FX_glass",
+   "outside_files": 0,
+   "sha256": "da79be38d585545192ff32562f68407e3fcd2d21f0c72051ebefdbafac91843f",
+   "size": 451920,
+   "source": "/project1/lab/FX_glass",
+   "summary": "fx_glass: FX_glass rack + modules (lane B, 27 Oct 2026, TD 2025.31550 target)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1448542,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:21",
+   "in_git": true,
+   "name": "FX_glitch",
+   "outside_files": 0,
+   "sha256": "26a795dd4c1000a2c9dd434d80e03fa7905c8675f1090bd685afd5cab6c566df",
+   "size": 1425828,
+   "source": "/project1/lab/FX_glitch",
+   "summary": "fx_glitch: FX_glitch rack + 15 modules (smear pilot first; live in main, 26-27 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1465854,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.3.1"
+  },
+  {
+   "created": "2026-10-27 02:15:32",
+   "in_git": true,
+   "name": "FX_haze",
+   "outside_files": 0,
+   "sha256": "b013e5cce85d6b5a9b2b1306632d60c6206f5c2ad3c56fbabcb51cb63025a809",
+   "size": 46398,
+   "source": "/project1/lab/FX_haze",
+   "summary": "px_haze - volumetric haze, light shafts and bloom v2 (lane W1-D, 27 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 45054,
+    "height": 128,
+    "ok": true,
+    "top": "out1",
+    "width": 128
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:23",
+   "in_git": true,
+   "name": "FX_motion_trail",
+   "outside_files": 0,
+   "sha256": "d4507a2edf8f344fd61d7b9c0bb285beb6887b48b52647e342cda90ba71f3661",
+   "size": 106038,
+   "source": "/project1/lab/FX_motion_trail",
+   "summary": "motion_trail - `/project1/lab/FX_motion_trail` (TD 2025.31550, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1565908,
+    "height": 1080,
+    "ok": true,
+    "top": "out1",
+    "width": 1920
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:24",
+   "in_git": true,
+   "name": "FX_palette_map",
+   "outside_files": 0,
+   "sha256": "c58b65232bf66e82bbbec7f9a9697fe4962b9c7a3e1ae92e719fc0af9f09d0e1",
+   "size": 100758,
+   "source": "/project1/lab/FX_palette_map",
+   "summary": "palette_map - `/project1/lab/FX_palette_map` (TD 2025.31550, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 216,
+    "height": 128,
+    "ok": true,
+    "top": "out1",
+    "width": 128
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:26",
+   "in_git": true,
+   "name": "FX_retro",
+   "outside_files": 0,
+   "sha256": "653107653798e43bca636981e43696a32d8a89fc20d0ea91c2b217aa2ca568bb",
+   "size": 1136116,
+   "source": "/project1/lab/FX_retro",
+   "summary": "fx_retro: FX_retro rack + 5 modules (palette, dither, glyph, teletext, smalldisplay), live in main, 26 Oct 2026",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1448542,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.4.0"
+  },
+  {
+   "created": "2026-10-29 00:08:29",
+   "in_git": true,
+   "name": "FX_scope",
+   "outside_files": 0,
+   "sha256": "bae4acb18d940ea8614a4bdf2b358e28d365252dcb695aa3c1584f10843b08e5",
+   "size": 481248,
+   "source": "/project1/lab/FX_scope",
+   "summary": "fx_scope: FX_scope rack + 5 modules `xy` `vector` `lissajous` `scopes` `hud` (live in main, 26 Oct 2026)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1448542,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:30",
+   "in_git": true,
+   "name": "FX_strobe",
+   "outside_files": 0,
+   "sha256": "773c163f8ba5a4da4b02081e0afe6b1c04c9bed94e89be9f1e50cbcd4ac52a6e",
+   "size": 96966,
+   "source": "/project1/lab/FX_strobe",
+   "summary": "strobe: FX_strobe strobe effector (26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 463,
+    "height": 128,
+    "ok": true,
+    "top": "out1",
+    "width": 128
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:31",
+   "in_git": true,
+   "name": "FX_stylise",
+   "outside_files": 0,
+   "sha256": "0b6ea37442cd01a7d2175d5c9a73bb3cf8b9fc912a7fc43072baa450d9f931bc",
+   "size": 757946,
+   "source": "/project1/lab/FX_stylise",
+   "summary": "fx_stylise: FX_stylise rack + modules (lane B, 27 Oct 2026, TD 2025.31550 target)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1448542,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:34",
+   "in_git": true,
+   "name": "FX_synth",
+   "outside_files": 0,
+   "sha256": "4f1637df7cd17a08fe3c545284054827a75dd87e95224f3f931b8e6eae8e6ded",
+   "size": 607776,
+   "source": "/project1/lab/FX_synth",
+   "summary": "FX_synth: video-synth rack + 6 modules (live in main, 26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1462375,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:36",
+   "in_git": true,
+   "name": "FX_track",
+   "outside_files": 0,
+   "sha256": "8eae5939c40f48703b4147cab2974437a4588d2e13535a61a57c1387394a8a9a",
+   "size": 391480,
+   "source": "/project1/lab/FX_track",
+   "summary": "fx_track: FX_track rack + shared tracker + plexus / hud / analytics (lane F, 27 Oct 2026, TD 2025.31550 target)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1449845,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:37",
+   "in_git": true,
+   "name": "FX_trans",
+   "outside_files": 0,
+   "sha256": "c9121709a212b9402ad3c7c63cecb07d739c4bccff764237d6b9d6289acfec93",
+   "size": 168726,
+   "source": "/project1/lab/FX_trans",
+   "summary": "fx_trans: FX_trans, the G-TRANS transition bank, 53 transition types (27 at first live) (live in main, 26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1090412,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.3.0"
+  },
+  {
+   "created": "2026-10-29 00:08:40",
+   "in_git": true,
+   "name": "GEN_clone",
+   "outside_files": 0,
+   "sha256": "29de462adcd979d7fc7270c8aca5d9ddefee2211eff08e9af50969d1021e672a",
+   "size": 128598,
+   "source": "/project1/lab/GEN_clone",
+   "summary": "gen_clone: GEN_clone, the G-CLONE cloner COMP (live in main, C1-C12 verified, 26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 4691872,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:41",
+   "in_git": true,
+   "name": "GEN_interactive",
+   "outside_files": 0,
+   "sha256": "fae7ae645ff73345370cb07d6901762ec06a25fe4b2bad920fd85f548f1149b3",
+   "size": 753458,
+   "source": "/project1/lab/GEN_interactive",
+   "summary": "gen_interactive: GEN_interactive rack + 4 people-driven artist looks (live in main, 26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 134333,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.1"
+  },
+  {
+   "created": "2026-10-29 00:08:44",
+   "in_git": true,
+   "name": "GEN_pattern",
+   "outside_files": 0,
+   "sha256": "b592554c1f7093b51dcbe2f75222c79d45d10cffabfc78f4bfdf869b97cbf2c3",
+   "size": 1581974,
+   "source": "/project1/lab/GEN_pattern",
+   "summary": "gen_pattern: GEN_pattern rack + 17 one-pass generator modules (live in main, 26-27 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 119132,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:47",
+   "in_git": true,
+   "name": "GEN_points",
+   "outside_files": 0,
+   "sha256": "c69de46833c58db3046a4bb1e23cee2ea66e88c19775b7d68a51d36a8dc7ce41",
+   "size": 1583724,
+   "source": "/project1/lab/GEN_points",
+   "summary": "gen_points: GEN_points rack + 8 point-engine modules (live in main, 26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1975134,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:50",
+   "in_git": true,
+   "name": "GEN_sdf",
+   "outside_files": 0,
+   "sha256": "d1d60e85e6eb795e66c3930c755fbeafd135e89b1d6a9f353e2ac3f03fd55f17",
+   "size": 1022332,
+   "source": "/project1/lab/GEN_sdf",
+   "summary": "gen_sdf: GEN_sdf rack + 10 raymarch / fractal / sky modules (live in main, 26-27 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 932947,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.3.0"
+  },
+  {
+   "created": "2026-10-29 00:08:52",
+   "in_git": true,
+   "name": "GEN_sim",
+   "outside_files": 0,
+   "sha256": "b5376bec0370a3f711fc86c3002d991f7b6ac26ccec902fca26b2aa40234ff0b",
+   "size": 862058,
+   "source": "/project1/lab/GEN_sim",
+   "summary": "gen_sim: GEN_sim rack + 5 modules `ca` / `voronoi` / `dla` / `blobs` / `lic` (live in main, 26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 306966,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:08:54",
+   "in_git": true,
+   "name": "GN_physarum",
+   "outside_files": 0,
+   "sha256": "49492cd681f187d21bebc1d5433b6f14ab14395e8b8bdf880a8eaf9db9e930f7",
+   "size": 150686,
+   "source": "/project1/lab/GN_physarum",
+   "summary": "physarum: GN_physarum slime mould COMP (live-verified v1 on 2025.31550, 26 Oct 2026, T-112)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 7708779,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:08:56",
+   "in_git": true,
+   "name": "GN_reaction_diffusion",
+   "outside_files": 0,
+   "sha256": "cf2b4019f319538edaf265bf17bd2d01eb3d61cbf974f25d51e5d377b3c181c0",
+   "size": 139334,
+   "source": "/project1/lab/GN_reaction_diffusion",
+   "summary": "reaction_diffusion: GN_reaction_diffusion Gray-Scott COMP (live-verified v1 on 2025.31550, 26 Oct 2026, T-108)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 470380,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:08:57",
+   "in_git": true,
+   "name": "LK_projection_room",
+   "outside_files": 0,
+   "sha256": "355fbdf13247e1628f80b5344bef9f99ae2c5c7831e9f1ec07b8368fe4da2817",
+   "size": 135142,
+   "source": "/project1/lab/LK_projection_room",
+   "summary": "projector_dome: LK_projection_room upgrade (projector planner + fulldome mode), 26 Oct 2026, TD 2025.31550",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 281207,
+    "height": 2048,
+    "ok": true,
+    "top": "domemaster_out",
+    "width": 2048
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:08:59",
+   "in_git": true,
+   "name": "LK_spectrum_glass",
+   "outside_files": 0,
+   "sha256": "a98ef70a8eb503fc3f1f27d143b10a646078f8ec86c9780d3bd5a2d96785e13a",
+   "size": 82222,
+   "source": "/project1/lab/LK_spectrum_glass",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 2026580,
+    "height": 1080,
+    "ok": true,
+    "top": "look_out",
+    "width": 1920
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:37",
+   "in_git": true,
+   "name": "LK_typecore",
+   "outside_files": 0,
+   "sha256": "e508b7b3e5f99922d34ac42cecae99de88fe3295ec794abf255b5c5534b4112e",
+   "size": 76054,
+   "source": "/project1/lab/LK_typecore",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 128129,
+    "height": 1080,
+    "ok": true,
+    "top": "type_out",
+    "width": 1920
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:00",
+   "in_git": true,
+   "name": "LP_laser_path",
+   "outside_files": 0,
+   "sha256": "f97728f686799b4abf4694b8bf783bfa036ed4d5eb71576f03717e3ec2aa0e48",
+   "size": 130078,
+   "source": "/project1/lab/LP_laser_path",
+   "summary": "laser_path: LP_laser_path laser path generator + beam preview (live v1 in main, 26 Oct 2026, no laser hardware)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 225386,
+    "height": 1080,
+    "ok": true,
+    "top": "out2",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:01",
+   "in_git": true,
+   "name": "LY_lyrics_feed",
+   "outside_files": 0,
+   "sha256": "0b2fe6e0fb712dfefd853509df7f8a4f388e285cb5c8b2733adcc72c16d3ce05",
+   "size": 102430,
+   "source": "/project1/lab/LY_lyrics_feed",
+   "summary": "lyrics_feed: LY_lyrics_feed synced lyrics feed (26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 12548,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-26 19:46:35",
+   "in_git": true,
+   "name": "MIDI_mapper",
+   "outside_files": 1,
+   "sha256": "c7ecde0206b889462f874544254bf8e2e3c3196af41330b1c1fd6ae678dce8a7",
+   "size": 35286,
+   "source": "/project1/lab/MIDI_mapper",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:03",
+   "in_git": true,
+   "name": "MX_prox_material",
+   "outside_files": 0,
+   "sha256": "d8ecd4708d8f1b9144e286da8ed8f0d5e6adc17eb8ef9420d963a4b375dcef94",
+   "size": 234670,
+   "source": "/project1/lab/MX_prox_material",
+   "summary": "MX_prox_material: proximity-driven PBR material for any mesh (26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1268772,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.3.0"
+  },
+  {
+   "created": "2026-10-29 00:09:04",
+   "in_git": true,
+   "name": "POP_branching",
+   "outside_files": 0,
+   "sha256": "79a1b090a4c416bfde82eee0c4eae95faad6083fe7bbe28b24f40db2460ce339",
+   "size": 89142,
+   "source": "/project1/lab/POP_branching",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 32545,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:09:06",
+   "in_git": true,
+   "name": "POP_caustics",
+   "outside_files": 0,
+   "sha256": "03fbd38da71605e258abbd1d08b0e75ce25766a50aa36566d95ec93d7f0ad69d",
+   "size": 89694,
+   "source": "/project1/lab/POP_caustics",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 6638334,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.2"
+  },
+  {
+   "created": "2026-10-29 00:09:07",
+   "in_git": true,
+   "name": "POP_collide",
+   "outside_files": 0,
+   "sha256": "fdddfd0efb608342ea21ebcdddb5d185f4da2b666387d0d0a669e55b2a1323d1",
+   "size": 92934,
+   "source": "/project1/lab/POP_collide",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 274133,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:09:09",
+   "in_git": true,
+   "name": "POP_crack3d",
+   "outside_files": 0,
+   "sha256": "ef84eaa4e9e114fbc8b6d84eb32fb630a3f85d50aad323ea3c04bbd89c19abb9",
+   "size": 90254,
+   "source": "/project1/lab/POP_crack3d",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 1274506,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:09:10",
+   "in_git": true,
+   "name": "POP_fillbody",
+   "outside_files": 0,
+   "sha256": "5768b86218dbe56b20f0ed1417047782c98da4dc38cd0d3e9dc620e31bd7e04d",
+   "size": 104222,
+   "source": "/project1/lab/POP_fillbody",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 300765,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.2"
+  },
+  {
+   "created": "2026-10-29 00:09:11",
+   "in_git": true,
+   "name": "POP_linegrowth",
+   "outside_files": 0,
+   "sha256": "1d5582ab699c4bb24790bf0f46a814d41ea9ad5529351701ed20a5849d0b849e",
+   "size": 105702,
+   "source": "/project1/lab/POP_linegrowth",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 51042,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.2"
+  },
+  {
+   "created": "2026-10-29 00:09:14",
+   "in_git": true,
+   "name": "POP_meshwarp",
+   "outside_files": 0,
+   "sha256": "4764b2a92e575c84494ae00e73afbabd75fada0fc3f18585e6809981dbfe4fb3",
+   "size": 86766,
+   "source": "/project1/lab/POP_meshwarp",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 6143425,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:16",
+   "in_git": true,
+   "name": "POP_rd3d",
+   "outside_files": 0,
+   "sha256": "4312f9e18baa0faa037a6263aa5eb8518d0b5173d3bc0a64c837e82b489effd2",
+   "size": 89006,
+   "source": "/project1/lab/POP_rd3d",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 878255,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:09:17",
+   "in_git": true,
+   "name": "POP_terrain",
+   "outside_files": 0,
+   "sha256": "a719dbc85932ffb52c40041590f18173cfb606ac6c6e821ec5d55220263c89e4",
+   "size": 86142,
+   "source": "/project1/lab/POP_terrain",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 2368567,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:19",
+   "in_git": true,
+   "name": "POP_tree",
+   "outside_files": 0,
+   "sha256": "16ae16e7860618251e961dedbd2aeb5866194b6da17b7798cc341f89719dc49f",
+   "size": 89566,
+   "source": "/project1/lab/POP_tree",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 50295,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:20",
+   "in_git": true,
+   "name": "POP_tubes",
+   "outside_files": 0,
+   "sha256": "cccc37cfff1e398654991741b83d5b830811c1b4ce02517081d3ed0b5410e48c",
+   "size": 89222,
+   "source": "/project1/lab/POP_tubes",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 4730484,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:09:39",
+   "in_git": true,
+   "name": "PV_previz_stage",
+   "outside_files": 0,
+   "sha256": "3a8f5c0b8bee00862005a50ef2b84decf42f5f062571315062a995dc48057894",
+   "size": 136830,
+   "source": "/project1/lab/PV_previz_stage",
+   "summary": "previz_stage (`/project1/lab/PV_previz_stage`)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 3522570,
+    "height": 1080,
+    "ok": true,
+    "top": "out1",
+    "width": 1920
+   },
+   "version": "0.1.1"
+  },
+  {
+   "created": "2026-10-29 00:09:22",
+   "in_git": true,
+   "name": "PX_lines",
+   "outside_files": 0,
+   "sha256": "c7a3caee122d913eb26c6480c3fc1236553d94269502e4c6f2dcbf916e1cad95",
+   "size": 168886,
+   "source": "/project1/lab/PX_lines",
+   "summary": "PX_lines: the lines pass for point / splat scenes (lane W1-C, 27 Oct 2026, TD 2025.31550 target)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 781171,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.2.0"
+  },
+  {
+   "created": "2026-10-29 00:09:29",
+   "in_git": true,
+   "name": "PX_pointfx",
+   "outside_files": 1,
+   "sha256": "4b6a503be7cb1d8b80ed427b43fedf93352467de5e78e8d1c130d5f031082a0d",
+   "size": 754808,
+   "source": "/project1/lab/PX_pointfx",
+   "summary": "PX_pointfx: modular point-cloud / splat FX (live in main, splats verified 27 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 7824728,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.6.1"
+  },
+  {
+   "created": "2026-10-29 00:09:30",
+   "in_git": true,
+   "name": "QC_mcp_checks",
+   "outside_files": 0,
+   "sha256": "ee732cf46f2f4a05bd27a11c33030c610eec96068469d1f40e1d8d1e90c00d05",
+   "size": 59918,
+   "source": "/project1/lab/QC_mcp_checks",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:40",
+   "in_git": true,
+   "name": "TL_timeline",
+   "outside_files": 0,
+   "sha256": "25488dc08fba5511d3b4eca8db757bbc71a0a28006b2b9141ba225d7cef8d7f3",
+   "size": 158422,
+   "source": "/project1/lab/TL_timeline",
+   "summary": "TL_timeline phase 2: clips track (live v1 26 Oct 2026, TD 2025.31550, T-93; live checks 3, 8, 9 open)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 12707,
+    "height": 1920,
+    "ok": true,
+    "top": "program_out",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:31",
+   "in_git": true,
+   "name": "TP_test_pattern",
+   "outside_files": 0,
+   "sha256": "538be8b852d9ebf7bb780fed709b90174357150fc7a45a22a0fea1b9d0d3423a",
+   "size": 105230,
+   "source": "/project1/lab/TP_test_pattern",
+   "summary": "test_pattern: TP_test_pattern test patterns + sync checks (26 Oct 2026, TD 2025.31550)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 33358,
+    "height": 1080,
+    "ok": true,
+    "top": "out1",
+    "width": 1920
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:31",
+   "in_git": true,
+   "name": "ZC_control_surface",
+   "outside_files": 0,
+   "sha256": "b0e1c48c941ea34a5da1268d7fa38403c4fb64d511694feadbf24d999fe4666c",
+   "size": 92886,
+   "source": "/project1/lab/ZC_control_surface",
+   "summary": "zctl (`/project1/lab/ZC_control_surface`)",
+   "td_build": "2025.31550",
+   "thumb": {
+    "ok": false,
+    "why": "no Out TOP (or thumb:false)"
+   },
+   "version": "0.1.0"
+  },
+  {
+   "created": "2026-10-29 00:09:32",
+   "in_git": true,
+   "name": "ZK_controls_kit",
+   "outside_files": 0,
+   "sha256": "40387dde2a74552b3a0bf4851ab74ff89be2884227da3267072143d04ff0622a",
+   "size": 78518,
+   "source": "/project1/lab/ZK_controls_kit",
+   "summary": "",
+   "td_build": "2025.31550",
+   "thumb": {
+    "bytes": 425992,
+    "height": 1920,
+    "ok": true,
+    "top": "out1",
+    "width": 1080
+   },
+   "version": "0.1.0"
+  }
+ ],
+ "v": 1
+}

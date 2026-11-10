@@ -1,0 +1,670 @@
+{
+ "created": "2026-10-29 00:07:51",
+ "doc": "docs/builds/dmx_patch.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Sheetdir",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/dmx",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/dmx",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [],
+ "name": "BK_dmx_patch",
+ "ops": 376,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 768,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 1024
+  },
+  {
+   "name": "out3",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Source",
+   "pars": [
+    {
+     "default": "/project1/lab/BK_dmx_out",
+     "label": "DMX out COMP",
+     "name": "Dmxcomp",
+     "style": "COMP",
+     "value": "/project1/lab/BK_dmx_out"
+    },
+    {
+     "default": "",
+     "label": "Universes CHOP (blank = Dmxcomp out3)",
+     "name": "Univchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "u{u}",
+     "label": "Channel name ({u} = universe)",
+     "name": "Chanfmt",
+     "style": "Str",
+     "value": "u{u}"
+    },
+    {
+     "default": true,
+     "label": "Auto sync stage",
+     "name": "Autosync",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Sync from patch",
+     "name": "Syncpatch",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Prune stale rows",
+     "name": "Prune",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Check patch + stage",
+     "name": "Checkpatch",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Fixtures (read)",
+     "name": "Fixtures",
+     "style": "Int",
+     "value": 7
+    },
+    {
+     "default": 0,
+     "label": "Pixels shown (read)",
+     "name": "Pixelsshown",
+     "style": "Int",
+     "value": 50
+    },
+    {
+     "default": 0,
+     "label": "Slot conflicts (read)",
+     "name": "Conflicts",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Python ms (read)",
+     "name": "Statems",
+     "style": "Float",
+     "value": 1.157
+    }
+   ]
+  },
+  {
+   "page": "Stage",
+   "pars": [
+    {
+     "default": "line",
+     "label": "Arrange",
+     "name": "Arrange",
+     "style": "Menu",
+     "value": "line"
+    },
+    {
+     "default": "*",
+     "label": "Fixtures (pattern)",
+     "name": "Arrangeset",
+     "style": "Str",
+     "value": "*"
+    },
+    {
+     "default": 12.0,
+     "label": "Span m",
+     "name": "Spanx",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 6.0,
+     "label": "Height m",
+     "name": "Height",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.0,
+     "label": "Depth z m",
+     "name": "Depth",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 60.0,
+     "label": "Arc deg",
+     "name": "Curve",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 8,
+     "label": "Grid columns",
+     "name": "Cols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 1.0,
+     "label": "Row gap m",
+     "name": "Rowgap",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Hanging (rx 180)",
+     "name": "Hang",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Arrange",
+     "name": "Applyarrange",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Pixel wall x",
+     "name": "Wallx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 3.0,
+     "label": "Pixel wall y",
+     "name": "Wally",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": -1.0,
+     "label": "Pixel wall z",
+     "name": "Wallz",
+     "style": "Float",
+     "value": -1.0
+    },
+    {
+     "default": 8.0,
+     "label": "Pixel wall w",
+     "name": "Wallw",
+     "style": "Float",
+     "value": 8.0
+    },
+    {
+     "default": 4.5,
+     "label": "Pixel wall h",
+     "name": "Wallh",
+     "style": "Float",
+     "value": 4.5
+    },
+    {
+     "default": 4096,
+     "label": "Pixels drawn (max)",
+     "name": "Pixmax",
+     "style": "Int",
+     "value": 4096
+    }
+   ]
+  },
+  {
+   "page": "View",
+   "pars": [
+    {
+     "default": "front",
+     "label": "View",
+     "name": "View",
+     "style": "Menu",
+     "value": "front"
+    },
+    {
+     "default": false,
+     "label": "Fit view",
+     "name": "Fit",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Centre x",
+     "name": "Centerx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 3.0,
+     "label": "Centre y",
+     "name": "Centery",
+     "style": "Float",
+     "value": 4.5
+    },
+    {
+     "default": 0.0,
+     "label": "Centre z",
+     "name": "Centerz",
+     "style": "Float",
+     "value": -0.5
+    },
+    {
+     "default": 16.0,
+     "label": "View size m",
+     "name": "Viewsize",
+     "style": "Float",
+     "value": 13.8
+    },
+    {
+     "default": 30.0,
+     "label": "Orbit deg",
+     "name": "Orbit",
+     "style": "Float",
+     "value": 30.0
+    },
+    {
+     "default": 20.0,
+     "label": "Elevation deg",
+     "name": "Elev",
+     "style": "Float",
+     "value": 20.0
+    },
+    {
+     "default": 40.0,
+     "label": "FOV deg",
+     "name": "Fov",
+     "style": "Float",
+     "value": 40.0
+    },
+    {
+     "default": true,
+     "label": "Beams",
+     "name": "Beams",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 8.0,
+     "label": "Beam length m",
+     "name": "Beamlen",
+     "style": "Float",
+     "value": 8.0
+    },
+    {
+     "default": 15.0,
+     "label": "Beam angle deg",
+     "name": "Beamangle",
+     "style": "Float",
+     "value": 15.0
+    },
+    {
+     "default": 0.5,
+     "label": "Beam gain",
+     "name": "Beamgain",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.25,
+     "label": "Fixture size m",
+     "name": "Bodysize",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.06,
+     "label": "Pixel size m",
+     "name": "Pixsize",
+     "style": "Float",
+     "value": 0.06
+    },
+    {
+     "default": 1.0,
+     "label": "Pixel gain",
+     "name": "Pixgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.12,
+     "label": "Dark fixture grey",
+     "name": "Mingrey",
+     "style": "Float",
+     "value": 0.12
+    },
+    {
+     "default": true,
+     "label": "Floor grid",
+     "name": "Grid",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "",
+     "label": "Highlight (pattern)",
+     "name": "Highlight",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 1080,
+     "label": "Width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Aim",
+   "pars": [
+    {
+     "default": false,
+     "label": "Aim on (out3)",
+     "name": "Aimon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "*",
+     "label": "Fixtures (pattern)",
+     "name": "Aimset",
+     "style": "Str",
+     "value": "*"
+    },
+    {
+     "default": 0.0,
+     "label": "Target x",
+     "name": "Targetx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Target y",
+     "name": "Targety",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Target z",
+     "name": "Targetz",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": "",
+     "label": "Target CHOP (tx ty tz)",
+     "name": "Targetchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "Calibrate fixture",
+     "name": "Calfixture",
+     "style": "Str",
+     "value": "mh1"
+    },
+    {
+     "default": 0.5,
+     "label": "Measured pan 0..1",
+     "name": "Calpan",
+     "style": "Float",
+     "value": 0.52
+    },
+    {
+     "default": 0.5,
+     "label": "Measured tilt 0..1",
+     "name": "Caltilt",
+     "style": "Float",
+     "value": 0.61
+    },
+    {
+     "default": false,
+     "label": "Calibrate (at target)",
+     "name": "Calibrate",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Out of range (read)",
+     "name": "Aimmissed",
+     "style": "Int",
+     "value": 0
+    }
+   ]
+  },
+  {
+   "page": "Sheet",
+   "pars": [
+    {
+     "default": "ownervalue",
+     "label": "Map mode",
+     "name": "Mapmode",
+     "style": "Menu",
+     "value": "ownervalue"
+    },
+    {
+     "default": 0,
+     "label": "First row",
+     "name": "Mapfirst",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 16,
+     "label": "Rows shown",
+     "name": "Mapcount",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": 6,
+     "label": "Px per slot",
+     "name": "Mapcell",
+     "style": "Int",
+     "value": 6
+    },
+    {
+     "default": 1024,
+     "label": "Map width",
+     "name": "Mapw",
+     "style": "Int",
+     "value": 1024
+    },
+    {
+     "default": 768,
+     "label": "Map height",
+     "name": "Maph",
+     "style": "Int",
+     "value": 768
+    },
+    {
+     "default": "dmx_patch",
+     "label": "Sheet name",
+     "name": "Sheetname",
+     "style": "Str",
+     "value": "dmx_patch"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/dmx",
+     "label": "Sheet folder",
+     "name": "Sheetdir",
+     "style": "Folder",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/dmx"
+    },
+    {
+     "default": false,
+     "label": "Export sheet (csv + md)",
+     "name": "Exportsheet",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Controls",
+   "pars": [
+    {
+     "default": false,
+     "label": "Reset defaults",
+     "name": "Resetdefaults",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 52
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Beams",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Pixels",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Frame",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 68.975,
+  "cpu_ms": 68.975,
+  "frames": 30,
+  "gpu_ms": 0.062,
+  "ops": 2
+ },
+ "sha256": "85c3b77e0998820e2a3356088466f053fe0b91f029a2aadd20e8fa284e1eac2b",
+ "size": 127062,
+ "source": "/project1/lab/BK_dmx_patch",
+ "summary": "dmx_patch: BK_dmx_patch fixture patch sheet + stage plot + previs + aim helper (26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 22210,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

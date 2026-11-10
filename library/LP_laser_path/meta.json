@@ -1,0 +1,748 @@
+{
+ "created": "2026-10-29 00:09:00",
+ "doc": "docs/builds/laser_path.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "beam_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "trace_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in1",
+   "type": "inSOP"
+  },
+  {
+   "name": "in2",
+   "type": "inCHOP"
+  },
+  {
+   "height": 128,
+   "name": "in3",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in4",
+   "type": "inPOP"
+  }
+ ],
+ "name": "LP_laser_path",
+ "ops": 389,
+ "outputs": [
+  {
+   "name": "out1",
+   "type": "outCHOP"
+  },
+  {
+   "height": 1080,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out3",
+   "type": "outDAT"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Source",
+   "pars": [
+    {
+     "default": "pattern",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "pattern"
+    },
+    {
+     "default": "square",
+     "label": "Pattern",
+     "name": "Pattern",
+     "style": "Menu",
+     "value": "circle"
+    },
+    {
+     "default": 5,
+     "label": "Count",
+     "name": "Count",
+     "style": "Int",
+     "value": 52
+    },
+    {
+     "default": 0.8,
+     "label": "Size",
+     "name": "Size",
+     "style": "Float",
+     "value": 0.646
+    },
+    {
+     "default": "",
+     "label": "SOP (empty = in1)",
+     "name": "Sop",
+     "style": "SOP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "CHOP (empty = in2)",
+     "name": "Chop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "POP (empty = in4)",
+     "name": "Pop",
+     "style": "POP",
+     "value": null
+    },
+    {
+     "default": true,
+     "label": "Fit SOP/POP to -1..1",
+     "name": "Fitsource",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "LASER",
+     "label": "Text",
+     "name": "Text",
+     "style": "Str",
+     "value": "LASER"
+    },
+    {
+     "default": "Helvetica",
+     "label": "Font",
+     "name": "Font",
+     "style": "Str",
+     "value": "Helvetica"
+    },
+    {
+     "default": "clip",
+     "label": "Tracesrc",
+     "name": "Tracesrc",
+     "style": "Menu",
+     "value": "in3"
+    },
+    {
+     "default": 0.5,
+     "label": "Trace threshold",
+     "name": "Tracelevel",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 4.0,
+     "label": "Trace blur px",
+     "name": "Traceblur",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 3,
+     "label": "Trace res /",
+     "name": "Tracesteps",
+     "style": "Int",
+     "value": 3
+    },
+    {
+     "default": "",
+     "label": "Audio CHOP (L/R)",
+     "name": "Audiochop",
+     "style": "CHOP",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Path",
+   "pars": [
+    {
+     "default": "native",
+     "label": "Engine",
+     "name": "Engine",
+     "style": "Menu",
+     "value": "own"
+    },
+    {
+     "default": 30000.0,
+     "label": "Points/s",
+     "name": "Pps",
+     "style": "Float",
+     "value": 48000.0
+    },
+    {
+     "default": 60.0,
+     "label": "Frame rate",
+     "name": "Fps",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 0.02,
+     "label": "Step",
+     "name": "Stepsize",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.1,
+     "label": "Blank step",
+     "name": "Bstepsize",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.1,
+     "label": "Min corner hold ms",
+     "name": "Minhold",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.3,
+     "label": "Max corner hold ms",
+     "name": "Maxhold",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0,
+     "label": "Hold add",
+     "name": "Holdadd",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 25.0,
+     "label": "Corner above deg",
+     "name": "Cornertol",
+     "style": "Float",
+     "value": 25.0
+    },
+    {
+     "default": 0.0,
+     "label": "Closed overlap ms",
+     "name": "Closedoverlap",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "twoopt",
+     "label": "Order",
+     "name": "Order",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": 3.0,
+     "label": "Order budget",
+     "name": "Orderms",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": "centre",
+     "label": "Startpoint",
+     "name": "Startpoint",
+     "style": "Menu",
+     "value": "centre"
+    },
+    {
+     "default": 0.0,
+     "label": "Pre-blank on ms",
+     "name": "Preblankon",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.1,
+     "label": "Post-blank on ms",
+     "name": "Postblankon",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.1,
+     "label": "Pre-blank off ms",
+     "name": "Preblankoff",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 0.0,
+     "label": "Post-blank off ms",
+     "name": "Postblankoff",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Colour delay ms",
+     "name": "Colordelay",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Interp colours",
+     "name": "Interpcolors",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "frames",
+     "label": "Overflow",
+     "name": "Overflow",
+     "style": "Menu",
+     "value": "frames"
+    }
+   ]
+  },
+  {
+   "page": "Shape",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Scale X",
+     "name": "Scalex",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Scale Y",
+     "name": "Scaley",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Rotate",
+     "name": "Rotate",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset X",
+     "name": "Offsetx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Offset Y",
+     "name": "Offsety",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Flip X",
+     "name": "Flipx",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Flip Y",
+     "name": "Flipy",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Swap XY",
+     "name": "Swap",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Warp (warptable)",
+     "name": "Warp",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Intensity",
+     "name": "Intensity",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.1,
+     "label": "Colour",
+     "name": "Rgbr",
+     "style": "RGBA",
+     "value": 0.1
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Rgbg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.25,
+     "label": "Colour",
+     "name": "Rgbb",
+     "style": "RGBA",
+     "value": 0.25
+    }
+   ]
+  },
+  {
+   "page": "Drive",
+   "pars": [
+    {
+     "default": "manual",
+     "label": "Intensitysrc",
+     "name": "Intensitysrc",
+     "style": "Menu",
+     "value": "manual"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": 1.0,
+     "label": "Beat mult",
+     "name": "Beatdiv",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "",
+     "label": "Audio CHOP (level)",
+     "name": "Audioch",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": 1.0,
+     "label": "Audio amount",
+     "name": "Audioamt",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "",
+     "label": "Drive CHOP (chan 0)",
+     "name": "Drivechop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "off",
+     "label": "Strobe",
+     "name": "Strobe",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": false,
+     "label": "Strobe button",
+     "name": "Strobeon",
+     "style": "Momentary",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Blackout",
+     "name": "Blackout",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Hold image",
+     "name": "Hold",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Preview",
+   "pars": [
+    {
+     "default": true,
+     "label": "Preview on",
+     "name": "Previewon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1080,
+     "label": "Preview px",
+     "name": "Previewres",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 6000.0,
+     "label": "Galvo bandwidth Hz",
+     "name": "Galvobw",
+     "style": "Float",
+     "value": 6000.0
+    },
+    {
+     "default": 0.7,
+     "label": "Galvo damping",
+     "name": "Galvozeta",
+     "style": "Float",
+     "value": 0.7
+    },
+    {
+     "default": false,
+     "label": "Show galvo lag",
+     "name": "Showlag",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show blanked travel",
+     "name": "Showblank",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 60.0,
+     "label": "Persistence ms",
+     "name": "Persist",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 6.0,
+     "label": "Glow px",
+     "name": "Glow",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.35,
+     "label": "Spot gain",
+     "name": "Spotgain",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 10.0,
+     "label": "Spot px",
+     "name": "Spotsize",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Controls",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Save snapshot",
+     "name": "Savesnap",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Export ILDA",
+     "name": "Exportilda",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 52
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.75
+    },
+    {
+     "default": 0.0,
+     "label": "Brightness",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.3
+    }
+   ]
+  },
+  {
+   "page": "About",
+   "pars": [
+    {
+     "default": "",
+     "label": "Version",
+     "name": "Version",
+     "style": "Str",
+     "value": "0.1.0"
+    },
+    {
+     "default": "",
+     "label": "Touch build",
+     "name": "Touchbuild",
+     "style": "Str",
+     "value": "2025.31550"
+    },
+    {
+     "default": "",
+     "label": "Saved",
+     "name": "Saved",
+     "style": "Str",
+     "value": "2026-10-26 16:51"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 1.424,
+  "cpu_ms": 1.424,
+  "frames": 30,
+  "gpu_ms": 1.556,
+  "ops": 7
+ },
+ "sha256": "f97728f686799b4abf4694b8bf783bfa036ed4d5eb71576f03717e3ec2aa0e48",
+ "size": 130078,
+ "source": "/project1/lab/LP_laser_path",
+ "summary": "laser_path: LP_laser_path laser path generator + beam preview (live v1 in main, 26 Oct 2026, no laser hardware)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 225386,
+  "height": 1080,
+  "ok": true,
+  "top": "out2",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

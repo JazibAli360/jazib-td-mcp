@@ -1,0 +1,90 @@
+{
+ "created": "2026-10-29 00:08:52",
+ "doc": "docs/builds/gen_sim.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "GEN_sim",
+ "ops": 2538,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (background only)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 1080,
+     "label": "Width (black bg)",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height (black bg)",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 46.939,
+  "cpu_ms": 46.939,
+  "frames": 30,
+  "gpu_ms": 1.331,
+  "ops": 16
+ },
+ "sha256": "b5376bec0370a3f711fc86c3002d991f7b6ac26ccec902fca26b2aa40234ff0b",
+ "size": 862058,
+ "source": "/project1/lab/GEN_sim",
+ "summary": "gen_sim: GEN_sim rack + 5 modules `ca` / `voronoi` / `dla` / `blobs` / `lic` (live in main, 26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 306966,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.0",
+ "was_parked": true
+}

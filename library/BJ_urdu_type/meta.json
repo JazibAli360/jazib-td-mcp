@@ -1,0 +1,811 @@
+{
+ "created": "2026-10-29 00:07:49",
+ "doc": "docs/builds/urdu_type.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Python",
+   "resolved": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+   "value": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+   "where": "outside"
+  },
+  {
+   "exists": true,
+   "op": "atlas_a",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/urdu_type/cache/a_0f1336b33bbd343f.png",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/urdu_type/cache/a_0f1336b33bbd343f.png",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "atlas_b",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/urdu_type/cache/a_0f1336b33bbd343f.png",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/urdu_type/cache/a_0f1336b33bbd343f.png",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in2",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "BJ_urdu_type",
+ "ops": 368,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out_rest",
+   "type": "outCHOP"
+  },
+  {
+   "name": "out_words",
+   "type": "outDAT"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Text",
+   "pars": [
+    {
+     "default": "\u0627\u0631\u062f\u0648 \u0632\u0628\u0627\u0646\\n\u06c1\u06cc\u0644\u0648 hello \u0627\u0631\u062f\u0648 2026",
+     "label": "Text (\\n = new line)",
+     "name": "Text",
+     "style": "Str",
+     "value": "\u0627\u0631\u062f\u0648 \u0632\u0628\u0627\u0646\\n\u06c1\u06cc\u0644\u0648 hello \u0627\u0631\u062f\u0648 2026"
+    },
+    {
+     "default": "",
+     "label": "Text DAT (lines)",
+     "name": "Textdat",
+     "style": "OP",
+     "value": null
+    },
+    {
+     "default": 0,
+     "label": "Line (cue)",
+     "name": "Line",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "auto",
+     "label": "Direction",
+     "name": "Direction",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "Noto Nastaliq Urdu",
+     "label": "Urdu font",
+     "name": "Fontrtl",
+     "style": "StrMenu",
+     "value": "Noto Nastaliq Urdu"
+    },
+    {
+     "default": "",
+     "label": "Urdu font file",
+     "name": "Fontfilertl",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "Regular",
+     "label": "Urdu typeface",
+     "name": "Typefacertl",
+     "style": "Menu",
+     "value": "Regular"
+    },
+    {
+     "default": 0,
+     "label": "Urdu weight (wght axis, 0 = font default)",
+     "name": "Weight",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "Helvetica Neue",
+     "label": "Latin font",
+     "name": "Fontltr",
+     "style": "StrMenu",
+     "value": "Helvetica Neue"
+    },
+    {
+     "default": "",
+     "label": "Latin font file",
+     "name": "Fontfileltr",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "Digits font (empty = Latin)",
+     "name": "Fontdigits",
+     "style": "StrMenu",
+     "value": ""
+    },
+    {
+     "default": 160.0,
+     "label": "Size px",
+     "name": "Size",
+     "style": "Float",
+     "value": 160.0
+    },
+    {
+     "default": 0.3,
+     "label": "Word gap em",
+     "name": "Wordgap",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1.0,
+     "label": "Line gap",
+     "name": "Linegap",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 960.0,
+     "label": "Wrap width px (0 off)",
+     "name": "Maxwidth",
+     "style": "Float",
+     "value": 960.0
+    },
+    {
+     "default": "center",
+     "label": "Align",
+     "name": "Align",
+     "style": "Menu",
+     "value": "center"
+    },
+    {
+     "default": 0.5,
+     "label": "Anchor x",
+     "name": "Anchorx",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.5,
+     "label": "Anchor y",
+     "name": "Anchory",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 24,
+     "label": "Max words",
+     "name": "Maxwords",
+     "style": "Int",
+     "value": 24
+    }
+   ]
+  },
+  {
+   "page": "Style",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Fill",
+     "name": "Fillr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fill",
+     "name": "Fillg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fill",
+     "name": "Fillb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fill alpha",
+     "name": "Fillalpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.85,
+     "label": "Outline",
+     "name": "Outliner",
+     "style": "RGBA",
+     "value": 0.85
+    },
+    {
+     "default": 0.65,
+     "label": "Outline",
+     "name": "Outlineg",
+     "style": "RGBA",
+     "value": 0.65
+    },
+    {
+     "default": 0.2,
+     "label": "Outline",
+     "name": "Outlineb",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.0,
+     "label": "Outline px",
+     "name": "Outlinepx",
+     "style": "Float",
+     "value": 4.14
+    },
+    {
+     "default": 1.0,
+     "label": "Outline alpha",
+     "name": "Outlinealpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Glow colour",
+     "name": "Glowcolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.8,
+     "label": "Glow colour",
+     "name": "Glowcolorg",
+     "style": "RGBA",
+     "value": 0.8
+    },
+    {
+     "default": 0.4,
+     "label": "Glow colour",
+     "name": "Glowcolorb",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Glow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 24.0,
+     "label": "Glow size px",
+     "name": "Glowsize",
+     "style": "Float",
+     "value": 24.0
+    },
+    {
+     "default": 0.0,
+     "label": "Shadow",
+     "name": "Shadow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 12.0,
+     "label": "Shadow soft px",
+     "name": "Shadowsize",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 8.0,
+     "label": "Shadow offset px",
+     "name": "Shadowoffx",
+     "style": "XYZW",
+     "value": 8.0
+    },
+    {
+     "default": -8.0,
+     "label": "Shadow offset px",
+     "name": "Shadowoffy",
+     "style": "XYZW",
+     "value": -8.0
+    },
+    {
+     "default": "none",
+     "label": "Background",
+     "name": "Background",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": 0.0,
+     "label": "Bg colour",
+     "name": "Bgcolorr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Bg colour",
+     "name": "Bgcolorg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Bg colour",
+     "name": "Bgcolorb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Bg alpha",
+     "name": "Bgalpha",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Premultiplied out",
+     "name": "Premult",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Anim",
+   "pars": [
+    {
+     "default": "fade",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "fade"
+    },
+    {
+     "default": "seconds",
+     "label": "Timing",
+     "name": "Timing",
+     "style": "Menu",
+     "value": "bpm"
+    },
+    {
+     "default": 1.0,
+     "label": "Progress (manual)",
+     "name": "Progress",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Stagger",
+     "name": "Stagger",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "reading",
+     "label": "Order",
+     "name": "Order",
+     "style": "Menu",
+     "value": "reading"
+    },
+    {
+     "default": 1,
+     "label": "Random seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "ease",
+     "label": "Ease",
+     "name": "Ease",
+     "style": "Menu",
+     "value": "ease"
+    },
+    {
+     "default": 2.0,
+     "label": "Seconds",
+     "name": "Seconds",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 94.6
+    },
+    {
+     "default": 4.0,
+     "label": "Beats",
+     "name": "Beats",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.0,
+     "label": "Slide x px",
+     "name": "Slidex",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": -80.0,
+     "label": "Slide y px",
+     "name": "Slidey",
+     "style": "Float",
+     "value": -80.0
+    },
+    {
+     "default": 0.6,
+     "label": "Scale from",
+     "name": "Scalefrom",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 24.0,
+     "label": "Blur max px",
+     "name": "Blurmax",
+     "style": "Float",
+     "value": 24.0
+    },
+    {
+     "default": 0.25,
+     "label": "Pulse amount",
+     "name": "Pulseamt",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.0,
+     "label": "Audio level",
+     "name": "Audiolevel",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Audio gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Audio smooth",
+     "name": "Audiosmooth",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": false,
+     "label": "Trigger",
+     "name": "Trigger",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Hold",
+     "name": "Hold",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Loop",
+     "name": "Loop",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Trigger on new text",
+     "name": "Autotrigger",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Layout",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Out width",
+     "name": "Outw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Out height",
+     "name": "Outh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 2.5,
+     "label": "Line box em",
+     "name": "Lineh",
+     "style": "Float",
+     "value": 2.5
+    },
+    {
+     "default": 0.6,
+     "label": "Raster margin em",
+     "name": "Marginem",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": false,
+     "label": "Show ink boxes",
+     "name": "Showboxes",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 24.0,
+     "label": "Wipe edge px",
+     "name": "Wipesoft",
+     "style": "Float",
+     "value": 24.0
+    },
+    {
+     "default": 16,
+     "label": "Blur taps",
+     "name": "Blurtaps",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": false,
+     "label": "Re-render",
+     "name": "Rebuild",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Files",
+   "pars": [
+    {
+     "default": "",
+     "label": "Render cache (empty = <repo>/output/urdu_type/cache)",
+     "name": "Cachedir",
+     "style": "Folder",
+     "value": ""
+    },
+    {
+     "default": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+     "label": "Python 3 for the renderer",
+     "name": "Python",
+     "style": "File",
+     "value": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3"
+    },
+    {
+     "default": 20.0,
+     "label": "Render timeout s",
+     "name": "Timeout",
+     "style": "Float",
+     "value": 20.0
+    }
+   ]
+  },
+  {
+   "page": "Control",
+   "pars": [
+    {
+     "default": false,
+     "label": "Show info on preview",
+     "name": "Showinfo",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Info",
+   "pars": [
+    {
+     "default": "",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "ok 6 words, atlas 2407x592"
+    },
+    {
+     "default": 0,
+     "label": "Words",
+     "name": "Nwords",
+     "style": "Int",
+     "value": 6
+    },
+    {
+     "default": 0,
+     "label": "Lines",
+     "name": "Nlines",
+     "style": "Int",
+     "value": 3
+    },
+    {
+     "default": 0,
+     "label": "Atlas slot (0 A, 1 B)",
+     "name": "Atlasslot",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0,
+     "label": "Atlas width",
+     "name": "Atlasw",
+     "style": "Int",
+     "value": 2407
+    },
+    {
+     "default": 0,
+     "label": "Atlas height",
+     "name": "Atlash",
+     "style": "Int",
+     "value": 592
+    },
+    {
+     "default": 0.0,
+     "label": "Parse ms (TD)",
+     "name": "Parsems",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Render ms (child process)",
+     "name": "Renderms",
+     "style": "Float",
+     "value": 483.8
+    },
+    {
+     "default": 0.0,
+     "label": "Layout ms (TD)",
+     "name": "Layoutms",
+     "style": "Float",
+     "value": 0.42
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Edge",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Speed",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.55
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.602,
+  "cpu_ms": 0.602,
+  "frames": 30,
+  "gpu_ms": 1.272,
+  "ops": 9
+ },
+ "sha256": "73c0850f72605154c83d5cf94696ff31a2f2a4e180fb9e48057872cb899df96e",
+ "size": 124302,
+ "source": "/project1/lab/BJ_urdu_type",
+ "summary": "urdu_type (BJ build spec A): status 26 Oct 2026, TD 2025.31550 - LIVE-VERIFIED via the pre-shaped atlas route (commit 9eb3bc7: 150 s scratch soak, then main; earlier Text TOP route crashed TD, T-76/T-79)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 130329,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

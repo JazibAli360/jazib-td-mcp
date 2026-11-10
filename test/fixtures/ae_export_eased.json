@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "exportedAt": "2026-10-26T00:00:00.000Z",
+  "aeVersion": "26.0",
+  "_note": "Hand-made fixture in the shape of mcp-aftereffects v0.3.2 ae_project_export_json (jsx/helpers.jsx serializeProperty); AK_td_aftereffects.md s3.3. Not from a real AE run.",
+  "project": { "file": null, "bitsPerChannel": 8 },
+  "items": [
+    { "id": 1, "name": "folder", "type": "FolderItem" },
+    {
+      "id": 2, "name": "Title Card", "type": "CompItem", "width": 1080, "height": 1920, "frameRate": 30, "duration": 2,
+      "workAreaStart": 0, "workAreaDuration": 2, "displayStartTime": 0,
+      "markers": { "name": "Marker", "matchName": "ADBE Marker", "keyframes": [
+        { "time": 0.5, "value": { "__kind": "MarkerValue", "comment": "drop", "duration": 0 } },
+        { "time": 1.5, "value": { "__kind": "MarkerValue", "comment": "out", "duration": 0.25 } } ] },
+      "layers": [
+        {
+          "index": 1, "name": "title", "type": "TextLayer", "inPoint": 0, "outPoint": 2, "startTime": 0, "stretch": 100, "parentIndex": null,
+          "textGroup": { "name": "Text", "matchName": "ADBE Text Properties", "properties": [
+            { "name": "Source Text", "matchName": "ADBE Text Document", "propertyValueType": "TEXT_DOCUMENT", "value": { "__kind": "TextDocument", "text": "HELLO" },
+              "keyframes": [
+                { "time": 0, "value": { "__kind": "TextDocument", "text": "HELLO", "font": "Inter-Bold", "fontSize": 120, "fillColor": [1, 1, 1], "justification": 7415 }, "inInterp": 6614, "outInterp": 6614, "inInterpName": "hold", "outInterpName": "hold" },
+                { "time": 1, "value": { "__kind": "TextDocument", "text": "PRISM\tFEST", "font": "Inter-Bold", "fontSize": 140, "fillColor": [1, 0.8, 0], "justification": 7415 }, "inInterp": 6614, "outInterp": 6614, "inInterpName": "hold", "outInterpName": "hold" }
+              ] } ], "groups": [] },
+          "transformGroup": { "name": "Transform", "matchName": "ADBE Transform Group", "properties": [
+            { "name": "Opacity", "matchName": "ADBE Opacity", "propertyValueType": "OneD", "value": 100,
+              "keyframes": [
+                { "time": 0, "value": 0, "inInterp": 6613, "outInterp": 6613, "inInterpName": "bezier", "outInterpName": "bezier", "inEase": [{ "speed": 0, "influence": 33.333333 }], "outEase": [{ "speed": 0, "influence": 33.333333 }] },
+                { "time": 1, "value": 100, "inInterp": 6613, "outInterp": 6613, "inInterpName": "bezier", "outInterpName": "bezier", "inEase": [{ "speed": 0, "influence": 33.333333 }], "outEase": [{ "speed": 0, "influence": 33.333333 }] }
+              ] },
+            { "name": "Position", "matchName": "ADBE Position", "propertyValueType": "TwoD_SPATIAL", "value": [540, 960],
+              "keyframes": [
+                { "time": 0, "value": [540, 1460], "inInterp": 6612, "outInterp": 6612, "inInterpName": "linear", "outInterpName": "linear" },
+                { "time": 1, "value": [540, 960], "inInterp": 6612, "outInterp": 6612, "inInterpName": "linear", "outInterpName": "linear" }
+              ] },
+            { "name": "Scale", "matchName": "ADBE Scale", "propertyValueType": "ThreeD", "value": [100, 100, 100],
+              "keyframes": [
+                { "time": 0, "value": [50, 80, 100], "inInterp": 6612, "outInterp": 6612, "inInterpName": "linear", "outInterpName": "linear" },
+                { "time": 2, "value": [150, 120, 100], "inInterp": 6612, "outInterp": 6612, "inInterpName": "linear", "outInterpName": "linear" }
+              ] },
+            { "name": "Rotation", "matchName": "ADBE Rotate Z", "propertyValueType": "OneD", "value": 0, "expression": "wiggle(2, 10)" }
+          ], "groups": [] }
+        },
+        {
+          "index": 2, "name": "flash", "type": "AVLayer", "inPoint": 0, "outPoint": 2, "startTime": 0, "stretch": 100, "parentIndex": 1,
+          "markers": { "name": "Marker", "matchName": "ADBE Marker", "keyframes": [ { "time": 1, "value": { "__kind": "MarkerValue", "comment": "hit", "duration": 0 } } ] },
+          "transformGroup": { "name": "Transform", "matchName": "ADBE Transform Group", "properties": [
+            { "name": "Opacity", "matchName": "ADBE Opacity", "propertyValueType": "OneD", "value": 0,
+              "keyframes": [
+                { "time": 0, "value": 0, "inInterp": 6614, "outInterp": 6614, "inInterpName": "hold", "outInterpName": "hold" },
+                { "time": 1, "value": 100, "inInterp": 6614, "outInterp": 6614, "inInterpName": "hold", "outInterpName": "hold" },
+                { "time": 1.5, "value": 0, "inInterp": 6614, "outInterp": 6614, "inInterpName": "hold", "outInterpName": "hold" }
+              ] }
+          ], "groups": [] },
+          "effectsGroup": { "name": "Effects", "matchName": "ADBE Effect Parade", "properties": [], "groups": [
+            { "name": "Glow", "matchName": "ADBE Glo2", "properties": [
+              { "name": "Glow Intensity", "matchName": "ADBE Glo2-0004", "propertyValueType": "OneD", "value": 1,
+                "keyframes": [
+                  { "time": 0, "value": 0, "inInterp": 6613, "outInterp": 6613 },
+                  { "time": 2, "value": 4, "inInterp": 6613, "outInterp": 6613 }
+                ] } ], "groups": [] } ] }
+        }
+      ]
+    }
+  ]
+}

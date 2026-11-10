@@ -1,0 +1,22 @@
+{
+  "$comment": "Hand-written sample in Open Fixture Library format (our own test data, not a real fixture file).",
+  "name": "Sample Spot 16",
+  "manufacturerKey": "sample",
+  "physical": {"focus": {"type": "Head", "panMax": 540, "tiltMax": 270}},
+  "availableChannels": {
+    "Pan": {"fineChannelAliases": ["Pan fine"], "capability": {"type": "Pan", "angleStart": "0deg", "angleEnd": "540deg"}},
+    "Tilt": {"fineChannelAliases": ["Tilt fine"], "capability": {"type": "Tilt", "angleStart": "0deg", "angleEnd": "270deg"}},
+    "Dimmer": {"capability": {"type": "Intensity"}},
+    "Red": {"capability": {"type": "ColorIntensity", "color": "Red"}},
+    "Green": {"capability": {"type": "ColorIntensity", "color": "Green"}},
+    "Blue": {"capability": {"type": "ColorIntensity", "color": "Blue"}},
+    "Shutter": {"defaultValue": 255, "capability": {"type": "ShutterStrobe", "shutterEffect": "Open"}},
+    "Gobo Wheel": {"capabilities": [{"dmxRange": [0, 255], "type": "WheelSlot"}]}
+  },
+  "modes": [
+    {"name": "Standard 16 bit", "shortName": "std16",
+     "channels": ["Pan", "Pan fine", "Tilt", "Tilt fine", "Dimmer", "Shutter", "Red", "Green", "Blue", null, "Gobo Wheel"]},
+    {"name": "Reduced 8 bit", "shortName": "red8",
+     "channels": ["Pan", "Tilt", "Dimmer", "Red", "Green", "Blue"]}
+  ]
+}

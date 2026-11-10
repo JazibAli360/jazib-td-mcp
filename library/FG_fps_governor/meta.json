@@ -1,0 +1,165 @@
+{
+ "created": "2026-10-29 00:09:33",
+ "doc": "docs/builds/fps_governor.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [],
+ "name": "FG_fps_governor",
+ "ops": 242,
+ "outputs": [
+  {
+   "name": "out1",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Governor",
+   "pars": [
+    {
+     "default": false,
+     "label": "Active",
+     "name": "Active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 60.0,
+     "label": "Target fps",
+     "name": "Target",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 30,
+     "label": "Down after frames",
+     "name": "Downafter",
+     "style": "Int",
+     "value": 30
+    },
+    {
+     "default": 300,
+     "label": "Up after frames",
+     "name": "Upafter",
+     "style": "Int",
+     "value": 300
+    },
+    {
+     "default": 5,
+     "label": "Steps",
+     "name": "Steps",
+     "style": "Int",
+     "value": 5
+    },
+    {
+     "default": 0.25,
+     "label": "Floor quality",
+     "name": "Floor",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 3.0,
+     "label": "Up headroom ms",
+     "name": "Upmargin",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": false,
+     "label": "Reset",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 11.979,
+  "cpu_ms": 11.979,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 56
+ },
+ "sha256": "166475652cf223e2474a029effdd595fe0adac30fd71cfe26f2c97db47286f8a",
+ "size": 84422,
+ "source": "/project1/lab/FG_fps_governor",
+ "summary": "FG_fps_governor: hold 60 fps, any COMP can follow (28 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

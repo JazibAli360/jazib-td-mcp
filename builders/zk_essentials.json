@@ -1,0 +1,5087 @@
+{
+ "AC_audio": {
+  "main": [],
+  "macros": [],
+  "why": "AC_audio's own par tables (Audiofile, Trim, Depth, Source, Specgain) are not defined in any file under builders/ or td/ (only builders/ac_audio_features.py, which adds just Features + Featurespath, a toggle and a string); the COMP was made ad hoc in TD, so fallback."
+ },
+ "AU_db_meter": {
+  "main": [
+   "Source",
+   "Mode",
+   "Channels",
+   "Gain",
+   "Floor",
+   "Ceil",
+   "Attack",
+   "Release",
+   "Hold",
+   "Holdreset",
+   "Orient",
+   "Showscale",
+   "Showpeak",
+   "Transparent"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Smooth",
+    "default": 0.65,
+    "drives": [
+     {
+      "par": "Release",
+      "from": 60,
+      "to": 6
+     },
+     {
+      "par": "Hold",
+      "from": 0.1,
+      "to": 2.4
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Range",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Floor",
+      "from": -30,
+      "to": -90
+     },
+     {
+      "par": "Ceil",
+      "from": 0,
+      "to": 6
+     }
+    ]
+   }
+  ],
+  "why": "Meter essentials: input source/mode/channels, gain, dB floor/ceil, ballistics (attack/release/hold + reset), orientation and scale/peak/transparent toggles."
+ },
+ "AU_features": {
+  "main": [
+   "Analysison",
+   "Source",
+   "Bpmrange",
+   "Bpmmin",
+   "Bpmmax",
+   "Bpmsource",
+   "Onsetsens",
+   "Onsetmethod",
+   "Beatdecay",
+   "Lufsfloor",
+   "Keymode",
+   "Resetcounts"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Reactive",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Onsetsens",
+      "from": 0.1,
+      "to": 0.9
+     },
+     {
+      "par": "Beatdecay",
+      "from": 0.45,
+      "to": 0.05
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Tempo window",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Bpmmin",
+      "from": 30,
+      "to": 90
+     },
+     {
+      "par": "Bpmmax",
+      "from": 150,
+      "to": 210
+     }
+    ]
+   }
+  ],
+  "why": "Features page (BPM range/source, onset sensitivity/method, beat decay, loud floor, key mode, reset counters) plus Analysis on and Source."
+ },
+ "BJ_urdu_type": {
+  "main": [
+   "Text",
+   "Trigger",
+   "Mode",
+   "Timing",
+   "Seconds",
+   "Stagger",
+   "Loop",
+   "Hold",
+   "Size",
+   "Align",
+   "Fill",
+   "Outline",
+   "Outlinepx",
+   "Glow",
+   "Shadow"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Glowsize",
+      "from": 24,
+      "to": 72
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Edge",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Outlinepx",
+      "from": 0,
+      "to": 8
+     },
+     {
+      "par": "Shadow",
+      "from": 0,
+      "to": 1
+     },
+     {
+      "par": "Shadowsize",
+      "from": 12,
+      "to": 40
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Speed",
+    "default": 0.55,
+    "drives": [
+     {
+      "par": "Seconds",
+      "from": 4,
+      "to": 0.5
+     },
+     {
+      "par": "Stagger",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Pulseamt",
+      "from": 0,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Main = text and trigger, animation mode/timing/seconds/stagger/loop/hold, size, align, fill/outline colours, outline width, glow, shadow; macros: glow, edge (outline + shadow), animation speed."
+ },
+ "BK_dmx_out": {
+  "main": [
+   "Active",
+   "Blackout",
+   "Freeze",
+   "Master",
+   "Masterfrom",
+   "Bpm",
+   "Tapbpm",
+   "Beatshape",
+   "Beatdepth",
+   "Audioamt",
+   "Pattern",
+   "Level",
+   "Speed",
+   "Gamma"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Tempo",
+    "default": 0.48,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.1,
+      "to": 2.0
+     },
+     {
+      "par": "Bpm",
+      "from": 60,
+      "to": 180
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Response",
+    "default": 0.45,
+    "drives": [
+     {
+      "par": "Audioamt",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Gamma",
+      "from": 0.6,
+      "to": 1.6
+     }
+    ]
+   }
+  ],
+  "why": "Main = send/blackout/freeze, master and its source, BPM/beat shape/depth/audio amount, test pattern, level/speed, gamma; macros: tempo (pattern speed + BPM) and response (audio amount + gamma)."
+ },
+ "BK_dmx_patch": {
+  "main": [
+   "Syncpatch",
+   "Checkpatch",
+   "Autosync",
+   "View",
+   "Orbit",
+   "Elev",
+   "Fov",
+   "Viewsize",
+   "Fit",
+   "Beams",
+   "Beamgain",
+   "Beamlen",
+   "Pixgain",
+   "Grid",
+   "Aimon",
+   "Resetdefaults"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Beams",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Beamgain",
+      "from": 0,
+      "to": 1
+     },
+     {
+      "par": "Beamlen",
+      "from": 2,
+      "to": 14
+     },
+     {
+      "par": "Beamangle",
+      "from": 5,
+      "to": 25
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Pixels",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Pixgain",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Pixsize",
+      "from": 0.02,
+      "to": 0.1
+     },
+     {
+      "par": "Bodysize",
+      "from": 0.1,
+      "to": 0.4
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Frame",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Viewsize",
+      "from": 8,
+      "to": 24
+     },
+     {
+      "par": "Fov",
+      "from": 25,
+      "to": 55
+     }
+    ]
+   }
+  ],
+  "why": "Main = sync/check patch, stage view (view menu, orbit, elevation, FOV, size, fit, grid), beam and pixel look, aim toggle, reset; macros scale beam, pixel and framing preview."
+ },
+ "BL_cloud_morph": {
+  "main": [
+   "Morphmode",
+   "Morph",
+   "Gena",
+   "Genb",
+   "Stagger",
+   "Arc",
+   "Beatsperswap",
+   "Shape",
+   "Blend",
+   "Size",
+   "Brightness",
+   "Tint",
+   "Tintamount",
+   "Noiseamp",
+   "Autorbit",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Motion",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Autorbit",
+      "from": 0.0,
+      "to": 20.0
+     },
+     {
+      "par": "Noisespeed",
+      "from": 0.0,
+      "to": 1.0
+     },
+     {
+      "par": "Rate",
+      "from": 0.02,
+      "to": 0.34
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Spread",
+    "default": 0.27,
+    "drives": [
+     {
+      "par": "Stagger",
+      "from": 0.0,
+      "to": 2.0
+     },
+     {
+      "par": "Arc",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Brightness",
+      "from": 0.5,
+      "to": 2.0
+     },
+     {
+      "par": "Size",
+      "from": 0.5,
+      "to": 5.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Noiseamp",
+      "from": 0.0,
+      "to": 0.1
+     },
+     {
+      "par": "Dof",
+      "from": 0.0,
+      "to": 8.0
+     },
+     {
+      "par": "Streak",
+      "from": 0.0,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Morph A to B (mode, amount, A/B generators, stagger, arc, beats per swap), point look (shape, blend, size, brightness, tint, drift) and orbit/reset; Motion, Spread, Glow and Chaos macros."
+ },
+ "BL_splat_render": {
+  "main": [
+   "Reset",
+   "Cammode",
+   "Orbitaz",
+   "Orbitel",
+   "Orbitdist",
+   "Autorbit",
+   "Frame",
+   "Scalemult",
+   "Opacitygain",
+   "Brightness",
+   "Gamma",
+   "Dissolve",
+   "Reveal",
+   "Explode",
+   "Noiseamp",
+   "Beatpulse"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Motion",
+    "default": 0.333,
+    "drives": [
+     {
+      "par": "Autorbit",
+      "from": 0.0,
+      "to": 30.0
+     },
+     {
+      "par": "Noisespeed",
+      "from": 0.0,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.333,
+    "drives": [
+     {
+      "par": "Brightness",
+      "from": 0.4,
+      "to": 2.2
+     },
+     {
+      "par": "Opacitygain",
+      "from": 0.5,
+      "to": 2.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Dissolve",
+      "from": 0.0,
+      "to": 0.4
+     },
+     {
+      "par": "Explode",
+      "from": 0.0,
+      "to": 0.8
+     },
+     {
+      "par": "Noiseamp",
+      "from": 0.0,
+      "to": 0.15
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Size",
+    "default": 0.333,
+    "drives": [
+     {
+      "par": "Scalemult",
+      "from": 0.5,
+      "to": 2.0
+     },
+     {
+      "par": "Lowpass",
+      "from": 0.1,
+      "to": 0.7
+     }
+    ]
+   }
+  ],
+  "why": "Camera (mode, orbit az/el/distance/speed, frame, reset), splat scale/opacity/brightness/gamma, and the Look-page dissolve/reveal/explode/drift/beat pulse; Motion, Glow, Chaos and Size macros."
+ },
+ "BN_cloth": {
+  "main": [
+   "Mode",
+   "Reset",
+   "Release",
+   "Burst",
+   "Pause",
+   "Pins",
+   "Windmode",
+   "Windgain",
+   "Turbulence",
+   "Damping",
+   "Bend",
+   "Timescale",
+   "Shading",
+   "Colorfront",
+   "Colorback",
+   "Orbitspeed"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Wind",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Windgain",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Turbulence",
+      "from": 0.1,
+      "to": 0.9
+     },
+     {
+      "par": "Gust",
+      "from": 0.1,
+      "to": 0.9
+     },
+     {
+      "par": "Aero",
+      "from": 0.4,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Floppy",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Bend",
+      "from": 0.0,
+      "to": 0.1
+     },
+     {
+      "par": "Shear",
+      "from": 0.0,
+      "to": 0.0002
+     },
+     {
+      "par": "Damping",
+      "from": 0.2,
+      "to": 1.8
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Speed",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Timescale",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Orbitspeed",
+      "from": 0.0,
+      "to": 24.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Punch",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Burstforce",
+      "from": 5.0,
+      "to": 45.0
+     },
+     {
+      "par": "Burstdecay",
+      "from": 0.1,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Cloth/jelly mode, reset/release/burst/pause, pins, wind and turbulence, damping, bend, time scale, shading, front/back colour, orbit."
+ },
+ "BN_fluid2d": {
+  "main": [
+   "Colormode",
+   "Emitcolor",
+   "Burst",
+   "Reset",
+   "Pause",
+   "Audiomode",
+   "Bpmmode",
+   "Emitforce",
+   "Emitradius",
+   "Veldiss",
+   "Dyediss",
+   "Curl",
+   "Timescale",
+   "Exposure",
+   "Srcgain",
+   "Forcegain"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Swirl",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Curl",
+      "from": 5.0,
+      "to": 55.0
+     },
+     {
+      "par": "Veldiss",
+      "from": 0.35,
+      "to": 0.05
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Persist",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Dyediss",
+      "from": 1.8,
+      "to": 0.2
+     },
+     {
+      "par": "Exposure",
+      "from": -1.0,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Force",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Emitforce",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Forcegain",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Burstforce",
+      "from": 0.2,
+      "to": 1.8
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Size",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Emitradius",
+      "from": 0.01,
+      "to": 0.05
+     },
+     {
+      "par": "Burstradius",
+      "from": 0.015,
+      "to": 0.065
+     }
+    ]
+   }
+  ],
+  "why": "Dye colour mode and emitter colour, burst/reset/pause, audio and BPM modes, emitter force/radius, decay, vorticity, time scale, exposure, source/force gains."
+ },
+ "BO_particles": {
+  "main": [
+   "Play",
+   "Reset",
+   "Burst",
+   "Source",
+   "Speed",
+   "Life",
+   "Curlstrength",
+   "Drag",
+   "Size",
+   "Bright",
+   "Bloom",
+   "Colormode",
+   "Palsource",
+   "Palshift",
+   "Trails",
+   "Shape"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.4,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.2,
+      "to": 2.2
+     },
+     {
+      "par": "Curlstrength",
+      "from": 0.2,
+      "to": 2.2
+     },
+     {
+      "par": "Initspeed",
+      "from": 0.0,
+      "to": 0.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Curlscale",
+      "from": 0.5,
+      "to": 2.5
+     },
+     {
+      "par": "Curlspeed",
+      "from": 0.1,
+      "to": 0.5
+     },
+     {
+      "par": "Drag",
+      "from": 1.4,
+      "to": 0.2
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.4,
+    "drives": [
+     {
+      "par": "Bright",
+      "from": 0.1,
+      "to": 1.35
+     },
+     {
+      "par": "Softness",
+      "from": 0.3,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Size",
+    "default": 0.4,
+    "drives": [
+     {
+      "par": "Size",
+      "from": 0.004,
+      "to": 0.024
+     },
+     {
+      "par": "Sizevar",
+      "from": 0.2,
+      "to": 0.95
+     }
+    ]
+   }
+  ],
+  "why": "Play/Reset/Burst, emit source, speed, life, curl, drag, size, brightness, bloom, colour/palette, trails and shape of the particle engine."
+ },
+ "BP_io_router": {
+  "main": [
+   "Busa",
+   "Busb",
+   "Mix",
+   "Xfademode",
+   "Bpm",
+   "Cutdiv",
+   "Xfadetime",
+   "Fadecurve",
+   "Cutnow",
+   "Stalesec"
+  ],
+  "macros": [],
+  "why": "Bus crossfade essentials (bus A/B, mix, fade mode/time/curve, cut, bpm, stale timeout); no macros: only 4 numeric pars and no sensible float pairs. Source/sink pars are built by string concatenation and stay on their tabs."
+ },
+ "BX_blender_scene": {
+  "main": [],
+  "macros": [],
+  "why": "No builder source defines its pars (searched builders/, td/, test/): none of builders/ has a blender file; only td/handlers.py and td/vat.py mention Blender and only the library README lists Camera, Lightdimmer, Ambient, Resw, Resh (the COMP was made ad hoc in TD)."
+ },
+ "CQ_cuelist": {
+  "main": [
+   "Go",
+   "Goback",
+   "Standbyprev",
+   "Standbynext",
+   "Gotocue",
+   "Stop",
+   "Pause",
+   "Reset",
+   "Rate",
+   "Queuemode",
+   "Clocksrc",
+   "Clockplay",
+   "Chase",
+   "Defaultfade",
+   "Autofollow",
+   "Tracking"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Snap",
+    "default": 1.0,
+    "drives": [
+     {
+      "par": "Rate",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Defaultfade",
+      "from": 3,
+      "to": 0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Tolerance",
+    "default": 0.35,
+    "drives": [
+     {
+      "par": "Lockwindow",
+      "from": 1,
+      "to": 6
+     },
+     {
+      "par": "Freewheel",
+      "from": 0.5,
+      "to": 5
+     },
+     {
+      "par": "Jumpthreshold",
+      "from": 0.5,
+      "to": 2
+     }
+    ]
+   }
+  ],
+  "why": "Main = transport (GO/back/standby/goto/stop/pause/reset), fade rate and queue mode, clock source/play/chase, default fade, tracking and autofollow; macros are weak but harmless: fade snappiness and timecode lock tolerance."
+ },
+ "CS_cam_sequencer": {
+  "main": [
+   "Bind",
+   "Init",
+   "Append",
+   "Select",
+   "Easing",
+   "Override",
+   "Splineinterp",
+   "Playmode",
+   "Gotopreset",
+   "Clockmode",
+   "Quant",
+   "Shakeprofile",
+   "Shakeamount"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Shake",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Shakepos",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Shakerot",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Shakespeed",
+      "from": 0,
+      "to": 2
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Pace",
+    "default": 0.5714,
+    "drives": [
+     {
+      "par": "Defaulthold",
+      "from": 16,
+      "to": 2
+     },
+     {
+      "par": "Tdur",
+      "from": 4,
+      "to": 0.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Smooth",
+    "default": 0,
+    "drives": [
+     {
+      "par": "Lag",
+      "from": 0,
+      "to": 1.5
+     },
+     {
+      "par": "Lookdamp",
+      "from": 0,
+      "to": 1
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Lens",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Fovoffset",
+      "from": -20,
+      "to": 20
+     },
+     {
+      "par": "Framepad",
+      "from": 0,
+      "to": 0.4
+     }
+    ]
+   }
+  ],
+  "why": "Camera COMP preset sequencer (v2, the original's workflow): Bind, Init / Append (capture the camera + its Look At), the Select fader (fraction = blend), Easing + Ease Override + Spline Interpolation, then ours: playmode, any-to-any Go to preset, clock, quantise, shake profile + amount. Macros: Shake (profile scales + speed), Pace (hold + transition shorter), Smooth (Select lag + look damping), Lens (FOV offset + framing pad)."
+ },
+ "CV_person_mask": {
+  "main": [
+   "Visionon",
+   "Source",
+   "Person",
+   "View",
+   "Background",
+   "Fillcolor",
+   "Bgcolor",
+   "Bgalpha",
+   "Feather",
+   "Grow",
+   "Smooth",
+   "Invert",
+   "Opacity",
+   "Lightwrap",
+   "Despill",
+   "Resetsmooth"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Edge",
+    "default": 0.33,
+    "drives": [
+     {
+      "par": "Feather",
+      "from": 0,
+      "to": 6
+     },
+     {
+      "par": "Grow",
+      "from": -4,
+      "to": 8
+     },
+     {
+      "par": "Smooth",
+      "from": 0,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Wrap",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Lightwrap",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Wrapwidth",
+      "from": 12,
+      "to": 48
+     },
+     {
+      "par": "Wrapblur",
+      "from": 24,
+      "to": 96
+     }
+    ]
+   }
+  ],
+  "why": "Matte (feather, grow, smooth, invert, opacity), Look (person, fill/bg, view), light wrap and despill, Vision on, source and reset smoothing."
+ },
+ "DC_depth_cam": {
+  "main": [
+   "Active",
+   "Source",
+   "Mode",
+   "Mix",
+   "Smooth",
+   "Invert",
+   "Mirror",
+   "Fogamount",
+   "Fogstart",
+   "Fogend",
+   "Fogcolour",
+   "Slicecenter",
+   "Slicewidth",
+   "Slicespeed",
+   "Linethresh",
+   "Linewidth"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Fog depth",
+    "default": 0.55,
+    "drives": [
+     {
+      "par": "Fogstart",
+      "from": 0.15,
+      "to": 0.45
+     },
+     {
+      "par": "Fogend",
+      "from": 0.75,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Slice",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Slicewidth",
+      "from": 0.1,
+      "to": 0.7
+     },
+     {
+      "par": "Slicesoft",
+      "from": 0,
+      "to": 0.1
+     },
+     {
+      "par": "Slicecenter",
+      "from": 0.6,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Lines",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Linethresh",
+      "from": 0.005,
+      "to": 0.055
+     },
+     {
+      "par": "Linewidth",
+      "from": 1,
+      "to": 3
+     }
+    ]
+   }
+  ],
+  "why": "Depth page (active, mode depth/fog/slice/outline, mix, smooth, invert, mirror) plus the key pars of the Fog, Slice and Outline pages."
+ },
+ "Effectors": {
+  "main": [
+   "Addkind",
+   "Addname",
+   "Addtags",
+   "Add",
+   "Target",
+   "Toggle",
+   "Remove",
+   "Duplicate",
+   "Track",
+   "Sync",
+   "Palsource",
+   "Palshift",
+   "Palreverse",
+   "Gridon",
+   "Painton",
+   "Paintclear"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Paint",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Paintrate",
+      "from": 2,
+      "to": 8
+     },
+     {
+      "par": "Paintdecay",
+      "from": 0,
+      "to": 0.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Grid",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Gridsize",
+      "from": 2,
+      "to": 6
+     },
+     {
+      "par": "Gridalpha",
+      "from": 0.1,
+      "to": 0.9
+     }
+    ]
+   }
+  ],
+  "why": "The /project1/effectors list management (add kind/name/tags, target, toggle/remove/duplicate, track mode, sync), light palette source/shift/reverse, and the voxel grid / paint switches."
+ },
+ "FT_face_track": {
+  "main": [
+   "Active",
+   "Source",
+   "Mirror",
+   "Maxfaces",
+   "Smooth",
+   "Minconf",
+   "Holdframes",
+   "Showwire",
+   "Showboxes",
+   "Wirewidth",
+   "Wireopacity",
+   "Wirecolor",
+   "Maskblur",
+   "Maskgrow",
+   "Calibrate"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Steady",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Smooth",
+      "from": 0.1,
+      "to": 0.9
+     },
+     {
+      "par": "Holdframes",
+      "from": 0,
+      "to": 16
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Mask soft",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Maskblur",
+      "from": 0,
+      "to": 8
+     },
+     {
+      "par": "Maskgrow",
+      "from": -10,
+      "to": 10
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Features",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Eyeexpand",
+      "from": 0.8,
+      "to": 1.8
+     },
+     {
+      "par": "Mouthexpand",
+      "from": 0.6,
+      "to": 1.6
+     },
+     {
+      "par": "Forehead",
+      "from": 0,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Tracking page: on/source/mirror, face count, smoothing, confidence, hold, wire/box display and colour, mask blur/grow, calibrate."
+ },
+ "FX_analog": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Standard",
+   "Separation",
+   "Crawl",
+   "Hue",
+   "Saturation",
+   "Phaseerr",
+   "Peaking",
+   "Ringing",
+   "Noise",
+   "Gain",
+   "Ybw",
+   "Lineblend"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Bleed",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Ybw",
+      "from": 7,
+      "to": 1.4
+     },
+     {
+      "par": "Ibw",
+      "from": 2.5,
+      "to": 0.1
+     },
+     {
+      "par": "Qbw",
+      "from": 0.9,
+      "to": 0.1
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Grit",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Noise",
+      "from": 0,
+      "to": 0.1
+     },
+     {
+      "par": "Peaking",
+      "from": 0,
+      "to": 1.2
+     },
+     {
+      "par": "Ringing",
+      "from": 0,
+      "to": 0.8
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Hue",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Hue",
+      "from": -60,
+      "to": 60
+     },
+     {
+      "par": "Phaseerr",
+      "from": -45,
+      "to": 45
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module ntsc1 (ntsc): standard, separation, dot crawl, hue, saturation, phase error, peaking, ringing, noise, gain, bandwidth."
+ },
+ "FX_destroy": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Mode",
+   "Direction",
+   "Gravity",
+   "Drip",
+   "Viscosity",
+   "Recover",
+   "Wobble",
+   "Speed",
+   "Columns",
+   "Weight",
+   "Seed",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Gravity",
+      "from": 0.05,
+      "to": 0.3
+     },
+     {
+      "par": "Drip",
+      "from": 0.4,
+      "to": 1.0
+     },
+     {
+      "par": "Wobble",
+      "from": 0.1,
+      "to": 0.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Goo",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Viscosity",
+      "from": 0.1,
+      "to": 0.7
+     },
+     {
+      "par": "Speed",
+      "from": 0.05,
+      "to": 0.55
+     },
+     {
+      "par": "Weight",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Density",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Columns",
+      "from": 8,
+      "to": 40
+     },
+     {
+      "par": "Start",
+      "from": 0.1,
+      "to": 0.9
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module melt1 (melt): amount, mode, direction, gravity, drip, viscosity, recover, wobble, speed, columns, weight, seed, Reset."
+ },
+ "FX_film": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Shutter",
+   "Moveblur",
+   "Shake",
+   "Shakefreq",
+   "Shakerot",
+   "Steps",
+   "Readout",
+   "Exposure",
+   "Iso",
+   "Overscan",
+   "Zoom"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Shake",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Shake",
+      "from": 0,
+      "to": 30
+     },
+     {
+      "par": "Shakerot",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Steps",
+      "from": 0,
+      "to": 15
+     },
+     {
+      "par": "Zoomshake",
+      "from": 0,
+      "to": 0.04
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Grit",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Iso",
+      "from": 0,
+      "to": 6400
+     },
+     {
+      "par": "Hotpixels",
+      "from": 0,
+      "to": 30
+     },
+     {
+      "par": "Fpn",
+      "from": 0,
+      "to": 0.003
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Blur",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Shutter",
+      "from": 90,
+      "to": 270
+     },
+     {
+      "par": "Moveblur",
+      "from": 0,
+      "to": 2
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module camera1 (camera): shutter, move blur, handheld shake, footsteps, rolling readout, exposure, ISO, overscan, zoom."
+ },
+ "FX_glass": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Source",
+   "Ior",
+   "Thickness",
+   "Bevel",
+   "Smooth",
+   "Dispersion",
+   "Frost",
+   "Bright",
+   "Drift",
+   "Driftspeed",
+   "Rim",
+   "Spec",
+   "Tintamt"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Glass",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Thickness",
+      "from": 20,
+      "to": 100
+     },
+     {
+      "par": "Bevel",
+      "from": 15,
+      "to": 65
+     },
+     {
+      "par": "Dispersion",
+      "from": 0.0,
+      "to": 0.06
+     },
+     {
+      "par": "Ior",
+      "from": 1.2,
+      "to": 1.7
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Rim",
+      "from": 0.1,
+      "to": 1.1
+     },
+     {
+      "par": "Spec",
+      "from": 0.1,
+      "to": 0.9
+     },
+     {
+      "par": "Bright",
+      "from": 0.9,
+      "to": 1.26
+     },
+     {
+      "par": "Edge",
+      "from": 0.1,
+      "to": 0.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Drift",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Drift",
+      "from": 0,
+      "to": 150
+     },
+     {
+      "par": "Driftspeed",
+      "from": 0.3,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Frost",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Frost",
+      "from": 0.3,
+      "to": 1.0
+     },
+     {
+      "par": "Backblur",
+      "from": 8,
+      "to": 40
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module liquid1 (liquid glass; slot starts disabled): amount, shapes/mask source, refraction, bevel, frost, drift, rim, specular, tint."
+ },
+ "FX_glitch": {
+  "main": [
+   "Panic",
+   "Input",
+   "Mode",
+   "Amount",
+   "Angle",
+   "Length",
+   "Threshold",
+   "Decay",
+   "Wobble",
+   "Seed",
+   "Stripwidth",
+   "Density"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Reach",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Length",
+      "from": 40,
+      "to": 280
+     },
+     {
+      "par": "Stripwidth",
+      "from": 2,
+      "to": 14
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Wobble",
+      "from": 0.0,
+      "to": 0.6
+     },
+     {
+      "par": "Bandwidth",
+      "from": 0.02,
+      "to": 0.14
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module smear1 (smear): mode, amount, angle, length, threshold, decay, wobble, seed, strip width, density."
+ },
+ "FX_haze": {
+  "main": [
+   "Hazeamount",
+   "Density",
+   "Falloff",
+   "Noise",
+   "Wind",
+   "Extinction",
+   "Ambient",
+   "Hazetint",
+   "Gain",
+   "Anisotropy",
+   "Shafts",
+   "Bloom",
+   "Bloomwide",
+   "Ring",
+   "Palsource",
+   "Palshift"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Density",
+    "default": 0.28,
+    "drives": [
+     {
+      "par": "Density",
+      "from": 0.01,
+      "to": 0.25
+     },
+     {
+      "par": "Ambient",
+      "from": 0.05,
+      "to": 0.9
+     },
+     {
+      "par": "Gain",
+      "from": 0.3,
+      "to": 2.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Shafts",
+    "default": 0.21,
+    "drives": [
+     {
+      "par": "Shafts",
+      "from": 0.1,
+      "to": 2.5
+     },
+     {
+      "par": "Disc",
+      "from": 0.02,
+      "to": 0.2
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Bloom",
+      "from": 0.0,
+      "to": 3.0
+     },
+     {
+      "par": "Bloomthr",
+      "from": 0.8,
+      "to": 0.3
+     },
+     {
+      "par": "Bloomwide",
+      "from": 1.0,
+      "to": 2.0
+     },
+     {
+      "par": "Ring",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Patchy",
+    "default": 0.44,
+    "drives": [
+     {
+      "par": "Noise",
+      "from": 0.1,
+      "to": 1.0
+     },
+     {
+      "par": "Noisescale",
+      "from": 0.1,
+      "to": 0.7
+     },
+     {
+      "par": "Falloff",
+      "from": 0.0,
+      "to": 0.8
+     }
+    ]
+   }
+  ],
+  "why": "Haze body (amount, density, falloff, patchiness, drift, extinction, ambient, lit-fog tint/gain/anisotropy), shafts, bloom and ring halo, and the palette pick; Density, Shafts, Glow and Patchy macros."
+ },
+ "FX_motion_trail": {
+  "main": [
+   "Mix",
+   "Length",
+   "Decay",
+   "Threshold",
+   "Agecolor",
+   "Blend",
+   "Palette",
+   "Colornew",
+   "Colormid",
+   "Colorold",
+   "Spread",
+   "Cycle",
+   "Hold",
+   "Clear",
+   "Source",
+   "Sourcelevel"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Trail",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Length",
+      "from": 5.0,
+      "to": 90.0
+     },
+     {
+      "par": "Decay",
+      "from": 0.25,
+      "to": 0.85
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Sensitivity",
+    "default": 0.6,
+    "drives": [
+     {
+      "par": "Threshold",
+      "from": 0.2,
+      "to": 0.0
+     },
+     {
+      "par": "Softness",
+      "from": 0.01,
+      "to": 0.09
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Colour",
+    "default": 0.25,
+    "drives": [
+     {
+      "par": "Spread",
+      "from": 0.5,
+      "to": 2.5
+     },
+     {
+      "par": "Cycle",
+      "from": -0.5,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Fade",
+    "default": 1.0,
+    "drives": [
+     {
+      "par": "Mix",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Sourcelevel",
+      "from": 0.2,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "Trail amount/length/decay/threshold, age colouring (mode, blend, palette, new/mid/old colours, spread, cycle), hold/clear and the source pick; Trail, Sensitivity, Colour and Fade macros."
+ },
+ "FX_palette_map": {
+  "main": [
+   "Palette",
+   "Colourspace",
+   "Blend",
+   "Lightnessweight",
+   "Preserveluma",
+   "Dither",
+   "Ditheramount",
+   "Ditheranimate",
+   "Source"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Strength",
+    "default": 1.0,
+    "drives": [
+     {
+      "par": "Blend",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Preserveluma",
+      "from": 1.0,
+      "to": 0.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Grit",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Ditheramount",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Lightnessweight",
+      "from": 0.2,
+      "to": 1.8
+     }
+    ]
+   }
+  ],
+  "why": "The whole Palette page (palette, colour space, blend, lightness weight, preserve luma, dither + amount + animate) plus the Source pick; the COMP only has about ten live pars. Strength and Grit macros."
+ },
+ "FX_retro": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Machine",
+   "Constraint",
+   "Pixelsize",
+   "Dither",
+   "Ditheramt",
+   "Ditheranim",
+   "Lightnessweight",
+   "Contrast",
+   "Brightness",
+   "Saturation"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Chunk",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Pixelsize",
+      "from": 1,
+      "to": 7
+     },
+     {
+      "par": "Ditheramt",
+      "from": 0,
+      "to": 2
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Colour",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Contrast",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Saturation",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Brightness",
+      "from": -0.3,
+      "to": 0.3
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module palette1 (palette): machine, constraint, pixel size, dither, contrast, brightness, saturation."
+ },
+ "FX_scope": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Source",
+   "Gainx",
+   "Gainy",
+   "Intensity",
+   "Phosphor",
+   "Persist",
+   "Flash",
+   "Size",
+   "Glow",
+   "Exposure",
+   "Graticule",
+   "Background",
+   "Rotate"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0.2,
+      "to": 0.8
+     },
+     {
+      "par": "Intensity",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Exposure",
+      "from": 0.5,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Trail",
+    "default": 0.15,
+    "drives": [
+     {
+      "par": "Persist",
+      "from": 0.0,
+      "to": 0.5
+     },
+     {
+      "par": "Flash",
+      "from": 0.2,
+      "to": 1.5
+     },
+     {
+      "par": "Beamwidth",
+      "from": 1.2,
+      "to": 3.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Frame",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Size",
+      "from": 0.4,
+      "to": 1.4
+     },
+     {
+      "par": "Rotate",
+      "from": -45,
+      "to": 45
+     },
+     {
+      "par": "Graticule",
+      "from": 0.0,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module xy1 (audio XY scope) with its shared beam pages: source, gain, intensity, phosphor, persistence, size, glow, exposure, graticule, background."
+ },
+ "FX_strobe": {
+  "main": [
+   "Source",
+   "Mode",
+   "Colour",
+   "Depth",
+   "Division",
+   "Note",
+   "Bpm",
+   "Tap",
+   "Threshold",
+   "Rate",
+   "Attack",
+   "Release",
+   "Fire",
+   "Burst",
+   "Flash",
+   "Blackout"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Intensity",
+    "default": 1.0,
+    "drives": [
+     {
+      "par": "Depth",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Mix",
+      "from": 0.2,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Snap",
+    "default": 0.85,
+    "drives": [
+     {
+      "par": "Attack",
+      "from": 0.15,
+      "to": 0.0
+     },
+     {
+      "par": "Release",
+      "from": 0.6,
+      "to": 0.03
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Speed",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Bpm",
+      "from": 90.0,
+      "to": 210.0
+     },
+     {
+      "par": "Rate",
+      "from": 0.5,
+      "to": 5.5
+     },
+     {
+      "par": "Testrate",
+      "from": 0.5,
+      "to": 5.5
+     }
+    ]
+   }
+  ],
+  "why": "Trigger source, flash mode/colour/depth, rhythm (every Nth, note, BPM, tap, threshold, LFO rate), attack/release, and the manual Fire/Burst/Flash/Blackout; Intensity, Snap and Speed macros."
+ },
+ "FX_stylise": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Mode",
+   "Width",
+   "Offset",
+   "Intensity",
+   "Glow",
+   "Glowgain",
+   "Colsrc",
+   "Palpos",
+   "Keep",
+   "Back",
+   "Blend",
+   "Speed",
+   "Wobble"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Line",
+    "default": 0.35,
+    "drives": [
+     {
+      "par": "Width",
+      "from": 2,
+      "to": 14
+     },
+     {
+      "par": "Intensity",
+      "from": 0.8,
+      "to": 3.0
+     },
+     {
+      "par": "Soft",
+      "from": 0.5,
+      "to": 3.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.35,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 5,
+      "to": 60
+     },
+     {
+      "par": "Glowgain",
+      "from": 0.4,
+      "to": 2.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Wobble",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Wobble",
+      "from": 0,
+      "to": 20
+     },
+     {
+      "par": "Wobblespeed",
+      "from": 0.5,
+      "to": 3.0
+     },
+     {
+      "par": "Wobblescale",
+      "from": 60,
+      "to": 120
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module outline1 (outline; slot starts disabled): amount, mode, line width/offset, intensity, halo, colour source, palette position, backdrop, contour speed, wobble."
+ },
+ "FX_synth": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Mode",
+   "Source",
+   "Function",
+   "Overflow",
+   "Drive",
+   "Bias",
+   "Solar",
+   "Drift",
+   "Gainr",
+   "Gaing",
+   "Gainb",
+   "Huegain",
+   "Sat"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Drive",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Drive",
+      "from": 0.4,
+      "to": 1.6
+     },
+     {
+      "par": "Bias",
+      "from": -0.3,
+      "to": 0.3
+     },
+     {
+      "par": "Solar",
+      "from": 0.3,
+      "to": 0.7
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Gain",
+    "default": 0.4,
+    "drives": [
+     {
+      "par": "Gainr",
+      "from": 0.4,
+      "to": 1.9
+     },
+     {
+      "par": "Gaing",
+      "from": 0.4,
+      "to": 1.9
+     },
+     {
+      "par": "Gainb",
+      "from": 0.4,
+      "to": 1.9
+     },
+     {
+      "par": "Huegain",
+      "from": 0.4,
+      "to": 1.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Cycle",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Drift",
+      "from": 0,
+      "to": 1.0
+     },
+     {
+      "par": "Huephase",
+      "from": 0,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module colorize1 (colorize): amount, mode, source, function, overflow, drive, bias, solarize, drift, per-channel gains, hue cycles, saturation."
+ },
+ "FX_track": {
+  "main": [
+   "Panic",
+   "Input",
+   "Key",
+   "Keygain",
+   "Threshold",
+   "Detector",
+   "Smooth",
+   "Amount",
+   "Radius",
+   "Neighbours",
+   "Linewidth",
+   "Halo",
+   "Intensity",
+   "Dotstyle",
+   "Dotradius",
+   "Reveal"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Links",
+    "default": 0.55,
+    "drives": [
+     {
+      "par": "Radius",
+      "from": 80,
+      "to": 260
+     },
+     {
+      "par": "Neighbours",
+      "from": 1,
+      "to": 4
+     },
+     {
+      "par": "Dotradius",
+      "from": 2,
+      "to": 10
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Intensity",
+      "from": 0.8,
+      "to": 2.2
+     },
+     {
+      "par": "Halo",
+      "from": 0,
+      "to": 6
+     },
+     {
+      "par": "Halogain",
+      "from": 0.1,
+      "to": 0.6
+     },
+     {
+      "par": "Linewidth",
+      "from": 0.8,
+      "to": 2.2
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Spark",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Jitter",
+      "from": 0,
+      "to": 30
+     },
+     {
+      "par": "Pieces",
+      "from": 1,
+      "to": 5
+     },
+     {
+      "par": "Flicker",
+      "from": 0.0,
+      "to": 0.6
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the shared tracker pars (Key, Keygain, Threshold, Detector, Smooth) plus the first module plexus1 (plexus): amount, link radius, neighbours, line width, halo, intensity, dots, reveal."
+ },
+ "FX_trans": {
+  "main": [
+   "Type",
+   "Progress",
+   "Drive",
+   "Go",
+   "Back",
+   "Cut",
+   "Duration",
+   "Beats",
+   "Ease",
+   "Steps",
+   "Quantize",
+   "Bpm",
+   "K1",
+   "K2",
+   "K3",
+   "Backstyle"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Speed",
+    "default": 0.667,
+    "drives": [
+     {
+      "par": "Duration",
+      "from": 6.0,
+      "to": 0.3
+     },
+     {
+      "par": "Bpm",
+      "from": 40.0,
+      "to": 160.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Snap",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Steps",
+      "from": 0.0,
+      "to": 10.0
+     },
+     {
+      "par": "Beats",
+      "from": 4.0,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "One COMP with transition types: Type, Progress, Drive, Go/Back/Cut, Duration/Beats/Ease/Steps/Quantize/Bpm, Backstyle and the first three type-dependent knobs K1-K3; Speed and Snap macros."
+ },
+ "GEN_clone": {
+  "main": [
+   "Mode",
+   "Count",
+   "Countx",
+   "County",
+   "Radius",
+   "Source",
+   "Size",
+   "Colour",
+   "Alpha",
+   "Blend",
+   "Align",
+   "Seed",
+   "Noisepos",
+   "Timeoffset",
+   "Camspin"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Size",
+    "default": 0.45,
+    "drives": [
+     {
+      "par": "Size",
+      "from": 0.1,
+      "to": 0.7
+     },
+     {
+      "par": "Radius",
+      "from": 0.5,
+      "to": 2.0
+     },
+     {
+      "par": "Pathsize",
+      "from": 0.5,
+      "to": 2.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Noisepos",
+      "from": 0.0,
+      "to": 0.6
+     },
+     {
+      "par": "Noiserot",
+      "from": 0.0,
+      "to": 90.0
+     },
+     {
+      "par": "Noisescale",
+      "from": 0.0,
+      "to": 0.5
+     },
+     {
+      "par": "Randscale",
+      "from": 0.0,
+      "to": 0.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Energy",
+    "default": 0.17,
+    "drives": [
+     {
+      "par": "Noisespeed",
+      "from": 0.1,
+      "to": 2.5
+     },
+     {
+      "par": "Camspin",
+      "from": -2.0,
+      "to": 10.0
+     },
+     {
+      "par": "Pathspeed",
+      "from": -0.2,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "Layout (Mode/Count/grid counts/Radius), clone shape and picture source, size/colour/alpha/blend, alignment, seed, noise position, time offset and camera spin; Size, Chaos and Energy macros."
+ },
+ "GEN_interactive": {
+  "main": [
+   "Panic",
+   "Input",
+   "Source",
+   "Demoshape",
+   "Demospeed",
+   "Amount",
+   "Ribbons",
+   "Width",
+   "Fade",
+   "Style",
+   "Glow",
+   "Colormode",
+   "Palette",
+   "Colora",
+   "Colorb",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Speed",
+    "default": 0.29,
+    "drives": [
+     {
+      "par": "Demospeed",
+      "from": 0.2,
+      "to": 3.0
+     },
+     {
+      "par": "Speed",
+      "from": 0.2,
+      "to": 3.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Wobble",
+      "from": 0.0,
+      "to": 40.0
+     },
+     {
+      "par": "Wobblespeed",
+      "from": 0.0,
+      "to": 4.0
+     },
+     {
+      "par": "Strands",
+      "from": 1,
+      "to": 6
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0.0,
+      "to": 3.0
+     },
+     {
+      "par": "Taper",
+      "from": 0.6,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Size",
+    "default": 0.27,
+    "drives": [
+     {
+      "par": "Width",
+      "from": 2.0,
+      "to": 62.0
+     },
+     {
+      "par": "Length",
+      "from": 24,
+      "to": 240
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input and tracked-points Source/Demo pars plus the first module ribbon1 (Ribbon/Width/Style/Colour pages)."
+ },
+ "GEN_pattern": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Tile",
+   "Levels",
+   "Subdivide",
+   "Linewidth",
+   "Flipshare",
+   "Scale",
+   "Speed",
+   "Seed",
+   "Palette",
+   "Colora",
+   "Colorb",
+   "Blend",
+   "Rotspeed"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.33,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.1,
+      "to": 3.1
+     },
+     {
+      "par": "Linewidth",
+      "from": 0.05,
+      "to": 0.3
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Flipshare",
+      "from": 0.0,
+      "to": 0.6
+     },
+     {
+      "par": "Fliprate",
+      "from": 0.0,
+      "to": 6.0
+     },
+     {
+      "par": "Colorvar",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Density",
+    "default": 0.35,
+    "drives": [
+     {
+      "par": "Scale",
+      "from": 2.0,
+      "to": 28.0
+     },
+     {
+      "par": "Subdivide",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module truchet1 (Truchet page: Amount/Tile/Levels/Subdivide/Linewidth/Flipshare) and its shared Drive/Space/Colour essentials."
+ },
+ "GEN_points": {
+  "main": [
+   "Panic",
+   "Input",
+   "Map",
+   "Amount",
+   "Drift",
+   "Fold",
+   "Fit",
+   "Size",
+   "Intensity",
+   "Persist",
+   "Palette",
+   "Colora",
+   "Colorb",
+   "Glow",
+   "Exposure",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.1,
+      "to": 3.1
+     },
+     {
+      "par": "Iterations",
+      "from": 1,
+      "to": 5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Drift",
+      "from": 0.0,
+      "to": 0.3
+     },
+     {
+      "par": "Driftspeed",
+      "from": 0.02,
+      "to": 0.4
+     },
+     {
+      "par": "Kick",
+      "from": 0.0,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0.0,
+      "to": 2.5
+     },
+     {
+      "par": "Exposure",
+      "from": 0.0,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Size",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Size",
+      "from": 1.0,
+      "to": 8.0
+     },
+     {
+      "par": "Intensity",
+      "from": 1.0,
+      "to": 2.5
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module density2d1 (Density page: Map/Amount/Drift) and the shared Points/Look/View/Drive essentials."
+ },
+ "GEN_sdf": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Scenea",
+   "Sceneb",
+   "Morph",
+   "Morphswing",
+   "Size",
+   "Thickness",
+   "Material",
+   "Palette",
+   "Colora",
+   "Colorb",
+   "Camdist",
+   "Orbitspeed",
+   "Glow"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.25,
+    "drives": [
+     {
+      "par": "Orbitspeed",
+      "from": 0.0,
+      "to": 40.0
+     },
+     {
+      "par": "Speed",
+      "from": 0.2,
+      "to": 3.2
+     },
+     {
+      "par": "Morphrate",
+      "from": 0.0,
+      "to": 0.4
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Morph",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Twist",
+      "from": 0.0,
+      "to": 1.2
+     },
+     {
+      "par": "Morphswing",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0.0,
+      "to": 2.5
+     },
+     {
+      "par": "Emissive",
+      "from": 0.0,
+      "to": 0.8
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module scene1 (Scene page: scene A/B, morph, size) with its shared Camera/Look/Colour essentials."
+ },
+ "GEN_sim": {
+  "main": [
+   "Panic",
+   "Input",
+   "Amount",
+   "Family",
+   "Ruleset",
+   "Cell",
+   "Steps",
+   "Run",
+   "Seedmode",
+   "Density",
+   "Reset",
+   "Colormode",
+   "Decay",
+   "Palette",
+   "Colora",
+   "Colorb"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Speed",
+    "default": 0.175,
+    "drives": [
+     {
+      "par": "Steps",
+      "from": 0.3,
+      "to": 4.3
+     },
+     {
+      "par": "Sparks",
+      "from": 0.0,
+      "to": 0.1
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Mutate",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Mutate",
+      "from": 0.0,
+      "to": 0.004
+     },
+     {
+      "par": "Leniadt",
+      "from": 0.1,
+      "to": 0.25
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Size",
+    "default": 0.25,
+    "drives": [
+     {
+      "par": "Cell",
+      "from": 2.0,
+      "to": 10.0
+     },
+     {
+      "par": "Gap",
+      "from": 0.0,
+      "to": 0.4
+     }
+    ]
+   }
+  ],
+  "why": "Rack Panic/Input plus the first module ca1 (cellular automata: Ca, Look and Colour pages); the rack has no mix/global-amount par."
+ },
+ "GN_physarum": {
+  "main": [
+   "Preseta",
+   "Presetb",
+   "Morph",
+   "Colormode",
+   "Palette",
+   "Exposure",
+   "Glow",
+   "Hi",
+   "Species",
+   "Seedmode",
+   "Reseed",
+   "Reset",
+   "Burst",
+   "Pause"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Chaos",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Jittergain",
+      "from": 0.0,
+      "to": 2.0
+     },
+     {
+      "par": "Sagain",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Ssgain",
+      "from": 0.3,
+      "to": 1.7
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Density",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Depgain",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Decaygain",
+      "from": 1.6,
+      "to": 0.4
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0.0,
+      "to": 1.5
+     },
+     {
+      "par": "Exposure",
+      "from": 0.0,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "Slime-mould presets A/B + morph, colour mode and palette, exposure/glow/value high, species and seeding, reseed/reset/burst/pause."
+ },
+ "GN_reaction_diffusion": {
+  "main": [
+   "Preseta",
+   "Presetb",
+   "Morph",
+   "Morphgo",
+   "Palette",
+   "Hi",
+   "Exposure",
+   "Steps",
+   "Seedmode",
+   "Reseed",
+   "Reset",
+   "Burst",
+   "Pause",
+   "Invert",
+   "Audiomode"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Speed",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Steps",
+      "from": 1,
+      "to": 15
+     },
+     {
+      "par": "Flowspeed",
+      "from": 0.0,
+      "to": 0.2
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Mutate",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Feedoff",
+      "from": -0.003,
+      "to": 0.003
+     },
+     {
+      "par": "Killoff",
+      "from": -0.0015,
+      "to": 0.0015
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Light",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Exposure",
+      "from": -1.0,
+      "to": 1.0
+     },
+     {
+      "par": "Hi",
+      "from": 0.2,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Pattern presets A/B + morph, palette, value scale, exposure, steps per frame, seeding, reset/burst/pause and audio mode."
+ },
+ "LK_projection_room": {
+  "main": [
+   "Viewmode",
+   "Campreset",
+   "Camproj",
+   "Domemode",
+   "Inputformat",
+   "Testchart",
+   "Throwratio",
+   "Lumens",
+   "Gain",
+   "Shifth",
+   "Shiftv",
+   "Fitcontent",
+   "Showfrustum",
+   "Projbon",
+   "Showhud",
+   "Domefov"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Light",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Lumens",
+      "from": 3000,
+      "to": 12000
+     },
+     {
+      "par": "Gain",
+      "from": 0.6,
+      "to": 2.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Dome view",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Domecamfov",
+      "from": 60,
+      "to": 140
+     },
+     {
+      "par": "Domepitch",
+      "from": 15,
+      "to": 75
+     },
+     {
+      "par": "Domefov",
+      "from": 140,
+      "to": 220
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "View aids",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Eyeheight",
+      "from": 0.8,
+      "to": 2.6
+     },
+     {
+      "par": "Orthowidth",
+      "from": 4,
+      "to": 20
+     },
+     {
+      "par": "Templateopacity",
+      "from": 0,
+      "to": 1
+     }
+    ]
+   }
+  ],
+  "why": "Main = view/camera/dome mode menus, test chart, projector throw/lumens/gain/lens shift, content fit, frustum, projector B, readouts; macros: projector light, dome view, view aids. Pars from builders/projector_dome.py only (the older Room page pars are not in builder code)."
+ },
+ "LK_spectrum_glass": {
+  "main": [],
+  "macros": [],
+  "why": "No builder in builders/ or td/ (made ad hoc in TD; only library/LK_spectrum_glass/README.md lists its pars and show_rig names it), so par names cannot be determined from builder code: fallback applies."
+ },
+ "LK_typecore": {
+  "main": [],
+  "macros": [],
+  "why": "No builder in builders/ or td/ (made ad hoc in TD; only library/LK_typecore/README.md lists its pars and show_rig names it), so par names cannot be determined from builder code: fallback applies."
+ },
+ "LP_laser_path": {
+  "main": [
+   "Source",
+   "Pattern",
+   "Size",
+   "Count",
+   "Rgb",
+   "Intensity",
+   "Gain",
+   "Rotate",
+   "Scalex",
+   "Scaley",
+   "Intensitysrc",
+   "Bpm",
+   "Strobe",
+   "Strobeon",
+   "Blackout",
+   "Hold"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Size",
+    "default": 0.75,
+    "drives": [
+     {
+      "par": "Size",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Scalex",
+      "from": 0.25,
+      "to": 1.25
+     },
+     {
+      "par": "Scaley",
+      "from": 0.25,
+      "to": 1.25
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Brightness",
+    "default": 1.0,
+    "drives": [
+     {
+      "par": "Intensity",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Gain",
+      "from": 0.2,
+      "to": 1.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.3,
+    "drives": [
+     {
+      "par": "Glow",
+      "from": 0,
+      "to": 20
+     },
+     {
+      "par": "Spotgain",
+      "from": 0.1,
+      "to": 1.0
+     },
+     {
+      "par": "Persist",
+      "from": 20,
+      "to": 160
+     }
+    ]
+   }
+  ],
+  "why": "Main = source and pattern, size/count/colour, intensity and gain, rotate and scale, intensity source/BPM, strobe, blackout, hold; macros: size, brightness, preview glow."
+ },
+ "LY_lyrics_feed": {
+  "main": [
+   "Source",
+   "Offset",
+   "Play",
+   "Rate",
+   "Loop",
+   "Restart",
+   "Seekto",
+   "Seek",
+   "Cursize",
+   "Nextsize",
+   "Shownext",
+   "Showbar",
+   "Curcolour",
+   "Nextcolour",
+   "Barcolour",
+   "Transparent"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Size",
+    "default": 0.43,
+    "drives": [
+     {
+      "par": "Cursize",
+      "from": 48,
+      "to": 160
+     },
+     {
+      "par": "Nextsize",
+      "from": 28,
+      "to": 90
+     },
+     {
+      "par": "Gap",
+      "from": 70,
+      "to": 230
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Space",
+    "default": 0.43,
+    "drives": [
+     {
+      "par": "Margin",
+      "from": 20,
+      "to": 160
+     },
+     {
+      "par": "Barh",
+      "from": 2,
+      "to": 16
+     }
+    ]
+   }
+  ],
+  "why": "Main = lyric source, timing offset, play/rate/loop/restart/seek, line sizes, next-line and bar toggles, colours, transparent bg; macros: text size (line sizes + gap) and spacing (margin + bar height)."
+ },
+ "MIDI_mapper": {
+  "main": [],
+  "macros": [],
+  "why": "Its pars (Enable, Device, Activebank, Learn, Feedback, ...) are defined in td/handlers.py (MIDI_PARS and the par table near line 5306) and td/midi_runtime.py, not in builders/; there is no builder file for the validator to grep, and only Activebank is a numeric par."
+ },
+ "MX_prox_material": {
+  "main": [
+   "Preset",
+   "Applypreset",
+   "Radius",
+   "Gain",
+   "Shape",
+   "Flip",
+   "Colourmode",
+   "Colournear",
+   "Colourfar",
+   "Colouramt",
+   "Emitnear",
+   "Rimnear",
+   "Dissolvemode",
+   "Dispmode",
+   "Dispnear",
+   "Animate"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Reach",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Radius",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Falloffexp",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Gain",
+      "from": 0.4,
+      "to": 1.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Emitnear",
+      "from": 0.0,
+      "to": 8.0
+     },
+     {
+      "par": "Rimnear",
+      "from": 0.0,
+      "to": 4.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Ripple",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Dispnear",
+      "from": 0.05,
+      "to": 0.35
+     },
+     {
+      "par": "Ripplefreq",
+      "from": 4.0,
+      "to": 20.0
+     },
+     {
+      "par": "Ripplespeed",
+      "from": 2.0,
+      "to": 10.0
+     },
+     {
+      "par": "Wakegain",
+      "from": 0.01,
+      "to": 0.09
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Burn",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Burnwidth",
+      "from": 0.02,
+      "to": 0.14
+     },
+     {
+      "par": "Noisescale",
+      "from": 2.0,
+      "to": 8.0
+     },
+     {
+      "par": "Dissolvecurve",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Burnemit",
+      "from": 2.0,
+      "to": 10.0
+     }
+    ]
+   }
+  ],
+  "why": "Preset, proximity radius/gain/shape/flip, colour mode and near/far colours, emission and rim glow, dissolve and displace switches (pars from prox_mat_logic.py)."
+ },
+ "POP_branching": {
+  "main": [
+   "Amount",
+   "Play",
+   "Reset",
+   "Seedmode",
+   "Seedcount",
+   "Step",
+   "Sensorangle",
+   "Turn",
+   "Wander",
+   "Splitrate",
+   "Splitangle",
+   "Deposit",
+   "Decay",
+   "Huea",
+   "Hueb",
+   "Gain"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Chaos",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Wander",
+      "from": 2,
+      "to": 18
+     },
+     {
+      "par": "Turn",
+      "from": 10,
+      "to": 30
+     },
+     {
+      "par": "Splitrate",
+      "from": 0.005,
+      "to": 0.035
+     },
+     {
+      "par": "Splitangle",
+      "from": 10,
+      "to": 40
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Growth",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Step",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Sensordist",
+      "from": 3,
+      "to": 9
+     },
+     {
+      "par": "Deposit",
+      "from": 0.5,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Gain",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Sat",
+      "from": 0.6,
+      "to": 1.0
+     }
+    ]
+   }
+  ],
+  "why": "Branching play/reset/seed, steering and split pars, trail deposit/decay, hues and gain; macros Chaos / Growth / Glow."
+ },
+ "POP_caustics": {
+  "main": [
+   "Amount",
+   "Refractor",
+   "Ior",
+   "Lightangle",
+   "Speed",
+   "Amp",
+   "Freq",
+   "Radius",
+   "Thickness",
+   "Exposure",
+   "Persist",
+   "Composite",
+   "Tintr",
+   "Tintg",
+   "Tintb"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Waves",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Amp",
+      "from": 0.005,
+      "to": 0.035
+     },
+     {
+      "par": "Freq",
+      "from": 3,
+      "to": 9
+     },
+     {
+      "par": "Speed",
+      "from": 0.4,
+      "to": 1.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Focus",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Ior",
+      "from": 1.15,
+      "to": 1.5
+     },
+     {
+      "par": "Floordepth",
+      "from": 0.5,
+      "to": 1.5
+     },
+     {
+      "par": "Lightsize",
+      "from": 1,
+      "to": 3
+     }
+    ]
+   }
+  ],
+  "why": "Refractor + optics, water motion, exposure/persist, composite and tint; macros Waves / Focus."
+ },
+ "POP_collide": {
+  "main": [
+   "Amount",
+   "Reset",
+   "Emitshape",
+   "Speed",
+   "Gravity",
+   "Wind",
+   "Restitution",
+   "Spread",
+   "Life",
+   "Size",
+   "Bright",
+   "Hue1",
+   "Hue2",
+   "Sat",
+   "Persist",
+   "Orbit"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.2,
+      "to": 1.8
+     },
+     {
+      "par": "Gravity",
+      "from": -0.2,
+      "to": -1.4
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Chaos",
+    "default": 0.25,
+    "drives": [
+     {
+      "par": "Spread",
+      "from": 0.01,
+      "to": 0.21
+     },
+     {
+      "par": "Wind",
+      "from": 0,
+      "to": 0.8
+     },
+     {
+      "par": "Windfreq",
+      "from": 0.5,
+      "to": 10.5
+     },
+     {
+      "par": "Restitution",
+      "from": 0.3,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Bright",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Size",
+      "from": 1,
+      "to": 3
+     },
+     {
+      "par": "Gain",
+      "from": 0.4,
+      "to": 1.6
+     }
+    ]
+   }
+  ],
+  "why": "Look/emitter essentials of POP_collide (amount, reset, emitter shape, speed, gravity, wind, bounce, colour, trails) plus Energy / Chaos / Glow macros."
+ },
+ "POP_crack3d": {
+  "main": [
+   "Amount",
+   "Style",
+   "Cellscale",
+   "Width",
+   "Progress",
+   "Auto",
+   "Autospeed",
+   "Reach",
+   "Soft",
+   "Erode",
+   "Glow",
+   "Glowcolor",
+   "Basecolor",
+   "Shape",
+   "Spin",
+   "Dist"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Cracks",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Width",
+      "from": 0.01,
+      "to": 0.09
+     },
+     {
+      "par": "Cellscale",
+      "from": 2,
+      "to": 6
+     },
+     {
+      "par": "Glow",
+      "from": 0.5,
+      "to": 3.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Speed",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Autospeed",
+      "from": 0.05,
+      "to": 0.45
+     },
+     {
+      "par": "Spin",
+      "from": 0,
+      "to": 20
+     },
+     {
+      "par": "Soft",
+      "from": 0,
+      "to": 0.1
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Zoom",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Dist",
+      "from": 6,
+      "to": 2
+     },
+     {
+      "par": "Fov",
+      "from": 55,
+      "to": 25
+     }
+    ]
+   }
+  ],
+  "why": "Crack style, cell scale, width, progress/auto, reach, glow, colours, object shape, spin and distance; macros Cracks / Speed / Zoom."
+ },
+ "POP_fillbody": {
+  "main": [
+   "Amount",
+   "Reset",
+   "Speed",
+   "Wander",
+   "Respawn",
+   "Dancespeed",
+   "Pose",
+   "Bodyscale",
+   "Size",
+   "Bright",
+   "Hue1",
+   "Hue2",
+   "Sat",
+   "Persist",
+   "Gain",
+   "Orbit"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.3,
+      "to": 1.7
+     },
+     {
+      "par": "Wander",
+      "from": 0.5,
+      "to": 2.5
+     },
+     {
+      "par": "Wanderfreq",
+      "from": 2,
+      "to": 10
+     },
+     {
+      "par": "Dancespeed",
+      "from": 0.1,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Bright",
+      "from": 0.2,
+      "to": 1.0
+     },
+     {
+      "par": "Size",
+      "from": 1,
+      "to": 3
+     },
+     {
+      "par": "Gain",
+      "from": 0.4,
+      "to": 1.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Pose",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Pose",
+      "from": 0.6,
+      "to": 1.4
+     },
+     {
+      "par": "Bodyscale",
+      "from": 0.6,
+      "to": 1.2
+     }
+    ]
+   }
+  ],
+  "why": "Particle motion, dancer pose/speed/scale, point look and colour; macros Energy / Glow / Pose."
+ },
+ "POP_linegrowth": {
+  "main": [
+   "Amount",
+   "Play",
+   "Reset",
+   "Shape",
+   "Seedcount",
+   "Maxnodes",
+   "Rest",
+   "Spring",
+   "Repel",
+   "Jitter",
+   "Size",
+   "Zoom",
+   "Hue",
+   "Huespread",
+   "Sat",
+   "Gain"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Chaos",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Jitter",
+      "from": 0,
+      "to": 0.2
+     },
+     {
+      "par": "Align",
+      "from": 0.3,
+      "to": 0.1
+     },
+     {
+      "par": "Repel",
+      "from": 0.01,
+      "to": 0.03
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Speed",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Dt",
+      "from": 0.25,
+      "to": 0.75
+     },
+     {
+      "par": "Maxstep",
+      "from": 0.0015,
+      "to": 0.0045
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Gain",
+      "from": 0.8,
+      "to": 2.2
+     },
+     {
+      "par": "Size",
+      "from": 1,
+      "to": 3
+     },
+     {
+      "par": "Huespread",
+      "from": 0,
+      "to": 0.6
+     }
+    ]
+   }
+  ],
+  "why": "Growth play/reset/shape/seeds, spring physics essentials, point size, zoom and hue/gain; macros Chaos / Speed / Glow."
+ },
+ "POP_meshwarp": {
+  "main": [
+   "Amount",
+   "Mode",
+   "Strength",
+   "Freq",
+   "Speed",
+   "Depth",
+   "Uvwarp",
+   "Radius",
+   "Centerx",
+   "Centery",
+   "Shade",
+   "Edge",
+   "Tilt",
+   "Orbit",
+   "Zoom"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Warp",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Strength",
+      "from": 0.1,
+      "to": 0.9
+     },
+     {
+      "par": "Depth",
+      "from": 0.05,
+      "to": 0.55
+     },
+     {
+      "par": "Uvwarp",
+      "from": 0.2,
+      "to": 1.8
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Ripple",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.02,
+      "to": 0.48
+     },
+     {
+      "par": "Freq",
+      "from": 1,
+      "to": 5
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Size",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Radius",
+      "from": 0.25,
+      "to": 0.75
+     },
+     {
+      "par": "Zoom",
+      "from": 0.7,
+      "to": 1.3
+     }
+    ]
+   }
+  ],
+  "why": "Warp mode, strength, frequency, speed, depth, centre, shading and sheet view (tilt/orbit/zoom); macros Warp / Speed / Size."
+ },
+ "POP_rd3d": {
+  "main": [
+   "Amount",
+   "Preset",
+   "Play",
+   "Steps",
+   "Reseed",
+   "Density",
+   "Palette",
+   "Shape",
+   "Height",
+   "Light",
+   "Rim",
+   "Spin",
+   "Tilt",
+   "Zoom",
+   "Customf",
+   "Customk"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Relief",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Height",
+      "from": 0.02,
+      "to": 0.28
+     },
+     {
+      "par": "Rim",
+      "from": 0.1,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Turn",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Spin",
+      "from": 2,
+      "to": 18
+     },
+     {
+      "par": "Tilt",
+      "from": 40,
+      "to": 80
+     },
+     {
+      "par": "Zoom",
+      "from": 0.7,
+      "to": 1.3
+     }
+    ]
+   }
+  ],
+  "why": "Reaction-diffusion preset, play/steps/reseed, palette, surface shape/height/light and view; macros Relief / Turn."
+ },
+ "POP_terrain": {
+  "main": [
+   "Amount",
+   "Style",
+   "Speed",
+   "Freq",
+   "Heightscale",
+   "Octaves",
+   "Ridge",
+   "Contours",
+   "Fog",
+   "Lowcolor",
+   "Midcolor",
+   "Highcolor",
+   "Camh",
+   "Pitch",
+   "Fov"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Relief",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Heightscale",
+      "from": 1.5,
+      "to": 10.5
+     },
+     {
+      "par": "Freq",
+      "from": 0.03,
+      "to": 0.13
+     },
+     {
+      "par": "Octaves",
+      "from": 3,
+      "to": 7
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Fly",
+    "default": 0.2,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.5,
+      "to": 8.5
+     },
+     {
+      "par": "Camh",
+      "from": 12,
+      "to": 4
+     },
+     {
+      "par": "Pitch",
+      "from": 30,
+      "to": 10
+     }
+    ]
+   }
+  ],
+  "why": "Terrain style, fly speed, noise shape, contour/fog, the three height colours and camera height/pitch/fov; macros Relief / Fly."
+ },
+ "POP_tree": {
+  "main": [
+   "Amount",
+   "Depth",
+   "Branches",
+   "Spread",
+   "Twist",
+   "Ratio",
+   "Length",
+   "Progress",
+   "Sway",
+   "Hue0",
+   "Hue1",
+   "Bright",
+   "Gain",
+   "Dist",
+   "Spin",
+   "Composite"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Chaos",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Jitter",
+      "from": 0,
+      "to": 16
+     },
+     {
+      "par": "Lenjitter",
+      "from": 0,
+      "to": 0.3
+     },
+     {
+      "par": "Spread",
+      "from": 15,
+      "to": 45
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Wind",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Sway",
+      "from": 0,
+      "to": 12
+     },
+     {
+      "par": "Swayspeed",
+      "from": 0.5,
+      "to": 2.5
+     },
+     {
+      "par": "Speed",
+      "from": 0.4,
+      "to": 1.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Gain",
+      "from": 0.1,
+      "to": 0.6
+     },
+     {
+      "par": "Bright",
+      "from": 0.5,
+      "to": 1.5
+     }
+    ]
+   }
+  ],
+  "why": "Tree structure (depth, branches, spread, twist, ratio, length, growth), sway, hues, brightness/gain, camera and composite; macros Chaos / Wind / Glow."
+ },
+ "POP_tubes": {
+  "main": [
+   "Amount",
+   "Source",
+   "Play",
+   "Reset",
+   "Speed",
+   "Scale",
+   "Radius",
+   "Taper",
+   "Palette",
+   "Fade",
+   "Gain",
+   "Halo",
+   "Spin",
+   "Dist",
+   "Zoom"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.3,
+      "to": 1.7
+     },
+     {
+      "par": "Scale",
+      "from": 0.4,
+      "to": 0.8
+     },
+     {
+      "par": "Spin",
+      "from": 0,
+      "to": 12
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Gain",
+      "from": 0.4,
+      "to": 1.6
+     },
+     {
+      "par": "Halo",
+      "from": 0,
+      "to": 1.2
+     },
+     {
+      "par": "Fade",
+      "from": 0.5,
+      "to": 2.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Thick",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Radius",
+      "from": 0.004,
+      "to": 0.02
+     },
+     {
+      "par": "Taper",
+      "from": 0.5,
+      "to": 1.5
+     }
+    ]
+   }
+  ],
+  "why": "Tube source, play/reset, speed, path scale, radius/taper, palette, fade/gain/halo and view; macros Energy / Glow / Thick."
+ },
+ "PV_previz_stage": {
+  "main": [
+   "Preset",
+   "Source",
+   "Autoorbit",
+   "Orbitspeed",
+   "Lightson",
+   "Intensity",
+   "Beams",
+   "Hazeon",
+   "Density",
+   "Strobe",
+   "Exposure",
+   "Bloom",
+   "Crowdon",
+   "Fov",
+   "Audioreact",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Haze",
+    "default": 0.33,
+    "drives": [
+     {
+      "par": "Density",
+      "from": 0,
+      "to": 1.5
+     },
+     {
+      "par": "Scatter",
+      "from": 0.2,
+      "to": 1.4
+     },
+     {
+      "par": "Hazeglow",
+      "from": 0,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Light",
+    "default": 0.42,
+    "drives": [
+     {
+      "par": "Intensity",
+      "from": 0.3,
+      "to": 2.0
+     },
+     {
+      "par": "Wash",
+      "from": 0.3,
+      "to": 2.0
+     },
+     {
+      "par": "Beamlen",
+      "from": 15,
+      "to": 45
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Motion",
+    "default": 0.25,
+    "drives": [
+     {
+      "par": "Beamsweep",
+      "from": 0.05,
+      "to": 1.05
+     },
+     {
+      "par": "Beamsweepspeed",
+      "from": 0.05,
+      "to": 1.05
+     },
+     {
+      "par": "Drift",
+      "from": 0,
+      "to": 0.2
+     },
+     {
+      "par": "Orbitspeed",
+      "from": 1,
+      "to": 21
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Crowd",
+    "default": 0.25,
+    "drives": [
+     {
+      "par": "Sway",
+      "from": 0,
+      "to": 1.2
+     },
+     {
+      "par": "Swayspeed",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Hands",
+      "from": 0,
+      "to": 0.6
+     }
+    ]
+   }
+  ],
+  "why": "Main = camera preset/orbit, screen source, lights/haze/crowd on-off and their key amounts, strobe, exposure/bloom, audio to beams, reset; macros: haze, light, motion, crowd."
+ },
+ "PX_lines": {
+  "main": [
+   "Amount",
+   "Rings",
+   "Contour",
+   "Trails",
+   "Connect",
+   "Edges",
+   "Width",
+   "Halo",
+   "Intensity",
+   "Speed",
+   "Reveal",
+   "Linecol",
+   "Linecolsrc",
+   "Palsource",
+   "Palshift",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Glow",
+    "default": 0.24,
+    "drives": [
+     {
+      "par": "Intensity",
+      "from": 0.7,
+      "to": 4.0
+     },
+     {
+      "par": "Halogain",
+      "from": 0.05,
+      "to": 1.0
+     },
+     {
+      "par": "Halo",
+      "from": 2.0,
+      "to": 20.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Width",
+    "default": 0.2,
+    "drives": [
+     {
+      "par": "Width",
+      "from": 0.5,
+      "to": 8.0
+     },
+     {
+      "par": "Edwidth",
+      "from": 0.5,
+      "to": 8.0
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Energy",
+    "default": 0.286,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.2,
+      "to": 3.0
+     },
+     {
+      "par": "Trspeed",
+      "from": 0.3,
+      "to": 4.0
+     },
+     {
+      "par": "Trcurl",
+      "from": 0.1,
+      "to": 1.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Flicker",
+      "from": 0.0,
+      "to": 0.6
+     },
+     {
+      "par": "Trjitter",
+      "from": 0.0,
+      "to": 0.5
+     },
+     {
+      "par": "Cnjitter",
+      "from": 0.0,
+      "to": 1.0
+     },
+     {
+      "par": "Ctwave",
+      "from": 0.0,
+      "to": 0.5
+     }
+    ]
+   }
+  ],
+  "why": "Line-source toggles (rings, contour, trails, connect, edges), amount/width/halo/intensity/speed/reveal, line colour and palette (Linecol, Linecolsrc, Palsource, Palshift) and Reset; Glow, Width, Energy and Chaos macros."
+ },
+ "PX_pointfx": {
+  "main": [
+   "Amode",
+   "Sprite",
+   "Size",
+   "Palsource",
+   "Palshift",
+   "Bloom",
+   "M4progress",
+   "Camsource",
+   "M1strength",
+   "Camdist",
+   "Orbit",
+   "Speed",
+   "Prev",
+   "Next",
+   "Transition",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.3333,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.25,
+      "to": 2.5
+     },
+     {
+      "par": "M2strength",
+      "from": 0.0,
+      "to": 1.8
+     },
+     {
+      "par": "M2speed",
+      "from": 0.0,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Bloom",
+      "from": 0.0,
+      "to": 2.5
+     },
+     {
+      "par": "Bright",
+      "from": 1.0,
+      "to": 1.8
+     },
+     {
+      "par": "Flare",
+      "from": 0.0,
+      "to": 0.8
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Mood",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Split",
+      "from": 0.0,
+      "to": 0.6
+     },
+     {
+      "par": "Saturation",
+      "from": 1.0,
+      "to": 1.6
+     },
+     {
+      "par": "Contrast",
+      "from": 1.0,
+      "to": 1.25
+     },
+     {
+      "par": "Vignette",
+      "from": 0.0,
+      "to": 0.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "M1radius",
+      "from": 1.0,
+      "to": 2.5
+     },
+     {
+      "par": "Spring",
+      "from": 4.0,
+      "to": 1.0
+     },
+     {
+      "par": "Damping",
+      "from": 1.5,
+      "to": 0.6
+     }
+    ]
+   }
+  ],
+  "why": "Source (Amode), look (Sprite/Size), colour (Palsource/Palshift), glow, dissolve (M4progress = dissolve_noise progress, Disrecover = heal /s), effector strength (M1strength = prox_push), camera, speed, setlist (Prev / Next scene, Transition s or beats; 28 Oct phase A, replacing Agen / Ascale / Tealorange, which stay on their pages), Reset. M<uid> names follow the default stack (1 prox_push, 2 curl, 3 prox_colour, 4 dissolve_noise)."
+ },
+ "QC_mcp_checks": {
+  "main": [],
+  "macros": [],
+  "why": "A throw-away QC check COMP made ad hoc in TD (pars Tint RGBA, Note string, Glow RGB per library README): no builder source defines its pars, and its pars are colours/strings only."
+ },
+ "TL_timeline": {
+  "main": [
+   "Play",
+   "Stop",
+   "Loop",
+   "Rate",
+   "Seek",
+   "Gotostart",
+   "Gotoend",
+   "Inpoint",
+   "Outpoint",
+   "Snap",
+   "Lane",
+   "Addkey",
+   "Addmarker",
+   "Prevmarker",
+   "Nextmarker",
+   "Bpm"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Tempo",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Rate",
+      "from": 0.25,
+      "to": 1.75
+     },
+     {
+      "par": "Bpm",
+      "from": 80,
+      "to": 160
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Audio",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Audiogain",
+      "from": 0,
+      "to": 2
+     },
+     {
+      "par": "Clipgain",
+      "from": 0,
+      "to": 2
+     }
+    ]
+   }
+  ],
+  "why": "Main = transport (play/stop/loop/rate/seek/start/end/in/out), snap, lane, key and marker pulses, BPM; macros are weak but harmless: tempo (rate + BPM) and audio (master + clip gain)."
+ },
+ "TP_test_pattern": {
+  "main": [
+   "Pattern",
+   "Channel",
+   "Level",
+   "Area",
+   "Walk",
+   "Speed",
+   "Resetwalk",
+   "Linewidth",
+   "Cell",
+   "Steps",
+   "Showfaces",
+   "Respreset",
+   "Counter",
+   "Wheel",
+   "Flash"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Detail",
+    "default": 0.14,
+    "drives": [
+     {
+      "par": "Linewidth",
+      "from": 1,
+      "to": 8
+     },
+     {
+      "par": "Steps",
+      "from": 8,
+      "to": 64
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Sync size",
+    "default": 0.33,
+    "drives": [
+     {
+      "par": "Countersize",
+      "from": 8,
+      "to": 56
+     },
+     {
+      "par": "Wheelsize",
+      "from": 200,
+      "to": 680
+     }
+    ]
+   }
+  ],
+  "why": "Pattern page (pattern, channel, level, area, walk + speed/reset, line width, cell, steps, face outlines) plus resolution preset and the Counter/Wheel/Flash sync toggles."
+ },
+ "ZC_control_surface": {
+  "main": [
+   "Active",
+   "Activepreset",
+   "Store",
+   "Storenew",
+   "Recall",
+   "Stopmorph",
+   "Morphtime",
+   "Morphcurve",
+   "Randamount",
+   "Randomize",
+   "Bindselected"
+  ],
+  "macros": [],
+  "why": "Preset slot, store/recall/morph and randomise essentials; no macros: the only numeric pars are Morphtime, Randamount and ids that must not be driven."
+ },
+ "ZK_controls_kit": {
+  "main": [
+   "Noisetype",
+   "Period",
+   "Harmonics",
+   "Gain",
+   "Exponent",
+   "Speed",
+   "Mono",
+   "Tint",
+   "Rotate",
+   "Offset",
+   "Flash",
+   "Reseed"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Detail",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Period",
+      "from": 0.4,
+      "to": 2.0
+     },
+     {
+      "par": "Harmonics",
+      "from": 0,
+      "to": 6
+     },
+     {
+      "par": "Exponent",
+      "from": 0.5,
+      "to": 1.5
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Energy",
+    "default": 0.5,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.05,
+      "to": 0.55
+     },
+     {
+      "par": "Gain",
+      "from": -0.4,
+      "to": 0.4
+     },
+     {
+      "par": "Rotate",
+      "from": -30,
+      "to": 30
+     }
+    ]
+   }
+  ],
+  "why": "The demo noise look's own pars (Look + Motion pages, from zkit.py DEMO_PAGES): type, period, harmonics, gain, exponent, speed, mono, tint, rotate, offset, flash, reseed; macros: detail and energy."
+ },
+ "PX_pointfx1": {
+  "main": [
+   "Amode",
+   "Sprite",
+   "Size",
+   "Palsource",
+   "Palshift",
+   "Bloom",
+   "M4progress",
+   "Camsource",
+   "M1strength",
+   "Camdist",
+   "Orbit",
+   "Speed",
+   "Prev",
+   "Next",
+   "Transition",
+   "Reset"
+  ],
+  "macros": [
+   {
+    "name": "Zkm1",
+    "label": "Energy",
+    "default": 0.3333,
+    "drives": [
+     {
+      "par": "Speed",
+      "from": 0.25,
+      "to": 2.5
+     },
+     {
+      "par": "M2strength",
+      "from": 0.0,
+      "to": 1.8
+     },
+     {
+      "par": "M2speed",
+      "from": 0.0,
+      "to": 0.9
+     }
+    ]
+   },
+   {
+    "name": "Zkm2",
+    "label": "Glow",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Bloom",
+      "from": 0.0,
+      "to": 2.5
+     },
+     {
+      "par": "Bright",
+      "from": 1.0,
+      "to": 1.8
+     },
+     {
+      "par": "Flare",
+      "from": 0.0,
+      "to": 0.8
+     }
+    ]
+   },
+   {
+    "name": "Zkm3",
+    "label": "Mood",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "Split",
+      "from": 0.0,
+      "to": 0.6
+     },
+     {
+      "par": "Saturation",
+      "from": 1.0,
+      "to": 1.6
+     },
+     {
+      "par": "Contrast",
+      "from": 1.0,
+      "to": 1.25
+     },
+     {
+      "par": "Vignette",
+      "from": 0.0,
+      "to": 0.6
+     }
+    ]
+   },
+   {
+    "name": "Zkm4",
+    "label": "Chaos",
+    "default": 0.0,
+    "drives": [
+     {
+      "par": "M1radius",
+      "from": 1.0,
+      "to": 2.5
+     },
+     {
+      "par": "Spring",
+      "from": 4.0,
+      "to": 1.0
+     },
+     {
+      "par": "Damping",
+      "from": 1.5,
+      "to": 0.6
+     }
+    ]
+   }
+  ],
+  "why": "user copy of PX_pointfx (28 Oct): same Main tab"
+ },
+ "FG_fps_governor": {
+  "main": [
+   "Active",
+   "Target",
+   "Downafter",
+   "Upafter",
+   "Steps",
+   "Floor",
+   "Upmargin",
+   "Reset"
+  ],
+  "macros": [],
+  "why": "Main = the whole Governor page: Active (off = manual wins), Target fps, Downafter / Upafter hysteresis frames, Steps, Floor quality, Up headroom ms, Reset. No macros: a governor has no look to morph."
+ }
+}

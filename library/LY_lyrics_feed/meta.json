@@ -1,0 +1,445 @@
+{
+ "created": "2026-10-29 00:09:01",
+ "doc": "docs/builds/lyrics_feed.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Folder",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/test/fixtures/lyrics",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/test/fixtures/lyrics",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in1",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "LY_lyrics_feed",
+ "ops": 310,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out2",
+   "type": "outCHOP"
+  },
+  {
+   "name": "out3",
+   "type": "outDAT"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Source",
+   "pars": [
+    {
+     "default": "auto",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/test/fixtures/lyrics",
+     "label": "LRC folder",
+     "name": "Folder",
+     "style": "Folder",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/test/fixtures/lyrics"
+    },
+    {
+     "default": "",
+     "label": "Force .lrc (blank = match)",
+     "name": "Lrcfile",
+     "style": "File",
+     "value": ""
+    },
+    {
+     "default": 0.0,
+     "label": "Offset s (+ = earlier)",
+     "name": "Offset",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Spotify polls / s",
+     "name": "Pollhz",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.3,
+     "label": "Resync above s",
+     "name": "Drift",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": "pos",
+     "label": "CHOP channel (s)",
+     "name": "Chopchan",
+     "style": "Str",
+     "value": "pos"
+    },
+    {
+     "default": false,
+     "label": "Rescan folder",
+     "name": "Rescan",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reload file",
+     "name": "Reload",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Manual",
+   "pars": [
+    {
+     "default": true,
+     "label": "Play",
+     "name": "Play",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1.0,
+     "label": "Rate",
+     "name": "Rate",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Loop",
+     "name": "Loop",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Seek to s",
+     "name": "Seekto",
+     "style": "Float",
+     "value": 7.0
+    },
+    {
+     "default": false,
+     "label": "Seek",
+     "name": "Seek",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Restart",
+     "name": "Restart",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "Open Sans",
+     "label": "Font (Latin)",
+     "name": "Font",
+     "style": "Str",
+     "value": "Open Sans"
+    },
+    {
+     "default": "Noto Nastaliq Urdu",
+     "label": "Font (Urdu / RTL)",
+     "name": "Urdufont",
+     "style": "Str",
+     "value": "Noto Nastaliq Urdu"
+    },
+    {
+     "default": 96.0,
+     "label": "Line px",
+     "name": "Cursize",
+     "style": "Float",
+     "value": 96.0
+    },
+    {
+     "default": 54.0,
+     "label": "Next line px",
+     "name": "Nextsize",
+     "style": "Float",
+     "value": 54.0
+    },
+    {
+     "default": 80.0,
+     "label": "Side margin px",
+     "name": "Margin",
+     "style": "Float",
+     "value": 80.0
+    },
+    {
+     "default": 140.0,
+     "label": "Line gap px",
+     "name": "Gap",
+     "style": "Float",
+     "value": 140.0
+    },
+    {
+     "default": true,
+     "label": "Show next line",
+     "name": "Shownext",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Line progress bar",
+     "name": "Showbar",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 8.0,
+     "label": "Bar px",
+     "name": "Barh",
+     "style": "Float",
+     "value": 8.0
+    },
+    {
+     "default": false,
+     "label": "Transparent bg",
+     "name": "Transparent",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Textmethod",
+     "name": "Textmethod",
+     "style": "Menu",
+     "value": "auto"
+    }
+   ]
+  },
+  {
+   "page": "Colours",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Line",
+     "name": "Curcolourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Line",
+     "name": "Curcolourg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Line",
+     "name": "Curcolourb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.55,
+     "label": "Next line",
+     "name": "Nextcolourr",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.55,
+     "label": "Next line",
+     "name": "Nextcolourg",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.6,
+     "label": "Next line",
+     "name": "Nextcolourb",
+     "style": "RGBA",
+     "value": 0.6
+    },
+    {
+     "default": 0.95,
+     "label": "Bar",
+     "name": "Barcolourr",
+     "style": "RGBA",
+     "value": 0.95
+    },
+    {
+     "default": 0.75,
+     "label": "Bar",
+     "name": "Barcolourg",
+     "style": "RGBA",
+     "value": 0.75
+    },
+    {
+     "default": 0.2,
+     "label": "Bar",
+     "name": "Barcolourb",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.43
+    },
+    {
+     "default": 0.0,
+     "label": "Space",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.43
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 13.993,
+  "cpu_ms": 13.993,
+  "frames": 30,
+  "gpu_ms": 0.794,
+  "ops": 7
+ },
+ "sha256": "0b2fe6e0fb712dfefd853509df7f8a4f388e285cb5c8b2733adcc72c16d3ce05",
+ "size": 102430,
+ "source": "/project1/lab/LY_lyrics_feed",
+ "summary": "lyrics_feed: LY_lyrics_feed synced lyrics feed (26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 12548,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

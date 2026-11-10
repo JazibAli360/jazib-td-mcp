@@ -1,0 +1,1026 @@
+{
+ "created": "2026-10-29 00:08:54",
+ "doc": "docs/builds/physarum.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "dep_cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in5",
+   "type": "inCHOP"
+  },
+  {
+   "name": "in6",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "GN_physarum",
+ "ops": 488,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 960,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 540
+  },
+  {
+   "height": 512,
+   "name": "out3",
+   "type": "outTOP",
+   "width": 512
+  }
+ ],
+ "pars": [
+  {
+   "page": "Sim",
+   "pars": [
+    {
+     "default": 262144,
+     "label": "Agents",
+     "name": "Agents",
+     "style": "Int",
+     "value": 262144
+    },
+    {
+     "default": 960,
+     "label": "Trail cells (height)",
+     "name": "Simh",
+     "style": "Int",
+     "value": 960
+    },
+    {
+     "default": 1080,
+     "label": "Out width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Out height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "wrap",
+     "label": "Edges",
+     "name": "Edge",
+     "style": "Menu",
+     "value": "wrap"
+    },
+    {
+     "default": 1,
+     "label": "Species (1-3)",
+     "name": "Species",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "interleave",
+     "label": "Species layout",
+     "name": "Speciesmode",
+     "style": "Menu",
+     "value": "interleave"
+    },
+    {
+     "default": 1.0,
+     "label": "Own trail weight",
+     "name": "Selfw",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": -1.0,
+     "label": "Other species weight (- avoid)",
+     "name": "Otherw",
+     "style": "Float",
+     "value": -1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Species speed spread",
+     "name": "Speedspread",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Preset",
+   "pars": [
+    {
+     "default": "network",
+     "label": "Preset A",
+     "name": "Preseta",
+     "style": "Menu",
+     "value": "network"
+    },
+    {
+     "default": "cells",
+     "label": "Preset B",
+     "name": "Presetb",
+     "style": "Menu",
+     "value": "cells"
+    },
+    {
+     "default": 0.0,
+     "label": "Morph A -> B",
+     "name": "Morph",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Morph go (A <-> B)",
+     "name": "Morphgo",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 4.0,
+     "label": "Morph go time s",
+     "name": "Morphtime",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": "off",
+     "label": "Morph LFO",
+     "name": "Morphlfo",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 0.05,
+     "label": "LFO rate Hz",
+     "name": "Morphrate",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.0,
+     "label": "LFO depth",
+     "name": "Morphdepth",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Sensor angle",
+     "name": "Sagain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Sensor distance",
+     "name": "Sogain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Rotate angle",
+     "name": "Ragain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Step",
+     "name": "Ssgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Deposit",
+     "name": "Depgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Decay",
+     "name": "Decaygain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Diffuse",
+     "name": "Diffgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "x Jitter",
+     "name": "Jittergain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 22.5,
+     "label": "Custom Sensor angle deg",
+     "name": "Customsa",
+     "style": "Float",
+     "value": 22.5
+    },
+    {
+     "default": 9.0,
+     "label": "Custom Sensor distance cells",
+     "name": "Customso",
+     "style": "Float",
+     "value": 9.0
+    },
+    {
+     "default": 45.0,
+     "label": "Custom Rotate angle deg",
+     "name": "Customra",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 1.0,
+     "label": "Custom Step cells/frame",
+     "name": "Customss",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Custom Deposit",
+     "name": "Customdep",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.1,
+     "label": "Custom Decay per frame",
+     "name": "Customdecay",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 1.0,
+     "label": "Custom Diffuse (3x3 mix)",
+     "name": "Customdiffuse",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Custom Jitter deg",
+     "name": "Customjitter",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Seed",
+   "pars": [
+    {
+     "default": "disc",
+     "label": "Agent seed",
+     "name": "Seedmode",
+     "style": "Menu",
+     "value": "disc"
+    },
+    {
+     "default": "random",
+     "label": "Start heading",
+     "name": "Heading",
+     "style": "Menu",
+     "value": "random"
+    },
+    {
+     "default": 0.3,
+     "label": "Seed size (heights)",
+     "name": "Seedsize",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "PRISM",
+     "label": "Seed text",
+     "name": "Seedtext",
+     "style": "Str",
+     "value": "PRISM"
+    },
+    {
+     "default": 0.12,
+     "label": "Text size (heights)",
+     "name": "Textsize",
+     "style": "Float",
+     "value": 0.12
+    },
+    {
+     "default": false,
+     "label": "Reseed (new seed + reset)",
+     "name": "Reseed",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reset",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0.002,
+     "label": "Respawn per frame (fraction)",
+     "name": "Respawn",
+     "style": "Float",
+     "value": 0.002
+    }
+   ]
+  },
+  {
+   "page": "Food",
+   "pars": [
+    {
+     "default": 0.0,
+     "label": "Food map attract (in1 / text)",
+     "name": "Foodw",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Food -> trail inject",
+     "name": "Foodinject",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "image",
+     "label": "Food source",
+     "name": "Foodsrc",
+     "style": "Menu",
+     "value": "image"
+    },
+    {
+     "default": 0.5,
+     "label": "Mask threshold (in2)",
+     "name": "Maskthresh",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": true,
+     "label": "Effectors on",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "eff*",
+     "label": "Effector Nulls (names/paths/patterns)",
+     "name": "Effectors",
+     "style": "StrMenu",
+     "value": "eff*"
+    },
+    {
+     "default": 1.0,
+     "label": "Plane height (world units)",
+     "name": "Planeh",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.15,
+     "label": "Effector radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 10.0,
+     "label": "Effector attract (- repels)",
+     "name": "Effstrength",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 0.0,
+     "label": "Effector trail inject",
+     "name": "Effdeposit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "gauss",
+     "label": "Effector falloff",
+     "name": "Efffalloff",
+     "style": "Menu",
+     "value": "gauss"
+    },
+    {
+     "default": 0.05,
+     "label": "in5 point radius",
+     "name": "Pointradius",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": "off",
+     "label": "Mouse",
+     "name": "Mousemode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 0.08,
+     "label": "Mouse radius",
+     "name": "Mouseradius",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": 5.0,
+     "label": "Mouse strength",
+     "name": "Mousestrength",
+     "style": "Float",
+     "value": 5.0
+    }
+   ]
+  },
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Audio (in6)",
+     "name": "Audiomode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": "step",
+     "label": "Level drives",
+     "name": "Audiotarget",
+     "style": "Menu",
+     "value": "step"
+    },
+    {
+     "default": 4.0,
+     "label": "Audio gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 1.0,
+     "label": "Level amount",
+     "name": "Audioamt",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 150.0,
+     "label": "Low band Hz",
+     "name": "Lowhz",
+     "style": "Float",
+     "value": 150.0
+    },
+    {
+     "default": 0.3,
+     "label": "Kick threshold",
+     "name": "Kickthresh",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.15,
+     "label": "Kick refractory s",
+     "name": "Refractory",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 3.0,
+     "label": "Kick step x",
+     "name": "Kickspeed",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.3,
+     "label": "Kick release s",
+     "name": "Kickrelease",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": false,
+     "label": "Burst",
+     "name": "Burst",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "random",
+     "label": "Burst pattern",
+     "name": "Burstpattern",
+     "style": "Menu",
+     "value": "random"
+    },
+    {
+     "default": 3,
+     "label": "Burst spots",
+     "name": "Burstcount",
+     "style": "Int",
+     "value": 3
+    },
+    {
+     "default": 0.08,
+     "label": "Burst radius",
+     "name": "Burstradius",
+     "style": "Float",
+     "value": 0.08
+    },
+    {
+     "default": -8.0,
+     "label": "Burst attract (- scatters)",
+     "name": "Burststrength",
+     "style": "Float",
+     "value": -8.0
+    },
+    {
+     "default": 6,
+     "label": "Burst frames",
+     "name": "Burstframes",
+     "style": "Int",
+     "value": 6
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "soft",
+     "label": "Tone",
+     "name": "Valuemode",
+     "style": "Menu",
+     "value": "soft"
+    },
+    {
+     "default": 0.0,
+     "label": "Value low",
+     "name": "Lo",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 8.0,
+     "label": "Value high / soft scale",
+     "name": "Hi",
+     "style": "Float",
+     "value": 8.0
+    },
+    {
+     "default": "species",
+     "label": "Colour",
+     "name": "Colormode",
+     "style": "Menu",
+     "value": "species"
+    },
+    {
+     "default": "prism",
+     "label": "Palette",
+     "name": "Palette",
+     "style": "Menu",
+     "value": "prism"
+    },
+    {
+     "default": "",
+     "label": "Ramp TOP (empty = inner ramp)",
+     "name": "Ramptop",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": 0.79,
+     "label": "Species 1 colour",
+     "name": "Col1r",
+     "style": "RGBA",
+     "value": 0.79
+    },
+    {
+     "default": 0.28,
+     "label": "Species 1 colour",
+     "name": "Col1g",
+     "style": "RGBA",
+     "value": 0.28
+    },
+    {
+     "default": 0.91,
+     "label": "Species 1 colour",
+     "name": "Col1b",
+     "style": "RGBA",
+     "value": 0.91
+    },
+    {
+     "default": 1.0,
+     "label": "Species 2 colour",
+     "name": "Col2r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.27,
+     "label": "Species 2 colour",
+     "name": "Col2g",
+     "style": "RGBA",
+     "value": 0.27
+    },
+    {
+     "default": 0.5,
+     "label": "Species 2 colour",
+     "name": "Col2b",
+     "style": "RGBA",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Species 3 colour",
+     "name": "Col3r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.73,
+     "label": "Species 3 colour",
+     "name": "Col3g",
+     "style": "RGBA",
+     "value": 0.73
+    },
+    {
+     "default": 0.01,
+     "label": "Species 3 colour",
+     "name": "Col3b",
+     "style": "RGBA",
+     "value": 0.01
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Exposure (stops)",
+     "name": "Exposure",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Gamma",
+     "name": "Gamma",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Halo glow",
+     "name": "Glow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Show agents (deposit) mix",
+     "name": "Agentsview",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "opaque",
+     "label": "Alpha",
+     "name": "Alpha",
+     "style": "Menu",
+     "value": "opaque"
+    },
+    {
+     "default": true,
+     "label": "Premultiplied",
+     "name": "Premult",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Preview gizmos",
+     "name": "Showeff",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.02,
+     "label": "Palette 1 (low)",
+     "name": "Pal1r",
+     "style": "RGBA",
+     "value": 0.02
+    },
+    {
+     "default": 0.0,
+     "label": "Palette 1 (low)",
+     "name": "Pal1g",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.06,
+     "label": "Palette 1 (low)",
+     "name": "Pal1b",
+     "style": "RGBA",
+     "value": 0.06
+    },
+    {
+     "default": 0.25,
+     "label": "Palette 2",
+     "name": "Pal2r",
+     "style": "RGBA",
+     "value": 0.25
+    },
+    {
+     "default": 0.05,
+     "label": "Palette 2",
+     "name": "Pal2g",
+     "style": "RGBA",
+     "value": 0.05
+    },
+    {
+     "default": 0.55,
+     "label": "Palette 2",
+     "name": "Pal2b",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.85,
+     "label": "Palette 3",
+     "name": "Pal3r",
+     "style": "RGBA",
+     "value": 0.85
+    },
+    {
+     "default": 0.15,
+     "label": "Palette 3",
+     "name": "Pal3g",
+     "style": "RGBA",
+     "value": 0.15
+    },
+    {
+     "default": 0.65,
+     "label": "Palette 3",
+     "name": "Pal3b",
+     "style": "RGBA",
+     "value": 0.65
+    },
+    {
+     "default": 1.0,
+     "label": "Palette 4",
+     "name": "Pal4r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.55,
+     "label": "Palette 4",
+     "name": "Pal4g",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.3,
+     "label": "Palette 4",
+     "name": "Pal4b",
+     "style": "RGBA",
+     "value": 0.3
+    },
+    {
+     "default": 1.0,
+     "label": "Palette 5 (high)",
+     "name": "Pal5r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.95,
+     "label": "Palette 5 (high)",
+     "name": "Pal5g",
+     "style": "RGBA",
+     "value": 0.95
+    },
+    {
+     "default": 0.85,
+     "label": "Palette 5 (high)",
+     "name": "Pal5b",
+     "style": "RGBA",
+     "value": 0.85
+    }
+   ]
+  },
+  {
+   "page": "Control",
+   "pars": [
+    {
+     "default": false,
+     "label": "Pause",
+     "name": "Pause",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Step (while paused)",
+     "name": "Step",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Pause at step (0 = off)",
+     "name": "Stopat",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": "off",
+     "label": "Test mode",
+     "name": "Testmode",
+     "style": "Menu",
+     "value": "off"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Density",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 2.286,
+  "cpu_ms": 2.286,
+  "frames": 30,
+  "gpu_ms": 9.395,
+  "ops": 12
+ },
+ "sha256": "49492cd681f187d21bebc1d5433b6f14ab14395e8b8bdf880a8eaf9db9e930f7",
+ "size": 150686,
+ "source": "/project1/lab/GN_physarum",
+ "summary": "physarum: GN_physarum slime mould COMP (live-verified v1 on 2025.31550, 26 Oct 2026, T-112)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 7708779,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

@@ -1,0 +1,1602 @@
+{
+ "created": "2026-10-29 00:08:04",
+ "doc": "docs/builds/particles.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "pcam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "PX_lines/cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in_ctl",
+   "type": "inCHOP"
+  },
+  {
+   "height": 128,
+   "name": "in_emit",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in_field",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "BO_particles",
+ "ops": 637,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "name": "out_info",
+   "type": "outCHOP"
+  },
+  {
+   "height": 256,
+   "name": "out_state",
+   "type": "outTOP",
+   "width": 768
+  }
+ ],
+ "pars": [
+  {
+   "page": "System",
+   "pars": [
+    {
+     "default": true,
+     "label": "Play",
+     "name": "Play",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Reset",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 65536,
+     "label": "Count (re-inits)",
+     "name": "Count",
+     "style": "Int",
+     "value": 65536
+    },
+    {
+     "default": 1.0,
+     "label": "Speed",
+     "name": "Speed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": true,
+     "label": "Stagger first births",
+     "name": "Stagger",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "feedback",
+     "label": "State mode",
+     "name": "Statemode",
+     "style": "Menu",
+     "value": "feedback"
+    },
+    {
+     "default": false,
+     "label": "Debug: frame stamp",
+     "name": "Debugstamp",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1080,
+     "label": "Resx",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Resy",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Emit",
+   "pars": [
+    {
+     "default": "ball",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "ball"
+    },
+    {
+     "default": "auto",
+     "label": "Emit TOP",
+     "name": "Emitinput",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": "luma",
+     "label": "Emit weight",
+     "name": "Emitweight",
+     "style": "Menu",
+     "value": "luma"
+    },
+    {
+     "default": "continuous",
+     "label": "Emit mode",
+     "name": "Emitmode",
+     "style": "Menu",
+     "value": "continuous"
+    },
+    {
+     "default": 5000.0,
+     "label": "Rate /s",
+     "name": "Rate",
+     "style": "Float",
+     "value": 5000.0
+    },
+    {
+     "default": 4.0,
+     "label": "Life",
+     "name": "Life",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.5,
+     "label": "Life var",
+     "name": "Lifevar",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Emit pos",
+     "name": "Emitposx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Emit pos",
+     "name": "Emitposy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Emit pos",
+     "name": "Emitposz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.3,
+     "label": "Emit size",
+     "name": "Emitsizex",
+     "style": "XYZW",
+     "value": 0.3
+    },
+    {
+     "default": 0.3,
+     "label": "Emit size",
+     "name": "Emitsizey",
+     "style": "XYZW",
+     "value": 0.3
+    },
+    {
+     "default": 0.3,
+     "label": "Emit size",
+     "name": "Emitsizez",
+     "style": "XYZW",
+     "value": 0.3
+    },
+    {
+     "default": 0.0,
+     "label": "Emit dir",
+     "name": "Emitdirx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Emit dir",
+     "name": "Emitdiry",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Emit dir",
+     "name": "Emitdirz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.2,
+     "label": "Init speed",
+     "name": "Initspeed",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": 1.0,
+     "label": "Init spread",
+     "name": "Initspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.1,
+     "label": "Emit threshold",
+     "name": "Emitthreshold",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": false,
+     "label": "Burst",
+     "name": "Burst",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 5000,
+     "label": "Burst count",
+     "name": "Burstcount",
+     "style": "Int",
+     "value": 5000
+    },
+    {
+     "default": 9,
+     "label": "Strand seeds",
+     "name": "Strands",
+     "style": "Int",
+     "value": 9
+    },
+    {
+     "default": 0.02,
+     "label": "Strand jitter",
+     "name": "Strandjitter",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.0,
+     "label": "Init speed variation",
+     "name": "Initspeedvar",
+     "style": "Float",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "page": "Forces",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Curl",
+     "name": "Curlstrength",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.5,
+     "label": "Curl scale",
+     "name": "Curlscale",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.3,
+     "label": "Curl speed",
+     "name": "Curlspeed",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1,
+     "label": "Curl octaves",
+     "name": "Curloctaves",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.0,
+     "label": "Gravity",
+     "name": "Gravityx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Gravity",
+     "name": "Gravityy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Gravity",
+     "name": "Gravityz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.8,
+     "label": "Drag",
+     "name": "Drag",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": 0.0,
+     "label": "Wind",
+     "name": "Windx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Wind",
+     "name": "Windy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Wind",
+     "name": "Windz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Attractor 1",
+     "name": "Att1on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Att 1 pos",
+     "name": "Att1posx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Att 1 pos",
+     "name": "Att1posy",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Att 1 pos",
+     "name": "Att1posz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.5,
+     "label": "Att 1 strength",
+     "name": "Att1strength",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.05,
+     "label": "Att 1 soft",
+     "name": "Att1soft",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": false,
+     "label": "Attractor 2",
+     "name": "Att2on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Att 2 pos",
+     "name": "Att2posx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": -1.0,
+     "label": "Att 2 pos",
+     "name": "Att2posy",
+     "style": "XYZW",
+     "value": -1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Att 2 pos",
+     "name": "Att2posz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.5,
+     "label": "Att 2 strength",
+     "name": "Att2strength",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.05,
+     "label": "Att 2 soft",
+     "name": "Att2soft",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": false,
+     "label": "Vortex",
+     "name": "Vortexon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Vortex axis",
+     "name": "Vortexaxisx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Vortex axis",
+     "name": "Vortexaxisy",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Vortex axis",
+     "name": "Vortexaxisz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.5,
+     "label": "Vortex strength",
+     "name": "Vortexstrength",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Field (in_field)",
+     "name": "Fieldstrength",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "wrap",
+     "label": "Bounds",
+     "name": "Bounds",
+     "style": "Menu",
+     "value": "wrap"
+    },
+    {
+     "default": 2.5,
+     "label": "Bound size",
+     "name": "Boundsizex",
+     "style": "XYZW",
+     "value": 2.5
+    },
+    {
+     "default": 4.5,
+     "label": "Bound size",
+     "name": "Boundsizey",
+     "style": "XYZW",
+     "value": 4.5
+    },
+    {
+     "default": 2.5,
+     "label": "Bound size",
+     "name": "Boundsizez",
+     "style": "XYZW",
+     "value": 2.5
+    },
+    {
+     "default": false,
+     "label": "Floor",
+     "name": "Floor",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": -3.0,
+     "label": "Floor y",
+     "name": "Floory",
+     "style": "Float",
+     "value": -3.0
+    },
+    {
+     "default": 0.5,
+     "label": "Bounce",
+     "name": "Bounce",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Spiral 1",
+     "name": "Sp1on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 1 centre",
+     "name": "Sp1posx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 1 centre",
+     "name": "Sp1posy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 1 centre",
+     "name": "Sp1posz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 1 axis",
+     "name": "Sp1axisx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Spiral 1 axis",
+     "name": "Sp1axisy",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 1 axis",
+     "name": "Sp1axisz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.5,
+     "label": "Spiral 1 swirl",
+     "name": "Sp1swirl",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.5,
+     "label": "Spiral 1 pull in",
+     "name": "Sp1pull",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 1 lift (along axis)",
+     "name": "Sp1lift",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Spiral 1 radius (falloff, 0 = none)",
+     "name": "Sp1radius",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Spiral 2",
+     "name": "Sp2on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 2 centre",
+     "name": "Sp2posx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Spiral 2 centre",
+     "name": "Sp2posy",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 2 centre",
+     "name": "Sp2posz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Spiral 2 axis",
+     "name": "Sp2axisx",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 2 axis",
+     "name": "Sp2axisy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 2 axis",
+     "name": "Sp2axisz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.5,
+     "label": "Spiral 2 swirl",
+     "name": "Sp2swirl",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.5,
+     "label": "Spiral 2 pull in",
+     "name": "Sp2pull",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Spiral 2 lift (along axis)",
+     "name": "Sp2lift",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Spiral 2 radius (falloff, 0 = none)",
+     "name": "Sp2radius",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Audio",
+   "pars": [
+    {
+     "default": "off",
+     "label": "Audio",
+     "name": "Audiosrc",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": 0.0,
+     "label": "Phase nudge",
+     "name": "Tapnudge",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "",
+     "label": "CHOP (kick bass mid high level)",
+     "name": "Chop",
+     "style": "CHOP",
+     "value": "/project1/lab/AC_audio/out_ctl"
+    },
+    {
+     "default": 0.05,
+     "label": "Smooth s",
+     "name": "Smooth",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.0,
+     "label": "Bass -> curl",
+     "name": "Amtcurl",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Kick -> size",
+     "name": "Amtsize",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Level -> bright",
+     "name": "Amtbright",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Kick -> burst",
+     "name": "Amtburst",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Mid -> attract",
+     "name": "Amtatt",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Level -> speed",
+     "name": "Amtspeed",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Manual kick",
+     "name": "Manual1",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Manual bass",
+     "name": "Manual2",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Manual mid",
+     "name": "Manual3",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Manual high",
+     "name": "Manual4",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": true,
+     "label": "Auto: kick fires bursts (Kick -> burst)",
+     "name": "Autohit",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 0.012,
+     "label": "Size",
+     "name": "Size",
+     "style": "Float",
+     "value": 0.012
+    },
+    {
+     "default": 0.5,
+     "label": "Size var",
+     "name": "Sizevar",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.5,
+     "label": "Size by age",
+     "name": "Sizeage",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "age",
+     "label": "Colour mode",
+     "name": "Colormode",
+     "style": "Menu",
+     "value": "age"
+    },
+    {
+     "default": 2.0,
+     "label": "Speed ref",
+     "name": "Speedref",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.6,
+     "label": "Bright",
+     "name": "Bright",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": "add",
+     "label": "Blend",
+     "name": "Blend",
+     "style": "Menu",
+     "value": "add"
+    },
+    {
+     "default": 0.6,
+     "label": "Softness",
+     "name": "Softness",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": false,
+     "label": "Trails",
+     "name": "Trails",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.9,
+     "label": "Trail keep",
+     "name": "Trailfade",
+     "style": "Float",
+     "value": 0.9
+    },
+    {
+     "default": 0.0,
+     "label": "Bloom",
+     "name": "Bloom",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "dot",
+     "label": "Particle shape",
+     "name": "Shape",
+     "style": "Menu",
+     "value": "dot"
+    },
+    {
+     "default": 1.5,
+     "label": "Spin / twist rev per s",
+     "name": "Spinrate",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.6,
+     "label": "Paper aspect (h / w)",
+     "name": "Paperaspect",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.25,
+     "label": "Paper dark side",
+     "name": "Ambient",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 0.3,
+     "label": "Paper light dir",
+     "name": "Lightdirx",
+     "style": "XYZW",
+     "value": 0.3
+    },
+    {
+     "default": 0.6,
+     "label": "Paper light dir",
+     "name": "Lightdiry",
+     "style": "XYZW",
+     "value": 0.6
+    },
+    {
+     "default": 1.0,
+     "label": "Paper light dir",
+     "name": "Lightdirz",
+     "style": "XYZW",
+     "value": 1.0
+    },
+    {
+     "default": 6.0,
+     "label": "Streamer length (x size)",
+     "name": "Streamerlen",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.0,
+     "label": "Flutter force (sideways sine)",
+     "name": "Flutter",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.2,
+     "label": "Flutter rate Hz",
+     "name": "Flutterhz",
+     "style": "Float",
+     "value": 1.2
+    }
+   ]
+  },
+  {
+   "page": "Colours",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Young",
+     "name": "Colour1r",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.55,
+     "label": "Young",
+     "name": "Colour1g",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.2,
+     "label": "Young",
+     "name": "Colour1b",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.95,
+     "label": "Middle",
+     "name": "Colour2r",
+     "style": "RGBA",
+     "value": 0.95
+    },
+    {
+     "default": 0.2,
+     "label": "Middle",
+     "name": "Colour2g",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.6,
+     "label": "Middle",
+     "name": "Colour2b",
+     "style": "RGBA",
+     "value": 0.6
+    },
+    {
+     "default": 0.2,
+     "label": "Old",
+     "name": "Colour3r",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.4,
+     "label": "Old",
+     "name": "Colour3g",
+     "style": "RGBA",
+     "value": 0.4
+    },
+    {
+     "default": 1.0,
+     "label": "Old",
+     "name": "Colour3b",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.25,
+     "label": "Trail line colour (solid)",
+     "name": "Linecolr",
+     "style": "RGBA",
+     "value": 0.25
+    },
+    {
+     "default": 1.0,
+     "label": "Trail line colour (solid)",
+     "name": "Linecolg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.4,
+     "label": "Trail line colour (solid)",
+     "name": "Linecolb",
+     "style": "RGBA",
+     "value": 0.4
+    }
+   ]
+  },
+  {
+   "page": "Camera",
+   "pars": [
+    {
+     "default": 6.0,
+     "label": "Distance",
+     "name": "Camdist",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 45.0,
+     "label": "FOV",
+     "name": "Fov",
+     "style": "Float",
+     "value": 45.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit deg/s",
+     "name": "Orbit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Pan x",
+     "name": "Camx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Pan y",
+     "name": "Camy",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Ortho",
+     "name": "Ortho",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.4
+    },
+    {
+     "default": 0.0,
+     "label": "Chaos",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.4
+    },
+    {
+     "default": 0.0,
+     "label": "Size",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.4
+    }
+   ]
+  },
+  {
+   "page": "About",
+   "pars": [
+    {
+     "default": "",
+     "label": "Version",
+     "name": "Version",
+     "style": "Str",
+     "value": "0.1.0"
+    },
+    {
+     "default": "",
+     "label": "Touch build",
+     "name": "Touchbuild",
+     "style": "Str",
+     "value": "2025.31550"
+    },
+    {
+     "default": "",
+     "label": "Saved",
+     "name": "Saved",
+     "style": "Str",
+     "value": "2026-10-26 16:46"
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 1.0,
+     "label": "Weight gain",
+     "name": "Effgain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "max",
+     "label": "Combine",
+     "name": "Effcombine",
+     "style": "Menu",
+     "value": "max"
+    },
+    {
+     "default": 1.0,
+     "label": "Radius scale",
+     "name": "Effradscale",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Ragged edge",
+     "name": "Effragged",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 4.0,
+     "label": "Ragged freq",
+     "name": "Effraggedfreq",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": false,
+     "label": "Own falloff (ignore per-effector)",
+     "name": "Effoverride",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Own radius",
+     "name": "Effradius",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 1.0,
+     "label": "Own exponent",
+     "name": "Effexp",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "smooth",
+     "label": "Own shape",
+     "name": "Effshape",
+     "style": "Menu",
+     "value": "smooth"
+    },
+    {
+     "default": 2.0,
+     "label": "Push (outward)",
+     "name": "Effpush",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.0,
+     "label": "Attract (to the surface)",
+     "name": "Effattract",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Vortex (around the up axis)",
+     "name": "Effvortex",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Wake (effector velocity)",
+     "name": "Effwake",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Drag near effectors",
+     "name": "Effdrag",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Kill at weight (0 = off)",
+     "name": "Effkill",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Spawn at effectors (fraction)",
+     "name": "Effspawn",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.2,
+     "label": "Spawn radius",
+     "name": "Effspawnr",
+     "style": "Float",
+     "value": 0.2
+    }
+   ]
+  },
+  {
+   "page": "Palette",
+   "pars": [
+    {
+     "default": "neon_trio",
+     "label": "Palette",
+     "name": "Palsource",
+     "style": "Menu",
+     "value": "neon_trio"
+    },
+    {
+     "default": "gradient",
+     "label": "Palette mode",
+     "name": "Palmode",
+     "style": "Menu",
+     "value": "gradient"
+    },
+    {
+     "default": "oklab",
+     "label": "Blend space",
+     "name": "Palinterp",
+     "style": "Menu",
+     "value": "oklab"
+    },
+    {
+     "default": false,
+     "label": "Reverse palette",
+     "name": "Palreverse",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Palette shift (drive me)",
+     "name": "Palshift",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "age",
+     "label": "Dots palette by",
+     "name": "Palby",
+     "style": "Menu",
+     "value": "age"
+    },
+    {
+     "default": 0.0,
+     "label": "Palette position",
+     "name": "Palpos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Palette spread",
+     "name": "Palspread",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Lines",
+   "pars": [
+    {
+     "default": false,
+     "label": "Light trails (PX_lines on the particles)",
+     "name": "Lineson",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Draw the dots too",
+     "name": "Linedots",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1024,
+     "label": "Trails (tracks)",
+     "name": "Linetracks",
+     "style": "Int",
+     "value": 1024
+    },
+    {
+     "default": 32,
+     "label": "Samples per trail",
+     "name": "Linesamples",
+     "style": "Int",
+     "value": 32
+    },
+    {
+     "default": 1,
+     "label": "Frames per sample",
+     "name": "Lineevery",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 1.5,
+     "label": "Core width px",
+     "name": "Linewidth",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 3.0,
+     "label": "Halo px",
+     "name": "Linehalo",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 0.35,
+     "label": "Halo gain",
+     "name": "Linehalogain",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 1.5,
+     "label": "Intensity (HDR)",
+     "name": "Lineintensity",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 1.0,
+     "label": "Width taper",
+     "name": "Linetaper",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Fade along",
+     "name": "Linefade",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Max jump (respawn = new trail)",
+     "name": "Linemaxjump",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "attr",
+     "label": "Trail colour",
+     "name": "Linecolsrc",
+     "style": "Menu",
+     "value": "attr"
+    },
+    {
+     "default": "along",
+     "label": "Trail attribute",
+     "name": "Lineattr",
+     "style": "Menu",
+     "value": "along"
+    },
+    {
+     "default": 0.0,
+     "label": "Trail palette position",
+     "name": "Linepalpos",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Trail palette spread",
+     "name": "Linepalspread",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "add",
+     "label": "Trail blend",
+     "name": "Lineblend",
+     "style": "Menu",
+     "value": "add"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 124.325,
+  "cpu_ms": 124.325,
+  "frames": 30,
+  "gpu_ms": 0.996,
+  "ops": 11
+ },
+ "sha256": "40948d24bfc61b59c8ec13e722ff3c8dbda5f761a620fc705ed62f5fc871a43f",
+ "size": 258310,
+ "source": "/project1/lab/BO_particles",
+ "summary": "particles: BO_particles GPU particle system (live v1 in main, 26 Oct 2026, TD 2025.31550; V5 partial)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 117328,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

@@ -1,0 +1,443 @@
+{
+ "created": "2026-10-29 00:08:09",
+ "doc": "docs/builds/face_track.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Clipfile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/faces/ward_cunningham_8s_twofaces.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/faces/ward_cunningham_8s_twofaces.mp4",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Helper",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/faces/ward_cunningham_8s_twofaces.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/faces/ward_cunningham_8s_twofaces.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in_video",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FT_face_track",
+ "ops": 351,
+ "outputs": [
+  {
+   "name": "out_ctl",
+   "type": "outCHOP"
+  },
+  {
+   "height": 144,
+   "name": "out_eyes",
+   "type": "outTOP",
+   "width": 512
+  },
+  {
+   "height": 144,
+   "name": "out_face",
+   "type": "outTOP",
+   "width": 512
+  },
+  {
+   "name": "out_info",
+   "type": "outDAT"
+  },
+  {
+   "height": 144,
+   "name": "out_mouth",
+   "type": "outTOP",
+   "width": 512
+  },
+  {
+   "name": "out_pts",
+   "type": "outCHOP"
+  },
+  {
+   "height": 540,
+   "name": "out_video",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Track",
+   "pars": [
+    {
+     "default": false,
+     "label": "Active (runs the helper)",
+     "name": "Active",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 4,
+     "label": "Max faces",
+     "name": "Maxfaces",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": 0.5,
+     "label": "Smoothing (One-Euro)",
+     "name": "Smooth",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.5,
+     "label": "Min confidence",
+     "name": "Minconf",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 8,
+     "label": "Hold frames on loss",
+     "name": "Holdframes",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": false,
+     "label": "Mirror source",
+     "name": "Mirror",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Show wire",
+     "name": "Showwire",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Show face boxes",
+     "name": "Showboxes",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 2.0,
+     "label": "Wire width (px)",
+     "name": "Wirewidth",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 1.0,
+     "label": "Wire opacity",
+     "name": "Wireopacity",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 4.0,
+     "label": "Mask blur (px)",
+     "name": "Maskblur",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.0,
+     "label": "Mask grow (x0.1% h)",
+     "name": "Maskgrow",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.3,
+     "label": "Eye mask scale",
+     "name": "Eyeexpand",
+     "style": "Float",
+     "value": 1.3
+    },
+    {
+     "default": 1.1,
+     "label": "Mouth mask scale",
+     "name": "Mouthexpand",
+     "style": "Float",
+     "value": 1.1
+    },
+    {
+     "default": 0.25,
+     "label": "Face mask forehead",
+     "name": "Forehead",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": false,
+     "label": "Open controls window",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": "clip",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "clip"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+     "label": "Clip file",
+     "name": "Clipfile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/faces/ward_cunningham_8s_twofaces.mp4"
+    },
+    {
+     "default": "w640",
+     "label": "Detect width",
+     "name": "Detectsize",
+     "style": "Menu",
+     "value": "w640"
+    },
+    {
+     "default": "r512",
+     "label": "Mask resolution",
+     "name": "Maskres",
+     "style": "Menu",
+     "value": "r512"
+    },
+    {
+     "default": "deg",
+     "label": "Roll / yaw / pitch unit",
+     "name": "Rollunit",
+     "style": "Menu",
+     "value": "deg"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge",
+     "label": "Vision helper binary",
+     "name": "Helper",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/vision_bridge/build/jzb_vision_bridge"
+    },
+    {
+     "default": 0.12,
+     "label": "Eye ratio closed",
+     "name": "Eyeclosed",
+     "style": "Float",
+     "value": 0.12
+    },
+    {
+     "default": 0.35,
+     "label": "Eye ratio open",
+     "name": "Eyeopen",
+     "style": "Float",
+     "value": 0.35
+    },
+    {
+     "default": 0.02,
+     "label": "Mouth ratio at rest",
+     "name": "Mouthrest",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.6,
+     "label": "Mouth ratio wide open",
+     "name": "Mouthmax",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": false,
+     "label": "Calibrate rest pose (face 1)",
+     "name": "Calibrate",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Fake face (test without helper)",
+     "name": "Fakeface",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Colours",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Wire colour",
+     "name": "Wirecolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Wire colour",
+     "name": "Wirecolorg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Wire colour",
+     "name": "Wirecolorb",
+     "style": "RGBA",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 0,
+     "label": "Faces tracked",
+     "name": "Facecount",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Round trip median (ms)",
+     "name": "Latency",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "off",
+     "label": "Status",
+     "name": "Status",
+     "style": "Str",
+     "value": "off"
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Steady",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Mask soft",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Features",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 31.754,
+  "cpu_ms": 31.754,
+  "frames": 30,
+  "gpu_ms": 10.136,
+  "ops": 4
+ },
+ "sha256": "c2a60eaa244b103166d3eadc351df8b98c761d330e27f79083de96d0431c5723",
+ "size": 123774,
+ "source": "/project1/lab/FT_face_track",
+ "summary": "face_track - `/project1/lab/FT_face_track` (TD 2025.31550, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 753,
+  "height": 144,
+  "ok": true,
+  "top": "out_eyes",
+  "width": 512
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

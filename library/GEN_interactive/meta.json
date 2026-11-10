@@ -1,0 +1,408 @@
+{
+ "created": "2026-10-29 00:08:41",
+ "doc": "docs/builds/gen_interactive.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "parallax1/still",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/parallax/webcam_f0.png",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/parallax/webcam_f0.png",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "parallax1/depthfile",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/parallax/webcam_f0_depth.png",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/parallax/webcam_f0_depth.png",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "GEN_interactive",
+ "ops": 2333,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Points",
+   "pars": [
+    {
+     "default": "demo",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "demo"
+    },
+    {
+     "default": 16,
+     "label": "Points (samples of pts)",
+     "name": "Maxpoints",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": 0.5,
+     "label": "Smooth (share kept per 1/60 s)",
+     "name": "Smooth",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "lissajous",
+     "label": "Demoshape",
+     "name": "Demoshape",
+     "style": "Menu",
+     "value": "lissajous"
+    },
+    {
+     "default": 1.0,
+     "label": "Demo speed",
+     "name": "Demospeed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1,
+     "label": "Demo seed",
+     "name": "Demoseed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": "/project1/lab/FT_face_track",
+     "label": "Face tracker COMP (out_pts)",
+     "name": "Faceop",
+     "style": "Str",
+     "value": "/project1/lab/FT_face_track"
+    },
+    {
+     "default": "f1_nose_* f1_pupil_* f1_lips_outer_*",
+     "label": "Landmarks (glob on f<n>_<region>_<kk>)",
+     "name": "Facepts",
+     "style": "Str",
+     "value": "f1_nose_* f1_pupil_* f1_lips_outer_*"
+    },
+    {
+     "default": 1,
+     "label": "Landmark stride",
+     "name": "Facestride",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": false,
+     "label": "Mirror face x",
+     "name": "Facemirror",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Effectors (all / names / #tag)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": true,
+     "label": "Point sets give their points",
+     "name": "Effsets",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Other effectors give their centre",
+     "name": "Effcentres",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "pen1",
+     "label": "Null COMPs (names / paths)",
+     "name": "Nulls",
+     "style": "StrMenu",
+     "value": "pen1"
+    },
+    {
+     "default": false,
+     "label": "Mouse draws only while pressed",
+     "name": "Mousepen",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Point CHOP (Source chop)",
+     "name": "Pointchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "unit",
+     "label": "Chopunits",
+     "name": "Chopunits",
+     "style": "Menu",
+     "value": "signed"
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre x (world)",
+     "name": "Planecx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Plane centre y (world)",
+     "name": "Planecy",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.125,
+     "label": "Plane width (world units = frame)",
+     "name": "Planew",
+     "style": "Float",
+     "value": 1.125
+    },
+    {
+     "default": 2.0,
+     "label": "Plane height (world units = frame)",
+     "name": "Planeh",
+     "style": "Float",
+     "value": 2.0
+    }
+   ]
+  },
+  {
+   "page": "Mask",
+   "pars": [
+    {
+     "default": "none",
+     "label": "Masksource",
+     "name": "Masksource",
+     "style": "Menu",
+     "value": "none"
+    },
+    {
+     "default": "",
+     "label": "Mask TOP (e.g. CV_person_mask/out2, FT_face_track/out_face)",
+     "name": "Masktop",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": "r",
+     "label": "Maskchannel",
+     "name": "Maskchannel",
+     "style": "Menu",
+     "value": "r"
+    },
+    {
+     "default": 0.5,
+     "label": "Luma threshold",
+     "name": "Lumathresh",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 0.1,
+     "label": "Luma softness",
+     "name": "Lumasoft",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": false,
+     "label": "Invert presence",
+     "name": "Maskinvert",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 4.0,
+     "label": "Motion gain",
+     "name": "Motiongain",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.8,
+     "label": "Motion smooth (per cook)",
+     "name": "Motionsmooth",
+     "style": "Float",
+     "value": 0.8
+    },
+    {
+     "default": 270,
+     "label": "Mask width",
+     "name": "Maskw",
+     "style": "Int",
+     "value": 270
+    },
+    {
+     "default": 480,
+     "label": "Mask height",
+     "name": "Maskh",
+     "style": "Int",
+     "value": 480
+    }
+   ]
+  },
+  {
+   "page": "Drive",
+   "pars": [
+    {
+     "default": "internal",
+     "label": "Beatsource",
+     "name": "Beatsource",
+     "style": "Menu",
+     "value": "internal"
+    },
+    {
+     "default": 120.0,
+     "label": "Bpm",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "",
+     "label": "Bpm CHOP (e.g. AU_features/out1)",
+     "name": "Bpmchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "bpm",
+     "label": "Bpm channel",
+     "name": "Bpmchan",
+     "style": "Str",
+     "value": "bpm"
+    },
+    {
+     "default": "",
+     "label": "Beat CHOP (e.g. AU_features/out1)",
+     "name": "Beatchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "beat_phase",
+     "label": "Beat phase channel",
+     "name": "Phasechan",
+     "style": "Str",
+     "value": "beat_phase"
+    },
+    {
+     "default": "beat_count",
+     "label": "Beat count channel",
+     "name": "Countchan",
+     "style": "Str",
+     "value": "beat_count"
+    },
+    {
+     "default": "",
+     "label": "Audio CHOP (e.g. AC_audio/out_ctl)",
+     "name": "Audiochop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "low",
+     "label": "Audio channel",
+     "name": "Audiochan",
+     "style": "Str",
+     "value": "low"
+    },
+    {
+     "default": false,
+     "label": "Resync (beat 1 now)",
+     "name": "Resync",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (background only)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 1080,
+     "label": "Width (black bg)",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Height (black bg)",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 95.622,
+  "cpu_ms": 95.622,
+  "frames": 30,
+  "gpu_ms": 0.891,
+  "ops": 22
+ },
+ "sha256": "fae7ae645ff73345370cb07d6901762ec06a25fe4b2bad920fd85f548f1149b3",
+ "size": 753458,
+ "source": "/project1/lab/GEN_interactive",
+ "summary": "gen_interactive: GEN_interactive rack + 4 people-driven artist looks (live in main, 26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 134333,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.1",
+ "was_parked": true
+}

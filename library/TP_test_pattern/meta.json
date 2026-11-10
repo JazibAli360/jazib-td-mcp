@@ -1,0 +1,374 @@
+{
+ "created": "2026-10-29 00:09:31",
+ "doc": "docs/builds/test_pattern.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [],
+ "name": "TP_test_pattern",
+ "ops": 332,
+ "outputs": [
+  {
+   "height": 1080,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1920
+  }
+ ],
+ "pars": [
+  {
+   "page": "Pattern",
+   "pars": [
+    {
+     "default": "cabinets",
+     "label": "Pattern",
+     "name": "Pattern",
+     "style": "Menu",
+     "value": "gradient"
+    },
+    {
+     "default": "white",
+     "label": "Channel",
+     "name": "Channel",
+     "style": "Menu",
+     "value": "red"
+    },
+    {
+     "default": 255,
+     "label": "Level (8-bit code)",
+     "name": "Level",
+     "style": "Int",
+     "value": 255
+    },
+    {
+     "default": "slices",
+     "label": "Area",
+     "name": "Area",
+     "style": "Menu",
+     "value": "slices"
+    },
+    {
+     "default": "across",
+     "label": "Walk",
+     "name": "Walk",
+     "style": "Menu",
+     "value": "across"
+    },
+    {
+     "default": 10.0,
+     "label": "Walk speed (steps/s)",
+     "name": "Speed",
+     "style": "Float",
+     "value": 19.5
+    },
+    {
+     "default": false,
+     "label": "Reset walk",
+     "name": "Resetwalk",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 2,
+     "label": "Line width px",
+     "name": "Linewidth",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": 0.0,
+     "label": "Cell LED px (0 = cabinet)",
+     "name": "Cell",
+     "style": "Float",
+     "value": 433.0
+    },
+    {
+     "default": 16,
+     "label": "Ramp steps",
+     "name": "Steps",
+     "style": "Int",
+     "value": 256
+    },
+    {
+     "default": false,
+     "label": "Show face outlines",
+     "name": "Showfaces",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Cabinet",
+   "pars": [
+    {
+     "default": "1920x1080",
+     "label": "Resolution preset",
+     "name": "Respreset",
+     "style": "Menu",
+     "value": "1920x1080"
+    },
+    {
+     "default": 1920,
+     "label": "Width px",
+     "name": "Resx",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 1080,
+     "label": "Height px",
+     "name": "Resy",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 0.0,
+     "label": "Native LED width (0 = 1:1)",
+     "name": "Nativewidth",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 128.0,
+     "label": "Cabinet width LED px",
+     "name": "Cabw",
+     "style": "Float",
+     "value": 128.0
+    },
+    {
+     "default": 128.0,
+     "label": "Cabinet height LED px",
+     "name": "Cabh",
+     "style": "Float",
+     "value": 128.0
+    }
+   ]
+  },
+  {
+   "page": "Sync",
+   "pars": [
+    {
+     "default": false,
+     "label": "Frame counter",
+     "name": "Counter",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 16,
+     "label": "Counter x px",
+     "name": "Counterx",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": 16,
+     "label": "Counter y px",
+     "name": "Countery",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": 24,
+     "label": "Counter size px",
+     "name": "Countersize",
+     "style": "Int",
+     "value": 24
+    },
+    {
+     "default": false,
+     "label": "Sync wheel",
+     "name": "Wheel",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.5,
+     "label": "Wheel x (0..1)",
+     "name": "Wheelu",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.5,
+     "label": "Wheel y (0..1)",
+     "name": "Wheelv",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 360.0,
+     "label": "Wheel size px",
+     "name": "Wheelsize",
+     "style": "Float",
+     "value": 360.0
+    },
+    {
+     "default": false,
+     "label": "Flash frame",
+     "name": "Flash",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 60,
+     "label": "Flash every N frames",
+     "name": "Flashevery",
+     "style": "Int",
+     "value": 60
+    },
+    {
+     "default": false,
+     "label": "Audio blip (speakers)",
+     "name": "Blip",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 1000.0,
+     "label": "Blip Hz",
+     "name": "Blipfreq",
+     "style": "Float",
+     "value": 1000.0
+    },
+    {
+     "default": 1,
+     "label": "Blip frames",
+     "name": "Bliplen",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 0.5,
+     "label": "Blip volume",
+     "name": "Blipvol",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 60.0,
+     "label": "Counter fps",
+     "name": "Fps",
+     "style": "Float",
+     "value": 60.0
+    }
+   ]
+  },
+  {
+   "page": "Layout",
+   "pars": [
+    {
+     "default": "",
+     "label": "Face table DAT (empty = faces)",
+     "name": "Facestable",
+     "style": "DAT",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Detail",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.14
+    },
+    {
+     "default": 0.0,
+     "label": "Sync size",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.33
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 36.68,
+  "cpu_ms": 36.68,
+  "frames": 30,
+  "gpu_ms": 0.434,
+  "ops": 4
+ },
+ "sha256": "538be8b852d9ebf7bb780fed709b90174357150fc7a45a22a0fea1b9d0d3423a",
+ "size": 105230,
+ "source": "/project1/lab/TP_test_pattern",
+ "summary": "test_pattern: TP_test_pattern test patterns + sync checks (26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 33358,
+  "height": 1080,
+  "ok": true,
+  "top": "out1",
+  "width": 1920
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

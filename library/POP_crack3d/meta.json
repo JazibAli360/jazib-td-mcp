@@ -1,0 +1,385 @@
+{
+ "created": "2026-10-29 00:09:09",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_crack3d",
+ "ops": 327,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Crack",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "lit",
+     "label": "Style",
+     "name": "Style",
+     "style": "Menu",
+     "value": "lit"
+    },
+    {
+     "default": 4.0,
+     "label": "Cells per object unit",
+     "name": "Cellscale",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 0.05,
+     "label": "Crack width (F2 - F1, cell units)",
+     "name": "Width",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 1.0,
+     "label": "Crack front progress",
+     "name": "Progress",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Auto progress (loops 0..1)",
+     "name": "Auto",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.25,
+     "label": "Auto speed (per s)",
+     "name": "Autospeed",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": 2.5,
+     "label": "Reach at progress 1 (object units)",
+     "name": "Reach",
+     "style": "Float",
+     "value": 2.5
+    },
+    {
+     "default": 0.05,
+     "label": "Front softness",
+     "name": "Soft",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 0.0,
+     "label": "Impact x (object space)",
+     "name": "Impactx",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Impact y",
+     "name": "Impacty",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Impact z",
+     "name": "Impactz",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Erode (fraction of reached cells removed)",
+     "name": "Erode",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 2.0,
+     "label": "Crack glow intensity",
+     "name": "Glow",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": "flat",
+     "label": "Basemode",
+     "name": "Basemode",
+     "style": "Menu",
+     "value": "flat"
+    },
+    {
+     "default": 1.0,
+     "label": "Crack glow colour",
+     "name": "Glowcolorr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 0.55,
+     "label": "Crack glow colour",
+     "name": "Glowcolorg",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": 0.15,
+     "label": "Crack glow colour",
+     "name": "Glowcolorb",
+     "style": "RGBA",
+     "value": 0.15
+    },
+    {
+     "default": 0.12,
+     "label": "Base colour",
+     "name": "Basecolorr",
+     "style": "RGBA",
+     "value": 0.12
+    },
+    {
+     "default": 0.12,
+     "label": "Base colour",
+     "name": "Basecolorg",
+     "style": "RGBA",
+     "value": 0.12
+    },
+    {
+     "default": 0.14,
+     "label": "Base colour",
+     "name": "Basecolorb",
+     "style": "RGBA",
+     "value": 0.14
+    }
+   ]
+  },
+  {
+   "page": "Object",
+   "pars": [
+    {
+     "default": "sphere",
+     "label": "Shape",
+     "name": "Shape",
+     "style": "Menu",
+     "value": "sphere"
+    },
+    {
+     "default": "",
+     "label": "Custom POP path (Shape custom)",
+     "name": "Custompop",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 24,
+     "label": "Sphere geodesic freq",
+     "name": "Detail",
+     "style": "Int",
+     "value": 24
+    },
+    {
+     "default": 15.0,
+     "label": "Tilt deg (x)",
+     "name": "Tilt",
+     "style": "Float",
+     "value": 15.0
+    },
+    {
+     "default": 0.0,
+     "label": "Orbit deg (y)",
+     "name": "Orbit",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 10.0,
+     "label": "Spin deg / s (y)",
+     "name": "Spin",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 4.0,
+     "label": "Camera distance",
+     "name": "Dist",
+     "style": "Float",
+     "value": 4.0
+    },
+    {
+     "default": 40.0,
+     "label": "Vertical fov",
+     "name": "Fov",
+     "style": "Float",
+     "value": 40.0
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Cracks",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Speed",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Zoom",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 43.669,
+  "cpu_ms": 43.669,
+  "frames": 30,
+  "gpu_ms": 1.903,
+  "ops": 4
+ },
+ "sha256": "ef84eaa4e9e114fbc8b6d84eb32fb630a3f85d50aad323ea3c04bbd89c19abb9",
+ "size": 90254,
+ "source": "/project1/lab/POP_crack3d",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1274506,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

@@ -1,0 +1,511 @@
+{
+ "created": "2026-10-29 00:08:05",
+ "doc": "docs/builds/cuelist.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in1",
+   "type": "inCHOP"
+  },
+  {
+   "name": "in2",
+   "type": "inDAT"
+  }
+ ],
+ "name": "CQ_cuelist",
+ "ops": 300,
+ "outputs": [
+  {
+   "name": "out1",
+   "type": "outCHOP"
+  },
+  {
+   "name": "out2",
+   "type": "outDAT"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Transport",
+   "pars": [
+    {
+     "default": false,
+     "label": "GO",
+     "name": "Go",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Back",
+     "name": "Goback",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Standby up",
+     "name": "Standbyprev",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Standby down",
+     "name": "Standbynext",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Goto cue (name/num)",
+     "name": "Gotocue",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": false,
+     "label": "Stop fades",
+     "name": "Stop",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Pause fades",
+     "name": "Pause",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Reset standby",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Fade rate",
+     "name": "Rate",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "queue",
+     "label": "GO during fade",
+     "name": "Queuemode",
+     "style": "Menu",
+     "value": "queue"
+    }
+   ]
+  },
+  {
+   "page": "Clock",
+   "pars": [
+    {
+     "default": "internal",
+     "label": "Clock source",
+     "name": "Clocksrc",
+     "style": "Menu",
+     "value": "internal"
+    },
+    {
+     "default": false,
+     "label": "Internal play",
+     "name": "Clockplay",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "00:00:00:00",
+     "label": "Locate to",
+     "name": "Locate",
+     "style": "Str",
+     "value": "00:00:00:00"
+    },
+    {
+     "default": false,
+     "label": "Locate",
+     "name": "Dolocate",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Manual TC",
+     "name": "Manualtc",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": "",
+     "label": "TC CHOP (else In1)",
+     "name": "Tcchop",
+     "style": "CHOP",
+     "value": null
+    },
+    {
+     "default": "25",
+     "label": "TC rate",
+     "name": "Tcrate",
+     "style": "Menu",
+     "value": "25"
+    },
+    {
+     "default": "00:00:00:00",
+     "label": "TC offset",
+     "name": "Tcoffset",
+     "style": "Str",
+     "value": "00:00:00:00"
+    },
+    {
+     "default": true,
+     "label": "Chase (lock)",
+     "name": "Chase",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Chase lag s",
+     "name": "Chaselag",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 2.0,
+     "label": "Freewheel s",
+     "name": "Freewheel",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 3.0,
+     "label": "Lock window fr",
+     "name": "Lockwindow",
+     "style": "Float",
+     "value": 3.0
+    },
+    {
+     "default": 1.0,
+     "label": "Jump threshold s",
+     "name": "Jumpthreshold",
+     "style": "Float",
+     "value": 1.0
+    }
+   ]
+  },
+  {
+   "page": "Cues",
+   "pars": [
+    {
+     "default": "",
+     "label": "Cue table (else cues)",
+     "name": "Cuetable",
+     "style": "DAT",
+     "value": null
+    },
+    {
+     "default": false,
+     "label": "Reload cues",
+     "name": "Reloadcues",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Tracking",
+     "name": "Tracking",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Autofollow",
+     "name": "Autofollow",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 0.0,
+     "label": "Default fade s",
+     "name": "Defaultfade",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": "linear",
+     "label": "Defaultcurve",
+     "name": "Defaultcurve",
+     "style": "Menu",
+     "value": "linear"
+    },
+    {
+     "default": "",
+     "label": "ZC preset kit",
+     "name": "Presetkit",
+     "style": "COMP",
+     "value": null
+    },
+    {
+     "default": "",
+     "label": "TL timeline",
+     "name": "Timeline",
+     "style": "COMP",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Targets",
+   "pars": [
+    {
+     "default": true,
+     "label": "Allowtl",
+     "name": "Allowtl",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": true,
+     "label": "Allowzc",
+     "name": "Allowzc",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Allowosc",
+     "name": "Allowosc",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Allowarena",
+     "name": "Allowarena",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "127.0.0.1",
+     "label": "Oscdest",
+     "name": "Oscdest",
+     "style": "Str",
+     "value": "127.0.0.1"
+    },
+    {
+     "default": 7000,
+     "label": "Oscport",
+     "name": "Oscport",
+     "style": "Int",
+     "value": 7000
+    },
+    {
+     "default": false,
+     "label": "Arena send (else dry)",
+     "name": "Arenasend",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "",
+     "label": "Oscmap",
+     "name": "Oscmap",
+     "style": "DAT",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Log",
+   "pars": [
+    {
+     "default": "logs/cq_<yyyymmdd>.csv",
+     "label": "Logfile",
+     "name": "Logfile",
+     "style": "Str",
+     "value": "logs/cq_<yyyymmdd>.csv"
+    },
+    {
+     "default": true,
+     "label": "Logon",
+     "name": "Logon",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 500,
+     "label": "Logmax",
+     "name": "Logmax",
+     "style": "Int",
+     "value": 500
+    },
+    {
+     "default": false,
+     "label": "Clearlog",
+     "name": "Clearlog",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Status",
+   "pars": [
+    {
+     "default": "",
+     "label": "Standby",
+     "name": "Standby",
+     "style": "Str",
+     "value": "1 Preset"
+    },
+    {
+     "default": "",
+     "label": "Running",
+     "name": "Running",
+     "style": "Str",
+     "value": ""
+    },
+    {
+     "default": 100.0,
+     "label": "Fadepct",
+     "name": "Fadepct",
+     "style": "Float",
+     "value": 100.0
+    },
+    {
+     "default": "",
+     "label": "Tc",
+     "name": "Tc",
+     "style": "Str",
+     "value": "00:00:00:00"
+    },
+    {
+     "default": "",
+     "label": "Clockstate",
+     "name": "Clockstate",
+     "style": "Str",
+     "value": "free"
+    },
+    {
+     "default": "",
+     "label": "Lastevent",
+     "name": "Lastevent",
+     "style": "Str",
+     "value": "fade_end par:/project1/show_rig:L1opacity"
+    },
+    {
+     "default": "",
+     "label": "Lasterror",
+     "name": "Lasterror",
+     "style": "Str",
+     "value": ""
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Snap",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Tolerance",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.35
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 18.47,
+  "cpu_ms": 18.47,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 66
+ },
+ "sha256": "748c51762ee3d40ff70c7ee962cf8347abf60b3a8431dbc2e5292ee21ae05113",
+ "size": 97270,
+ "source": "/project1/lab/CQ_cuelist",
+ "summary": "CQ_cuelist \u2014 cue list + timecode show control (v1)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

@@ -1,0 +1,259 @@
+{
+ "axis": {
+  "blender": "Z up, front view along +Y",
+  "point_map": "td = (x, z, -y)",
+  "rotate_order": "xyz",
+  "td": "Y up",
+  "xform_order": "srt"
+ },
+ "cameras": [
+  {
+   "active": true,
+   "blender_matrix_world": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.16439899802207947,
+     -0.986393928527832,
+     -12.0
+    ],
+    [
+     0.0,
+     0.986393928527832,
+     0.16439899802207947,
+     3.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "lens_mm": 35.0,
+   "name": "Cam_FOH",
+   "parent": null,
+   "sensor_fit": "AUTO",
+   "sensor_mm": [
+    36.0,
+    24.0
+   ],
+   "shift": [
+    0.1,
+    0.0
+   ],
+   "view": {
+    "aspect": 1.777778,
+    "far": 200.0,
+    "fit": "horizontal",
+    "hfov": 54.432223,
+    "near": 0.1,
+    "projection": "perspective",
+    "vfov": 32.268802,
+    "winx": 0.1,
+    "winy": 0.0
+   },
+   "visible": true,
+   "xform": {
+    "r": [
+     -9.462323,
+     0.0,
+     0.0
+    ],
+    "s": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "t": [
+     0.0,
+     3.0,
+     12.0
+    ]
+   }
+  }
+ ],
+ "geometry": {
+  "fbx": "tiny_stage.fbx",
+  "forward": "-Z",
+  "metres_per_unit": 1.0,
+  "up": "Y",
+  "usd": "tiny_stage.usdc"
+ },
+ "lights": [
+  {
+   "blender_matrix_world": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.3511233329772949,
+     -0.936329185962677,
+     -8.0
+    ],
+    [
+     0.0,
+     0.936329185962677,
+     0.3511233329772949,
+     4.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "light": {
+    "color": [
+     1.0,
+     0.95,
+     0.9
+    ],
+    "coneangle": 40.0,
+    "conedelta": 3.0,
+    "dimmer": 0.8,
+    "energy": 800.0,
+    "kind": "spot",
+    "lighttype": "cone"
+   },
+   "name": "PROJ_A",
+   "parent": null,
+   "projector": {
+    "hfov": 36.8699,
+    "res": [
+     1920,
+     1080
+    ],
+    "shift": [
+     0.0,
+     0.0
+    ],
+    "texture": "",
+    "throw": 1.5
+   },
+   "visible": true,
+   "xform": {
+    "r": [
+     -20.556039,
+     0.0,
+     0.0
+    ],
+    "s": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "t": [
+     0.0,
+     4.0,
+     8.0
+    ]
+   }
+  }
+ ],
+ "objects": [
+  {
+   "blender_matrix_world": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "dims_m": [
+    8.0,
+    1.0,
+    4.0
+   ],
+   "name": "Stage_Deck",
+   "parent": null,
+   "type": "MESH",
+   "visible": true,
+   "xform": {
+    "r": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "s": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "t": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  }
+ ],
+ "scene": {
+  "active_camera": "Cam_FOH",
+  "fps": 60.0,
+  "frame_range": [
+   1,
+   250
+  ],
+  "name": "Scene",
+  "pixel_aspect": [
+   1.0,
+   1.0
+  ],
+  "resolution": [
+   1920,
+   1080
+  ]
+ },
+ "schema": "jazib-blender-td/1",
+ "source": {
+  "blend": "~/Documents/StageLab_PrismFest/jazib-td-mcp/test/fixtures/blender/tiny_stage.blend",
+  "blender": "5.2.2 LTS",
+  "exported": "2026-10-26T18:20:40"
+ },
+ "units": {
+  "length_unit": "METERS",
+  "metres_per_blender_unit": 1.0,
+  "scale_length": 1.0,
+  "system": "METRIC",
+  "td": "metres"
+ },
+ "warnings": [],
+ "world": {
+  "color": [
+   0.05,
+   0.05,
+   0.05
+  ],
+  "strength": 1.0
+ }
+}

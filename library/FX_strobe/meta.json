@@ -1,0 +1,383 @@
+{
+ "created": "2026-10-29 00:08:30",
+ "doc": "docs/builds/strobe.md",
+ "files": [],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in2",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "FX_strobe",
+ "ops": 304,
+ "outputs": [
+  {
+   "height": 128,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 128
+  }
+ ],
+ "pars": [
+  {
+   "page": "Trigger",
+   "pars": [
+    {
+     "default": "kick",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "kick"
+    },
+    {
+     "default": 0.6,
+     "label": "Threshold",
+     "name": "Threshold",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": "1",
+     "label": "Every Nth",
+     "name": "Division",
+     "style": "Menu",
+     "value": "1"
+    },
+    {
+     "default": 0.0,
+     "label": "Hold gap s",
+     "name": "Hold",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 2.0,
+     "label": "LFO rate Hz",
+     "name": "Rate",
+     "style": "Float",
+     "value": 2.0
+    }
+   ]
+  },
+  {
+   "page": "Tempo",
+   "pars": [
+    {
+     "default": "project",
+     "label": "Tempo",
+     "name": "Tempo",
+     "style": "Menu",
+     "value": "project"
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": false,
+     "label": "Tap",
+     "name": "Tap",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "n4",
+     "label": "Note",
+     "name": "Note",
+     "style": "Menu",
+     "value": "n4"
+    },
+    {
+     "default": "straight",
+     "label": "Feel",
+     "name": "Notemod",
+     "style": "Menu",
+     "value": "straight"
+    },
+    {
+     "default": 0.0,
+     "label": "Phase",
+     "name": "Phase",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Swing",
+     "name": "Swing",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Resync",
+     "name": "Resync",
+     "style": "Pulse",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Manual",
+   "pars": [
+    {
+     "default": false,
+     "label": "Fire",
+     "name": "Fire",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Flash (hold)",
+     "name": "Flash",
+     "style": "Momentary",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Burst",
+     "name": "Burst",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 4,
+     "label": "Burst hits",
+     "name": "Burstcount",
+     "style": "Int",
+     "value": 4
+    },
+    {
+     "default": "space",
+     "label": "Fire key",
+     "name": "Key",
+     "style": "Str",
+     "value": "space"
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "lift",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "lift"
+    },
+    {
+     "default": 0.01,
+     "label": "Attack s",
+     "name": "Attack",
+     "style": "Float",
+     "value": 0.01
+    },
+    {
+     "default": 0.15,
+     "label": "Release s",
+     "name": "Release",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": "linear",
+     "label": "Ease",
+     "name": "Ease",
+     "style": "Menu",
+     "value": "linear"
+    },
+    {
+     "default": 1.0,
+     "label": "Depth",
+     "name": "Depth",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Mix",
+     "name": "Mix",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Colourr",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Colourg",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Colour",
+     "name": "Colourb",
+     "style": "RGBA",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Blackout",
+     "name": "Blackout",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Input",
+   "pars": [
+    {
+     "default": "auto",
+     "label": "Input source",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    },
+    {
+     "default": 2.0,
+     "label": "Test pulse Hz",
+     "name": "Testrate",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": "",
+     "label": "Link CHOP (tempo)",
+     "name": "Linkchop",
+     "style": "CHOP",
+     "value": null
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Intensity",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Snap",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.85
+    },
+    {
+     "default": 0.0,
+     "label": "Speed",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.3
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.226,
+  "cpu_ms": 0.226,
+  "frames": 30,
+  "gpu_ms": 0.11,
+  "ops": 8
+ },
+ "sha256": "773c163f8ba5a4da4b02081e0afe6b1c04c9bed94e89be9f1e50cbcd4ac52a6e",
+ "size": 96966,
+ "source": "/project1/lab/FX_strobe",
+ "summary": "strobe: FX_strobe strobe effector (26 Oct 2026, TD 2025.31550)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 463,
+  "height": 128,
+  "ok": true,
+  "top": "out1",
+  "width": 128
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": true
+}

@@ -1,0 +1,897 @@
+{
+ "created": "2026-10-29 00:08:01",
+ "doc": "docs/builds/cloth.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "name": "in3",
+   "type": "inCHOP"
+  },
+  {
+   "name": "in4",
+   "type": "inCHOP"
+  },
+  {
+   "name": "in5",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "BN_cloth",
+ "ops": 476,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 128,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 150
+  },
+  {
+   "name": "out3",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Sim",
+   "pars": [
+    {
+     "default": 128,
+     "label": "Grid width (vertices)",
+     "name": "Gridw",
+     "style": "Int",
+     "value": 150
+    },
+    {
+     "default": 128,
+     "label": "Grid height (vertices)",
+     "name": "Gridh",
+     "style": "Int",
+     "value": 128
+    },
+    {
+     "default": "cloth",
+     "label": "Mode",
+     "name": "Mode",
+     "style": "Menu",
+     "value": "cloth"
+    },
+    {
+     "default": 16,
+     "label": "Substeps per frame",
+     "name": "Substeps",
+     "style": "Int",
+     "value": 16
+    },
+    {
+     "default": 0.0,
+     "label": "Dt s (0 = 1/cook rate)",
+     "name": "Dt",
+     "style": "Float",
+     "value": 0.0225
+    },
+    {
+     "default": 1.0,
+     "label": "Time scale",
+     "name": "Timescale",
+     "style": "Float",
+     "value": 0.639767
+    },
+    {
+     "default": 0.0,
+     "label": "Gravity m/s2",
+     "name": "Gravityx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": -9.8,
+     "label": "Gravity m/s2",
+     "name": "Gravityy",
+     "style": "XYZW",
+     "value": -9.8
+    },
+    {
+     "default": 0.0,
+     "label": "Gravity m/s2",
+     "name": "Gravityz",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 1.0,
+     "label": "Damping 1/s",
+     "name": "Damping",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.0,
+     "label": "Stretch compliance",
+     "name": "Stretch",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.0001,
+     "label": "Shear compliance",
+     "name": "Shear",
+     "style": "Float",
+     "value": 0.0
+    },
+    {
+     "default": 0.05,
+     "label": "Bend compliance",
+     "name": "Bend",
+     "style": "Float",
+     "value": 0.280968
+    },
+    {
+     "default": 1.5,
+     "label": "Jacobi relax",
+     "name": "Relax",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 0.1,
+     "label": "Jelly shape stiffness",
+     "name": "Shape",
+     "style": "Float",
+     "value": 0.1
+    },
+    {
+     "default": 1.0,
+     "label": "Mass kg (whole cloth)",
+     "name": "Mass",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Width m",
+     "name": "Sizew",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 1.0,
+     "label": "Height m",
+     "name": "Sizeh",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "vertical",
+     "label": "Orient",
+     "name": "Orient",
+     "style": "Menu",
+     "value": "vertical"
+    },
+    {
+     "default": 1.0,
+     "label": "Top edge / plane y m",
+     "name": "Top",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "top",
+     "label": "Pins",
+     "name": "Pins",
+     "style": "Menu",
+     "value": "top"
+    },
+    {
+     "default": true,
+     "label": "Tethers to pins",
+     "name": "Tethers",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": 1.0,
+     "label": "Tether slack",
+     "name": "Tetherslack",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": false,
+     "label": "Floor",
+     "name": "Floor",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": -0.8,
+     "label": "Floor y m",
+     "name": "Floory",
+     "style": "Float",
+     "value": -0.8
+    }
+   ]
+  },
+  {
+   "page": "Wind",
+   "pars": [
+    {
+     "default": "noise",
+     "label": "Windmode",
+     "name": "Windmode",
+     "style": "Menu",
+     "value": "noise"
+    },
+    {
+     "default": 0.0,
+     "label": "Wind m/s2",
+     "name": "Windx",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Wind m/s2",
+     "name": "Windy",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 3.0,
+     "label": "Wind m/s2",
+     "name": "Windz",
+     "style": "XYZW",
+     "value": 3.0
+    },
+    {
+     "default": 1.0,
+     "label": "Wind gain",
+     "name": "Windgain",
+     "style": "Float",
+     "value": 0.939961
+    },
+    {
+     "default": 0.7,
+     "label": "Aero (normal pressure)",
+     "name": "Aero",
+     "style": "Float",
+     "value": 0.7
+    },
+    {
+     "default": 0.5,
+     "label": "Turbulence",
+     "name": "Turbulence",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 2.0,
+     "label": "Turbulence scale 1/m",
+     "name": "Turbscale",
+     "style": "Float",
+     "value": 2.0
+    },
+    {
+     "default": 0.5,
+     "label": "Gust rate Hz",
+     "name": "Gust",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 120.0,
+     "label": "BPM",
+     "name": "Bpm",
+     "style": "Float",
+     "value": 120.0
+    },
+    {
+     "default": "b1",
+     "label": "Bpmdiv",
+     "name": "Bpmdiv",
+     "style": "Menu",
+     "value": "b1"
+    },
+    {
+     "default": false,
+     "label": "Burst",
+     "name": "Burst",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 25.0,
+     "label": "Burst m/s2",
+     "name": "Burstforce",
+     "style": "Float",
+     "value": 6.98836
+    },
+    {
+     "default": 0.3,
+     "label": "Burst decay s",
+     "name": "Burstdecay",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 1.0,
+     "label": "Audio gain",
+     "name": "Audiogain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.5,
+     "label": "Kick threshold",
+     "name": "Burstthresh",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.25,
+     "label": "Kick gap s",
+     "name": "Burstrefractory",
+     "style": "Float",
+     "value": 0.25
+    }
+   ]
+  },
+  {
+   "page": "Collide",
+   "pars": [
+    {
+     "default": 0.3,
+     "label": "Friction",
+     "name": "Friction",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.01,
+     "label": "Thickness m",
+     "name": "Thickness",
+     "style": "Float",
+     "value": 0.01
+    },
+    {
+     "default": false,
+     "label": "Sphere 1",
+     "name": "Sphere1on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 1 centre",
+     "name": "Sphere1x",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.3,
+     "label": "Sphere 1 centre",
+     "name": "Sphere1y",
+     "style": "XYZW",
+     "value": 0.545158
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 1 centre",
+     "name": "Sphere1z",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.3,
+     "label": "Sphere 1 radius",
+     "name": "Sphere1r",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": false,
+     "label": "Sphere 2",
+     "name": "Sphere2on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 2 centre",
+     "name": "Sphere2x",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 2 centre",
+     "name": "Sphere2y",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 2 centre",
+     "name": "Sphere2z",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.2,
+     "label": "Sphere 2 radius",
+     "name": "Sphere2r",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": false,
+     "label": "Sphere 3",
+     "name": "Sphere3on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 3 centre",
+     "name": "Sphere3x",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 3 centre",
+     "name": "Sphere3y",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 3 centre",
+     "name": "Sphere3z",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.2,
+     "label": "Sphere 3 radius",
+     "name": "Sphere3r",
+     "style": "Float",
+     "value": 0.2
+    },
+    {
+     "default": false,
+     "label": "Sphere 4",
+     "name": "Sphere4on",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 4 centre",
+     "name": "Sphere4x",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 4 centre",
+     "name": "Sphere4y",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Sphere 4 centre",
+     "name": "Sphere4z",
+     "style": "XYZW",
+     "value": 0.0
+    },
+    {
+     "default": 0.2,
+     "label": "Sphere 4 radius",
+     "name": "Sphere4r",
+     "style": "Float",
+     "value": 0.2
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Render width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Render height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": "front",
+     "label": "Cam",
+     "name": "Cam",
+     "style": "Menu",
+     "value": "front"
+    },
+    {
+     "default": 2.6,
+     "label": "Camera distance m",
+     "name": "Camdist",
+     "style": "Float",
+     "value": 2.6
+    },
+    {
+     "default": 10.0,
+     "label": "Camera elevation deg",
+     "name": "Camelev",
+     "style": "Float",
+     "value": 10.0
+    },
+    {
+     "default": 12.0,
+     "label": "Orbit deg/s",
+     "name": "Orbitspeed",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": 40.0,
+     "label": "Horizontal FOV deg",
+     "name": "Fov",
+     "style": "Float",
+     "value": 40.0
+    },
+    {
+     "default": 1.5,
+     "label": "Light position",
+     "name": "Lightx",
+     "style": "XYZW",
+     "value": 1.5
+    },
+    {
+     "default": 2.5,
+     "label": "Light position",
+     "name": "Lighty",
+     "style": "XYZW",
+     "value": 2.5
+    },
+    {
+     "default": 3.0,
+     "label": "Light position",
+     "name": "Lightz",
+     "style": "XYZW",
+     "value": 3.0
+    },
+    {
+     "default": "sheen",
+     "label": "Shading",
+     "name": "Shading",
+     "style": "Menu",
+     "value": "sheen"
+    },
+    {
+     "default": 0.85,
+     "label": "Front colour",
+     "name": "Colorfrontr",
+     "style": "RGBA",
+     "value": 0.85
+    },
+    {
+     "default": 0.12,
+     "label": "Front colour",
+     "name": "Colorfrontg",
+     "style": "RGBA",
+     "value": 0.12
+    },
+    {
+     "default": 0.25,
+     "label": "Front colour",
+     "name": "Colorfrontb",
+     "style": "RGBA",
+     "value": 0.25
+    },
+    {
+     "default": 0.15,
+     "label": "Back colour",
+     "name": "Colorbackr",
+     "style": "RGBA",
+     "value": 0.15
+    },
+    {
+     "default": 0.2,
+     "label": "Back colour",
+     "name": "Colorbackg",
+     "style": "RGBA",
+     "value": 0.2
+    },
+    {
+     "default": 0.55,
+     "label": "Back colour",
+     "name": "Colorbackb",
+     "style": "RGBA",
+     "value": 0.55
+    },
+    {
+     "default": "checker",
+     "label": "Texture",
+     "name": "Texture",
+     "style": "Menu",
+     "value": "checker"
+    },
+    {
+     "default": 0.5,
+     "label": "Texture mix",
+     "name": "Texmix",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 12.0,
+     "label": "Checker cells",
+     "name": "Texscale",
+     "style": "Float",
+     "value": 12.0
+    },
+    {
+     "default": false,
+     "label": "Wire grid",
+     "name": "Wire",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgr",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgg",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": 0.0,
+     "label": "Background",
+     "name": "Bgb",
+     "style": "RGBA",
+     "value": 0.0
+    },
+    {
+     "default": false,
+     "label": "Transparent background",
+     "name": "Alpha",
+     "style": "Toggle",
+     "value": false
+    }
+   ]
+  },
+  {
+   "page": "Control",
+   "pars": [
+    {
+     "default": false,
+     "label": "Reset",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Pause",
+     "name": "Pause",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Step (paused)",
+     "name": "Step",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Release pins",
+     "name": "Release",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "off",
+     "label": "Testmode",
+     "name": "Testmode",
+     "style": "Menu",
+     "value": "off"
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Wind",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Floppy",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Speed",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Punch",
+     "name": "Zkm4",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  },
+  {
+   "page": "Effectors",
+   "pars": [
+    {
+     "default": false,
+     "label": "Effectors on (/project1/effectors)",
+     "name": "Effon",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "all",
+     "label": "Use effectors (all / names / #tags)",
+     "name": "Effselect",
+     "style": "StrMenu",
+     "value": "all"
+    },
+    {
+     "default": 0.02,
+     "label": "Collider padding",
+     "name": "Effpad",
+     "style": "Float",
+     "value": 0.02
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 174.873,
+  "cpu_ms": 174.873,
+  "frames": 30,
+  "gpu_ms": 2.303,
+  "ops": 25
+ },
+ "sha256": "b23cee5a2acf595b7422b242eb715417fea1be1d7d04a974b2dc3c93850b128f",
+ "size": 135006,
+ "source": "/project1/lab/BN_cloth",
+ "summary": "cloth: BN_cloth cloth + jelly COMP (live v1 in main, 26 Oct 2026, TD 2025.31550; jelly fails live, T-87)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 72603,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.1",
+ "was_parked": true
+}

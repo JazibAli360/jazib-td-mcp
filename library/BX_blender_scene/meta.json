@@ -1,0 +1,88 @@
+{
+ "created": "2026-10-26 19:47:40",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "geo",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/blender/tiny_stage/tiny_stage.usdc",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/output/blender/tiny_stage/tiny_stage.usdc",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "cam_Cam_FOH/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [],
+ "name": "BX_blender_scene",
+ "ops": 187,
+ "outputs": [],
+ "pars": [
+  {
+   "page": "Blender",
+   "pars": [
+    {
+     "default": "cam_Cam_FOH",
+     "label": "Camera",
+     "name": "Camera",
+     "style": "Menu",
+     "value": "cam_Cam_FOH"
+    },
+    {
+     "default": 1.0,
+     "label": "Light dimmer",
+     "name": "Lightdimmer",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.15,
+     "label": "Ambient",
+     "name": "Ambient",
+     "style": "Float",
+     "value": 0.15
+    },
+    {
+     "default": 1920,
+     "label": "Render width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 1080,
+     "label": "Render height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1080
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.465,
+  "cpu_ms": 0.465,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 7
+ },
+ "sha256": "bf59586e1a1dfa132fd37a620b53d89e5749dcd122707ec4743c2227553c8a28",
+ "size": 18470,
+ "source": "/project1/lab/BX_blender_scene",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}

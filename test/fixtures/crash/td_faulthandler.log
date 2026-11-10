@@ -1,0 +1,14 @@
+=== jazib-td faulthandler session pid=1111 build=2025.31550 project=JazibTD_home.90.toe started=2026-10-26T12:00:00+0500 python=3.11.1 ===
+=== jazib-td faulthandler session pid=4242 build=2025.31550 project=JazibTD_home.97.toe started=2026-10-26T14:40:05+0500 python=3.11.1 ===
+Fatal Python error: Segmentation fault
+
+Thread 0x000070000a3b1000 (most recent call first):
+  File "/Users/x/jazib-td-mcp/td/midi_runtime.py", line 10 in on_frame
+
+Current thread 0x000070000a2ae000 (most recent call first):
+  File "<jazib_mcp exec>", line 3 in <module>
+  File "/jazib_mcp/handlers", line 520 in run_code
+  File "/jazib_mcp/handlers", line 1915 in _exec_visible
+
+Extension modules: numpy.core._multiarray_umath (total: 1)
+=== jazib-td faulthandler session pid=9999 build=2025.31550 project=JazibTD_home.98.toe started=2026-10-26T15:02:00+0500 python=3.11.1 ===

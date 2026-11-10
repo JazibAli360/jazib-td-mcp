@@ -1,0 +1,236 @@
+{
+ "created": "2026-10-29 00:08:36",
+ "doc": "docs/builds/fx_track.md",
+ "files": [
+  {
+   "exists": true,
+   "op": "plexus1/lines/cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  },
+  {
+   "exists": true,
+   "op": "test_clip",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/webcam/webcam_ref_5s.mp4",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "FX_track",
+ "ops": 1200,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  }
+ ],
+ "pars": [
+  {
+   "page": "Track",
+   "pars": [
+    {
+     "default": "picture",
+     "label": "Tracksrc",
+     "name": "Tracksrc",
+     "style": "Menu",
+     "value": "picture"
+    },
+    {
+     "default": "",
+     "label": "Track TOP (e.g. CV_person_mask/out2)",
+     "name": "Tracktop",
+     "style": "TOP",
+     "value": null
+    },
+    {
+     "default": "bright",
+     "label": "Key",
+     "name": "Key",
+     "style": "Menu",
+     "value": "bright"
+    },
+    {
+     "default": 1.0,
+     "label": "Key gain",
+     "name": "Keygain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 6.0,
+     "label": "Motion gain",
+     "name": "Motiongain",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 0.55,
+     "label": "Threshold (key)",
+     "name": "Threshold",
+     "style": "Float",
+     "value": 0.55
+    },
+    {
+     "default": "cells",
+     "label": "Detector",
+     "name": "Detector",
+     "style": "Menu",
+     "value": "cells"
+    },
+    {
+     "default": 18,
+     "label": "Cells across",
+     "name": "Cellsx",
+     "style": "Int",
+     "value": 18
+    },
+    {
+     "default": 32,
+     "label": "Cells down",
+     "name": "Cellsy",
+     "style": "Int",
+     "value": 32
+    },
+    {
+     "default": "peak",
+     "label": "Cellpick",
+     "name": "Cellpick",
+     "style": "Menu",
+     "value": "peak"
+    },
+    {
+     "default": 0.03,
+     "label": "Min share of a cell over threshold",
+     "name": "Minfill",
+     "style": "Float",
+     "value": 0.03
+    },
+    {
+     "default": 0.5,
+     "label": "Smooth (kept share per frame)",
+     "name": "Smooth",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 32,
+     "label": "Max blobs",
+     "name": "Maxblobs",
+     "style": "Int",
+     "value": 32
+    },
+    {
+     "default": 0.02,
+     "label": "Blob min size",
+     "name": "Blobmin",
+     "style": "Float",
+     "value": 0.02
+    },
+    {
+     "default": 0.3,
+     "label": "Blob max size",
+     "name": "Blobmax",
+     "style": "Float",
+     "value": 0.3
+    },
+    {
+     "default": 0.05,
+     "label": "Blob max move",
+     "name": "Blobmove",
+     "style": "Float",
+     "value": 0.05
+    },
+    {
+     "default": 270,
+     "label": "Detect width px",
+     "name": "Detw",
+     "style": "Int",
+     "value": 270
+    },
+    {
+     "default": 480,
+     "label": "Detect height px",
+     "name": "Deth",
+     "style": "Int",
+     "value": 480
+    },
+    {
+     "default": 1080,
+     "label": "Picture width (plexus lines)",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Picture height (plexus lines)",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    },
+    {
+     "default": 64,
+     "label": "Points out (out_pts CHOP, strongest kept)",
+     "name": "Outpts",
+     "style": "Int",
+     "value": 64
+    }
+   ]
+  },
+  {
+   "page": "Rack",
+   "pars": [
+    {
+     "default": false,
+     "label": "Panic (passthrough)",
+     "name": "Panic",
+     "style": "Toggle",
+     "value": false
+    },
+    {
+     "default": "auto",
+     "label": "Input",
+     "name": "Input",
+     "style": "Menu",
+     "value": "auto"
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 8.454,
+  "cpu_ms": 8.454,
+  "frames": 30,
+  "gpu_ms": 0.143,
+  "ops": 7
+ },
+ "sha256": "8eae5939c40f48703b4147cab2974437a4588d2e13535a61a57c1387394a8a9a",
+ "size": 391480,
+ "source": "/project1/lab/FX_track",
+ "summary": "fx_track: FX_track rack + shared tracker + plexus / hud / analytics (lane F, 27 Oct 2026, TD 2025.31550 target)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 1449845,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.2.0",
+ "was_parked": true
+}

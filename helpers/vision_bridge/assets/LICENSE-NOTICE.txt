@@ -1,0 +1,11 @@
+DepthAnythingV2SmallF16.mlmodelc -- copied 2026-10-26 (read only) from td-port/camera_bridge/assets/, which copied it
+from stagelab vendor/depth/. Compiled (xcrun coremlcompiler, unmodified) from Apple's Core ML conversion of Depth
+Anything V2 Small: https://huggingface.co/apple/coreml-depth-anything-v2-small, file DepthAnythingV2SmallF16.mlpackage
+(49.8 MB, downloaded 2026-10-11; SHA-256 of weight.bin begins fa60d9b6a155734f, model.mlmodel 44ac97a3efcfd521).
+This copy: 5 files, 49,887,454 bytes; weights/weight.bin sha1 086f4da2c878 (same as td-port's); sorted per-file
+shasum list hashed = 7f385ec1d09e for both copies.
+Licensed under the Apache License, Version 2.0 (full text: LICENSE-Apache-2.0.txt here,
+https://www.apache.org/licenses/LICENSE-2.0).
+Original work: Lihe Yang et al., "Depth Anything V2" (https://huggingface.co/depth-anything/Depth-Anything-V2-Small).
+Used unmodified by helpers/vision_bridge (kind 1 = depth) for builders/depth_cam.py. The model folder is git-ignored;
+recopy it from td-port/camera_bridge/assets/ (never write into td-port).

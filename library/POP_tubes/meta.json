@@ -1,0 +1,341 @@
+{
+ "created": "2026-10-29 00:09:20",
+ "doc": null,
+ "files": [
+  {
+   "exists": true,
+   "op": "cam/file1",
+   "par": "file",
+   "resolved": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "value": "/Applications/TouchDesigner 2.app/Contents/Resources/tfs/Samples/Geo/defcam.tog",
+   "where": "td_app"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "height": 128,
+   "name": "in1",
+   "type": "inTOP",
+   "width": 128
+  },
+  {
+   "height": 128,
+   "name": "in2",
+   "type": "inTOP",
+   "width": 128
+  }
+ ],
+ "name": "POP_tubes",
+ "ops": 318,
+ "outputs": [
+  {
+   "height": 1920,
+   "name": "out1",
+   "type": "outTOP",
+   "width": 1080
+  },
+  {
+   "height": 64,
+   "name": "out2",
+   "type": "outTOP",
+   "width": 64
+  }
+ ],
+ "pars": [
+  {
+   "page": "Tubes",
+   "pars": [
+    {
+     "default": 1.0,
+     "label": "Amount (0 = in1 untouched)",
+     "name": "Amount",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "tubes",
+     "label": "Route",
+     "name": "Route",
+     "style": "Menu",
+     "value": "tubes"
+    },
+    {
+     "default": "lissajous",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "lissajous"
+    },
+    {
+     "default": true,
+     "label": "Play",
+     "name": "Play",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": false,
+     "label": "Reset trails",
+     "name": "Reset",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 1.0,
+     "label": "Speed",
+     "name": "Speed",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Path scale",
+     "name": "Scale",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 1,
+     "label": "Seed",
+     "name": "Seed",
+     "style": "Int",
+     "value": 1
+    },
+    {
+     "default": 64,
+     "label": "Tracks",
+     "name": "Tracks",
+     "style": "Int",
+     "value": 64
+    },
+    {
+     "default": 64,
+     "label": "Samples per trail",
+     "name": "Samples",
+     "style": "Int",
+     "value": 64
+    },
+    {
+     "default": 8,
+     "label": "Tube sides",
+     "name": "Sides",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.012,
+     "label": "Tube radius at the head",
+     "name": "Radius",
+     "style": "Float",
+     "value": 0.012
+    },
+    {
+     "default": 1.0,
+     "label": "Taper exponent",
+     "name": "Taper",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": -100.0,
+     "label": "internal: frame of the last Reset",
+     "name": "Resetat",
+     "style": "Float",
+     "value": 221211.0
+    }
+   ]
+  },
+  {
+   "page": "Look",
+   "pars": [
+    {
+     "default": "neon",
+     "label": "Palette",
+     "name": "Palette",
+     "style": "Menu",
+     "value": "neon"
+    },
+    {
+     "default": 1.5,
+     "label": "Fade along the trail (exponent)",
+     "name": "Fade",
+     "style": "Float",
+     "value": 1.5
+    },
+    {
+     "default": 1.0,
+     "label": "Gain",
+     "name": "Gain",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": 0.6,
+     "label": "Halo (render mips, no Bloom TOP)",
+     "name": "Halo",
+     "style": "Float",
+     "value": 0.6
+    },
+    {
+     "default": 6.0,
+     "label": "Spin deg / s",
+     "name": "Spin",
+     "style": "Float",
+     "value": 6.0
+    },
+    {
+     "default": 2.4,
+     "label": "Camera distance",
+     "name": "Dist",
+     "style": "Float",
+     "value": 2.4
+    },
+    {
+     "default": 1.0,
+     "label": "Zoom",
+     "name": "Zoom",
+     "style": "Float",
+     "value": 1.0
+    },
+    {
+     "default": "aa4",
+     "label": "Render MSAA (1x saves ~0.6 ms GPU, aliased tube edges)",
+     "name": "Msaa",
+     "style": "Menu",
+     "value": "aa4"
+    }
+   ]
+  },
+  {
+   "page": "Output",
+   "pars": [
+    {
+     "default": 1080,
+     "label": "Output width",
+     "name": "Resw",
+     "style": "Int",
+     "value": 1080
+    },
+    {
+     "default": 1920,
+     "label": "Output height",
+     "name": "Resh",
+     "style": "Int",
+     "value": 1920
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Energy",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Glow",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Thick",
+     "name": "Zkm3",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 0.948,
+  "cpu_ms": 0.948,
+  "frames": 30,
+  "gpu_ms": 3.135,
+  "ops": 9
+ },
+ "sha256": "cccc37cfff1e398654991741b83d5b830811c1b4ce02517081d3ed0b5410e48c",
+ "size": 89222,
+ "source": "/project1/lab/POP_tubes",
+ "summary": "",
+ "td_build": "2025.31550",
+ "thumb": {
+  "bytes": 4730484,
+  "height": 1920,
+  "ok": true,
+  "top": "out1",
+  "width": 1080
+ },
+ "type": "baseCOMP",
+ "version": "0.1.1",
+ "was_parked": true
+}

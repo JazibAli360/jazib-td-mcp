@@ -1,0 +1,316 @@
+{
+ "created": "2026-10-29 00:07:48",
+ "doc": "docs/builds/au_features.md",
+ "files": [
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Audiofile",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio_tests/kick_128bpm_30s.wav",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio_tests/kick_128bpm_30s.wav",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": ".",
+   "par": "Pluginfolder",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "file",
+   "par": "file",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio_tests/kick_128bpm_30s.wav",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio_tests/kick_128bpm_30s.wav",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "tonal",
+   "par": "plugin",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaTonalCHOP.plugin",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaTonalCHOP.plugin",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "rhythm",
+   "par": "plugin",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaRhythmCHOP.plugin",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaRhythmCHOP.plugin",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "loudness",
+   "par": "plugin",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaLoudnessCHOP.plugin",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaLoudnessCHOP.plugin",
+   "where": "repo"
+  },
+  {
+   "exists": true,
+   "op": "spectral",
+   "par": "plugin",
+   "resolved": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaSpectralCHOP.plugin",
+   "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/EssentiaSpectralCHOP.plugin",
+   "where": "repo"
+  }
+ ],
+ "in_git": true,
+ "inputs": [
+  {
+   "name": "in1",
+   "type": "inCHOP"
+  }
+ ],
+ "name": "AU_features",
+ "ops": 277,
+ "outputs": [
+  {
+   "name": "out1",
+   "type": "outCHOP"
+  }
+ ],
+ "pars": [
+  {
+   "page": "Features",
+   "pars": [
+    {
+     "default": "wide",
+     "label": "BPM range",
+     "name": "Bpmrange",
+     "style": "Menu",
+     "value": "wide"
+    },
+    {
+     "default": 60.0,
+     "label": "BPM min (custom)",
+     "name": "Bpmmin",
+     "style": "Float",
+     "value": 60.0
+    },
+    {
+     "default": 180.0,
+     "label": "BPM max (custom)",
+     "name": "Bpmmax",
+     "style": "Float",
+     "value": 180.0
+    },
+    {
+     "default": 0.5,
+     "label": "Onset sensitivity",
+     "name": "Onsetsens",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": "complex",
+     "label": "Onset method",
+     "name": "Onsetmethod",
+     "style": "Menu",
+     "value": "complex"
+    },
+    {
+     "default": 0.25,
+     "label": "Beat pulse decay s",
+     "name": "Beatdecay",
+     "style": "Float",
+     "value": 0.25
+    },
+    {
+     "default": -60.0,
+     "label": "Loud floor LUFS",
+     "name": "Lufsfloor",
+     "style": "Float",
+     "value": -60.0
+    },
+    {
+     "default": "windowed",
+     "label": "Key mode",
+     "name": "Keymode",
+     "style": "Menu",
+     "value": "windowed"
+    },
+    {
+     "default": false,
+     "label": "Reset counters",
+     "name": "Resetcounts",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "beats",
+     "label": "BPM from",
+     "name": "Bpmsource",
+     "style": "Menu",
+     "value": "beats"
+    },
+    {
+     "default": -60.0,
+     "label": "Band floor dBFS (bass / mid / high)",
+     "name": "Bandfloor",
+     "style": "Float",
+     "value": -60.0
+    }
+   ]
+  },
+  {
+   "page": "Setup",
+   "pars": [
+    {
+     "default": false,
+     "label": "Analysis on (loads the Essentia plugins)",
+     "name": "Analysison",
+     "style": "Toggle",
+     "value": true
+    },
+    {
+     "default": "file",
+     "label": "Source",
+     "name": "Source",
+     "style": "Menu",
+     "value": "file"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio_tests/kick_128bpm_30s.wav",
+     "label": "Audio file",
+     "name": "Audiofile",
+     "style": "File",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/media/demo/audio_tests/kick_128bpm_30s.wav"
+    },
+    {
+     "default": "../AC_audio/n_mono",
+     "label": "AC_audio mono CHOP",
+     "name": "Acaudiopath",
+     "style": "Str",
+     "value": "../AC_audio/n_mono"
+    },
+    {
+     "default": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/",
+     "label": "Essentia plugin folder",
+     "name": "Pluginfolder",
+     "style": "Folder",
+     "value": "~/Documents/StageLab_PrismFest/jazib-td-mcp/helpers/installs/disabled/Essentia/"
+    },
+    {
+     "default": false,
+     "label": "Re-init analysers (clears key/BPM history)",
+     "name": "Reinitplugins",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": true,
+     "label": "Cook every frame (needed for BPM/onsets)",
+     "name": "Alwayscook",
+     "style": "Toggle",
+     "value": true
+    }
+   ]
+  },
+  {
+   "page": "Zkit",
+   "pars": [
+    {
+     "default": false,
+     "label": "Open controls",
+     "name": "Opencontrols",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": "night",
+     "label": "Theme",
+     "name": "Zktheme",
+     "style": "Menu",
+     "value": "night"
+    },
+    {
+     "default": 56,
+     "label": "Knob size px",
+     "name": "Zkd",
+     "style": "Int",
+     "value": 56
+    },
+    {
+     "default": 8,
+     "label": "Columns",
+     "name": "Zkcols",
+     "style": "Int",
+     "value": 8
+    },
+    {
+     "default": 0.5,
+     "label": "Random amount",
+     "name": "Zkrandamount",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": false,
+     "label": "Randomize",
+     "name": "Zkrandomize",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Show deleted knobs",
+     "name": "Zkshowall",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": false,
+     "label": "Rebuild panel",
+     "name": "Zkrebuild",
+     "style": "Pulse",
+     "value": false
+    },
+    {
+     "default": 0,
+     "label": "Max height px (0 = fit screen)",
+     "name": "Zkmaxh",
+     "style": "Int",
+     "value": 0
+    },
+    {
+     "default": 0.0,
+     "label": "Reactive",
+     "name": "Zkm1",
+     "style": "Float",
+     "value": 0.5
+    },
+    {
+     "default": 0.0,
+     "label": "Tempo window",
+     "name": "Zkm2",
+     "style": "Float",
+     "value": 0.5
+    }
+   ]
+  }
+ ],
+ "perf": {
+  "cook_ms": 14.626,
+  "cpu_ms": 14.626,
+  "frames": 0,
+  "gpu_ms": 0.0,
+  "ops": 61
+ },
+ "sha256": "decdef594f9eba3350c862e28e8a917ccd71a48999ad7e4e7b2ae58ad11c12d3",
+ "size": 112782,
+ "source": "/project1/lab/AU_features",
+ "summary": "au_features - `/project1/lab/AU_features` (TD 2025.31550, 26 Oct 2026)",
+ "td_build": "2025.31550",
+ "thumb": {
+  "ok": false,
+  "why": "no Out TOP (or thumb:false)"
+ },
+ "type": "baseCOMP",
+ "version": "0.1.0",
+ "was_parked": null
+}
